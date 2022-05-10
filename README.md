@@ -1,10 +1,10 @@
 # Hexo-Theme-ParticleX
 
-Hexo 主题 [ParticleX](https://github.com/argvchs/hexo-theme-particlex)，诞生原因是因为原来的 particle 主题不维护了，但是我觉得还是很可以的
+[Hexo ParticleX](https://github.com/argvchs/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很可以的
 
 原来用的是 Vue2 + AntdVue1，现更新到 Vue3，去除 AntdVue 采用自定义样式，图标更改为 FontAwesome 6，将不能用的 JsDelivr 改为 Staticfile CDN
 
-吐槽一句：我改[原项目](https://github.com/korilin/hexo-theme-particle) README 的时候看到的，看：
+吐槽一句：我改原项目 README 的时候看到的，看：
 
 > 目前有 full、night 和 maiden **两个**主题样式
 
@@ -44,11 +44,7 @@ prismjs:
     tab_replace: ""
 ```
 
-修改完请清除缓存
-
-```bash
-hexo cl
-```
+修改完请清除缓存：`hexo cl`
 
 ## 配置文件说明
 
@@ -156,4 +152,4 @@ home_background: # Background URL
 
 ## 写在最后
 
-本项目采用 MIT 开源许可证，欢迎大家贡献，你可以随意打开一个 Issue 来进行提问，有任何改进想法都可以进行 Fork
+本项目采用 MIT 开源许可证，欢迎大家贡献，你可以随意打开一个 Issue 来进行提问，有任何改进想法都可以进行 Fork，期待您的 Pull Request
