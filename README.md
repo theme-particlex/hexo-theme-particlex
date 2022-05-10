@@ -57,7 +57,7 @@ home_background: # Background URL
 
 -   导航栏配置
 
-    为了方便，主题使用的图标是 FontAwesome 图标，地址为：<https://fontawesome.com/search/>
+    为了方便，主题使用的图标是 FontAwesome 6 图标，地址为：<https://fontawesome.com/search/>
 
     ```yaml
     menu:
@@ -144,7 +144,7 @@ home_background: # Background URL
         owner: # GitHub repo owner
         admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
         language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
-        sites: # Other sites
+        sites:
             # Example:
             # <www.example.com>:
             #    clientID: <client-id>

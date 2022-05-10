@@ -1,37 +1,35 @@
-<% var rootlink = config.root %> 
+<% var rootlink = config.root; %> 
 <nav id="menu">
     <div class="desktop-menu">
         <a href="<%- rootlink %>">
             <span class="title"><%- config.title %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
-        <a href="<%=theme.menu[key].src%>">
+        <a href="<%= theme.menu[key].src %>">
             <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
-            <span>&ensp;<%=key%></span>
+            <span>&ensp;<%= key %></span>
         </a>
         <% }); %>
     </div>
-
     <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div class="curtain" @click="menu_show=!menu_show" v-show="menu_show"></div>
-        <div :class="'title'" @click="menu_show=!menu_show">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;<%- config.title %></span>
         </div>
         <transition name="slide">
         <div class="items" v-show="menu_show">
             <% Object.keys(theme.menu).forEach(key => { %>
-            <a href="<%=theme.menu[key].src%>">
+            <a href="<%= theme.menu[key].src %>">
                 <div class="item">
-                    <div style="min-width:20px; max-width:50px; width: 10%">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
                     </div>
-                    <div style="min-width:100px;max-width: 150%;width: 20%;"><%=key%></div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%"><%= key %></div>
                 </div>
             </a>
             <% }); %>
         </div>
         </transition>
     </div>
-
 </nav>

@@ -1,4 +1,4 @@
-<% var rootlink = config.root %> 
+<% var rootlink = config.root; %>
 <div class="article">
     <div>
         <h1><%= titlecase(page.title) %> </h1>
@@ -8,10 +8,9 @@
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
             </span>
-            <%- date(page.date, 'YYYY/M/D') %>
+            <%- date(page.date, "YYYY/M/D") %>
         </span>
-
-        <% if(page.categories && page.categories.data.length!=0){ %>
+        <% if (page.categories && page.categories.data.length != 0) { %>
         <span class="category">
             <a href="<%- rootlink %>categories/<%= page.categories.data[0].name.replace(" ", "-") %>">
                 <span class="icon">
@@ -21,33 +20,29 @@
             </a>
         </span>
         <% } %>
-
-        <% if(page.tags && page.tags.data.length!=0){ %>
-
+        <% if (page.tags && page.tags.data.length != 0) { %>
         <span class="tags">
             <span class="icon">
                 <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
             </span>
-            <% page.tags.data.forEach(function(data){%>
+            <% page.tags.data.forEach(function(data) {%>
             <span class="tag">
                 <% 
-                var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
-                var num = Math.floor(Math.random()*color.length);
+                    var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
+                    var num = Math.floor(Math.random() * color.length);
                 %>
-                <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
+                <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style="<%- color[num] %>">
                     <%- data.name %>
                 </a>
             </span>
-            <% }) %>
+            <% }); %>
         </span>
         <% } %>
     </div>
-
     <div class="content" v-pre>
         <%- page.content %>
     </div>
-
-    <% if(theme.gitalk.enable){ %>
+    <% if (theme.gitalk.enable) { %>
     <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
     <div id="comment">
         <div id="gitalk-container">

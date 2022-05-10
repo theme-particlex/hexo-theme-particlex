@@ -7,14 +7,14 @@
             <%- config.author %>
         </div>
         <div class="descriptions">
-            <% theme.card.description.forEach(function(desc){ %>
+            <% theme.card.description.forEach(function(desc) { %>
             <div class="description">
                 <%- desc %>
             </div>
             <% }) %>
         </div>
         <div class="icon-links">
-            <% Object.keys(theme.card.icon_links).forEach(function(key){ %>
+            <% Object.keys(theme.card.icon_links).forEach(function(key) { %>
             <span class="icon-link">
                 <a href="<%- theme.card.icon_links[key].link %>">
                     <i class="fa-<%- theme.card.icon_links[key].theme %> fa-<%- theme.card.icon_links[key].name %> fa-fw"></i>
@@ -23,7 +23,7 @@
             <% }) %>
         </div>
         <div class="friend-links">
-            <% Object.keys(theme.card.friend_links).forEach(function(key){ %>
+            <% Object.keys(theme.card.friend_links).forEach(function(key) { %>
             <div class="friend-link">
                 <a href="<%- theme.card.friend_links[key] %>">
                     <%- key %>
