@@ -1,0 +1,92 @@
+<% var rootlink = config.root %> 
+<div class="page-current">
+
+    <div class="prev">
+        <% if(page.current!=1){ %>
+        <a href="<%- rootlink %><%- page.prev_link %>">
+            <span class="page-num">
+                <svg class="fa-icon"><use xlink:href="#caret-left-solid"></use></svg>
+            </span>
+        </a>
+        <% } %>
+    </div>
+
+    <div class="page-index">
+
+        <% if(page.current!=1){ %>
+        <span>
+
+            <% if(page.current-3 >= 1){ %>
+            <a href="<%- rootlink %>"><span class="page-num">1</span></a>
+            <span class="page-omit">...</span>
+            <% } %>
+
+            <% if(page.current-2 >= 1){ %>
+
+            <% if(page.current-2 == 1){ %>
+            <a href="<%- rootlink %>">
+                <span class="page-num">1</span>
+            </a>
+            <% } %>
+
+            <% if(page.current-2 != 1){ %>
+            <a href="<%- rootlink %>page/<%= page.current-2 %>">
+                <span class="page-num">
+                    <%= page.current-2 %>
+                </span>
+            </a>
+            <% } %>
+
+            <% } %>
+            <a href="<%- rootlink %><%- page.prev_link %>">
+                <span class="page-num">
+                    <%- page.prev %>
+                </span>
+            </a>
+        </span>
+        <% } %>
+
+        <span class="current">
+            <%- page.current %>
+        </span>
+
+        <% if(page.current!=page.total){ %>
+        <span>
+            <a href="<%- rootlink %><%- page.next_link %>">
+                <span class="page-num">
+                    <%- page.next %>
+                </span>
+            </a>
+            <% if(page.current+2 <= page.total){ %>
+            <a href="<%- rootlink %>page/<%- page.current+2 %>">
+                <span class="page-num">
+                    <%- page.current+2 %>
+                </span>
+            </a>
+            <% } %>
+
+            <% if(page.current+3 <= page.total){ %>
+            <span class="page-omit">...</span>
+            <a href="<%- rootlink %>page/<%- page.total %>">
+                <span class="page-num">
+                    <%- page.total %>
+                </span>
+            </a>
+            <% } %>
+
+        </span>
+        <% } %>
+
+    </div>
+
+    <div class="next">
+        <% if(page.current!=page.total){ %>
+        <a href="<%- rootlink %><%- page.next_link %> ">
+            <span class="page-num">
+                <svg class="fa-icon"><use xlink:href="#caret-right-solid"></use></svg>
+            </span>
+        </a>
+        <% }%>
+    </div>
+
+</div>

@@ -1,0 +1,23 @@
+<% var rootlink = config.root %> 
+<footer id="footer">
+    <div class="footer-wrap">
+        <div>
+            © <%= theme.footer.since %> - <%- date(Date.now(), 'YYYY') %> <%= config.title %>
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @<%- config.author %>
+        </div>
+        <div></div>
+        <div>Based on the <a href="https://hexo.io/">Hexo Engine</a> & <a
+                href="https://github.com/korilin/hexo-theme-particle">Particle Theme</a></div>
+        <% if(theme.footer.ICP.enable){ %>
+        <div>
+            备案号：<a href="http://beian.miit.gov.cn/">
+                <%- theme.footer.ICP.code %>
+            </a>
+        </div>
+        <% } %>
+    </div>
+
+</footer>

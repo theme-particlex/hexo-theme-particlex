@@ -1,0 +1,66 @@
+# Theme Github link: https://github.com/korilin/hexo-theme-particle
+# Developer: argvchs
+
+# html lang
+language: zh
+
+# avatar image url
+head_img:
+
+# home page head info block
+head_block_enable: true
+
+# home page head background style.
+home_background:
+
+# Particle theme icon is adopts the font awesome 6
+# Link: https://fontawesome.com/search/
+
+# main menu navigation
+menu:
+  home:
+    name: house
+    theme: solid
+    src: /
+  about:
+    name: id-card
+    theme: solid
+    src: /about
+  archives:
+    name: box-archive
+    theme: solid
+    src: /archives
+  categories:
+    name: bookmark
+    theme: solid
+    src: /categories
+  tags:
+    name: tags
+    theme: solid
+    src: /tags
+
+# side info card
+card:
+  enable: true
+  description: ["Description..."]
+  icon_links: []
+  friend_links: []
+
+# footer info
+footer:
+  since: 2022
+  ICP:
+    enable: false
+    code: 
+
+# Gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+  enable: true
+  clientID:
+  clientSecret:
+  repo:
+  owner:
+  admin:
+  language: zh-CN
+  sites: []

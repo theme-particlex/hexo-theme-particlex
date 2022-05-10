@@ -1,0 +1,75 @@
+<% 
+var current = (page.current-1)*config.index_generator.per_page; 
+var rootlink = config.root;
+%>
+<% site.posts.slice(0+current,config.index_generator.per_page+current).forEach(function(post){ %>
+<div class="post">
+
+    <a href="<%- rootlink %><%- post.path %>">
+        <h2>
+            <%- titlecase(post.title) %>
+        </h2>
+    </a>
+
+    <div class="category-and-date">
+
+        <% if(post.categories.data.length!=0){ %>
+        <span class="category">
+            <a href="<%- rootlink %>categories/<%= post.categories.data[0].name.replace(" ", "-") %>">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                <%- post.categories.data[0].name %>
+            </a>
+        </span>
+        <% } %>
+
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            <%- date(post.date, 'YYYY/M/D') %>
+        </span>
+
+    </div>
+
+    <div class="excerpt">
+        <div class="content" v-pre>
+            <% if(post.excerpt.length != 0){ %>
+            <%- post.excerpt %>
+            <% } %>
+            <% if(post.excerpt.length == 0){ %>
+            <%- post.content %>
+            <% } %>
+        </div>
+    </div>
+
+    <div class="post-tags">
+        <% if(post.tags.data.length!=0){ %>
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        <% } %>
+        <% post.tags.data.forEach(function(data){%>
+        <span class="tag">
+            <% 
+            if(theme.style == "night"){
+                var color = ['color:#607d8b', 'color:#6484be', 'color:#006674','color:#016a99']
+            }else if(theme.style == "maiden"){
+                var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#879cff', 'color:#1bccbc', 'color:#ff7d73'];
+            }else{
+                var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
+            }
+            var num = Math.floor(Math.random()*color.length);
+            %>
+            <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
+                <%- data.name %>
+            </a>
+        </span>
+        <% }) %>
+    </div>
+
+    <a href="<%- rootlink %><%- post.path %> " class="go-post">
+        阅读全文
+    </a>
+</div>
+<% }); %>

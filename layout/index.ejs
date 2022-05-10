@@ -1,0 +1,44 @@
+<div id="home-head">
+    <div
+        id="home-background"
+        style="background-image: url(<%- theme.home_background %>)"
+    ></div>
+    <% if(theme.head_block_enable){ %> 
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1><%- config.title %></h1>
+                <h3><%- config.subtitle %></h3>
+                <h5><%- config.description %></h5>
+            </div>
+        </span>
+    </div>
+    <% } %> 
+</div>
+
+<% 
+    var wrapClass = ""
+    if(!theme.card.enable){
+        wrapClass = "home-posts-wrap-no-card"
+    } 
+%>
+
+<div id="home-posts-wrap" class=<%- wrapClass %>>
+    <div id="home-posts">
+
+        <div id="posts">
+            <%- include("posts") %>
+
+            <%- include("current") %>
+        </div>
+    </div>
+    <% if(theme.card.enable){ %>
+    <div id="home-card">
+        <%- include("card") %>
+    </div>
+    <% } %>
+</div>

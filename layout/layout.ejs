@@ -1,0 +1,84 @@
+<% 
+    var layout = "index"
+    if(is_home()){
+        layout = "index"
+    }else if(is_post()){
+        layout = "post"
+    }else if(is_category() || page.title=="categories"){
+        layout = "categories"
+    }else if(is_tag() || page.title=="tags"){
+        layout = "tags"
+    }else if(is_archive() || is_year() || is_month()){
+        layout = "archives"
+    }else {
+        layout = "post"
+    }
+    var pageTitle = '';
+    if(page.title) pageTitle=page.title+" | "
+    else if(is_category()) pageTitle="Categories: "+page.category+" | "
+    else if(is_tag()) pageTitle="Tags: "+page.tag+" | "
+    else if(is_archive() || is_year() || is_month()) pageTitle="Archives | "
+    pageTitle += config.title
+    var rootlink = config.root
+    site.posts.data.sort(function(a, b){
+        return b.date - a.date;
+    })
+%>
+<!DOCTYPE html>
+<html lang="<%- config.language %> ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= titlecase(pageTitle) %></title>
+    <meta name="author" content="<%- config.author %>">
+    <meta name="description" content="<%- config.description %> ">
+    <meta name="keywords" content="<%- config.keywords %> ">
+    <link rel="icon" href="<%- theme.head_img %>">
+    <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+    <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+    <link rel="stylesheet" href="<%- rootlink %>css/fonts.min.css">
+    <link rel="stylesheet" href="<%- rootlink %>css/particlex.css">
+    <script src="//cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+</head>
+<body>
+    <div id="loading"
+        style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out">
+        <div
+            style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+            <div id="loadcontent"
+                style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
+                <div>
+                    <h2>LOADING...</h2>
+                    <p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p>
+                    <div>
+                        <img alt="loading" src="https://img.gejiba.com/images/c6339d6a6619b36f49abe6151924aa2d.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="layout">
+        <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+        <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+        <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+        <transition name="into">
+            <div v-show="show_page" style="display: -not-none;">
+                <div id="menu_show">
+                    <%- include("menu") %>
+                </div>
+                <div id="main">
+                    <%- include(layout) %>
+                    <%- include("footer") %>
+                </div>
+            </div>
+        </transition>
+        <div id="img_show">
+            <img id="img_content" alt="img_show">
+        </div>
+    </div>
+    <div id="L2dCanvas"></div>
+    <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="<%- rootlink %>js/showimg.js"></script>
+    <%- include("script") %>
+</body>
+</html>

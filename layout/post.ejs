@@ -1,0 +1,63 @@
+<% var rootlink = config.root %> 
+<div class="article">
+    <div>
+        <h1><%= titlecase(page.title) %> </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            <%- date(page.date, 'YYYY/M/D') %>
+        </span>
+
+        <% if(page.categories && page.categories.data.length!=0){ %>
+        <span class="category">
+            <a href="<%- rootlink %>categories/<%= page.categories.data[0].name.replace(" ", "-") %>">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                <%- page.categories.data[0].name %>
+            </a>
+        </span>
+        <% } %>
+
+        <% if(page.tags && page.tags.data.length!=0){ %>
+
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            <% page.tags.data.forEach(function(data){%>
+            <span class="tag">
+                <% 
+                if(theme.style == "night"){
+                    var color = ['color:#607d8b', 'color:#6484be', 'color:#006674','color:#016a99']
+                }else if(theme.style == "maiden"){
+                    var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#879cff', 'color:#1bccbc', 'color:#ff7d73'];
+                }else{
+                    var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
+                }
+                var num = Math.floor(Math.random()*color.length);
+                %>
+                <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
+                    <%- data.name %>
+                </a>
+            </span>
+            <% }) %>
+        </span>
+        <% } %>
+    </div>
+
+    <div class="content" v-pre>
+        <%- page.content %>
+    </div>
+
+    <% if(theme.gitalk.enable){ %>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    <% } %>
+</div>
