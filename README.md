@@ -138,16 +138,17 @@ home_background: # Background URL
     ```yaml
     gitalk:
         enable: true
-        clientID: 170844d595d9facb0be0 # Default ClientID
-        clientSecret: 21b990860bd70f9ac33d06f06d3232e82c464a3a # Default ClientSecret
-        repo: gitalk-comments # The name of repository of store comments
-        owner: argvchs # GitHub repo owner
-        admin: argvchs # GitHub repo owner and collaborators, only these guys can initialize github issues
+        clientID: # Default ClientID
+        clientSecret: # Default ClientSecret
+        repo: # The name of repository of store comments
+        owner: # GitHub repo owner
+        admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
         language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
         sites: # Other sites
-            Example:
-                clientID: 170844d595d9facb0be0
-                clientSecret: 21b990860bd70f9ac33d06f06d3232e82c464a3a
+            # Example:
+            # <www.example.com>:
+            #    clientID: <client-id>
+            #    clientSecret: <client-secret>
     ```
 
 ## 写在最后
