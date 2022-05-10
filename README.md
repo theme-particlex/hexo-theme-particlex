@@ -47,7 +47,7 @@ prismjs:
 修改完请清除缓存
 
 ```bash
-$ hexo cl
+hexo cl
 ```
 
 ## 配置文件说明
