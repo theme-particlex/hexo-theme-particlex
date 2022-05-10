@@ -31,13 +31,7 @@
             <% page.tags.data.forEach(function(data){%>
             <span class="tag">
                 <% 
-                if(theme.style == "night"){
-                    var color = ['color:#607d8b', 'color:#6484be', 'color:#006674','color:#016a99']
-                }else if(theme.style == "maiden"){
-                    var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#879cff', 'color:#1bccbc', 'color:#ff7d73'];
-                }else{
-                    var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
-                }
+                var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
                 var num = Math.floor(Math.random()*color.length);
                 %>
                 <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>

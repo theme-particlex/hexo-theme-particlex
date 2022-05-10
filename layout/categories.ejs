@@ -4,23 +4,10 @@
     <div class="all-s">
         <% site.categories.data.forEach(function(category){ %>
         <% 
-            if(theme.style == "night"){
-                var color = ['background:#607d8b', 'background:#6484be', 'background:#006674','background:#016a99']
-                if(is_category(category.name)){
-                var color = ['background:#24292e']
-                }
-            }else if(theme.style == "maiden"){
-                var color = ['background:#ffa2c4', 'background:#00bcd4', 'background:#879cff', 'background:#1bccbc', 'background:#ff7d73'];
-                if(is_category(category.name)){
-                var color = ["'background:linear-gradient(to right, #fbc2eb 0%, #bbd4ff 100%)'"]
-                }
-            }else{
-                var color = ['background:#ffa2c4', 'background:#00bcd4', 'background:#03a9f4', 'background:#00a596', 'background:#ff7d73'];
-                if(is_category(category.name)){
-                var color = ["'background:linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)'"]
-                }
+            var color = ['background:#ffa2c4', 'background:#00bcd4', 'background:#03a9f4', 'background:#00a596', 'background:#ff7d73'];
+            if(is_category(category.name)){
+            var color = ["'background:linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)'"]
             }
-            
             var num = Math.floor(Math.random()*color.length);
         %>
         <span>
@@ -63,13 +50,7 @@
                         <% post.tags.data.forEach(function(data){%>
                         <span class="tag">
                             <% 
-                                if(theme.style == "night"){
-                                    var color = ['color:#607d8b', 'color:#6484be', 'color:#006674','color:#016a99']
-                                }else if(theme.style == "maiden"){
-                                    var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#879cff', 'color:#1bccbc', 'color:#ff7d73'];
-                                }else{
-                                    var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
-                                }
+                                var color = ['color:#ffa2c4', 'color:#00bcd4', 'color:#03a9f4', 'color:#00a596', 'color:#ff7d73'];
                                 var num = Math.floor(Math.random()*color.length);
                                 %>
                             <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style=<%- color[num] %>>
