@@ -27,7 +27,7 @@ git clone https://github.com/argvchs/hexo-theme-particlex.git particlex
 
 ## 关闭 Hexo 自带 highlight
 
-到博客根目录下的 `_config.yml`，找到 highlight 和 prismjs 参数，设置为如下：
+到博客根目录下的 `_config.yml`，找到 `highlight` 和 `prismjs` 参数，设置为如下：
 
 ```yaml
 highlight:
