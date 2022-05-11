@@ -21,8 +21,7 @@
 进入主题目录后，克隆此仓库
 
 ```bash
-cd theme
-git clone https://github.com/argvchs/hexo-theme-particlex.git particlex
+git clone https://github.com/argvchs/hexo-theme-particlex.git themes\particlex
 ```
 
 ## 关闭 Hexo 自带 highlight
@@ -107,7 +106,7 @@ home_background: # Background URL
             # <name>:
             #    name: <icon-name>
             #    theme: <icon-theme>
-            #    link: https://github.com/argvchs
+            #    link: <link-url>
         friend_links:
             # Example:
             # <name>: <link-url>
