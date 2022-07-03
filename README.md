@@ -1,6 +1,6 @@
 # Hexo-Theme-ParticleX
 
-[Hexo ParticleX](https://github.com/argvchs/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很可以的
+[Hexo-Theme-ParticleX](https://github.com/argvchs/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很可以的
 
 原来用的是 Vue2 + AntdVue1，现更新到 Vue3，去除 AntdVue 采用自定义样式，图标更改为 FontAwesome 6，将不能用的 JsDelivr 改为 Staticfile CDN
 
