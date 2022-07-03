@@ -1303,7 +1303,7 @@ footer .footer-icon {
         width: 900px;
     }
     .content .language {
-        right: 80px;
+        left: 30px;
     }
     #archives {
         width: 900px;
@@ -1403,7 +1403,7 @@ footer .footer-icon {
         width: 85%;
     }
     .content .language {
-        right: 10%;
+        left: 5%;
     }
     #archives {
         width: 90%;
