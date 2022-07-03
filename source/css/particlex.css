@@ -1090,9 +1090,6 @@ footer .footer-icon {
     border: 2px solid #a5c2f5;
     border-radius: 50%;
 }
-.gt-container:after {
-    display: none !important;
-}
 .gt-container .markdown-body {
     font-family: unset !important;
 }
