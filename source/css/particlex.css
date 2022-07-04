@@ -1095,7 +1095,8 @@ footer .footer-icon {
     font-family: unset !important;
 }
 .gt-container .gt-comment-content {
-    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 .gt-container .gt-comment-content:hover,
 .gt-container .gt-header-textarea:hover,
