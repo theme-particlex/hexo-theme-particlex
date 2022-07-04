@@ -1091,6 +1091,7 @@ footer .footer-icon {
     border-radius: 50%;
 }
 .gt-container .markdown-body {
+    word-break: break-word;
     font-family: unset !important;
 }
 .gt-container .gt-comment-content {

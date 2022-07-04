@@ -63,4 +63,5 @@ gitalk:
     owner:
     admin:
     language: zh-CN
+    proxy:
     sites: []
