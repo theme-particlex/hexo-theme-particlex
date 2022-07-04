@@ -128,15 +128,17 @@ home_background: # Background URL
 
 -   Gitalk
 
-    本主题引入的是 Gitalk 评论系统，默认开启
+    本主题引入的是 Gitalk 评论系统，默认关闭
 
     考虑到博客可能部署到多个网站同步评论，但 OAuth APP 只能有一个回调 URL，所以添加了 `sites` 参数用于其他网站的评论，请注册多个 Oauth APP
 
     **同样如果没有其他网站，请在 `sites:` 后添加一个 `[]`**
 
+    由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 配置，搭建 CORS 代理可以看[这篇文章]()
+
     ```yaml
     gitalk:
-        enable: true
+        enable: false
         clientID: # Default ClientID
         clientSecret: # Default ClientSecret
         repo: # The name of repository of store comments
