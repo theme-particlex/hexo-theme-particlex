@@ -18,7 +18,7 @@
         id: location.pathname,
         distractionFreeMode: false,
         <% if (theme.gitalk.proxy) { %>
-        proxy: "https://<%- theme.gitalk.proxy %>/?https://github.com/login/oauth/access_token"
+        proxy: "<%- theme.gitalk.proxy %>"
         <% } %>
     })
     gitalk.render("gitalk-container")

@@ -143,7 +143,7 @@ home_background: # Background URL
         owner: # GitHub repo owner
         admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
         language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
-        proxy: # CORS proxy without "http:" or "https:"
+        proxy: # CORS proxy
         sites: # Sites
             # Example:
             # <www.example.com>:
