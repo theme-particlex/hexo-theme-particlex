@@ -16,7 +16,10 @@
         admin: ["<%- theme.gitalk.admin %>"],
         language: "<%- theme.gitalk.language %>",
         id: location.pathname,
-        distractionFreeMode: false
+        distractionFreeMode: false,
+        <% if (theme.gitalk.proxy) { %>
+        proxy: "https://<%- theme.gitalk.proxy %>/?https://github.com/login/oauth/access_token"
+        <% } %>
     })
     gitalk.render("gitalk-container")
 </script>
