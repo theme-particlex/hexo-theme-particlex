@@ -134,7 +134,7 @@ home_background: # Background URL
 
     **同样如果没有其他网站，请在 `sites:` 后添加一个 `[]`**
 
-    由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 配置，搭建 CORS 代理可以看[这篇文章]()
+    由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 配置，搭建 CORS 代理可以看[这篇文章](https://argvchs.github.io/2022/07/04/build-cors-anywhere)
 
     ```yaml
     gitalk:
