@@ -1090,6 +1090,9 @@ footer .footer-icon {
     border: 2px solid #a5c2f5;
     border-radius: 50%;
 }
+.math .MathJax svg {
+    vertical-align: baseline !important;
+}
 .gt-container *:not(.gt-header-textarea) {
     font-family: unset !important;
 }
@@ -1121,69 +1124,6 @@ footer .footer-icon {
 }
 .gt-container .gt-popup {
     border-radius: 10px;
-}
-#L2dCanvas {
-    z-index: 100;
-    width: 240px;
-    height: 325px;
-    right: 0;
-    bottom: -280px;
-    border-top-left-radius: 10px;
-    border-left: 2px solid #66afef00;
-    border-top: 2px solid #66afef00;
-    -webkit-transition: bottom 0.5s, background 0.5s, border 0.5s;
-    -moz-transition: bottom 0.5s, background 0.5s, border 0.5s;
-    -o-transition: bottom 0.5s, background 0.5s, border 0.5s;
-    transition: bottom 0.5s, background 0.5s, border 0.5s;
-    cursor: pointer;
-    -ms-touch-action: none;
-    touch-action: none;
-}
-#L2dCanvas:hover {
-    bottom: 0 !important;
-    background: #9dbeff7c;
-    border-left: 2px solid #9abbf7;
-    border-top: 2px solid #9abbf7;
-}
-#L2dCanvas::after {
-    content: "LIVE-2D";
-    position: absolute;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    padding: 10px;
-    background: -webkit-linear-gradient(120deg, #9abbf7 0, #ffbbf4 100%);
-    background: -moz-linear-gradient(120deg, #9abbf7 0, #ffbbf4 100%);
-    background: -o-linear-gradient(120deg, #9abbf7 0, #ffbbf4 100%);
-    background: linear-gradient(120deg, #9abbf7 0, #ffbbf4 100%);
-    color: #fff;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    letter-spacing: 10px;
-    border-top-left-radius: 10px;
-    -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
-}
-#L2dCanvas:hover::after {
-    opacity: 0;
-    pointer-events: none;
-}
-#fireworks,
-#background {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-}
-#fireworks {
-    z-index: 2147483647;
 }
 #img_show {
     position: fixed !important;
@@ -1230,11 +1170,6 @@ footer .footer-icon {
 ::-moz-selection {
     background-color: #edf7ff;
     color: #9dd1ff;
-}
-@media (max-width: 800px), (max-height: 600px) {
-    #L2dCanvas {
-        display: none;
-    }
 }
 @media (min-width: 900px) {
     #menu .desktop-menu {
@@ -1399,6 +1334,9 @@ footer .footer-icon {
     #home-posts .post {
         padding: 20px 30px;
         margin: 30px 0;
+    }
+    #home-posts .post .post-tags {
+        padding-right: 69px;
     }
     #home-posts .post .excerpt {
         padding: 20px 0;
