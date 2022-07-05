@@ -59,6 +59,7 @@ card:
         #    theme: <icon-theme>
         #    link: <link-url>
     friend_links:
+        []
         # Example:
         # <name>: <link-url>
 
