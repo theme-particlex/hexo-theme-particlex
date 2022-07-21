@@ -18,7 +18,7 @@
     }
     for (var img of imglist)
         img.addEventListener("click", function () {
-            show(img.getAttribute("src"));
+            show(this.getAttribute("src"));
         });
     imgshow.addEventListener("click", function () {
         hide();
