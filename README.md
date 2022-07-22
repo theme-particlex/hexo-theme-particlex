@@ -55,7 +55,7 @@ home_background: # Background URL
 vf_fonts_enable: false
 ```
 
-其中 VF_Fonts 可变字体设置是实验性功能，加载更快
+其中 VF_Fonts 可变字体设置是实验性功能
 
 [MDN 的可变字体介绍](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)
 
