@@ -1,11 +1,12 @@
 hljs.highlightAll();
-var pre_blocks = document.getElementsByTagName("pre");
-for (var i = 0; i < pre_blocks.length; i++) {
-    var code_block_class = pre_blocks[i].firstChild.className;
-    var language = code_block_class;
-    if (language == "") language = "Text";
-    var language_html = "<div class='language'>" + language + "</div>";
-    pre_blocks[i].innerHTML += language_html;
+hljs.configure({ ignoreUnescapedHTML: true });
+var codes = document.getElementsByTagName("pre");
+for (var i = 0; i < codes.length; i++) {
+    var lang = codes[i].firstChild.className.split(/\s+/).filter((x) => {
+        return x != "sourceCode";
+    })[0];
+    if (!lang) lang = "text";
+    codes[i].innerHTML += '<div class="language">' + lang + "</div>";
 }
 const App = Vue.createApp({
     data() {
@@ -16,13 +17,6 @@ const App = Vue.createApp({
             bar_local: 0,
         };
     },
-    mounted() {
-        if (document.getElementById("home-head"))
-            document.getElementById("menu").className += " menu-color";
-        if (document.getElementsByClassName("article")[0])
-            document.body.style.backgroundColor = "#fff";
-        window.addEventListener("scroll", this.handleScroll, true);
-    },
     created() {
         var that = this;
         window.onload = function () {
@@ -32,6 +26,13 @@ const App = Vue.createApp({
                 document.getElementById("loading").style.display = "none";
             }, 300);
         };
+    },
+    mounted() {
+        if (document.getElementById("home-head"))
+            document.getElementById("menu").className += " menu-color";
+        if (document.getElementsByClassName("article")[0])
+            document.body.style.backgroundColor = "#fff";
+        window.addEventListener("scroll", this.handleScroll, true);
     },
     methods: {
         home_click() {
