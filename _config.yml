@@ -10,8 +10,12 @@ head_img:
 # home page head info block
 head_block_enable: true
 
-# home page head background style.
+# home page head background style
 home_background:
+
+# WARNING! vf_fonts (variable fonts) feature is EXPERIMENTAL
+# MDN: https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide
+vf_fonts_enable: false
 
 # ParticleX theme icon is adopts the font awesome 6
 # Link: https://fontawesome.com/search/
