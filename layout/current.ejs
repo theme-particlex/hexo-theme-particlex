@@ -4,7 +4,7 @@
         <% if (page.current != 1) { %>
         <a href="<%- rootlink %><%- page.prev_link %>">
             <span class="page-num">
-                <svg class="fa-icon"><use xlink:href="#caret-left-solid"></use></svg>
+                <i class="fa-solid fa-caret-left fa-fw"></i>
             </span>
         </a>
         <% } %>
@@ -69,7 +69,7 @@
         <% if (page.current != page.total) { %>
         <a href="<%- rootlink %><%- page.next_link %> ">
             <span class="page-num">
-                <svg class="fa-icon"><use xlink:href="#caret-right-solid"></use></svg>
+                <i class="fa-solid fa-caret-right fa-fw"></i>
             </span>
         </a>
         <% }%>
