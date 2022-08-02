@@ -63,28 +63,30 @@ vf_fonts_enable: false
 
     为了方便，主题使用的图标是 FontAwesome 6 图标，地址为：<https://fontawesome.com/search/>
 
+    **主页链接的 `src` 值应为空**
+
     ```yaml
     menu:
         home:
             name: house
             theme: solid
-            src: /
+            src: # You shouldn't add anything else here
         about:
             name: id-card
             theme: solid
-            src: /about
+            src: about
         archives:
             name: box-archive
             theme: solid
-            src: /archives
+            src: archives
         categories:
             name: bookmark
             theme: solid
-            src: /categories
+            src: categories
         tags:
             name: tags
             theme: solid
-            src: /tags
+            src: tags
         # Example:
         # <name>:
         #     name: <icon-name>

@@ -5,7 +5,7 @@
             <span class="title"><%- config.title %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
-        <a href="<%= theme.menu[key].src %>">
+        <a href="<%- rootlink %><%= theme.menu[key].src %>">
             <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
             <span>&ensp;<%= key %></span>
         </a>
