@@ -12,7 +12,7 @@
         </span>
         <% if (page.categories && page.categories.data.length != 0) { %>
         <span class="category">
-            <a href="<%- rootlink %>categories/<%= page.categories.data[0].name.replace(" ", "-") %>">
+            <a href="<%- rootlink %><%= page.categories.data[0].path %>">
                 <span class="icon">
                     <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                 </span>
@@ -31,7 +31,7 @@
                     var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
                     var num = Math.floor(Math.random() * color.length);
                 %>
-                <a href="<%- rootlink %>tags/<%= data.name.replace(" ", "-") %>" style="<%- color[num] %>">
+                <a href="<%- rootlink %><%= data.path %>" style="<%- color[num] %>">
                     <%- data.name %>
                 </a>
             </span>
