@@ -1,6 +1,6 @@
 # Hexo-Theme-ParticleX
 
-[Hexo-Theme-ParticleX](https://github.com/argvchs/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很可以的
+[Hexo-Theme-ParticleX](https://github.com/argvchs/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很好的
 
 原来用的是 Vue2 + AntdVue1，现更新到 Vue3，去除 AntdVue 采用自定义样式，图标更改为 FontAwesome 6，将不能用的 JsDelivr 改为 Staticfile CDN
 
@@ -118,6 +118,27 @@ vf_fonts_enable: false
             []
             # Example:
             # <name>: <link-url>
+    ```
+
+-   首页文档缩略配置
+
+    一般来说，缩略展示文档只需要在文档中添加 `<!-- more -->` 即可，缩略内容在显示全文中也会出现
+
+    但考虑到不想把缩略内容放在正文里，就添加了此配置
+
+    配置在 Markdown 文件的 Front-Matter 中填写（被 `---` 括起来的内容），不想用则不用添加
+
+    例如：
+
+    ```yaml
+    ---
+    title: Title
+    date: 20xx-xx-xx xx:xx:xx
+    description:
+        - Line 1.
+        - Line 2.
+        - Line 3.
+    ---
     ```
 
 -   页脚配置
