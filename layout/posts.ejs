@@ -25,7 +25,13 @@
     </div>
     <div class="excerpt">
         <div class="content" v-pre>
-            <% if (post.excerpt.length != 0) { %>
+            <% if (post.description) { %>
+            <blockquote>
+                <% post.description.forEach(function(data) { %>
+                <p><%- data %></p>
+                <% }); %>
+            </blockquote>
+            <% } else if (post.excerpt.length != 0) { %>
             <%- post.excerpt %>
             <% } else { %>
             <%- post.content %>
