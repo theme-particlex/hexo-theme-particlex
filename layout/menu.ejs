@@ -5,7 +5,7 @@
             <span class="title"><%- config.title %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
-        <a href="<%- rootlink %><%= theme.menu[key].src %>">
+        <a href="<%= url_for(theme.menu[key].src) %>">
             <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
             <span>&ensp;<%= key %></span>
         </a>
@@ -20,7 +20,7 @@
         <transition name="slide">
         <div class="items" v-show="menu_show">
             <% Object.keys(theme.menu).forEach(key => { %>
-            <a href="<%= theme.menu[key].src %>">
+            <a href="<%= url_for(theme.menu[key].src) %>">
                 <div class="item">
                     <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
