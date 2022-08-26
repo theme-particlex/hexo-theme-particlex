@@ -126,19 +126,12 @@ vf_fonts_enable: false
 
     但考虑到不想把缩略内容放在正文里，就添加了此配置
 
-    配置在 Markdown 文件的 Front-Matter 中填写（被 `---` 括起来的内容），不想用则不用添加
+    配置在 Markdown 文件的 Front-Matter 中填写（被 `---` 括起来的内容），支持 Markdown 格式，不想用则不用添加
 
-    例如：
+    例如：（注意换行和转义 `"`）
 
     ```yaml
-    ---
-    title: Title
-    date: 20xx-xx-xx xx:xx:xx
-    description:
-        - Line 1.
-        - Line 2.
-        - Line 3.
-    ---
+    description: "text\n**strong**\n_italic_"
     ```
 
 -   页脚配置
