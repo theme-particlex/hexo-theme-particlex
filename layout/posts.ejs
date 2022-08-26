@@ -2,9 +2,7 @@
 <% site.posts.slice(0 + current, config.index_generator.per_page + current).forEach(function(post) { %>
 <div class="post">
     <a href="<%- rootlink %><%- post.path %>">
-        <h2>
-            <%- titlecase(post.title) %>
-        </h2>
+        <h2 class="post-title"><%- titlecase(post.title) %></h2>
     </a>
     <div class="category-and-date">
         <% if (post.categories.data.length != 0) { %>
