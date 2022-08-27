@@ -11,11 +11,11 @@
             <div class="info">
                 <% if(post.categories && post.categories.data.length!=0){ %>
                 <span class="category">
-                    <a href="<%- rootlink %><%= post.categories.data[0].path %>">
+                    <a href="<%- rootlink %><%- post.categories.data[0].path %>">
                         <span class="icon">
                             <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                         </span>
-                        <%- post.categories.data[0].name %>
+                        <%= post.categories.data[0].name %>
                     </a>
                 </span>
                 <% } %>
@@ -30,15 +30,15 @@
                             var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
                             var num = Math.floor(Math.random() * color.length);
                         %>
-                        <a href="<%- rootlink %><%= data.path %>" style="<%- color[num] %>">
-                            <%- data.name %>
+                        <a href="<%- rootlink %><%- data.path %>" style="<%- color[num] %>">
+                            <%= data.name %>
                         </a>
                     </span>
-                    <% }) %>
+                    <% }); %>
                 </span>
                 <% } %>
             </div>
         </div>
     </div>
-    <% }) %>
+    <% }); %>
 </div>

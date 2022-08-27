@@ -32,25 +32,25 @@
             <% } %>
             <a href="<%- rootlink %><%- page.prev_link %>">
                 <span class="page-num">
-                    <%- page.prev %>
+                    <%= page.prev %>
                 </span>
             </a>
         </span>
         <% } %>
         <span class="current">
-            <%- page.current %>
+            <%= page.current %>
         </span>
         <% if (page.current != page.total) { %>
         <span>
             <a href="<%- rootlink %><%- page.next_link %>">
                 <span class="page-num">
-                    <%- page.next %>
+                    <%= page.next %>
                 </span>
             </a>
             <% if (page.current + 2 <= page.total) { %>
             <a href="<%- rootlink %>page/<%- page.current + 2 %>">
                 <span class="page-num">
-                    <%- page.current + 2 %>
+                    <%= page.current + 2 %>
                 </span>
             </a>
             <% } %>
@@ -58,7 +58,7 @@
             <span class="page-omit">...</span>
             <a href="<%- rootlink %>page/<%- page.total %>">
                 <span class="page-num">
-                    <%- page.total %>
+                    <%= page.total %>
                 </span>
             </a>
             <% } %>

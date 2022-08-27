@@ -21,9 +21,7 @@
         pageTitle = "Archives | ";
     pageTitle += config.title;
     var rootlink = config.root;
-    site.posts.data.sort(function(a, b) {
-        return b.date - a.date;
-    })
+    site.posts.data.sort((a, b) => b.date - a.date)
 %>
 <!DOCTYPE html>
 <html lang="<%- config.language %>">
