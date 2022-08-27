@@ -30,8 +30,6 @@ const App = Vue.createApp({
     mounted() {
         if (document.getElementById("home-head"))
             document.getElementById("menu").className += " menu-color";
-        if (document.getElementsByClassName("article")[0])
-            document.body.style.backgroundColor = "#fff";
         window.addEventListener("scroll", this.handleScroll, true);
     },
     methods: {

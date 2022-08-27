@@ -8,16 +8,16 @@
         <span class="loop"></span>
         <span class="info">
             <div class="wrap">
-                <h1><%- config.title %></h1>
-                <h3><%- config.subtitle %></h3>
-                <h5><%- config.description %></h5>
+                <h1><%= config.title %></h1>
+                <h3><%= config.subtitle %></h3>
+                <h5><%= config.description %></h5>
             </div>
         </span>
     </div>
     <% } %>
 </div>
 <% wrapClass = theme.card.enable ? "" : "home-posts-wrap-no-card"; %>
-<div id="home-posts-wrap" class=<%- wrapClass %>>
+<div id="home-posts-wrap" class="<%- wrapClass %>">
     <div id="home-posts">
         <div id="posts">
             <%- include("posts") %>
