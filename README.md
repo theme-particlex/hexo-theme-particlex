@@ -103,10 +103,7 @@ vf_fonts_enable: false
         enable: true
         description: ["Description..."] # You can add more
         icon_links:
-            github:
-                name: github
-                theme: brands
-                link: https://github.com/argvchs
+            []
             # Example:
             # <name>:
             #    name: <icon-name>
