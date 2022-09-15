@@ -24,3 +24,22 @@
     gitalk.render("gitalk-container")
 </script>
 <% } %>
+
+<% if (theme.waline.enable && is_post()) { %>
+    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
+    <script>
+        Waline.init({
+            el: '#waline-container',
+            serverURL: "<%- theme.waline.serverURL %>",
+            commentCount: "<%- theme.waline.commentCount %>",
+            pageview: "<%- theme.waline.pageview %>",
+            emoji: "<%- theme.waline.emoji %>".split(','),
+            meta: ["<%- theme.waline.meta %>"],
+            requiredMeta: ["<%- theme.waline.requiredMeta %>"],
+            lang: "<%- theme.waline.lang %>",
+            wordLimit: parseInt("<%- theme.waline.wordLimit %>"),
+            pageSize: "<%- theme.waline.pageSize %>",
+            login: "<%- theme.waline.login %>",
+        });
+    </script>
+    <% } %>
