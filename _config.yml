@@ -92,9 +92,6 @@ waline:
     enable: false
     # Waline server address url, you should set this to your own link
     serverURL: 
-    # Custom locales
-    # locale:
-    #   placeholder: Welcome to comment # Comment box placeholder
 
     # If false, comment count will only be displayed in post page, not in home page
     commentCount: true

@@ -143,7 +143,7 @@ vf_fonts_enable: false
             code: 粤ICP备xxxxxx号
     ```
 
--   Gitalk
+-   Gitalk（不推荐，权限索要过高）
 
     本主题引入的是 Gitalk 评论系统，默认关闭
 
@@ -171,6 +171,55 @@ vf_fonts_enable: false
             #    clientSecret: <client-secret>
     ```
 
+-   waline 评论区
+
+    waline是一个非常安全好用的评论区系统，配置方法参见：[Yuzi0201的博客](https://blog.yuzi0201.top/posts/bcb4ff00.html "Yuzi0201的博客")
+
+    具体配置项：
+    ```yaml
+    waline:
+        # New! Whether enable this plugin
+        enable: false
+        # Waline server address url, you should set this to your own link
+        serverURL: 
+
+        # If false, comment count will only be displayed in post page, not in home page
+        commentCount: true
+
+        # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`.
+        pageview: false
+
+        # Custom emoji
+        emoji:
+            - https://unpkg.com/@waline/emojis@1.0.1/weibo
+            - https://unpkg.com/@waline/emojis@1.0.1/alus
+            - https://unpkg.com/@waline/emojis@1.0.1/bilibili
+            - https://unpkg.com/@waline/emojis@1.0.1/qq
+            - https://unpkg.com/@waline/emojis@1.0.1/tieba
+            - https://unpkg.com/@waline/emojis@1.0.1/tw-emoji
+
+        # Comment infomation, valid meta are nick, mail and link
+        meta:
+            - nick
+            - mail
+            - link
+
+        # Set required meta field, e.g.: [nick] | [nick, mail]
+        requiredMeta:
+            - nick
+
+        # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+        lang: zh-CN
+
+        # Word limit, no limit when setting to 0
+        wordLimit: 0
+
+        # Whether enable login, can choose from 'enable', 'disable' and 'force'
+        login: enable
+
+        # comment per page
+        pageSize: 10
+    ```
 ## 写在最后
 
 本项目采用 MIT 开源许可证，欢迎大家贡献，你可以随意打开一个 Issue 来进行提问，有任何改进想法都可以进行 Fork，期待您的 Pull Request
