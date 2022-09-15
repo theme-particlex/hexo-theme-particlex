@@ -45,8 +45,13 @@
     <% if (theme.gitalk.enable) { %>
     <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
     <div id="comment">
-        <div id="gitalk-container">
-        </div>
+        <div id="gitalk-container"></div>
+    </div>
+    <% } %>
+    <% if (theme.waline.enable) { %>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.9.1/waline.min.css" />
+    <div id="comment">
+        <div id="waline-container"></div>
     </div>
     <% } %>
 </div>

@@ -126,7 +126,7 @@ vf_fonts_enable: false
     例如：（注意换行和转义 `"`）
 
     ```yaml
-    description: "text\n**strong**\n_italic_"
+    description: "text\n**bold**\n_italic_"
     ```
 
 -   页脚配置
@@ -169,6 +169,39 @@ vf_fonts_enable: false
             # <www.example.com>:
             #    clientID: <client-id>
             #    clientSecret: <client-secret>
+    ```
+
+-   Waline
+
+    Waline 是一个好用的评论区系统，默认关闭
+
+    配置方法详见：[在 ParticleX 上使用 Waline | Yuzi's Blog](https://blog.yuzi0201.top/posts/bcb4ff00.html)
+
+    具体配置项：
+
+    ```yaml
+    waline:
+        enable: false
+        serverURL: # Waline server address url, you should set this to your own link
+        commentCount: true # If false, comment count will only be displayed in post page, not in home page
+        pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
+        emoji: # Custom emoji
+            - https://unpkg.com/@waline/emojis@1.0.1/weibo
+            - https://unpkg.com/@waline/emojis@1.0.1/alus
+            - https://unpkg.com/@waline/emojis@1.0.1/bilibili
+            - https://unpkg.com/@waline/emojis@1.0.1/qq
+            - https://unpkg.com/@waline/emojis@1.0.1/tieba
+            - https://unpkg.com/@waline/emojis@1.0.1/tw-emoji
+        meta: # Comment infomation, valid meta are nick, mail and link
+            - nick
+            - mail
+            - link
+        requiredMeta: # Set required meta field, e.g.: [nick] | [nick, mail]
+            - nick
+        lang: zh-CN # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+        wordLimit: 0 # Word limit, no limit when setting to 0
+        login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
+        pageSize: 10 # Comment per page
     ```
 
 ## 写在最后
