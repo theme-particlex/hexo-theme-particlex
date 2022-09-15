@@ -24,22 +24,21 @@
     gitalk.render("gitalk-container")
 </script>
 <% } %>
-
 <% if (theme.waline.enable && is_post()) { %>
-    <script src="https://unpkg.com/@waline/client@v2/dist/waline.js"></script>
-    <script>
-        Waline.init({
-            el: '#waline-container',
-            serverURL: "<%- theme.waline.serverURL %>",
-            commentCount: "<%- theme.waline.commentCount %>",
-            pageview: "<%- theme.waline.pageview %>",
-            emoji: "<%- theme.waline.emoji %>".split(','),
-            meta: "<%- theme.waline.meta %>".split(','),
-            requiredMeta: "<%- theme.waline.requiredMeta %>".split(','),
-            lang: "<%- theme.waline.lang %>",
-            wordLimit: parseInt("<%- theme.waline.wordLimit %>"),
-            pageSize: "<%- theme.waline.pageSize %>",
-            login: "<%- theme.waline.login %>",
-        });
-    </script>
-    <% } %>
+<script src="https://cdn.staticfile.org/waline/2.9.1/waline.min.js"></script>
+<script>
+    Waline.init({
+        el: '#waline-container',
+        serverURL: "<%- theme.waline.serverURL %>",
+        commentCount: "<%- theme.waline.commentCount %>",
+        pageview: "<%- theme.waline.pageview %>",
+        emoji: "<%- theme.waline.emoji %>".split(','),
+        meta: "<%- theme.waline.meta %>".split(','),
+        requiredMeta: "<%- theme.waline.requiredMeta %>".split(','),
+        lang: "<%- theme.waline.lang %>",
+        wordLimit: parseInt("<%- theme.waline.wordLimit %>"),
+        pageSize: "<%- theme.waline.pageSize %>",
+        login: "<%- theme.waline.login %>",
+    });
+</script>
+<% } %>
