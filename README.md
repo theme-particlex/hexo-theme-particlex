@@ -126,7 +126,7 @@ vf_fonts_enable: false
     例如：（注意换行和转义 `"`）
 
     ```yaml
-    description: "text\n**strong**\n_italic_"
+    description: "text\n**bold**\n_italic_"
     ```
 
 -   页脚配置
