@@ -92,9 +92,10 @@ gitalk:
 waline:
     enable: false
     serverURL: # Waline server address url, you should set this to your own link
-    locale:
-        placeholder: 欢迎评论(填写邮箱可在被回复时收到邮件提醒) # Comment box placeholder
-        #更多可替换项请查阅：https://waline.js.org/guide/client/i18n.html#locale-%E9%80%89%E9%A1%B9
+    locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
+        {}
+        # Example:
+        # placeholder: Leave a comment
     commentCount: true # If false, comment count will only be displayed in post page, not in home page
     pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
     emoji: # Custom emoji
