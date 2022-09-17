@@ -27,6 +27,10 @@
 <% if (theme.waline.enable && is_post()) { %>
 <script src="https://cdn.staticfile.org/waline/2.9.1/waline.min.js"></script>
 <script>
+    let locale = {}
+    <% Object.keys(theme.waline.locale).forEach(function (key) { %>
+    locale["<%- key %>"]="<%- theme.waline.locale[key] %>"
+    <% }) %>
     Waline.init({
         el: '#waline-container',
         serverURL: "<%- theme.waline.serverURL %>",
@@ -39,6 +43,7 @@
         wordLimit: parseInt("<%- theme.waline.wordLimit %>"),
         pageSize: "<%- theme.waline.pageSize %>",
         login: "<%- theme.waline.login %>",
+        locale
     });
 </script>
 <% } %>
