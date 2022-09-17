@@ -30,8 +30,8 @@
     Waline.init({
         el: '#waline-container',
         serverURL: "<%- theme.waline.serverURL %>",
-        commentCount: "<%- theme.waline.commentCount %>",
-        pageview: "<%- theme.waline.pageview %>",
+        commentCount: <%- theme.waline.commentCount %>,
+        pageview: <%- theme.waline.pageview %>,
         emoji: "<%- theme.waline.emoji %>".split(','),
         meta: "<%- theme.waline.meta %>".split(','),
         requiredMeta: "<%- theme.waline.requiredMeta %>".split(','),
@@ -39,6 +39,7 @@
         wordLimit: parseInt("<%- theme.waline.wordLimit %>"),
         pageSize: "<%- theme.waline.pageSize %>",
         login: "<%- theme.waline.login %>",
+        locale: <%- JSON.stringify(theme.waline.locale) %>
     });
 </script>
 <% } %>

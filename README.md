@@ -177,12 +177,16 @@ vf_fonts_enable: false
 
     配置方法详见：[在 ParticleX 上使用 Waline | Yuzi's Blog](https://blog.yuzi0201.top/posts/bcb4ff00.html)
 
-    具体配置项：
+    **注意如果不需要 Locale 配置，请在 `locale:` 后添加一个 `{}`**
 
     ```yaml
     waline:
         enable: false
         serverURL: # Waline server address url, you should set this to your own link
+        locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
+            {}
+            # Example:
+            # placeholder: Leave a comment
         commentCount: true # If false, comment count will only be displayed in post page, not in home page
         pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
         emoji: # Custom emoji
@@ -192,7 +196,7 @@ vf_fonts_enable: false
             - https://unpkg.com/@waline/emojis@1.0.1/qq
             - https://unpkg.com/@waline/emojis@1.0.1/tieba
             - https://unpkg.com/@waline/emojis@1.0.1/tw-emoji
-        meta: # Comment infomation, valid meta are nick, mail and link
+        meta: # Comment information, valid meta are nick, mail and link
             - nick
             - mail
             - link
