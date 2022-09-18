@@ -303,7 +303,8 @@ img,
 .go-post,
 .page-current,
 .all-s,
-pre .language {
+pre .language,
+pre .copyCode {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -872,6 +873,25 @@ pre .language {
     font-size: 12px;
     border-radius: 0 0 10px 10px;
 }
+.content .copyCode {
+    position: absolute;
+    cursor: pointer;
+    top: 30px;
+    padding: 10px 15px;
+    background: rgb(249, 48, 101);
+    background: linear-gradient(90deg, rgba(249, 48, 101, 1) 0%, rgba(140, 47, 237, 1) 50%, rgba(247, 26, 130, 1) 100%);
+    box-shadow: 1px 1px 0.75rem rgba(237, 110, 161, 0.302);
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+    border-radius: 10px 10px 10px 10px;
+    background-size: 200%;
+    transition: background-position 1s;
+}
+
+.content .copyCode:hover {
+    background-position: 100% 0;
+}
 .content .hljs {
     font-family: "Fira Code", monospace;
     background: none;
@@ -1281,6 +1301,9 @@ footer .footer-icon {
     .content .language {
         left: 30px;
     }
+    .content .copyCode {
+        right: 30px;
+    }
     #archives {
         width: 900px;
     }
@@ -1383,6 +1406,9 @@ footer .footer-icon {
     }
     .content .language {
         left: 5%;
+    }
+    .content .copyCode {
+        right: 5%;
     }
     #archives {
         width: 90%;
