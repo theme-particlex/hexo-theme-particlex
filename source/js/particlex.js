@@ -1,13 +1,5 @@
 hljs.highlightAll();
 hljs.configure({ ignoreUnescapedHTML: true });
-var codes = document.getElementsByTagName("pre");
-for (var i = 0; i < codes.length; i++) {
-    var lang = codes[i].firstChild.className.split(/\s+/).filter((x) => {
-        return x != "sourceCode";
-    })[0];
-    if (!lang) lang = "text";
-    codes[i].innerHTML += '<div class="language">' + lang + "</div>";
-}
 const App = Vue.createApp({
     data() {
         return {
@@ -19,18 +11,46 @@ const App = Vue.createApp({
     },
     created() {
         var that = this;
-        window.onload = function () {
+        window.addEventListener("load", () => {
             that.show_page = true;
             document.getElementById("loading").style.opacity = 0;
             setTimeout(function () {
                 document.getElementById("loading").style.display = "none";
             }, 300);
-        };
+        });
     },
     mounted() {
         if (document.getElementById("home-head"))
             document.getElementById("menu").className += " menu-color";
         window.addEventListener("scroll", this.handleScroll, true);
+        var codes = document.getElementsByTagName("pre");
+        for (var code of codes) {
+            const lang = code.firstChild.className.split(/\s+/).filter((x) => {
+                return x != "sourceCode";
+            })[0];
+            if (!lang) lang = "text";
+            let content = document.createElement("div");
+            content.classList.add("code-content");
+            content.innerHTML = code.innerHTML;
+            let language = document.createElement("div");
+            language.classList.add("language");
+            language.innerHTML = lang;
+            let copycode = document.createElement("div");
+            copycode.classList.add("copycode");
+            copycode.innerHTML =
+                '<i class="fa-solid fa-copy"></i><i class="fa-solid fa-clone"></i>';
+            copycode.addEventListener("click", async function () {
+                await navigator.clipboard.writeText(
+                    this.parentElement.firstChild.innerText
+                );
+                copycode.classList.add("copied");
+                setTimeout(() => {
+                    copycode.classList.remove("copied");
+                }, 1500);
+            });
+            code.innerHTML = "";
+            code.append(content, language, copycode);
+        }
     },
     methods: {
         home_click() {
