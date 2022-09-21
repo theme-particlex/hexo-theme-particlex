@@ -29,9 +29,9 @@ const App = Vue.createApp({
                 return x != "sourceCode";
             })[0];
             if (!lang) lang = "text";
-            let inner = document.createElement("div");
-            inner.classList.add("code-content");
-            inner.innerHTML = code.innerHTML;
+            let content = document.createElement("div");
+            content.classList.add("code-content");
+            content.innerHTML = code.innerHTML;
             let language = document.createElement("div");
             language.classList.add("language");
             language.innerHTML = lang;
@@ -49,7 +49,7 @@ const App = Vue.createApp({
                 }, 1500);
             });
             code.innerHTML = "";
-            code.append(inner, language, copycode);
+            code.append(content, language, copycode);
         }
     },
     methods: {
