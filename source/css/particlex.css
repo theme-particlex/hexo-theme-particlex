@@ -304,7 +304,7 @@ img,
 .page-current,
 .all-s,
 pre .language,
-pre .copyCode {
+pre .copycode {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -786,11 +786,13 @@ pre .copyCode {
 .content pre {
     box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
     border: 1px solid #ebeef5;
-    padding: 50px 30px 20px;
     margin: 25px 0;
     border-radius: 15px;
-    overflow: auto;
     position: relative;
+}
+.content .code-content {
+    overflow: auto;
+    padding: 50px 30px 20px;
 }
 .content pre code {
     background: none;
@@ -862,6 +864,7 @@ pre .copyCode {
     font-family: "Fira Code", monospace;
     position: absolute;
     top: 0px;
+    left: 30px;
     padding: 10px 15px;
     background: -webkit-linear-gradient(to right, #ed6ea0 0, #ec8c69 100%);
     background: -moz-linear-gradient(to right, #ed6ea0 0, #ec8c69 100%);
@@ -873,24 +876,26 @@ pre .copyCode {
     font-size: 12px;
     border-radius: 0 0 10px 10px;
 }
-.content .copyCode {
+.content .copycode {
     position: absolute;
-    cursor: pointer;
-    top: 30px;
-    padding: 10px 15px;
-    background: rgb(249, 48, 101);
-    background: linear-gradient(90deg, rgba(249, 48, 101, 1) 0%, rgba(140, 47, 237, 1) 50%, rgba(247, 26, 130, 1) 100%);
-    box-shadow: 1px 1px 0.75rem rgba(237, 110, 161, 0.302);
-    color: #fff;
-    font-weight: bold;
-    font-size: 12px;
-    border-radius: 10px 10px 10px 10px;
-    background-size: 200%;
-    transition: background-position 1s;
+    top: 0;
+    right: 0;
+    font-size: large;
 }
-
-.content .copyCode:hover {
-    background-position: 100% 0;
+.content .copycode:hover {
+    opacity: 0.8;
+}
+.content .copycode svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 15px;
+}
+.content .copycode.copied svg:first-child {
+    opacity: 0;
+}
+.content .copycode:not(.copied) svg:last-child {
+    opacity: 0;
 }
 .content .hljs {
     font-family: "Fira Code", monospace;
@@ -1298,12 +1303,6 @@ footer .footer-icon {
     .article {
         width: 900px;
     }
-    .content .language {
-        left: 30px;
-    }
-    .content .copyCode {
-        right: 30px;
-    }
     #archives {
         width: 900px;
     }
@@ -1403,12 +1402,6 @@ footer .footer-icon {
     }
     .article {
         width: 85%;
-    }
-    .content .language {
-        left: 5%;
-    }
-    .content .copyCode {
-        right: 5%;
     }
     #archives {
         width: 90%;
