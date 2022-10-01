@@ -140,7 +140,7 @@ vf_fonts_enable: false
         since: 20xx
         ICP:
             enable: true
-            code: 粤ICP备xxxxxx号
+            code:
     ```
 
 -   Gitalk
