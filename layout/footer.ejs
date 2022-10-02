@@ -13,9 +13,14 @@
                 href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
         <% if (theme.footer.ICP.enable) { %>
         <div>
-            备案号：<a href="http://beian.miit.gov.cn/">
-                <%= theme.footer.ICP.code %>
+            备案号：
+            <% if (theme.footer.ICP.link) { %>
+            <a href="<%= theme.footer.ICP.link %>">
+            <%= theme.footer.ICP.code %>
             </a>
+            <% } else { %>
+            <%= theme.footer.ICP.code %>
+            <% } %>
         </div>
         <% } %>
     </div>
