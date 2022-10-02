@@ -68,6 +68,7 @@ footer:
     ICP:
         enable: false
         code:
+        link:
 
 # Gitalk
 # https://github.com/gitalk/gitalk

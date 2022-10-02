@@ -139,8 +139,9 @@ vf_fonts_enable: false
     footer:
         since: 20xx
         ICP:
-            enable: true
+            enable: false
             code:
+            link:
     ```
 
 -   Gitalk
