@@ -27,8 +27,7 @@ const App = Vue.createApp({
         for (var code of codes) {
             const lang = code.firstChild.className.split(/\s+/).filter((x) => {
                 return x != "sourceCode";
-            })[0];
-            if (!lang) lang = "text";
+            })[0] || "text";
             let content = document.createElement("div");
             content.classList.add("code-content");
             content.innerHTML = code.innerHTML;
