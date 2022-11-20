@@ -4,17 +4,12 @@
         imglist = document.querySelectorAll(".article .content img");
     function show(src) {
         imgcontent.setAttribute("src", src);
-        imgshow.style.display = "flex";
-        setTimeout(function () {
-            imgshow.style.opacity = 1;
-        }, 5);
+        imgshow.style.opacity = 1;
+        imgshow.style.pointerEvents = "auto";
     }
     function hide() {
         imgshow.style.opacity = 0;
-        setTimeout(function () {
-            imgshow.removeAttribute("style");
-            document.body.removeAttribute("style");
-        }, 250);
+        imgshow.style.pointerEvents = "none";
     }
     for (var img of imglist)
         img.addEventListener("click", function () {

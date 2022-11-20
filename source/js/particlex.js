@@ -14,9 +14,10 @@ const App = Vue.createApp({
         window.addEventListener("load", () => {
             that.show_page = true;
             document.getElementById("loading").style.opacity = 0;
+            document.getElementById("loading").style.pointerEvents = "none";
             setTimeout(function () {
-                document.getElementById("loading").style.display = "none";
-            }, 300);
+                document.body.removeChild(document.getElementById("loading"));
+            }, 250);
         });
     },
     mounted() {
@@ -25,9 +26,10 @@ const App = Vue.createApp({
         window.addEventListener("scroll", this.handleScroll, true);
         var codes = document.getElementsByTagName("pre");
         for (var code of codes) {
-            const lang = code.firstChild.className.split(/\s+/).filter((x) => {
-                return x != "sourceCode";
-            })[0] || "text";
+            const lang =
+                code.firstChild.className.split(/\s+/).filter(x => {
+                    return x != "sourceCode";
+                })[0] || "text";
             let content = document.createElement("div");
             content.classList.add("code-content");
             content.innerHTML = code.innerHTML;
@@ -39,9 +41,7 @@ const App = Vue.createApp({
             copycode.innerHTML =
                 '<i class="fa-solid fa-copy"></i><i class="fa-solid fa-clone"></i>';
             copycode.addEventListener("click", async function () {
-                await navigator.clipboard.writeText(
-                    this.parentElement.firstChild.innerText
-                );
+                await navigator.clipboard.writeText(this.parentElement.firstChild.innerText);
                 copycode.classList.add("copied");
                 setTimeout(() => {
                     copycode.classList.remove("copied");
@@ -67,8 +67,7 @@ const App = Vue.createApp({
                 that.menu_show = false;
             } else menu.className = "show-menu";
             if (document.getElementById("home-posts-wrap"))
-                if (new_local <= window.innerHeight - 100)
-                    menu.className += " menu-color";
+                if (new_local <= window.innerHeight - 100) menu.className += " menu-color";
             this.bar_local = new_local;
         },
     },
