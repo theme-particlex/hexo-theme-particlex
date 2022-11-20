@@ -1196,13 +1196,13 @@ footer .footer-icon {
 }
 #img_show {
     position: fixed !important;
-    display: none;
+    display: flex;
     z-index: 205;
     left: 0;
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #0003;
+    background-color: #fffc;
     opacity: 0;
     -webkit-transition: opacity 0.25s;
     -moz-transition: opacity 0.25s;
@@ -1210,14 +1210,15 @@ footer .footer-icon {
     transition: opacity 0.25s;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
 }
 #img_content {
     position: relative;
     margin: auto;
     max-width: 95vw;
     max-height: 95vh;
-    border-radius: 5px;
-    border: 1px solid #0002;
+    border-radius: 20px;
+    box-shadow: 0 0 50px 10px #d9d9d980;
 }
 ::-webkit-scrollbar {
     width: 10px;
