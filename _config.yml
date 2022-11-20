@@ -1,13 +1,13 @@
-# Theme Github link: https://github.com/argvchs/hexo-theme-particlex
+# https://github.com/argvchs/hexo-theme-particlex
 # Developer: argvchs
 
-# avatar image url
+# Avatar image url
 head_img:
 
-# home page head info block
+# Home page head info block
 head_block_enable: true
 
-# home page head background style
+# Home page head background style
 home_background:
 
 # WARNING! vf_fonts (variable fonts) feature is EXPERIMENTAL
@@ -17,7 +17,7 @@ vf_fonts_enable: false
 # ParticleX theme icon is adopts the font awesome 6
 # Link: https://fontawesome.com/search/
 
-# main menu navigation
+# Main menu navigation
 menu:
     home:
         name: house
@@ -45,10 +45,10 @@ menu:
     #     theme: <icon-theme>
     #     src: <link-url>
 
-# side info card
+# Side info card
 card:
     enable: true
-    description: ["Description..."] # You can add more
+    description: ["Description", "..."] # You can add more
     icon_links:
         []
         # Example:
@@ -61,7 +61,7 @@ card:
         # Example:
         # <name>: <link-url>
 
-# footer info
+# Footer info
 footer:
     since: 20xx
     # Customize the server domain name ICP

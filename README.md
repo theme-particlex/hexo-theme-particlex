@@ -96,12 +96,14 @@ vf_fonts_enable: false
 
     和导航栏配置差不多
 
+    `description` 支持 Markdown 格式
+
     **如果图标链接或友链为空，请在 `icon_links:` 或 `friend_links:` 后添加一个 `[]`**
 
     ```yaml
     card:
         enable: true
-        description: ["Description..."] # You can add more
+        description: ["Description", "..."] # You can add more
         icon_links:
             []
             # Example:
