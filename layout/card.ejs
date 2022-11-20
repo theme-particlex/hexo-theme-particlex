@@ -9,7 +9,7 @@
         <div class="descriptions">
             <% theme.card.description.forEach(function(desc) { %>
             <div class="description">
-                <%= desc %>
+                <%- markdown(desc) %>
             </div>
             <% }); %>
         </div>

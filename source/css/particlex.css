@@ -300,11 +300,13 @@ blockquote {
 button,
 img,
 #home-head,
+#menu,
 .go-post,
 .page-current,
 .all-s,
 pre .language,
-pre .copycode {
+pre .copycode,
+.friend-link a {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
@@ -638,9 +640,10 @@ pre .copycode {
 }
 #home-card .card-style .name {
     margin: 20px auto;
-    font-size: 17px;
+    font-size: 16px;
+    font-weight: bold;
     color: #1e3e3f;
-    text-transform: capitalize;
+    text-transform: uppercase;
 }
 #home-card .card-style .descriptions {
     margin: 20px auto;
@@ -667,7 +670,7 @@ pre .copycode {
     margin: 5px;
 }
 #home-card .card-style .friend-links {
-    margin: 30px auto;
+    margin: 20px auto;
 }
 #home-card .card-style .friend-links .friend-link {
     margin: 5px auto;
@@ -680,18 +683,13 @@ pre .copycode {
     color: #5c6b72;
     font-size: 16px;
     border-radius: 15px;
+    background-blend-mode: darken;
 }
 #home-card .card-style .friend-links .friend-link a:hover {
-    background: -webkit-linear-gradient(120deg, #96ceff 0, #ff9edb 100%);
-    background: -moz-linear-gradient(120deg, #96ceff 0, #ff9edb 100%);
-    background: -o-linear-gradient(120deg, #96ceff 0, #ff9edb 100%);
-    background: linear-gradient(120deg, #96ceff 0, #ff9edb 100%);
     color: #fff;
+    background: #66afef;
 }
 #menu {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
     z-index: 105;
     position: fixed;
     width: 100%;
@@ -1102,11 +1100,12 @@ footer .footer-icon {
     top: -50px;
 }
 .page-num,
-.icon-link a {
-    -webkit-transition: background 0.25s, color 0.25s;
-    -moz-transition: background 0.25s, color 0.25s;
-    -o-transition: background 0.25s, color 0.25s;
-    transition: background 0.25s, color 0.25s;
+.icon-link a,
+.friend-link a {
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
 }
 .timeline {
     margin-bottom: 30px;
