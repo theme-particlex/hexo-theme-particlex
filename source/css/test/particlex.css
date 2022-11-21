@@ -886,7 +886,7 @@ pre .copycode,
     position: absolute;
     top: 0;
     right: 0;
-    font-size: large;
+    color: #5c6b72;
 }
 .content .copycode:hover {
     opacity: 0.8;
@@ -896,12 +896,19 @@ pre .copycode,
     top: 0;
     right: 0;
     padding: 15px;
+    -webkit-transition: transform 0.25s;
+    -moz-transition: transform 0.25s;
+    -o-transition: transform 0.25s;
+    transition: transform 0.25s;
 }
 .content .copycode.copied svg:first-child {
     opacity: 0;
 }
 .content .copycode:not(.copied) svg:last-child {
     opacity: 0;
+}
+.content .copycode.copied svg {
+    transform: scale(1.25);
 }
 .content .hljs {
     font-family: "Fira Code", monospace;
