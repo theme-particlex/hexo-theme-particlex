@@ -1,5 +1,8 @@
 hljs.highlightAll();
 hljs.configure({ ignoreUnescapedHTML: true });
+function timeout(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 const App = Vue.createApp({
     data() {
         return {
@@ -27,7 +30,7 @@ const App = Vue.createApp({
         var codes = document.getElementsByTagName("pre");
         for (var code of codes) {
             const lang =
-                code.firstChild.className.split(/\s+/).filter(x => {
+                code?.firstChild.className.split(/\s+/).filter(x => {
                     return x != "sourceCode";
                 })[0] || "text";
             let content = document.createElement("div");
@@ -40,13 +43,23 @@ const App = Vue.createApp({
             copycode.classList.add("copycode");
             copycode.innerHTML =
                 '<i class="fa-solid fa-copy"></i><i class="fa-solid fa-clone"></i>';
-            copycode.addEventListener("click", async function () {
-                await navigator.clipboard.writeText(this.parentElement.firstChild.innerText);
-                copycode.classList.add("copied");
-                setTimeout(() => {
-                    copycode.classList.remove("copied");
-                }, 1500);
-            });
+            copycode.addEventListener(
+                "click",
+                (function () {
+                    let copying = false;
+                    return async function () {
+                        if (copying) return;
+                        copying = true;
+                        copycode.classList.add("copied");
+                        await navigator.clipboard.writeText(
+                            this.parentElement.firstChild.innerText
+                        );
+                        await timeout(1000);
+                        copycode.classList.remove("copied");
+                        copying = false;
+                    };
+                })()
+            );
             code.innerHTML = "";
             code.append(content, language, copycode);
         }
