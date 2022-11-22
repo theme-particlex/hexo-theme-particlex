@@ -205,18 +205,16 @@ body {
     font-family: "Poppins", "Noto Sans SC", sans-serif;
     font-size: 14px;
     font-weight: 500;
-    scrollbar-color: #8ab5ff #e6efff;
-    scrollbar-width: 8px;
     overflow-x: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    -ms-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 * {
     margin: 0;
     padding: 0;
     word-wrap: break-word;
+    scrollbar-width: 0;
 }
 ul {
     margin-top: 15px !important;
@@ -782,7 +780,7 @@ pre .copycode,
     color: #fff !important;
 }
 .content code {
-    font-family: "Fira Code", monospace;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
     background: #bddcf76b;
     padding: 4px 8px;
     border-radius: 4px;
@@ -867,7 +865,7 @@ pre .copycode,
     display: none;
 }
 .content .language {
-    font-family: "Fira Code", monospace;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
     position: absolute;
     top: 0;
     left: 30px;
@@ -911,7 +909,7 @@ pre .copycode,
     transform: scale(1.25);
 }
 .content .hljs {
-    font-family: "Fira Code", monospace;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
     background: none;
     line-height: 2;
     font-size: 13px;
@@ -1115,7 +1113,13 @@ footer .footer-icon {
     transition: all 0.25s;
 }
 .timeline {
+    position: relative;
     margin-bottom: 30px;
+    height: 150px;
+    -webkit-transition: margin-top 0.5s, opacity 0.25s;
+    -moz-transition: margin-top 0.5s, opacity 0.25s;
+    -o-transition: margin-top 0.5s, opacity 0.25s;
+    transition: margin-top 0.5s, opacity 0.25s;
 }
 .timeline-content {
     margin-left: 17.5px;
@@ -1132,12 +1136,48 @@ footer .footer-icon {
     box-shadow: 0 2px 8px #00000017;
 }
 .timeline-tail {
-    float: left;
+    position: absolute;
     width: 7px;
     height: 7px;
     background: #fff;
     border: 2px solid #a5c2f5;
     border-radius: 50%;
+}
+.search-bar {
+    display: block;
+    margin: 0 auto 50px;
+    width: 100%;
+    height: 50px;
+    text-indent: 20px;
+    color: #000;
+    background: #f6f6f6;
+    border: 1px solid #00000017;
+    border-radius: 50px;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
+    font-size: 15px;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+.search-bar:hover,
+.search-bar:focus {
+    outline: none;
+    background: #fbfbfb;
+    box-shadow: 0 2px 8px #00000017;
+}
+.search-mask {
+    margin: auto;
+    margin-top: -125px;
+    margin-bottom: -25px;
+    width: 100%;
+    height: 150px;
+    background: #f6f8fa;
+}
+.timeline.hide {
+    opacity: 0;
+    pointer-events: none;
+    margin-top: -180px;
 }
 .math .MathJax svg {
     vertical-align: baseline !important;
@@ -1228,17 +1268,8 @@ footer .footer-icon {
     box-shadow: 0 0 50px 10px #d9d9d980;
 }
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #e6efff;
-    border-radius: 100px;
-}
-::-webkit-scrollbar-thumb {
-    background: #8ab5ff;
-    border-radius: 100px;
-    border: 3px solid #e6efff;
+    width: 0;
+    height: 0;
 }
 ::selection {
     background-color: #edf7ff;
@@ -1339,6 +1370,9 @@ footer .footer-icon {
     }
     #home-card {
         display: none;
+    }
+    #archives {
+        width: 850px;
     }
 }
 @media (max-width: 900px) {

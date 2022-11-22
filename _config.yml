@@ -70,6 +70,10 @@ footer:
         code:
         link:
 
+search:
+    enable: false
+    path: # Default /search.json
+
 # Gitalk
 # https://github.com/gitalk/gitalk
 gitalk:

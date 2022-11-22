@@ -146,6 +146,18 @@ vf_fonts_enable: false
             link:
     ```
 
+-   搜索
+
+    默认关闭，嵌入到 Archives 中，搜索数据是用 [Hexo-Generator-Search-Lite](https://github.com/argvchs/hexo-generator-search-lite) 生成
+
+    目前只支持搜索文档的标题 Tag Category（我太弱了）
+
+    ```yaml
+    search:
+        enable: false
+        path: # Default /search.json
+    ```
+
 -   Gitalk
 
     本主题引入的是 Gitalk 评论系统，默认关闭

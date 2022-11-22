@@ -1,7 +1,29 @@
 <% var rootlink = config.root; %>
+<% if (theme.search.enable) { %>
+<script src="<%- rootlink %>js/searcher.js"></script>
+<script>
+    const searcher = new Searcher("<%- config.root + (theme.search.path || "search.json") %>");
+    searcher.init().then(() => {
+        let input = document.getElementsByClassName("search-bar")[0];
+        let timeline = document.getElementsByClassName("timeline");
+        input.addEventListener("input", () => {
+            let result = searcher.search(input.value).map(e => e.path);
+            for (let t of timeline)
+                if (result.indexOf(t.getAttribute("path")) == -1)
+                    t.classList.add("hide");
+                else
+                    t.classList.remove("hide");
+        });
+    });
+</script>
+<% } %>
 <div id="archives">
-    <% site.posts.forEach(function(post){ %>
-    <div class="timeline">
+    <% if (theme.search.enable) { %>
+    <div class="search-mask"></div>
+    <input class="search-bar" placeholder="Search...">
+    <% } %>
+    <% site.posts.forEach(function(post, id){ %>
+    <div class="timeline" path="<%- rootlink %><%- post.path %>" style="z-index:-<%= id + 1 %>">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
             <div class="item-time"><%- date(post.date, "YYYY/M/D") %></div>
