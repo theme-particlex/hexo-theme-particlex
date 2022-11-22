@@ -688,7 +688,7 @@ pre .copycode,
     background: #66afef;
 }
 #menu {
-    z-index: 105;
+    z-index: 10005;
     position: fixed;
     width: 100%;
     line-height: 50px;
@@ -736,13 +736,13 @@ pre .copycode,
     text-align: center;
 }
 #menu .phone-menu .title {
-    z-index: 104;
+    z-index: 10004;
     cursor: pointer;
     color: #555;
 }
 #menu .phone-menu .items {
     padding: 10px 0 20px;
-    z-index: 103;
+    z-index: 10003;
 }
 #menu .phone-menu .items a {
     color: #555;
@@ -1144,6 +1144,7 @@ footer .footer-icon {
     border-radius: 50%;
 }
 .search-bar {
+    position: relative;
     display: block;
     margin: 0 auto 50px;
     width: 100%;
@@ -1167,6 +1168,7 @@ footer .footer-icon {
     box-shadow: 0 2px 8px #00000017;
 }
 .search-mask {
+    position: relative;
     margin: auto;
     margin-top: -125px;
     margin-bottom: -25px;
@@ -1176,7 +1178,6 @@ footer .footer-icon {
 }
 .timeline.hide {
     opacity: 0;
-    pointer-events: none;
     margin-top: -180px;
 }
 .math .MathJax svg {
@@ -1244,7 +1245,7 @@ footer .footer-icon {
 #img_show {
     position: fixed !important;
     display: flex;
-    z-index: 205;
+    z-index: 10006;
     left: 0;
     top: 0;
     width: 100vw;

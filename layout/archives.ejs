@@ -19,11 +19,11 @@
 <% } %>
 <div id="archives">
     <% if (theme.search.enable) { %>
-    <div class="search-mask"></div>
-    <input class="search-bar" placeholder="Search...">
+    <div class="search-mask" style="z-index: <%= site.posts.length + 1 %>"></div>
+    <input class="search-bar" placeholder="Search..." style="z-index: <%= site.posts.length + 2 %>">
     <% } %>
     <% site.posts.forEach(function(post, id){ %>
-    <div class="timeline" path="<%- rootlink %><%- post.path %>" style="z-index:-<%= id + 1 %>">
+    <div class="timeline" path="<%- rootlink %><%- post.path %>" style="z-index: <%= site.posts.length - id %>">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
             <div class="item-time"><%- date(post.date, "YYYY/M/D") %></div>
