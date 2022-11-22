@@ -16,22 +16,16 @@ const searcher = {
                 });
         });
     },
-    procstring(str) {
-        return str.toLowerCase().replace(/\s+/g, "");
-    },
-    match(str) {
-        return this.procstring(str).indexOf(this.procstring(this.input.value)) != -1;
+    match(str, proc) {
+        return str.indexOf(proc) != -1;
     },
     update() {
-        let res = [];
-        if (this.procstring(this.input.value) == "") res = this.data.map(i => i.path);
+        let res = [],
+            proc = this.input.value.toLowerCase().replace(/\s+/g, "");
+        if (!proc) res = this.data.map(i => i.path);
         else
             this.data.map(data => {
-                let flag = false;
-                if (this.match(data.title)) flag = true;
-                for (let i of data.tags) if (this.match(i.name)) flag = true;
-                for (let i of data.categories) if (this.match(i.name)) flag = true;
-                if (flag) res.push(data.path);
+                if (this.match(data.sdata, proc)) res.push(data.path);
             });
         for (let line of this.timeline)
             if (res.indexOf(line.getAttribute("path")) == -1) {
