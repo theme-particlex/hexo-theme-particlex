@@ -155,7 +155,7 @@ vf_fonts_enable: false
     ```yaml
     search:
         enable: false
-        path: # Default /search.json
+        path: # Default: search.json
     ```
 
 -   Gitalk
