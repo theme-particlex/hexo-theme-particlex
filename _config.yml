@@ -72,7 +72,7 @@ footer:
 
 search:
     enable: false
-    path: # Default /search.json
+    path: # Default: search.json
 
 # Gitalk
 # https://github.com/gitalk/gitalk
