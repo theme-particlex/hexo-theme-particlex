@@ -6,13 +6,21 @@
     searcher.init().then(() => {
         let input = document.getElementsByClassName("search-bar")[0];
         let timeline = document.getElementsByClassName("timeline");
+        function hide(e) {
+            e.style.opacity = 0;
+            e.style.pointerEvents = "none";
+            e.style.marginTop = -e.offsetHeight - 30 + "px";
+        }
+        function show(e) {
+            e.style.opacity = 1;
+            e.style.pointerEvents = "";
+            e.style.marginTop = "";
+        }
         input.addEventListener("input", () => {
             let result = searcher.search(input.value).map(e => e.path);
             for (let t of timeline)
-                if (result.indexOf(t.getAttribute("path")) == -1)
-                    t.classList.add("hide");
-                else
-                    t.classList.remove("hide");
+                if (result.indexOf(t.getAttribute("path")) == -1) hide(t);
+                else show(t);
         });
     });
 </script>
