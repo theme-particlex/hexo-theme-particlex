@@ -4,7 +4,7 @@
 
 原来用的是 Vue2 + AntdVue1，现更新到 Vue3，去除 AntdVue 采用自定义样式，图标更改为 FontAwesome 6，将不能用的 JsDelivr 改为 Staticfile CDN
 
-吐槽一句：我改原项目 README 的时候看到的，看：
+我改原项目 `README.md` 的时候看到一句：
 
 > 目前有 full、night 和 maiden **两个**主题样式
 
