@@ -11,14 +11,14 @@
         </a>
         <% }); %>
     </div>
-    <div :class="'phone-menu ' + menu_show" id="phone-menu">
-        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
-        <div :class="'title'" @click="menu_show = !menu_show">
+    <div :class="'phone-menu ' + menushow" id="phone-menu">
+        <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
+        <div :class="'title'" @click="menushow = !menushow">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;<%- config.title %></span>
         </div>
         <transition name="slide">
-        <div class="items" v-show="menu_show">
+        <div class="items" v-show="menushow">
             <% Object.keys(theme.menu).forEach(key => { %>
             <a href="<%= url_for(theme.menu[key].src) %>">
                 <div class="item">

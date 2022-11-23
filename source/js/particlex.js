@@ -6,16 +6,16 @@ function timeout(ms) {
 const App = Vue.createApp({
     data() {
         return {
-            show_page: false,
-            menu_show: false,
-            card_top: 100,
-            bar_local: 0,
+            showpage: false,
+            menushow: false,
+            cardtop: 100,
+            barlocal: 0,
         };
     },
     created() {
-        var that = this;
+        let that = this;
         window.addEventListener("load", () => {
-            that.show_page = true;
+            that.showpage = true;
             document.getElementById("loading").style.opacity = 0;
             document.getElementById("loading").style.pointerEvents = "none";
             setTimeout(function () {
@@ -27,8 +27,8 @@ const App = Vue.createApp({
         if (document.getElementById("home-head"))
             document.getElementById("menu").className += " menu-color";
         window.addEventListener("scroll", this.handleScroll, true);
-        var codes = document.getElementsByTagName("pre");
-        for (var code of codes) {
+        let codes = document.getElementsByTagName("pre");
+        for (let code of codes) {
             const lang =
                 code?.firstChild.className.split(/\s+/).filter(x => {
                     return x != "sourceCode";
@@ -72,16 +72,16 @@ const App = Vue.createApp({
             });
         },
         handleScroll() {
-            var new_local = document.documentElement.scrollTop;
-            var menu = document.getElementById("menu");
-            var that = this;
-            if (this.bar_local < new_local) {
+            let newlocal = document.documentElement.scrollTop;
+            let menu = document.getElementById("menu");
+            let that = this;
+            if (this.barlocal < newlocal) {
                 menu.className = "hidden-menu";
-                that.menu_show = false;
+                that.menushow = false;
             } else menu.className = "show-menu";
             if (document.getElementById("home-posts-wrap"))
-                if (new_local <= window.innerHeight - 100) menu.className += " menu-color";
-            this.bar_local = new_local;
+                if (newlocal <= window.innerHeight - 100) menu.className += " menu-color";
+            this.barlocal = newlocal;
         },
     },
 });
