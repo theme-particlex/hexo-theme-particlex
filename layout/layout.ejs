@@ -32,10 +32,10 @@
         <meta name="author" content="<%- config.author %>">
         <meta name="description" content="<%- config.description %>">
         <meta name="keywords" content="<%- config.keywords %>">
-        <link rel="icon" href="<%- theme.head_img %>">
+        <link rel="icon" href="<%- theme.avatar %>">
         <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
         <script src="https://cdn.staticfile.org/font-awesome/6.2.0/js/all.min.js"></script>
-        <% if (theme.vf_fonts_enable) { %>
+        <% if (theme.vfonts_enable) { %>
         <link rel="stylesheet" href="<%- rootlink %>css/test/fonts.min.css">
         <link rel="stylesheet" href="<%- rootlink %>css/test/particlex.css">
         <% } else { %>
@@ -51,8 +51,8 @@
             <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
             <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
             <transition name="into">
-                <div v-show="show_page" style="display: -not-none">
-                    <div id="menu_show">
+                <div v-show="showpage" style="display: -not-none">
+                    <div id="menushow">
                         <%- include("menu") %>
                     </div>
                     <div id="main">
