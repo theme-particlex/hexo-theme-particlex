@@ -92,6 +92,23 @@ gitalk:
         #    clientID: <client-id>
         #    clientSecret: <client-secret>
 
+# Giscus
+# https://github.com/giscus/giscus
+giscus:
+    enable: false
+    repo:
+    repoID:
+    category:
+    categoryID:
+    mapping: pathname
+    strict: 0
+    reactionsEnabled: 1
+    emitMetadata: 0
+    inputPosition: bottom
+    theme: preferred_color_scheme
+    lang: zh-CN
+    crossorigin: anonymous
+
 # Waline
 # https://github.com/walinejs/waline
 waline:

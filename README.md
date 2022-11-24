@@ -162,7 +162,7 @@ vfonts_enable: false
 
 -   Gitalk
 
-    本主题引入的是 Gitalk 评论系统，默认关闭
+    Gitalk 是一个基于 Github Issue 和 Preact 的评论系统
 
     考虑到博客可能部署到多个网站同步评论，但 OAuth APP 只能有一个回调 URL，所以添加了 `sites` 参数用于其他网站的评论，请注册多个 Oauth APP
 
@@ -188,9 +188,32 @@ vfonts_enable: false
             #    clientSecret: <client-secret>
     ```
 
+-   Giscus
+
+    Giscus 是一个由 GitHub Discussions 支持的评论系统
+
+    在 [giscus.app](https://giscus.app) 配置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可
+
+    ```yaml
+    giscus:
+        enable: false
+        repo:
+        repoID:
+        category:
+        categoryID:
+        mapping: pathname
+        strict: 0
+        reactionsEnabled: 1
+        emitMetadata: 0
+        inputPosition: bottom
+        theme: preferred_color_scheme
+        lang: zh-CN
+        crossorigin: anonymous
+    ```
+
 -   Waline
 
-    Waline 是一个好用的评论区系统，默认关闭
+    Waline 是一个简单、安全的评论系统
 
     配置方法详见：[在 ParticleX 上使用 Waline | Yuzi's Blog](https://blog.yuzi0201.top/posts/bcb4ff00.html)
 
