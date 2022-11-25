@@ -1,8 +1,7 @@
-<% var rootlink = config.root; %> 
 <div class="page-current">
     <div class="prev">
         <% if (page.current != 1) { %>
-        <a href="<%- rootlink %><%- page.prev_link %>">
+        <a href="<%- url_for(page.prev_link) %>">
             <span class="page-num">
                 <i class="fa-solid fa-caret-left fa-fw"></i>
             </span>
@@ -13,24 +12,24 @@
         <% if (page.current != 1) { %>
         <span>
             <% if (page.current - 3 >= 1) { %>
-            <a href="<%- rootlink %>"><span class="page-num">1</span></a>
+            <a href="<%- config.root %>"><span class="page-num">1</span></a>
             <span class="page-omit">...</span>
             <% } %>
             <% if (page.current - 2 >= 1) { %>
                 <% if (page.current - 2 == 1) { %>
-                <a href="<%- rootlink %>">
+                <a href="<%- config.root %>">
                     <span class="page-num">1</span>
                 </a>
                 <% } %>
                 <% if (page.current - 2 != 1) { %>
-                <a href="<%- rootlink %>page/<%= page.current-2 %>">
+                <a href="<%- url_for("page/" + (page.current - 2)) %>">
                     <span class="page-num">
-                        <%= page.current-2 %>
+                        <%= page.current - 2 %>
                     </span>
                 </a>
                 <% } %>
             <% } %>
-            <a href="<%- rootlink %><%- page.prev_link %>">
+            <a href="<%- url_for(page.prev_link) %>">
                 <span class="page-num">
                     <%= page.prev %>
                 </span>
@@ -42,13 +41,13 @@
         </span>
         <% if (page.current != page.total) { %>
         <span>
-            <a href="<%- rootlink %><%- page.next_link %>">
+            <a href="<%- url_for(page.next_link) %>">
                 <span class="page-num">
                     <%= page.next %>
                 </span>
             </a>
             <% if (page.current + 2 <= page.total) { %>
-            <a href="<%- rootlink %>page/<%- page.current + 2 %>">
+            <a href="<%- url_for("page/" + (page.current + 2)) %>">
                 <span class="page-num">
                     <%= page.current + 2 %>
                 </span>
@@ -56,7 +55,7 @@
             <% } %>
             <% if (page.current + 3 <= page.total) { %>
             <span class="page-omit">...</span>
-            <a href="<%- rootlink %>page/<%- page.total %>">
+            <a href="<%- url_for("page/" + page.total) %>">
                 <span class="page-num">
                     <%= page.total %>
                 </span>
@@ -67,7 +66,7 @@
     </div>
     <div class="next">
         <% if (page.current != page.total) { %>
-        <a href="<%- rootlink %><%- page.next_link %> ">
+        <a href="<%- url_for(page.next_link) %> ">
             <span class="page-num">
                 <i class="fa-solid fa-caret-right fa-fw"></i>
             </span>

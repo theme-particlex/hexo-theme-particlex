@@ -1,7 +1,6 @@
-<% var rootlink = config.root; %> 
 <nav id="menu">
     <div class="desktop-menu">
-        <a href="<%- rootlink %>">
+        <a href="<%- config.root %>">
             <span class="title"><%- config.title %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
@@ -13,7 +12,7 @@
     </div>
     <div :class="'phone-menu ' + menushow" id="phone-menu">
         <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
-        <div :class="'title'" @click="menushow = !menushow">
+        <div class="title" @click="menushow = !menushow">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;<%- config.title %></span>
         </div>
