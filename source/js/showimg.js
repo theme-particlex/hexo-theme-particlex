@@ -5,11 +5,11 @@
     function show(src) {
         imgcontent.setAttribute("src", src);
         imgshow.style.opacity = 1;
-        imgshow.style.pointerEvents = "auto";
+        imgshow.style.visibility = "visible";
     }
     function hide() {
         imgshow.style.opacity = 0;
-        imgshow.style.pointerEvents = "none";
+        imgshow.style.visibility = "hidden";
     }
     for (let img of imglist)
         img.addEventListener("click", function () {
