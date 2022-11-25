@@ -1,8 +1,6 @@
 hljs.highlightAll();
 hljs.configure({ ignoreUnescapedHTML: true });
-function timeout(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const App = Vue.createApp({
     data() {
         return {
@@ -17,10 +15,7 @@ const App = Vue.createApp({
         window.addEventListener("load", () => {
             that.showpage = true;
             document.getElementById("loading").style.opacity = 0;
-            document.getElementById("loading").style.pointerEvents = "none";
-            setTimeout(function () {
-                document.body.removeChild(document.getElementById("loading"));
-            }, 250);
+            document.getElementById("loading").style.visibility = "hidden";
         });
     },
     mounted() {
@@ -28,6 +23,7 @@ const App = Vue.createApp({
             document.getElementById("menu").className += " menu-color";
         window.addEventListener("scroll", this.handleScroll, true);
         let codes = document.getElementsByTagName("pre");
+        let copying = false;
         for (let code of codes) {
             const lang =
                 code?.firstChild.className.split(/\s+/).filter(x => {
@@ -43,23 +39,15 @@ const App = Vue.createApp({
             copycode.classList.add("copycode");
             copycode.innerHTML =
                 '<i class="fa-solid fa-copy"></i><i class="fa-solid fa-clone"></i>';
-            copycode.addEventListener(
-                "click",
-                (function () {
-                    let copying = false;
-                    return async function () {
-                        if (copying) return;
-                        copying = true;
-                        copycode.classList.add("copied");
-                        await navigator.clipboard.writeText(
-                            this.parentElement.firstChild.innerText
-                        );
-                        await timeout(1000);
-                        copycode.classList.remove("copied");
-                        copying = false;
-                    };
-                })()
-            );
+            copycode.addEventListener("click", async () => {
+                if (copying) return;
+                copying = true;
+                copycode.classList.add("copied");
+                await navigator.clipboard.writeText(this.parentElement.firstChild.innerText);
+                await sleep(1000);
+                copycode.classList.remove("copied");
+                copying = false;
+            });
             code.innerHTML = "";
             code.append(content, language, copycode);
         }
@@ -86,7 +74,7 @@ const App = Vue.createApp({
                 if (newlocal <= 400) {
                     wrap.style.top = -newlocal / 5 + "px";
                     footer.style.top = 150 - newlocal / 5 + "px";
-                } else {
+                } else if (wrap.style.top != "-80px" || footer.style.top != "70px") {
                     wrap.style.top = "-80px";
                     footer.style.top = "70px";
                 }
