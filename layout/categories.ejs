@@ -1,6 +1,6 @@
-<div class="categories-tags">
+<div id="archives">
     <% var posts = []; %>
-    <div class="all-s">
+    <div class="categories-tags">
         <% site.categories.data.forEach(function(category) { %>
         <% 
             var color = ["background: #ffa2c4", "background: #00bcd4", "background: #03a9f4", "background: #00a596", "background: #ff7d73"];
@@ -18,47 +18,45 @@
         </span>
         <% if (is_category(category.name)) { posts = category.posts; } %><% }); %>
     </div>
-    <div id="archives">
-        <% posts.forEach(function(post) { %>
-        <div class="timeline">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time"><%= date(post.date, "YYYY/M/D") %></div>
-                <a href="<%- url_for(post.path) %>">
-                    <h3><%= titlecase(post.title) %></h3>
-                </a>
-                <div class="info">
-                    <% if (post.categories && post.categories.data.length != 0){ %>
-                    <span class="category">
-                        <a href="<%- url_for(post.categories.data[0].path) %>">
-                            <span class="icon">
-                                <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                            </span>
-                            <%= post.categories.data[0].name %>
+    <% posts.forEach(function(post) { %>
+    <div class="timeline">
+        <div class="timeline-tail"></div>
+        <div class="timeline-content">
+            <div class="item-time"><%= date(post.date, "YYYY/M/D") %></div>
+            <a href="<%- url_for(post.path) %>">
+                <h3><%= titlecase(post.title) %></h3>
+            </a>
+            <div class="info">
+                <% if (post.categories && post.categories.data.length != 0){ %>
+                <span class="category">
+                    <a href="<%- url_for(post.categories.data[0].path) %>">
+                        <span class="icon">
+                            <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                        </span>
+                        <%= post.categories.data[0].name %>
+                    </a>
+                </span>
+                <% } %>
+                <% if (post.tags && post.tags.data.length != 0) { %>
+                <span class="tags">
+                    <span class="icon">
+                        <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    </span>
+                    <% post.tags.data.forEach(function(data) {%>
+                    <span class="tag">
+                        <% 
+                            var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
+                            var num = Math.floor(Math.random() * color.length);
+                        %>
+                        <a href="<%- url_for(data.path) %>" style="<%- color[num] %>">
+                            <%= data.name %>
                         </a>
                     </span>
-                    <% } %>
-                    <% if (post.tags && post.tags.data.length != 0) { %>
-                    <span class="tags">
-                        <span class="icon">
-                            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                        </span>
-                        <% post.tags.data.forEach(function(data) {%>
-                        <span class="tag">
-                            <% 
-                                var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
-                                var num = Math.floor(Math.random() * color.length);
-                            %>
-                            <a href="<%- url_for(data.path) %>" style="<%- color[num] %>">
-                                <%= data.name %>
-                            </a>
-                        </span>
-                        <% }); %>
-                    </span>
-                    <% } %>
-                </div>
+                    <% }); %>
+                </span>
+                <% } %>
             </div>
         </div>
-        <% }); %>
     </div>
+    <% }); %>
 </div>

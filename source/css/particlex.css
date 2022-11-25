@@ -299,7 +299,7 @@ img,
 #menu,
 .go-post,
 .page-current,
-.all-s,
+.categories-tags span a,
 pre .language,
 pre .copycode,
 .friend-link a {
@@ -1010,22 +1010,18 @@ footer .footer-icon {
 #archives .item-time {
     color: #5c6b72;
 }
-.categories-tags {
-    position: relative;
-    top: 100px;
-    margin: auto;
-}
-.categories-tags .all-s {
+#archives .categories-tags {
     text-align: center;
     max-width: 900px;
-    width: 90%;
+    width: 100%;
     margin: auto;
+    margin-bottom: 50px;
 }
-.categories-tags .all-s span {
+#archives .categories-tags span {
     display: inline-block;
     margin: 10px;
 }
-.categories-tags .all-s span a {
+#archives .categories-tags span a {
     padding: 10px 15px;
     color: #fff;
     text-decoration: none;
@@ -1036,21 +1032,18 @@ footer .footer-icon {
     transition: all 0.25s;
     border: #ffffff80 1px solid;
 }
-.categories-tags .all-s span a:hover {
+#archives .categories-tags span a:hover {
     border: #a5c2f5 1px solid;
     background: #fff !important;
     color: #5c6b72;
 }
-.categories-tags .all-s span a:hover .icon {
+#archives .categories-tags span a:hover .icon {
     color: #5c6b72;
 }
-.categories-tags .all-s span .icon {
+#archives .categories-tags span .icon {
     margin-left: 0;
     margin-right: 10px;
     color: #fff;
-}
-.categories-tags #archives {
-    top: 60px;
 }
 .article {
     margin: auto;
@@ -1357,9 +1350,6 @@ footer .footer-icon {
     #archives {
         width: 900px;
     }
-    .categories-tags {
-        width: 900px;
-    }
     footer .footer-wrap {
         width: 900px;
     }
@@ -1458,9 +1448,6 @@ footer .footer-icon {
         width: 85%;
     }
     #archives {
-        width: 90%;
-    }
-    .categories-tags {
         width: 90%;
     }
     footer .footer-wrap {
