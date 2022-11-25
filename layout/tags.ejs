@@ -1,4 +1,3 @@
-<% var rootlink = config.root; %> 
 <div class="categories-tags">
     <% var posts = []; %>
     <div class="all-s">
@@ -10,7 +9,7 @@
             var num = Math.floor(Math.random() * color.length);
         %>
         <span>
-            <a href="<%- rootlink %><%- tag.path %>" style="<%- color[num] %>">
+            <a href="<%- url_for(tag.path) %>" style="<%- color[num] %>">
                 <span class="icon">
                     <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
                 </span>
@@ -25,13 +24,13 @@
             <div class="timeline-tail"></div>
             <div class="timeline-content">
                 <div class="item-time"><%= date(post.date, "YYYY/M/D") %></div>
-                <a href="<%- rootlink %><%- post.path %>">
+                <a href="<%- url_for(post.path) %>">
                     <h3><%= titlecase(post.title) %></h3>
                 </a>
                 <div class="info">
                     <% if (post.categories && post.categories.data.length != 0){ %>
                     <span class="category">
-                        <a href="<%- rootlink %><%- post.categories.data[0].path %>">
+                        <a href="<%- url_for(post.categories.data[0].path) %>">
                             <span class="icon">
                                 <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                             </span>
@@ -50,7 +49,7 @@
                                 var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
                                 var num = Math.floor(Math.random() * color.length);
                             %>
-                            <a href="<%- rootlink %><%- data.path %>" style="<%- color[num] %>">
+                            <a href="<%- url_for(data.path) %>" style="<%- color[num] %>">
                                 <%= data.name %>
                             </a>
                         </span>

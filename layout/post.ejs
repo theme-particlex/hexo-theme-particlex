@@ -1,4 +1,3 @@
-<% var rootlink = config.root; %>
 <div class="article">
     <div>
         <h1><%= titlecase(page.title) %> </h1>
@@ -12,7 +11,7 @@
         </span>
         <% if (page.categories && page.categories.data.length != 0) { %>
         <span class="category">
-            <a href="<%- rootlink %><%- page.categories.data[0].path %>">
+            <a href="<%- url_for(page.categories.data[0].path) %>">
                 <span class="icon">
                     <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                 </span>
@@ -31,7 +30,7 @@
                     var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
                     var num = Math.floor(Math.random() * color.length);
                 %>
-                <a href="<%- rootlink %><%- data.path %>" style="<%- color[num] %>">
+                <a href="<%- url_for(data.path) %>" style="<%- color[num] %>">
                     <%= data.name %>
                 </a>
             </span>
