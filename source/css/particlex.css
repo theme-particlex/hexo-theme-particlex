@@ -1253,6 +1253,10 @@ footer .footer-icon {
 }
 ::-webkit-scrollbar-track {
     background: #e6efff;
+    border-radius: 100px;
+}
+body::-webkit-scrollbar-track {
+    border-radius: 0;
 }
 ::-webkit-scrollbar-thumb {
     background: #8ab5ff;
