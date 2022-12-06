@@ -4,7 +4,7 @@
 
 原来用的是 Vue2 + AntdVue1，现更新到 Vue3，去除 AntdVue 采用自定义样式，图标更改为 FontAwesome 6，将不能用的 JsDelivr 改为 Staticfile CDN
 
-我改原项目 `README.md` 的时候看到一句：
+原项目 `README.md` 里说：
 
 > 目前有 full、night 和 maiden **两个**主题样式
 
@@ -80,7 +80,6 @@ home_background: # Background URL
             name: tags
             theme: solid
             src: /tags
-        # Example:
         # <name>:
         #     name: <icon-name>
         #     theme: <icon-theme>
@@ -93,22 +92,20 @@ home_background: # Background URL
 
     `description` 支持 Markdown 格式
 
-    **如果图标链接或友链为空，请在 `icon_links:` 或 `friend_links:` 后添加一个 `[]`**
+    **如果图标链接或友链为空，请在 `icon_links:` 或 `friend_links:` 后添加一个 `{}`**
 
     ```yaml
     card:
         enable: true
         description: ["Description", "..."] # You can add more
         icon_links:
-            []
-            # Example:
+            {}
             # <name>:
             #    name: <icon-name>
             #    theme: <icon-theme>
             #    link: <link-url>
         friend_links:
-            []
-            # Example:
+            {}
             # <name>: <link-url>
     ```
 
@@ -161,7 +158,7 @@ home_background: # Background URL
 
     考虑到博客可能部署到多个网站同步评论，但 OAuth APP 只能有一个回调 URL，所以添加了 `sites` 参数用于其他网站的评论，请注册多个 Oauth APP
 
-    **同样如果没有其他网站，请在 `sites:` 后添加一个 `[]`**
+    **同样如果没有其他网站，请在 `sites:` 后添加一个 `{}`**
 
     由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 配置，搭建 CORS 代理可以看[这篇文章](https://argvchs.github.io/2022/07/04/build-cors-anywhere)
 
@@ -176,8 +173,7 @@ home_background: # Background URL
         language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
         proxy: # CORS proxy
         sites: # Sites
-            []
-            # Example:
+            {}
             # <www.example.com>:
             #    clientID: <client-id>
             #    clientSecret: <client-secret>
@@ -186,6 +182,8 @@ home_background: # Background URL
 -   Giscus
 
     Giscus 是一个由 GitHub Discussions 支持的评论系统
+
+    同样考虑到博客可能部署到多个网站同步评论，如果是 Self-Hosting，博客域名和 Giscus 域名不同（e.g. Netlify 和 Vercel），就很难受，所以也添加了 `sites` 参数
 
     在 [giscus.app](https://giscus.app) 配置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可
 
@@ -204,7 +202,9 @@ home_background: # Background URL
         inputPosition: bottom
         theme: preferred_color_scheme
         lang: zh-CN
-        crossorigin: anonymous
+        sites: # Sites
+            {}
+            # <www.example.com>: <src>
     ```
 
 -   Waline
@@ -221,7 +221,7 @@ home_background: # Background URL
         serverURL: # Waline server address url, you should set this to your own link
         locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
             {}
-            # Example:
+            # e.g.:
             # placeholder: Leave a comment
         commentCount: true # If false, comment count will only be displayed in post page, not in home page
         pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
