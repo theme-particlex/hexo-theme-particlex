@@ -302,7 +302,8 @@ img,
 .categories-tags span a,
 pre .language,
 pre .copycode,
-.friend-link a {
+.friend-link a,
+iframe {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
