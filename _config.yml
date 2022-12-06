@@ -35,7 +35,6 @@ menu:
         name: tags
         theme: solid
         src: /tags
-    # Example:
     # <name>:
     #     name: <icon-name>
     #     theme: <icon-theme>
@@ -46,15 +45,13 @@ card:
     enable: true
     description: ["Description", "..."] # You can add more
     icon_links:
-        []
-        # Example:
+        {}
         # <name>:
         #    name: <icon-name>
         #    theme: <icon-theme>
         #    link: <link-url>
     friend_links:
-        []
-        # Example:
+        {}
         # <name>: <link-url>
 
 # Footer info
@@ -82,8 +79,7 @@ gitalk:
     language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available.
     proxy: # CORS proxy
     sites: # Sites
-        []
-        # Example:
+        {}
         # <www.example.com>:
         #    clientID: <client-id>
         #    clientSecret: <client-secret>
@@ -92,7 +88,7 @@ gitalk:
 # https://github.com/giscus/giscus
 giscus:
     enable: false
-    src: https://giscus.app/client.js
+    src: https://giscus.app/client.js # Default src
     repo:
     repoID:
     category:
@@ -104,7 +100,9 @@ giscus:
     inputPosition: bottom
     theme: preferred_color_scheme
     lang: zh-CN
-    crossorigin: anonymous
+    sites: # Sites
+        {}
+        # <www.example.com>: <src>
 
 # Waline
 # https://github.com/walinejs/waline
@@ -113,7 +111,7 @@ waline:
     serverURL: # Waline server address url, you should set this to your own link
     locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
         {}
-        # Example:
+        # e.g.:
         # placeholder: Leave a comment
     commentCount: true # If false, comment count will only be displayed in post page, not in home page
     pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
