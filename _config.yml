@@ -100,9 +100,6 @@ giscus:
     inputPosition: bottom
     theme: preferred_color_scheme
     lang: zh-CN
-    sites: # Sites
-        {}
-        # <www.example.com>: <src>
 
 # Waline
 # https://github.com/walinejs/waline

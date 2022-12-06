@@ -183,8 +183,6 @@ home_background: # Background URL
 
     Giscus 是一个由 GitHub Discussions 支持的评论系统
 
-    同样考虑到博客可能部署到多个网站同步评论，如果是 Self-Hosting，博客域名和 Giscus 域名不同（e.g. Netlify 和 Vercel），就很难受，所以也添加了 `sites` 参数
-
     在 [giscus.app](https://giscus.app) 配置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可
 
     ```yaml
@@ -202,9 +200,6 @@ home_background: # Background URL
         inputPosition: bottom
         theme: preferred_color_scheme
         lang: zh-CN
-        sites: # Sites
-            {}
-            # <www.example.com>: <src>
     ```
 
 -   Waline
