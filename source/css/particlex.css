@@ -211,7 +211,7 @@ body {
     margin: 0;
     padding: 0;
     word-wrap: break-word;
-    scrollbar-width: 10px;
+    scrollbar-width: thin;
     scrollbar-color: #8ab5ff #e6efff;
 }
 ul {
@@ -1186,10 +1186,6 @@ footer .footer-icon {
 }
 .gt-container .gt-avatar img {
     border-radius: 50% !important;
-}
-.gt-container .markdown-body a[target="_blank"] {
-    pointer-events: none;
-    cursor: default;
 }
 .gt-container .gt-popup {
     border-radius: 10px;

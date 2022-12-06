@@ -26,7 +26,7 @@
 <% } %>
 <% if (theme.giscus.enable && is_post()) { %>
 <script
-    src="https://giscus.app/client.js"
+    src="<%- theme.giscus.src %>"
     data-repo="<%- theme.giscus.repo %>"
     data-repo-id="<%- theme.giscus.repoID %>"
     data-category="<%- theme.giscus.category %>"

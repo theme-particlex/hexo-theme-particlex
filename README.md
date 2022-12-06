@@ -192,6 +192,7 @@ home_background: # Background URL
     ```yaml
     giscus:
         enable: false
+        src: https://giscus.app/client.js
         repo:
         repoID:
         category:
