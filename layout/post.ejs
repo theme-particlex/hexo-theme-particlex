@@ -5,7 +5,7 @@
     <div class="info">
         <span class="date">
             <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
             </span>
             <%= date(page.date, "YYYY/M/D") %>
         </span>
@@ -13,7 +13,7 @@
         <span class="category">
             <a href="<%- url_for(page.categories.data[0].path) %>">
                 <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                 </span>
                 <%= page.categories.data[0].name %>
             </a>
@@ -22,7 +22,7 @@
         <% if (page.tags && page.tags.data.length != 0) { %>
         <span class="tags">
             <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
             </span>
             <% page.tags.data.forEach(function(data) {%>
             <span class="tag">

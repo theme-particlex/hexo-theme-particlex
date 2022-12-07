@@ -1,5 +1,5 @@
 <% if (theme.gitalk.enable && is_post()) { %>
-<script src="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.js"></script>
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
 <script>
     let clientID = "<%- theme.gitalk.clientID %>", clientSecret = "<%- theme.gitalk.clientSecret %>";
     <% Object.keys(theme.gitalk.sites).forEach(function(key) { %>
@@ -42,7 +42,7 @@
 ></script>
 <% } %>
 <% if (theme.waline.enable && is_post()) { %>
-<script src="https://cdn.staticfile.org/waline/2.14.1/waline.min.js"></script>
+<script src="https://cdn.staticfile.org/waline/2.9.1/waline.min.js"></script>
 <script>
     Waline.init({
         el: '#waline-container',
