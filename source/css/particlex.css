@@ -313,11 +313,6 @@ iframe {
     max-width: 70% !important;
     max-height: 70% !important;
 }
-.fa-icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.125em;
-}
 .icon {
     margin-right: 5px;
     color: #5c6b72;
