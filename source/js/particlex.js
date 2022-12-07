@@ -39,7 +39,7 @@ const App = Vue.createApp({
             copycode.classList.add("copycode");
             copycode.innerHTML =
                 '<i class="fa-solid fa-copy"></i><i class="fa-solid fa-clone"></i>';
-            copycode.addEventListener("click", async () => {
+            copycode.addEventListener("click", async function () {
                 if (copying) return;
                 copying = true;
                 copycode.classList.add("copied");
