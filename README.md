@@ -140,11 +140,11 @@ home_background: # Background URL
 
 -   搜索
 
-    嵌入到 Archives 中的搜索，搜索数据是用 [Hexo-Generator-Search-Lite](https://github.com/argvchs/hexo-generator-search-lite) 生成，默认关闭，使用需要安装上述插件
+    嵌入到 Archives 中的搜索，搜索数据是用 [Hexo-Generator-Search-Lite](https://github.com/argvchs/hexo-generator-search-lite) 生成，默认关闭，使用需要安装上述插件**并设置 `optimize: true`**
 
     目前只支持搜索文档的 Title Categories Tags（我太弱了）
 
-    要同时在主题和网站的两个 `_config.yml` 添加设置
+    要同时在主题和根目录的两个 `_config.yml` 添加设置
 
     ```yaml
     # Theme config
@@ -157,7 +157,7 @@ home_background: # Background URL
     # Site config
     search:
         path: # Default: search.json
-        optimize: true
+        optimize: false
     ```
 
 -   Gitalk
