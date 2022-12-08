@@ -142,7 +142,7 @@ home_background: # Background URL
 
     默认关闭，嵌入到 Archives 中，搜索数据是用 [Hexo-Generator-Search-Lite](https://github.com/argvchs/hexo-generator-search-lite) 生成，已经启用了 Optimize 优化
 
-    目前只支持搜索文档的标题 Tag Category（我太弱了）
+    目前只支持搜索文档的 Title Categories Tags（我太弱了）
 
     要同时在主题和网站的两个 `_config.yml` 添加设置
 
