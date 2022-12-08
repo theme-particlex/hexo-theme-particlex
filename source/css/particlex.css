@@ -1135,8 +1135,8 @@ footer .footer-icon {
     height: 50px;
     text-indent: 20px;
     color: #000;
-    background: #f6f6f6;
-    border: 1px solid #00000017;
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
     border-radius: 50px;
     font-family: "Fira Code", "Noto Sans SC", monospace;
     font-size: 15px;
@@ -1145,11 +1145,14 @@ footer .footer-icon {
     -o-transition: all 0.25s;
     transition: all 0.25s;
 }
-.search-bar:hover,
+.search-bar:hover {
+    background: #fff;
+}
 .search-bar:focus {
     outline: none;
-    background: #fbfbfb;
-    box-shadow: 0 2px 8px #00000017;
+    background: #fff;
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px #0969da4d;
 }
 .search-mask {
     position: relative;
