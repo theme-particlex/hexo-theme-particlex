@@ -366,6 +366,9 @@ iframe {
     color: #333;
     border-radius: 50%;
 }
+#home-head .home-info .info h1 {
+    word-break: keep-all;
+}
 #home-head .home-info .loop:nth-child(1) {
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     background: #fff;
@@ -441,10 +444,10 @@ iframe {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    width: 100%;
+    margin: auto;
+    padding: 20px;
     background: transparent;
     border-radius: 10px;
-    margin: auto;
 }
 #home-posts {
     position: relative;
@@ -464,9 +467,6 @@ iframe {
     -moz-transition: all 0.25s;
     -o-transition: all 0.25s;
     transition: all 0.25s;
-}
-#home-posts .post:first-child {
-    margin-top: 0;
 }
 #home-posts .post:hover {
     box-shadow: 0 0 5px #d9d9d9;
@@ -1048,10 +1048,10 @@ footer .footer-icon {
 }
 .article {
     margin: auto;
+    padding: 20px;
     position: relative;
     top: 100px;
     color: #1e3e3f;
-    padding: 20px;
     font-size: 15px;
 }
 .article h1 {
@@ -1168,9 +1168,6 @@ footer .footer-icon {
 }
 .gt-header-textarea {
     font-family: "Fira Code", "Noto Sans SC", monospace;
-}
-.gt-container .markdown-body {
-    word-break: break-word;
 }
 .gt-container .gt-comment-content {
     border: 1px solid #0000001a;
@@ -1305,7 +1302,6 @@ body::-webkit-scrollbar-track {
     #home-head .home-info .info .wrap h1 {
         font-size: 52px;
         font-weight: bold;
-        font-family: "Lexend", "Noto Sans SC", sans-serif;
         margin-bottom: 10px;
     }
     #home-head .home-info .info .wrap h3 {
@@ -1323,15 +1319,11 @@ body::-webkit-scrollbar-track {
         padding-left: 40px;
     }
     #home-posts-wrap {
-        max-width: 1300px;
-        min-width: 900px;
+        max-width: 1150px;
         padding: 30px 0;
     }
-    .home-posts-wrap-no-card {
-        max-width: 900px !important;
-    }
     #home-posts {
-        width: 800px;
+        width: 900px;
         margin-left: auto;
         margin-right: 50px;
     }
@@ -1357,18 +1349,17 @@ body::-webkit-scrollbar-track {
 }
 @media (min-width: 900px) and (max-width: 1200px) {
     #home-posts-wrap {
-        width: 900px;
-        padding: 30px 0;
+        width: 800px;
     }
     #home-posts {
-        width: 800px;
         margin: auto;
+        width: 100%;
     }
     #home-card {
         display: none;
     }
     #archives {
-        width: 850px;
+        width: 800px;
     }
 }
 @media (max-width: 900px) {
@@ -1425,8 +1416,7 @@ body::-webkit-scrollbar-track {
         padding-left: 20px;
     }
     #home-posts-wrap {
-        padding: 20px 0;
-        width: 95%;
+        width: calc(100% - 40px);
     }
     #home-card {
         display: none;
@@ -1446,12 +1436,12 @@ body::-webkit-scrollbar-track {
         padding: 20px 0;
     }
     .article {
-        width: 85%;
+        width: calc(100% - 40px);
     }
     #archives {
-        width: 90%;
+        width: calc(100% - 40px);
     }
     footer .footer-wrap {
-        width: 100%;
+        width: calc(100% - 40px);
     }
 }
