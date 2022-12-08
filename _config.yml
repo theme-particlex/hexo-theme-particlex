@@ -63,6 +63,7 @@ footer:
         code:
         link:
 
+# Search
 search:
     enable: false
     path: # Default: search.json
