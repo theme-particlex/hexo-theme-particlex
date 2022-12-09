@@ -1,4 +1,4 @@
-(function () {
+function showimg() {
     let imgshow = document.getElementById("img_show"),
         imgcontent = document.getElementById("img_content"),
         imglist = document.querySelectorAll(".article .content img");
@@ -21,4 +21,5 @@
     window.addEventListener("resize", function () {
         hide();
     });
-})();
+}
+showimg();
