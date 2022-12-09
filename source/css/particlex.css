@@ -1142,7 +1142,6 @@ input.ipt {
     box-sizing: border-box;
     border: 1px solid #d0d7de;
     border-radius: 50px;
-    font-weight: 500;
     font-family: "Fira Code", "Noto Sans SC", monospace;
     font-size: 15px;
     -webkit-transition: all 0.25s;
