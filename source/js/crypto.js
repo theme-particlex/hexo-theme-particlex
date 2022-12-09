@@ -29,9 +29,7 @@ const crypto = {
         }
     },
     update() {
-        console.log(this.input.value);
         let res = this.decrypt(this.enc, this.SHA(this.input.value), this.sha);
-        console.log(res);
         if (res.check) {
             this.input.disabled = true;
             this.input.classList.remove("fail");
