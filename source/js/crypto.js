@@ -7,7 +7,6 @@ const crypto = {
             this.input = document.getElementsByClassName("crypto")[0];
             this.content = document.getElementsByClassName("content")[0];
             this.content.style.opacity = 0;
-            this.content.style.height = 0;
             this.input.addEventListener("input", () => this.composition || this.update());
             this.input.addEventListener("compositionstart", () => (this.composition = true));
             this.input.addEventListener("compositionend", () => {
@@ -39,7 +38,6 @@ const crypto = {
             this.input.classList.add("success");
             this.content.innerHTML = res.dec;
             this.content.style.opacity = 1;
-            this.content.style.height = this.content.scrollHeight + "px";
         } else this.input.classList.add("fail");
     },
 };
