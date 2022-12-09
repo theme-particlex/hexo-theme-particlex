@@ -138,9 +138,18 @@ home_background: # Background URL
             link:
     ```
 
+-   文章加密
+
+    默认关闭，使用 AES 加密，在 Front-Matter 里设置 `password` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
+
+    ```yaml
+    crypto:
+        enable: false
+    ```
+
 -   搜索
 
-    嵌入到 Archives 中的搜索，搜索数据是用 [Hexo-Generator-Search-Lite](https://github.com/argvchs/hexo-generator-search-lite) 生成，默认关闭，使用需要安装上述插件**并设置 `optimize: true`**
+    嵌入到 Archives 中的搜索，搜索数据是用 [Hexo-Generator-Search-Lite](https://github.com/argvchs/hexo-generator-search-lite) 生成，默认关闭，使用需要**安装上述插件**并**设置 `optimize: true`**
 
     目前只支持搜索文档的 Title Categories Tags（我太弱了）
 

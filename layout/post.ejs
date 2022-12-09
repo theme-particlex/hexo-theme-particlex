@@ -38,9 +38,29 @@
         </span>
         <% } %>
     </div>
+    <% if (page.password && theme.crypto.enable) { %>
+    <%
+        const CryptoJS = crypto();
+        function SHA(str) {
+            return CryptoJS.SHA256(str).toString(CryptoJS.enc.Base64);
+        }
+        function encrypt(str, key) {
+            return CryptoJS.AES.encrypt(str, key, {
+                mode: CryptoJS.mode.CBC,
+                padding: CryptoJS.pad.Pkcs7,
+            }).toString();
+        }
+    %>
+    <input class="ipt crypto" placeholder="文章被加密，请输入密码">
+    <div class="content" v-pre></div>
+    <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="<%- url_for("/js/crypto.js") %>"></script>
+    <script>crypto.init("<%- encrypt(page.content, SHA(page.password.toString())) %>", "<%- SHA(page.content) %>")</script>
+    <% } else { %>
     <div class="content" v-pre>
         <%- page.content %>
     </div>
+    <% } %>
     <% if (theme.gitalk.enable) { %>
     <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
     <div id="comment">
