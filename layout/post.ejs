@@ -38,7 +38,7 @@
         </span>
         <% } %>
     </div>
-    <% if (page.password && theme.crypto.enable) { %>
+    <% if (typeof page.password !== "undefined" && theme.crypto.enable) { %>
     <%
         const CryptoJS = crypto();
         function SHA(str) {
