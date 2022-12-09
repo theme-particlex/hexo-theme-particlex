@@ -773,6 +773,10 @@ footer .footer-wrap {
 .menu-color a {
     color: #fff !important;
 }
+.content {
+    transition: all 0.5s;
+    overflow-y: hidden;
+}
 .content code {
     font-family: "Fira Code", "Noto Sans SC", monospace;
     background: #bddcf76b;
@@ -1128,10 +1132,9 @@ footer .footer-icon {
     border: 2px solid #a5c2f5;
     border-radius: 50%;
 }
-.search-bar {
+input.ipt {
     position: relative;
     display: block;
-    margin: 0 auto 50px;
     width: 100%;
     height: 50px;
     text-indent: 20px;
@@ -1139,6 +1142,7 @@ footer .footer-icon {
     background: #f6f8fa;
     border: 1px solid #d0d7de;
     border-radius: 50px;
+    font-weight: 500;
     font-family: "Fira Code", "Noto Sans SC", monospace;
     font-size: 15px;
     -webkit-transition: all 0.25s;
@@ -1146,14 +1150,34 @@ footer .footer-icon {
     -o-transition: all 0.25s;
     transition: all 0.25s;
 }
-.search-bar:hover {
+input.ipt:hover {
     background: #fff;
 }
-.search-bar:focus {
+input.ipt:focus {
     outline: none;
     background: #fff;
     border-color: #0969da;
     box-shadow: 0 0 0 3px #0969da4d;
+}
+input.ipt:disabled:hover {
+    background: #f6f8fa;
+}
+input.crypto {
+    margin: 50px auto 0;
+}
+input.crypto.fail {
+    color: #ea4a5a;
+    border-color: #ea4a5a;
+}
+input.crypto.fail:focus {
+    box-shadow: 0 0 0 3px #ea4a5a4d;
+}
+input.crypto.success {
+    color: #34d058;
+    border-color: #34d058;
+}
+input.search-bar {
+    margin: 0 auto 50px;
 }
 .search-mask {
     position: relative;
