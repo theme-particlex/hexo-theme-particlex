@@ -891,9 +891,9 @@ footer .footer-wrap {
     top: 0;
     right: 0;
     padding: 15px;
-    -webkit-transition: transform 0.25s;
-    -moz-transition: transform 0.25s;
-    -o-transition: transform 0.25s;
+    -webkit-transition: -webkit-transform 0.25s;
+    -moz-transition: -moz-transform 0.25s;
+    -o-transition: -o-transform 0.25s;
     transition: transform 0.25s;
 }
 .content .copycode.copied svg:first-child {
