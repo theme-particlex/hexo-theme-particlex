@@ -16,8 +16,7 @@
     </div>
     <% } %>
 </div>
-<% wrapClass = theme.card.enable ? "" : "home-posts-wrap-no-card"; %>
-<div id="home-posts-wrap" class="<%- wrapClass %>">
+<div id="home-posts-wrap" class="<%- theme.card.enable ? "" : "home-posts-wrap-no-card" %>">
     <div id="home-posts">
         <div id="posts">
             <%- include("posts") %>

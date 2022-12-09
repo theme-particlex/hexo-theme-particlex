@@ -7,7 +7,7 @@
     <div class="search-mask" style="z-index: <%= site.posts.length + 1 %>"></div>
     <input class="search-bar" placeholder="Search..." style="z-index: <%= site.posts.length + 2 %>">
     <% } %>
-    <% site.posts.forEach(function(post, id){ %>
+    <% site.posts.forEach((post, id) => { %>
     <div class="timeline" path="<%- url_for(post.path) %>" style="z-index: <%= site.posts.length - id %>">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
@@ -16,7 +16,7 @@
                 <h3><%= post.title %></h3>
             </a>
             <div class="info">
-                <% if (post.categories && post.categories.data.length != 0){ %>
+                <% if (post.categories && post.categories.data.length != 0) { %>
                 <span class="category">
                     <a href="<%- url_for(post.categories.data[0].path) %>">
                         <span class="icon">
@@ -26,12 +26,12 @@
                     </a>
                 </span>
                 <% } %>
-                <% if (post.tags && post.tags.data.length != 0){ %>
+                <% if (post.tags && post.tags.data.length != 0) { %>
                 <span class="tags">
                     <span class="icon">
                         <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
                     </span>
-                    <% post.tags.data.forEach(function(data) {%>
+                    <% post.tags.data.forEach(data => { %>
                     <span class="tag">
                         <%
                             var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
