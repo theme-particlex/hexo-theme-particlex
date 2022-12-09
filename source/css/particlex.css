@@ -308,10 +308,11 @@ iframe {
     -moz-user-select: none;
     user-select: none;
 }
-.article .content img,
-.gt-container .markdown-body img {
-    max-width: 70% !important;
-    max-height: 70% !important;
+#home-posts-wrap,
+#archives,
+.article,
+footer .footer-wrap {
+    box-sizing: border-box;
 }
 .fa-icon {
     width: 1em;
@@ -1419,7 +1420,7 @@ body::-webkit-scrollbar-track {
         padding-left: 20px;
     }
     #home-posts-wrap {
-        width: calc(100% - 40px);
+        width: 100%;
     }
     #home-card {
         display: none;
@@ -1439,12 +1440,12 @@ body::-webkit-scrollbar-track {
         padding: 20px 0;
     }
     .article {
-        width: calc(100% - 40px);
+        width: 100%;
     }
     #archives {
-        width: calc(100% - 40px);
+        width: 100%;
     }
     footer .footer-wrap {
-        width: calc(100% - 40px);
+        width: 100%;
     }
 }
