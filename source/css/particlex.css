@@ -775,7 +775,6 @@ footer .footer-wrap {
 }
 .content {
     transition: all 0.5s;
-    overflow-y: hidden;
 }
 .content code {
     font-family: "Fira Code", "Noto Sans SC", monospace;
