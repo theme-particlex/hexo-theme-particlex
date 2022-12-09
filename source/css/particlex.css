@@ -1139,6 +1139,7 @@ input.ipt {
     text-indent: 20px;
     color: #000;
     background: #f6f8fa;
+    box-sizing: border-box;
     border: 1px solid #d0d7de;
     border-radius: 50px;
     font-weight: 500;
