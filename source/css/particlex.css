@@ -1000,8 +1000,7 @@ footer .footer-icon {
     color: #5c6b72;
     text-decoration: none;
 }
-#archives .category,
-#archives .tags {
+#archives .category {
     margin-right: 20px;
 }
 #archives .tags .tag {
