@@ -1158,9 +1158,6 @@ input.ipt:focus {
     border-color: #0969da;
     box-shadow: 0 0 0 3px #0969da4d;
 }
-input.ipt:disabled:hover {
-    background: #f6f8fa;
-}
 input.crypto {
     margin: 50px auto 0;
 }
