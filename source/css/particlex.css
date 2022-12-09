@@ -1338,6 +1338,9 @@ body::-webkit-scrollbar-track {
     #home-posts .post .excerpt {
         padding: 20px 0;
     }
+    .home-posts-wrap-no-card #home-posts {
+        margin: auto;
+    }
     #home-card {
         margin-right: auto;
     }
