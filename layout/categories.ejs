@@ -1,11 +1,11 @@
 <div id="archives">
     <% var posts = []; %>
     <div class="categories-tags">
-        <% site.categories.data.forEach(function(category) { %>
+        <% site.categories.data.forEach(category => { %>
         <% 
             var color = ["background: #ffa2c4", "background: #00bcd4", "background: #03a9f4", "background: #00a596", "background: #ff7d73"];
             if (is_category(category.name))
-                var color = ["background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"];
+                color = ["background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"];
             var num = Math.floor(Math.random() * color.length);
         %>
         <span>
@@ -18,7 +18,7 @@
         </span>
         <% if (is_category(category.name)) { posts = category.posts; } %><% }); %>
     </div>
-    <% posts.forEach(function(post) { %>
+    <% posts.forEach(post => { %>
     <div class="timeline">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
@@ -27,7 +27,7 @@
                 <h3><%= titlecase(post.title) %></h3>
             </a>
             <div class="info">
-                <% if (post.categories && post.categories.data.length != 0){ %>
+                <% if (post.categories && post.categories.data.length != 0) { %>
                 <span class="category">
                     <a href="<%- url_for(post.categories.data[0].path) %>">
                         <span class="icon">
@@ -42,7 +42,7 @@
                     <span class="icon">
                         <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
                     </span>
-                    <% post.tags.data.forEach(function(data) {%>
+                    <% post.tags.data.forEach(data => { %>
                     <span class="tag">
                         <% 
                             var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];

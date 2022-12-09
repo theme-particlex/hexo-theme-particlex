@@ -1,7 +1,7 @@
 <div id="archives">
     <% var posts = []; %>
     <div class="categories-tags">
-        <% site.tags.data.forEach(function(tag) { %>
+        <% site.tags.data.forEach(tag => { %>
         <% 
             var color = ["background: #ffa2c4", "background: #00bcd4", "background: #03a9f4", "background: #00a596", "background: #ff7d73"];
             if (is_tag(tag.name))
@@ -18,7 +18,7 @@
         </span>
         <% if (is_tag(tag.name)) { posts = tag.posts; } %><% }); %>
     </div>
-    <% posts.forEach(function(post) { %>
+    <% posts.forEach(post => { %>
     <div class="timeline">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
@@ -42,7 +42,7 @@
                     <span class="icon">
                         <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
                     </span>
-                    <% post.tags.data.forEach(function(data) {%>
+                    <% post.tags.data.forEach(data => { %>
                     <span class="tag">
                         <% 
                             var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];

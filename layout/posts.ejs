@@ -1,5 +1,5 @@
 <% var current = (page.current - 1) * config.index_generator.per_page; %>
-<% site.posts.slice(0 + current, config.index_generator.per_page + current).forEach(function(post) { %>
+<% site.posts.slice(0 + current, config.index_generator.per_page + current).forEach(post => { %>
 <div class="post">
     <a href="<%- url_for(post.path) %>">
         <h2 class="post-title"><%= titlecase(post.title) %></h2>
@@ -39,7 +39,7 @@
             <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
         </span>
         <% } %>
-        <% post.tags.data.forEach(function(data) {%>
+        <% post.tags.data.forEach(data => { %>
         <span class="tag">
             <% 
                 var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
