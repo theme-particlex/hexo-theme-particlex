@@ -22,11 +22,8 @@ const searcher = {
     update() {
         let res = [],
             proc = this.input.value.toLowerCase().replace(/\s+/g, "");
-        if (!proc) res = this.data.map(i => i.path);
-        else
-            this.data.map(data => {
-                if (this.match(data.sdata, proc)) res.push(data.path);
-            });
+        if (proc != "") res = this.data.filter(i => this.match(i.odata, proc)).map(i => i.path);
+        else res = this.data.map(i => i.path);
         for (let line of this.timeline)
             if (res.indexOf(line.getAttribute("path")) == -1) {
                 line.style.opacity = 0;

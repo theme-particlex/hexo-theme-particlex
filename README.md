@@ -159,13 +159,13 @@ home_background: # Background URL
     # Theme config
     search:
         enable: false
-        path: # Default: search.json
+        path: /search.json
     ```
 
     ```yaml
     # Site config
     search:
-        path: # Default: search.json
+        path: /search.json
         optimize: false
     ```
 
