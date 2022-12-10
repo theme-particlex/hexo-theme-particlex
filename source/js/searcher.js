@@ -25,7 +25,7 @@ const searcher = {
     },
     update() {
         let res = [],
-            proc = procstr(this.input.value);
+            proc = this.procstr(this.input.value);
         if (proc) res = this.data.filter(i => this.match(i.odata, proc)).map(i => i.path);
         else res = this.data.map(i => i.path);
         for (let line of this.timeline)
