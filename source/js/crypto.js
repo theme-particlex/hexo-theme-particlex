@@ -36,6 +36,7 @@ const crypto = {
             this.input.classList.add("success");
             this.content.innerHTML = res.dec;
             this.content.style.opacity = 1;
+            highlight();
             showimg();
         } else this.input.classList.add("fail");
     },
