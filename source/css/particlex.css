@@ -1184,9 +1184,6 @@ input.search-bar {
     height: 150px;
     background: #f6f8fa;
 }
-.math .MathJax svg {
-    vertical-align: baseline !important;
-}
 .gt-container *:not(.gt-header-textarea) {
     font-family: unset !important;
 }
