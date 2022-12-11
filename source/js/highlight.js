@@ -16,7 +16,7 @@ function highlight() {
         language.innerHTML = lang;
         let copycode = document.createElement("div");
         copycode.classList.add("copycode");
-        copycode.innerHTML = '<i class="fa-solid fa-copy"></i><i class="fa-solid fa-clone"></i>';
+        copycode.innerHTML = '<i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i>';
         copycode.addEventListener("click", async function () {
             if (copying) return;
             copying = true;
