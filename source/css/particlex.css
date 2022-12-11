@@ -295,15 +295,16 @@ blockquote {
 }
 button,
 img,
+iframe,
 #home-head,
 #menu,
+.math,
 .go-post,
 .page-current,
 .categories-tags span a,
-pre .language,
-pre .copycode,
 .friend-link a,
-iframe {
+pre .language,
+pre .copycode {
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
