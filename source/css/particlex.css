@@ -1239,7 +1239,7 @@ input.search-bar {
     margin: 25px 0;
     border-radius: 15px !important;
 }
-#img_show {
+#showimg {
     position: fixed !important;
     display: flex;
     z-index: 10006;
@@ -1257,7 +1257,7 @@ input.search-bar {
     justify-content: center;
     visibility: hidden;
 }
-#img_content {
+#showimg-content {
     position: relative;
     margin: auto;
     max-width: 95%;
