@@ -1,21 +1,21 @@
 function showimg() {
-    let imgshow = document.getElementById("img_show"),
-        imgcontent = document.getElementById("img_content"),
-        imglist = document.querySelectorAll(".article .content img");
+    let wrap = document.getElementById("showimg"),
+        content = document.getElementById("showimg-content"),
+        imgs = document.querySelectorAll(".article .content img");
     function show(src) {
-        imgcontent.setAttribute("src", src);
-        imgshow.style.opacity = 1;
-        imgshow.style.visibility = "visible";
+        content.setAttribute("src", src);
+        wrap.style.opacity = 1;
+        wrap.style.visibility = "visible";
     }
     function hide() {
-        imgshow.style.opacity = 0;
-        imgshow.style.visibility = "hidden";
+        wrap.style.opacity = 0;
+        wrap.style.visibility = "hidden";
     }
-    for (let img of imglist)
+    for (let img of imgs)
         img.addEventListener("click", function () {
             show(this.getAttribute("src"));
         });
-    imgshow.addEventListener("click", function () {
+    wrap.addEventListener("click", function () {
         hide();
     });
     window.addEventListener("resize", function () {
