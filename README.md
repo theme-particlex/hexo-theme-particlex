@@ -138,9 +138,18 @@ home_background: # Background URL
             link:
     ```
 
+-   渲染数学公式
+
+    使用 KaTeX 渲染数学公式，默认关闭
+
+    ```yaml
+    math:
+        enable: false
+    ```
+
 -   文章加密
 
-    默认关闭，使用 AES 加密，在 Front-Matter 里设置 `password` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
+    使用 AES 加密算法，在 Front-Matter 里设置 `password` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
 
     ```yaml
     crypto:
