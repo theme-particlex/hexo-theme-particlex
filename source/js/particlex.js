@@ -1,4 +1,3 @@
-const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 const App = Vue.createApp({
     data() {
         return {
@@ -19,18 +18,18 @@ const App = Vue.createApp({
     mounted() {
         if (document.getElementById("home-head"))
             document.getElementById("menu").className += " menu-color";
-        window.addEventListener("scroll", this.handleScroll, true);
+        window.addEventListener("scroll", this.handlescroll, true);
         highlight();
         showimg();
     },
     methods: {
-        home_click() {
+        homeclick() {
             window.scrollTo({
                 top: window.innerHeight,
                 behavior: "smooth",
             });
         },
-        handleScroll() {
+        handlescroll() {
             let newlocal = document.documentElement.scrollTop;
             let menu = document.getElementById("menu");
             let wrap = document.getElementById("home-posts-wrap");
