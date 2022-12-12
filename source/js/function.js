@@ -36,12 +36,8 @@ function showimg() {
         img.addEventListener("click", function () {
             show(this.getAttribute("src"));
         });
-    wrap.addEventListener("click", function () {
-        hide();
-    });
-    window.addEventListener("resize", function () {
-        hide();
-    });
+    wrap.addEventListener("click", () => hide());
+    window.addEventListener("resize", () => hide());
 }
 function rendermath() {
     if (typeof renderMathInElement != "undefined")
