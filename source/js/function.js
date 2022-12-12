@@ -17,7 +17,8 @@ function highlight() {
         language.innerHTML = lang;
         let copycode = document.createElement("div");
         copycode.classList.add("copycode");
-        copycode.innerHTML = '<i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i>';
+        copycode.innerHTML =
+            '<i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i>';
         copycode.addEventListener("click", async function () {
             if (copying) return;
             copying = true;
@@ -30,4 +31,28 @@ function highlight() {
         code.innerHTML = "";
         code.append(content, language, copycode);
     }
+}
+function showimg() {
+    let wrap = document.getElementById("showimg"),
+        content = document.getElementById("showimg-content"),
+        imgs = document.querySelectorAll(".article .content img");
+    function show(src) {
+        content.setAttribute("src", src);
+        wrap.style.opacity = 1;
+        wrap.style.visibility = "visible";
+    }
+    function hide() {
+        wrap.style.opacity = 0;
+        wrap.style.visibility = "hidden";
+    }
+    for (let img of imgs)
+        img.addEventListener("click", function () {
+            show(this.getAttribute("src"));
+        });
+    wrap.addEventListener("click", function () {
+        hide();
+    });
+    window.addEventListener("resize", function () {
+        hide();
+    });
 }
