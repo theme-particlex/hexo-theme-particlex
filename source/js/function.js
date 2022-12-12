@@ -1,35 +1,22 @@
+const sleep = ms => new Promise(res => setTimeout(res, ms));
+let copying = false;
 function highlight() {
-    const sleep = ms => new Promise(res => setTimeout(res, ms));
     hljs.configure({ ignoreUnescapedHTML: true });
     hljs.highlightAll();
     let codes = document.getElementsByTagName("pre");
-    let copying = false;
     for (let code of codes) {
-        const lang =
-            code?.firstChild.className.split(/\s+/).filter(x => {
-                return x != "sourceCode";
-            })[0] || "text";
-        let content = document.createElement("div");
-        content.classList.add("code-content");
-        content.innerHTML = code.innerHTML;
-        let language = document.createElement("div");
-        language.classList.add("language");
-        language.innerHTML = lang;
-        let copycode = document.createElement("div");
-        copycode.classList.add("copycode");
-        copycode.innerHTML =
-            '<i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i>';
+        const lang = code.firstChild?.classList.filter(x => x != "sourceCode")[0] || "text";
+        code.innerHTML = `<div class="code-content">${code.innerHTML}</div><div class="language">${lang}</div><div class="copycode"><i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-copy fa-fw"></i></div>`;
+        let copycode = code.getElementsByClassName("copycode")[0];
         copycode.addEventListener("click", async function () {
             if (copying) return;
             copying = true;
-            copycode.classList.add("copied");
+            this.classList.add("copied");
             await navigator.clipboard.writeText(this.parentElement.firstChild.innerText);
             await sleep(1000);
-            copycode.classList.remove("copied");
+            this.classList.remove("copied");
             copying = false;
         });
-        code.innerHTML = "";
-        code.append(content, language, copycode);
     }
 }
 function showimg() {
