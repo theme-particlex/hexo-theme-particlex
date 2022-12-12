@@ -1260,7 +1260,6 @@ input.search-bar {
     margin: auto;
     max-width: 95%;
     max-height: 95%;
-    border-radius: 20px;
     box-shadow: 0 0 50px 10px #d9d9d980;
 }
 ::-webkit-scrollbar {
