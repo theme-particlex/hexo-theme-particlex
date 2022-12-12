@@ -1,4 +1,4 @@
-const App = Vue.createApp({
+const app = Vue.createApp({
     data() {
         return {
             showpage: false,
@@ -53,4 +53,4 @@ const App = Vue.createApp({
         },
     },
 });
-App.mount("#layout");
+app.mount("#layout");
