@@ -16,17 +16,17 @@ const searcher = {
                 });
         });
     },
-    procstr(str) {
-        if (!str) return "";
-        return str.toLowerCase().replace(/\s+/gm, "");
+    rstr(s) {
+        if (!s) return "";
+        return s.toLowerCase().replace(/\s+/gm, "");
     },
-    match(str, proc) {
-        return str.indexOf(proc) != -1;
+    match(s, rs) {
+        return s.indexOf(rs) != -1;
     },
     update() {
         let res = [],
-            proc = this.procstr(this.input.value);
-        if (proc) res = this.data.filter(i => this.match(i.odata, proc)).map(i => i.path);
+            rs = this.rstr(this.input.value);
+        if (rs) res = this.data.filter(i => this.match(i.odata, rs)).map(i => i.path);
         else res = this.data.map(i => i.path);
         for (let line of this.timeline)
             if (res.indexOf(line.getAttribute("path")) == -1) {
