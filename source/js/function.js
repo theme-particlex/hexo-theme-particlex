@@ -5,8 +5,8 @@ function highlight() {
     hljs.highlightAll();
     let codes = document.getElementsByTagName("pre");
     for (let code of codes) {
-        const lang = code.firstChild?.classList.filter(x => x != "sourceCode")[0] || "text";
-        code.innerHTML = `<div class="code-content">${code.innerHTML}</div><div class="language">${lang}</div><div class="copycode"><i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-copy fa-fw"></i></div>`;
+        const lang = [...code.classList].filter(x => x != "sourceCode")[0] || "text";
+        code.innerHTML = `<div class="code-content">${code.innerHTML}</div><div class="language">${lang}</div><div class="copycode"><i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i></div>`;
         let copycode = code.getElementsByClassName("copycode")[0];
         copycode.addEventListener("click", async function () {
             if (copying) return;
