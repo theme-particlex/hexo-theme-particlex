@@ -63,7 +63,11 @@ footer:
         code:
         link:
 
-# Crypto
+# Rendering math with KaTeX
+math:
+    enable: false
+
+# Article encryption
 crypto:
     enable: false
 

@@ -21,6 +21,7 @@ const app = Vue.createApp({
         window.addEventListener("scroll", this.handlescroll, true);
         highlight();
         showimg();
+        rendermath();
     },
     methods: {
         homeclick() {
