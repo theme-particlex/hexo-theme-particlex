@@ -1,4 +1,5 @@
 function highlight() {
+    const sleep = ms => new Promise(res => setTimeout(res, ms));
     hljs.configure({ ignoreUnescapedHTML: true });
     hljs.highlightAll();
     let codes = document.getElementsByTagName("pre");
