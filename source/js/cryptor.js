@@ -1,4 +1,4 @@
-const crypto = {
+const cryptor = {
     init(enc, sha) {
         this.enc = enc;
         this.sha = sha;

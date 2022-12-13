@@ -54,8 +54,8 @@
     <input class="ipt crypto" placeholder="文章被加密，请输入密码">
     <div class="content" v-pre></div>
     <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="<%- url_for("/js/crypto.js") %>"></script>
-    <script>crypto.init("<%- encrypt(page.content, SHA(page.password.toString())) %>", "<%- SHA(page.content) %>")</script>
+    <script src="<%- url_for("/js/cryptor.js") %>"></script>
+    <script>cryptor.init("<%- encrypt(page.content, SHA(page.password.toString())) %>", "<%- SHA(page.content) %>")</script>
     <% } else { %>
     <div class="content" v-pre>
         <%- page.content %>
