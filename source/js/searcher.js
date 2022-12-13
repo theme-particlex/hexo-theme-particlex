@@ -7,7 +7,8 @@ const searcher = {
             this.input.addEventListener("input", () => this.composition || this.update());
             this.input.addEventListener("compositionstart", () => (this.composition = true));
             this.input.addEventListener("compositionend", () => {
-                this.update(), (this.composition = false);
+                this.update();
+                this.composition = false;
             });
             fetch(path)
                 .then(res => res.json())
