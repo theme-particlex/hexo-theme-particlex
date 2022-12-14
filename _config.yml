@@ -11,7 +11,7 @@ head_block_enable: true
 home_background:
 
 # ParticleX theme icon is adopts the font awesome 6
-# Link: https://fontawesome.com/search/
+# Link: https://fontawesome.com/search
 
 # Main menu navigation
 menu:
@@ -43,7 +43,9 @@ menu:
 # Side info card
 card:
     enable: true
-    description: ["Description", "..."] # You can add more
+    description:
+        - "Description"
+        - "..."
     icon_links:
         {}
         # <name>:
@@ -62,6 +64,13 @@ footer:
         enable: false
         code:
         link:
+
+# Polyfill
+# https://polyfill.io/v3/url-builder
+polyfill:
+    enable: true
+    features:
+        - default
 
 # Rendering math with KaTeX
 math:

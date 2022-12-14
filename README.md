@@ -10,21 +10,20 @@
 
 ~~虽然更改后只有一种了，如果你想改颜色就在 `particlex.css` 里 `Ctrl+F` 替换吧~~
 
-## 演示地址（我自己的博客）
+## 演示地址
 
--   Github Pages：<https://argvchs.github.io>
--   Netlify 加速：<https://argvchs.netlify.app>
--   Vercel 加速：<https://argvchs.vercel.app>
+-   Github Pages <https://argvchs.github.io>
+-   Netlify <https://argvchs.netlify.app>
+-   Vercel <https://argvchs.vercel.app>
 
-## 主题安装
-
-进入主题目录后，克隆此仓库
+## 安装
 
 ```bash
-git clone https://github.com/argvchs/hexo-theme-particlex.git themes\particlex --depth=1
+cd themes
+git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=1
 ```
 
-## 关闭 Hexo 自带 highlight
+## 关闭自带 Highlight
 
 到博客根目录下的 `_config.yml`，找到 `highlight` 和 `prismjs` 参数，设置为如下：
 
@@ -45,7 +44,7 @@ prismjs:
 
 修改完请清除缓存：`hexo cl`
 
-## 配置文件说明
+## 配置
 
 ```yaml
 language: # Language
@@ -56,7 +55,7 @@ home_background: # Background URL
 
 -   导航栏配置
 
-    为了方便，主题使用的图标是 FontAwesome 6 图标，地址为：<https://fontawesome.com/search/>
+    为了方便，主题使用的图标是 FontAwesome 6 图标，地址为：<https://fontawesome.com/search>
 
     ```yaml
     menu:
@@ -97,7 +96,9 @@ home_background: # Background URL
     ```yaml
     card:
         enable: true
-        description: ["Description", "..."] # You can add more
+        description:
+            - "Description"
+            - "..."
         icon_links:
             {}
             # <name>:
@@ -136,6 +137,17 @@ home_background: # Background URL
             enable: false
             code:
             link:
+    ```
+
+-   Polyfill
+
+    使用 [Polyfill.io](https://polyfill.io/v3/url-builder) 自动根据 UA 处理新的 JS API 兼容问题，可以配合 [Hexo-Renderer-BabelJS](https://github.com/argvchs/hexo-renderer-babeljs) 插件处理 JS 语法
+
+    ```yaml
+    polyfill:
+        enable: true
+        features:
+            - default
     ```
 
 -   渲染数学公式
