@@ -1,0 +1,13 @@
+<div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#fff;transition:all 0.3s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+    <div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+        <div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
+            <div>
+                <h2>LOADING...</h2>
+                <p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p>
+                <div>
+                    <img alt="loading" src="<%- url_for("/loading.gif") %>">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
