@@ -611,7 +611,7 @@ footer .footer-wrap {
 }
 .content img {
     display: block;
-    max-width: 100%;
+    max-width: 70%;
     margin: 0 auto;
 }
 .content table tr th {
