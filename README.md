@@ -97,7 +97,7 @@ home_background: # Background URL
     card:
         enable: true
         description:
-            - "Description"
+            - Description
             - "..."
         icon_links:
             {}
