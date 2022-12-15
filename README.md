@@ -221,7 +221,7 @@ home_background: # Background URL
 
     Giscus 是一个由 GitHub Discussions 支持的评论系统
 
-    在 [giscus.app](https://giscus.app) 配置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可
+    在 [Giscus.app](https://giscus.app) 配置好各项后，会在下面生成一个 `<script>` 标签，在主题内填入即可
 
     ```yaml
     giscus:
