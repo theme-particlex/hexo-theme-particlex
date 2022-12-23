@@ -45,8 +45,8 @@
             return CryptoJS.SHA256(str).toString(CryptoJS.enc.Base64);
         }
         function encrypt(str, key) {
-            return CryptoJS.AES.encrypt(str, key, {
-                mode: CryptoJS.mode.CBC,
+            return CryptoJS.AES.encrypt(str, CryptoJS.enc.Utf8.parse(key), {
+                mode: CryptoJS.mode.ECB,
                 padding: CryptoJS.pad.Pkcs7,
             }).toString();
         }
@@ -55,7 +55,7 @@
     <div class="content" v-pre></div>
     <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="<%- url_for("/js/cryptor.js") %>"></script>
-    <script>cryptor.init("<%- encrypt(page.content, SHA(page.password.toString())) %>", "<%- SHA(page.content) %>")</script>
+    <script>cryptor.init("<%- encrypt(page.content, page.password.toString()) %>", "<%- SHA(page.content) %>")</script>
     <% } else { %>
     <div class="content" v-pre>
         <%- page.content %>
