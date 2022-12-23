@@ -5,7 +5,7 @@
         <%
             var color = ["background: #ffa2c4", "background: #00bcd4", "background: #03a9f4", "background: #00a596", "background: #ff7d73"];
             if (is_tag(tag.name))
-                color = ["background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"];
+                var color = ["background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"];
             var num = Math.floor(Math.random() * color.length);
         %>
         <span>

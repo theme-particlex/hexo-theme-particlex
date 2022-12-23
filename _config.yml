@@ -2,39 +2,43 @@
 # Developer: argvchs
 
 # Avatar image url
-avatar:
+avatar: https://i0.hdslb.com/bfs/album/26ebdc733112ed398c76a0d9d485ee542e18adfc.jpg
 
 # Home page head info block
 head_block_enable: true
 
 # Home page head background style
-home_background:
+home_background: https://img.picgo.net/2022/12/23/www.todaybing.com-hd-wR1jrAPz-20221127d0ae6f28328f1926.jpeg
+
+# Light/Dark theme
+dark: true
 
 # ParticleX theme icon is adopts the font awesome 6
 # Link: https://fontawesome.com/search
 
 # Main menu navigation
 menu:
-    home:
+    首页:
         name: house
         theme: solid
         src: /
-    about:
+    关于我:
         name: id-card
         theme: solid
         src: /about
-    archives:
+    存档:
         name: box-archive
         theme: solid
         src: /archives
-    categories:
+    分类:
         name: bookmark
         theme: solid
         src: /categories
-    tags:
+    标签:
         name: tags
         theme: solid
         src: /tags
+    # Example:
     # <name>:
     #     name: <icon-name>
     #     theme: <icon-theme>
@@ -43,27 +47,43 @@ menu:
 # Side info card
 card:
     enable: true
-    description:
-        - Description
-        - "..."
-    icon_links:
-        {}
-        # <name>:
-        #    name: <icon-name>
-        #    theme: <icon-theme>
-        #    link: <link-url>
-    friend_links:
-        {}
-        # <name>: <link-url>
+    description: 
+        - "我是山猫三号，一个来自一百零三世纪的强人工智能。"
+    icon_links: 
+        Github:
+            name: github
+            theme: brands
+            link: https://github.com/lynxcatthethird
+        Twitter:
+            name: twitter
+            theme: brands
+            link: https://twitter.com/lynxcatthethird
+        # Bilibili:
+        #     name: bilibili
+        #     theme: brands
+        #     link: https://space.bilibili.com/xxxxxxxxxx
+        # Wechat:
+        #     name: weixin
+        #     theme: brands
+        #     link: weixin://contacts/profile/xxxxxxx
+        # QQ:
+        #     name: qq
+        #     theme: brands
+        #     link: http://wpa.qq.com/msgrd?v=3&uin=xxxxxxxx&site=qq&menu=true
+    friend_links: 
+        欢迎: https://lynxcatthethird-person.netlify.app/2022/12/292c5761.html
+        Argvchs: https://argvchs.github.io/
+        一蓑烟雨: http://lukeyalvin.site/
+
 
 # Footer info
 footer:
-    since: 20xx
+    since: 2021
     # Customize the server domain name ICP
     ICP:
-        enable: false
-        code:
-        link:
+        enable: true 
+        code: 萌 ICP 备 20221840 号
+        link: https://icp.gov.moe/?keyword=20221840
 
 # Polyfill
 # https://polyfill.io/v3/url-builder
@@ -74,15 +94,15 @@ polyfill:
 
 # Rendering math with KaTeX
 math:
-    enable: false
+    enable: true
 
 # Article encryption
 crypto:
-    enable: false
+    enable: true
 
 # Search
 search:
-    enable: false
+    enable: true
     path: /search.json
 
 # Gitalk
@@ -107,23 +127,23 @@ gitalk:
 giscus:
     enable: false
     src: https://giscus.app/client.js # Default src
-    repo:
-    repoID:
-    category:
-    categoryID:
+    repo: ara1145/gitcus
+    repoID: R_kgDOImx36A
+    category: General
+    categoryID: DIC_kwDOImx36M4CTCzk
     mapping: pathname
     strict: 0
     reactionsEnabled: 1
-    emitMetadata: 0
-    inputPosition: bottom
-    theme: preferred_color_scheme
+    emitMetadata: 1
+    inputPosition: top
+    theme: light_protanopia
     lang: zh-CN
 
 # Waline
 # https://github.com/walinejs/waline
 waline:
     enable: false
-    serverURL: # Waline server address url, you should set this to your own link
+    serverURL: https://www.lynxcatthethird-waline.tk/
     locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
         {}
         # e.g.:
@@ -132,18 +152,26 @@ waline:
     pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
     emoji: # Custom emoji
         - https://unpkg.com/@waline/emojis@1.0.1/weibo
-        - https://unpkg.com/@waline/emojis@1.0.1/alus
         - https://unpkg.com/@waline/emojis@1.0.1/bilibili
         - https://unpkg.com/@waline/emojis@1.0.1/qq
-        - https://unpkg.com/@waline/emojis@1.0.1/tieba
         - https://unpkg.com/@waline/emojis@1.0.1/tw-emoji
     meta: # Comment information, valid meta are nick, mail and link
         - nick
         - mail
         - link
+    dark: 'true'
     requiredMeta: # Set required meta field, e.g.: [nick] | [nick, mail]
         - nick
     lang: zh-CN # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
     wordLimit: 0 # Word limit, no limit when setting to 0
     login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
     pageSize: 10 # Comment per page
+
+# Twikoo
+# https://github.com/imaegoo/twikoo
+twikoo:
+    enable: true
+    envId: https://xxx.vercel.app # 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
+    region:  # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
+    path: location.pathname # 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+    lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js

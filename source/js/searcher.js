@@ -7,8 +7,7 @@ const searcher = {
             this.input.addEventListener("input", () => this.composition || this.update());
             this.input.addEventListener("compositionstart", () => (this.composition = true));
             this.input.addEventListener("compositionend", () => {
-                this.update();
-                this.composition = false;
+                this.update(), (this.composition = false);
             });
             fetch(path)
                 .then(res => res.json())
@@ -17,17 +16,17 @@ const searcher = {
                 });
         });
     },
-    rstr(s) {
-        if (!s) return "";
-        return s.toLowerCase().replace(/\s+/gm, "");
+    procstr(str) {
+        if (!str) return "";
+        return str.toLowerCase().replace(/\s+/gm, "");
     },
-    match(s, rs) {
-        return s.indexOf(rs) != -1;
+    match(str, proc) {
+        return str.indexOf(proc) != -1;
     },
     update() {
         let res = [],
-            rs = this.rstr(this.input.value);
-        if (rs) res = this.data.filter(i => this.match(i.odata, rs)).map(i => i.path);
+            proc = this.procstr(this.input.value);
+        if (proc) res = this.data.filter(i => this.match(i.odata, proc)).map(i => i.path);
         else res = this.data.map(i => i.path);
         for (let line of this.timeline)
             if (res.indexOf(line.getAttribute("path")) == -1) {

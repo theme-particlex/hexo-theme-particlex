@@ -25,29 +25,66 @@
 <!DOCTYPE html>
 <html lang="<%- config.language %>">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
         <title><%= titlecase(pageTitle) %></title>
+        <meta charset="UTF-8">
+        <meta name="referrer" content="no-referrer">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
         <meta name="author" content="<%- config.author %>">
         <meta name="description" content="<%- config.description %>">
         <meta name="keywords" content="<%- config.keywords %>">
-        <link rel="icon" href="<%- theme.avatar %>">
         <script src="https://cdn.staticfile.org/instant.page/5.1.1/instantpage.min.js" type="module"></script>
         <script src="https://cdn.staticfile.org/font-awesome/6.2.1/js/all.min.js"></script>
         <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
-        <% if (theme.polyfill.enable) { %>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=<% theme.polyfill.features.join(",") %>"></script>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+        <script src="https://cdn.staticfile.org/animejs/3.2.1/anime.min.js"></script>
+        <script src="<%- url_for("/js/fun.js") %>"></script>
+        <link rel="icon" href="<%- theme.avatar %>">
+        <link rel="stylesheet" href="<%- url_for("/css/lxgwwenkailite-regular.css") %>">
+        <link rel="stylesheet" href="<%- url_for("/css/lxgwwenkailite-bold.css") %>">
+        <link rel="stylesheet" href="<%- url_for("/css/lxgwwenkailite-light.css") %>">
+        <link rel="stylesheet" href="<%- url_for("/css/lxgwwenkaimonolite-regular.css") %>">
+        <link rel="stylesheet" href="<%- url_for("/css/lxgwwenkaimonolite-bold.css") %>">
+        <link rel="stylesheet" href="<%- url_for("/css/lxgwwenkaimonolite-light.css") %>">
+        <% if (theme.dark) { %>
+            <link rel="stylesheet" href="<%- url_for("/css/particlex_dark.css") %>">
+        <% } else { %>
+            <link rel="stylesheet" href="<%- url_for("/css/particlex_light.css") %>">
         <% } %>
-        <link rel="stylesheet" href="<%- url_for("/css/fonts.min.css") %>">
-        <link rel="stylesheet" href="<%- url_for("/css/particlex.css") %>">
+        <% if (theme.polyfill.enable) { %>
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=<% theme.polyfill.features.join(",") %>"></script>
+        <% } %>
         <% if (theme.math.enable) { %>
-        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
-        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
+            <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
+            <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+            <script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+            <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
         <% } %>
     </head>
-    <body>
-        <%- include("loading") %>
+    <body class="dark">
+        <canvas
+            id="background"
+            style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:-1"
+        ></canvas>
+        <script src="<%- url_for("/js/background.js") %>"></script>
+        <canvas
+                id="fireworks"
+                style="position:fixed;top:0;left:0;width:100vw;height:100vh;pointer-events:none;z-index:32767"
+        ></canvas>
+        <script src="<%- url_for("/js/firework.js") %>"></script>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:2147483647;justify-content:space-between;background:#262626;transition:all 0.3s ease-out;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none">
+            <div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center">
+                <div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center">
+                    <div>
+                        <h2>加载中...</h2>
+                        <p style="word-break:keep-all">着急你就输了~~~</p>
+                        <div>
+                            <img alt="loading" src="<%- url_for("/loading.gif") %>">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div id="layout">
             <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
             <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>

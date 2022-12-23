@@ -55,7 +55,7 @@
     <div class="content" v-pre></div>
     <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
     <script src="<%- url_for("/js/cryptor.js") %>"></script>
-    <script>cryptor.init("<%- encrypt(page.content, page.password.toString()) %>", "<%- SHA(page.content) %>")</script>
+    <script>cryptor.init("<%- encrypt(page.content, SHA(page.password.toString())) %>", "<%- SHA(page.content) %>")</script>
     <% } else { %>
     <div class="content" v-pre>
         <%- page.content %>
@@ -76,6 +76,12 @@
     <link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.9.1/waline.min.css" />
     <div id="comment">
         <div id="waline-container"></div>
+    </div>
+    <% } %>
+    <% if (theme.twikoo.enable) { %>
+    <script src="https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js"></script>
+    <div id="comment">
+        <div id="twikoo-container"></div>
     </div>
     <% } %>
 </div>

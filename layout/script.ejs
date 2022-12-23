@@ -45,7 +45,6 @@
 ></script>
 <% } %>
 <% if (theme.waline.enable && is_post()) { %>
-<script src="https://cdn.staticfile.org/waline/2.9.1/waline.min.js"></script>
 <script>
     Waline.init({
         el: '#waline-container',
@@ -61,5 +60,16 @@
         login: "<%- theme.waline.login %>",
         locale: <%- JSON.stringify(theme.waline.locale) %>
     });
+</script>
+<% } %>
+<% if (theme.twikoo.enable && is_post()) { %>
+<script>
+twikoo.init({
+    envId: '<%- theme.twikoo.envId %>',
+    el: '#twikoo-container',
+    region: '<%- theme.twikoo.region %>',
+    path: <%- theme.twikoo.path %>,
+    lang: '<%- theme.twikoo.lang %>'
+})
 </script>
 <% } %>
