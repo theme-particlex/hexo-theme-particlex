@@ -19,7 +19,7 @@ const cryptor = {
     },
     decrypt(enc, key, sha) {
         try {
-            let res = CryptoJS.AES.decrypt(enc, CryptoJS.enc.Utf8.parse(key), {
+            let res = CryptoJS.AES.decrypt(enc, this.SHA(key), {
                 mode: CryptoJS.mode.ECB,
                 padding: CryptoJS.pad.Pkcs7,
             }).toString(CryptoJS.enc.Utf8);

@@ -45,7 +45,7 @@
             return CryptoJS.SHA256(str).toString(CryptoJS.enc.Base64);
         }
         function encrypt(str, key) {
-            return CryptoJS.AES.encrypt(str, CryptoJS.enc.Utf8.parse(key), {
+            return CryptoJS.AES.encrypt(str, SHA(key), {
                 mode: CryptoJS.mode.ECB,
                 padding: CryptoJS.pad.Pkcs7,
             }).toString();
