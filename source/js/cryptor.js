@@ -19,8 +19,8 @@ const cryptor = {
     },
     decrypt(enc, key, sha) {
         try {
-            let res = CryptoJS.AES.decrypt(enc, key, {
-                mode: CryptoJS.mode.CBC,
+            let res = CryptoJS.AES.decrypt(enc, CryptoJS.enc.Utf8.parse(key), {
+                mode: CryptoJS.mode.ECB,
                 padding: CryptoJS.pad.Pkcs7,
             }).toString(CryptoJS.enc.Utf8);
             return { dec: res, check: this.SHA(res) == sha };
@@ -29,7 +29,7 @@ const cryptor = {
         }
     },
     update() {
-        let res = this.decrypt(this.enc, this.SHA(this.input.value), this.sha);
+        let res = this.decrypt(this.enc, this.input.value, this.sha);
         if (res.check) {
             this.input.disabled = true;
             this.input.classList.remove("fail");
