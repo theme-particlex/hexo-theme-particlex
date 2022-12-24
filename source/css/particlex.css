@@ -187,7 +187,7 @@ footer .footer-wrap {
     opacity: 0;
 }
 #home-head {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
     display: flex;
@@ -241,12 +241,11 @@ footer .footer-wrap {
     z-index: -1;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 #home-posts-wrap {
     position: relative;
