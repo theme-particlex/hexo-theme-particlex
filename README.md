@@ -152,7 +152,7 @@ home_background: # Background URL
 
 -   渲染数学公式
 
-    使用 KaTeX 渲染数学公式，默认关闭
+    使用 $\KaTeX$ 渲染数学公式，默认关闭
 
     ```yaml
     math:
