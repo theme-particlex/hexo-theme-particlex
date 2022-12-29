@@ -1041,8 +1041,8 @@ body::-webkit-scrollbar-track {
     );
 }
 ::selection {
-    background-color: #edf7ff;
-    color: #9dd1ff;
+    background-color: #3392ff2a;
+    color: unset;
 }
 @media (min-width: 900px) {
     #menu .desktop-menu {
