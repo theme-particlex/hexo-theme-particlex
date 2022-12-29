@@ -30,8 +30,8 @@
                     <% post.tags.data.forEach(data => { %>
                     <span class="tag">
                         <%
-                            var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
-                            var num = Math.floor(Math.random() * color.length);
+                            const color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
+                            let num = Math.floor(Math.random() * color.length);
                         %>
                         <a href="<%- url_for(data.path) %>" style="<%- color[num] %>">
                             <%= data.name %>

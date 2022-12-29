@@ -1,12 +1,12 @@
 <div id="archives">
-    <% var posts = []; %>
+    <% let posts = []; %>
     <div class="categories-tags">
         <% site.categories.data.forEach(category => { %>
         <%
-            var color = ["background: #ffa2c4", "background: #00bcd4", "background: #03a9f4", "background: #00a596", "background: #ff7d73"];
-            if (is_category(category.name))
-                color = ["background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"];
-            var num = Math.floor(Math.random() * color.length);
+            const color = is_category(category.name)
+                ? ["background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"]
+                : ["background: #ffa2c4", "background: #00bcd4", "background: #03a9f4", "background: #00a596", "background: #ff7d73"];
+            let num = Math.floor(Math.random() * color.length);
         %>
         <span>
             <a href="<%- url_for(category.path) %>" style="<%- color[num] %>">
@@ -45,8 +45,8 @@
                     <% post.tags.data.forEach(data => { %>
                     <span class="tag">
                         <%
-                            var color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
-                            var num = Math.floor(Math.random() * color.length);
+                            const color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
+                            let num = Math.floor(Math.random() * color.length);
                         %>
                         <a href="<%- url_for(data.path) %>" style="<%- color[num] %>">
                             <%= data.name %>
