@@ -1,5 +1,5 @@
 <%
-    var layout = "post";
+    let layout = "post";
     if (is_home())
         layout = "index";
     else if (is_post())
@@ -10,16 +10,16 @@
         layout = "tags";
     else if (is_archive() || is_year() || is_month())
         layout = "archives";
-    var pageTitle = "";
+    let title = "";
     if (page.title)
-        pageTitle = page.title + " | ";
+        title = page.title + " | ";
     else if (is_category())
-        pageTitle = "Categories: " + page.category + " | ";
+        title = "Categories: " + page.category + " | ";
     else if (is_tag())
-        pageTitle = "Tags: " + page.tag + " | ";
+        title = "Tags: " + page.tag + " | ";
     else if (is_archive() || is_year() || is_month())
-        pageTitle = "Archives | ";
-    pageTitle += config.title;
+        title = "Archives | ";
+    title += config.title;
     site.posts.data.sort((a, b) => b.date - a.date);
 %>
 <!DOCTYPE html>
@@ -27,7 +27,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title><%= titlecase(pageTitle) %></title>
+        <title><%= titlecase(title) %></title>
         <meta name="author" content="<%- config.author %>">
         <meta name="description" content="<%- config.description %>">
         <meta name="keywords" content="<%- config.keywords %>">
