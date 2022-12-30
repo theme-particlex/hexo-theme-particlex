@@ -52,7 +52,7 @@ body {
     width: 100%;
     background: #181a1dfb;
     color: #eee;
-    font-family: "LXGW WenKai Lite", sans-serif;
+    ffont-family: "Lexend", "Noto Sans SC", sans-serif;
     font-size: 17px;
     font-weight: 500;
     overflow-x: hidden;
@@ -83,35 +83,35 @@ ol li {
 h1 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "LXGW WenKai Lite", sans-serif;
+    ffont-family: "Lexend", "Noto Sans SC", sans-serif;
     color: #eee;
     font-size: 38px;
 }
 h2 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "LXGW WenKai Lite", sans-serif;
+    ffont-family: "Lexend", "Noto Sans SC", sans-serif;
     color: #eee;
     font-size: 33px;
 }
 h3 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "LXGW WenKai Lite", sans-serif;
+    ffont-family: "Lexend", "Noto Sans SC", sans-serif;
     color: #eee;
     font-size: 29px;
 }
 h4 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "LXGW WenKai Lite", sans-serif;
+    ffont-family: "Lexend", "Noto Sans SC", sans-serif;
     color: #eee;
     font-size: 25px;
 }
 h5 {
     margin: 15px 0;
     font-weight: bold;
-    font-family: "LXGW WenKai Lite", sans-serif;
+    ffont-family: "Lexend", "Noto Sans SC", sans-serif;
     color: #eee;
     font-size: 21px;
 }
@@ -484,7 +484,7 @@ footer .footer-wrap {
     display: inline-block;
     margin-left: 30px;
     margin-right: 20px;
-    font-family: "LXGW WenKai Lite", sans-serif;
+    ffont-family: "Lexend", "Noto Sans SC", sans-serif;
     text-transform: uppercase;
     color: #333;
 }
@@ -788,7 +788,7 @@ footer .footer-wrap {
     transition: all 0.5s;
 }
 .content code {
-    font-family: "LXGW WenKai Mono Lite", "LXGW WenKai Lite", monospace;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
     background: #bddcf76b;
     padding: 4px 8px;
     border-radius: 4px;
@@ -873,7 +873,7 @@ footer .footer-wrap {
     display: none;
 }
 .content .language {
-    font-family: "LXGW WenKai Mono Lite", "LXGW WenKai Lite", monospace;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
     position: absolute;
     top: 0;
     left: 30px;
@@ -911,7 +911,7 @@ footer .footer-wrap {
     transform: scale(1.25);
 }
 .content .hljs {
-    font-family: "LXGW WenKai Mono Lite", "LXGW WenKai Lite", monospace;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
     background: none;
     line-height: 2;
     font-size: 16px;
@@ -1135,7 +1135,7 @@ input.ipt {
     box-sizing: border-box;
     border: 1px solid #d0d7de;
     border-radius: 50px;
-    font-family: "LXGW WenKai Mono Lite", "LXGW WenKai Lite", monospace;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
     font-size: 15px;
     transition: all 0.25s;
 }
@@ -1177,7 +1177,7 @@ input.search-bar {
     font-family: unset !important;
 }
 .gt-header-textarea {
-    font-family: "LXGW WenKai Mono Lite", "LXGW WenKai Lite", monospace;
+    font-family: "Fira Code", "Noto Sans SC", monospace;
 }
 .gt-container .gt-comment-content {
     border: 1px solid #0000001a;
@@ -1211,14 +1211,14 @@ input.search-bar {
     color: unset !important;
 }
 .gt-container .markdown-body code {
-    font-family: "LXGW WenKai Mono Lite" !important;
+    font-family: "Fira Code" !important;
     background: #bddcf76b;
     border-radius: 4px;
     font-size: 14px;
     color: #4b616b;
 }
 .gt-container .markdown-body pre {
-    font-family: "LXGW WenKai Mono Lite" !important;
+    font-family: "Fira Code" !important;
     font-weight: 500;
     border: 1px solid #ebeef5;
     padding: 20px;
@@ -1274,8 +1274,8 @@ body::-webkit-scrollbar-track {
     );
 }
 ::selection {
-    background-color: #edf7ff;
-    color: #9dd1ff;
+    background-color: #3392ff2a;
+    color: unset;
 }
 @media (min-width: 900px) {
     #menu .desktop-menu {
@@ -1331,7 +1331,7 @@ body::-webkit-scrollbar-track {
     }
     #home-posts .post {
         padding: 50px 50px;
-        margin: 25px 0;
+        margin: 0 0 25px;
     }
     #home-posts .post .excerpt {
         padding: 20px 0;
@@ -1399,7 +1399,7 @@ body::-webkit-scrollbar-track {
     #home-head .home-info .info .wrap h1 {
         font-size: 46px;
         font-weight: bold;
-        font-family: "LXGW WenKai Lite", sans-serif;
+        ffont-family: "Lexend", "Noto Sans SC", sans-serif;
         margin-bottom: 10px;
     }
     #home-head .home-info .info .wrap h3 {
@@ -1428,7 +1428,7 @@ body::-webkit-scrollbar-track {
     }
     #home-posts .post {
         padding: 20px 30px;
-        margin: 30px 0;
+        margin: 0 0 30px;
     }
     #home-posts .post .post-tags {
         padding-right: 69px;
