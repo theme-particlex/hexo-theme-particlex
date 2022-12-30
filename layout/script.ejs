@@ -63,3 +63,14 @@
     });
 </script>
 <% } %>
+<% if (theme.twikoo.enable && is_post()) { %>
+<script>
+twikoo.init({
+    envId: '<%- theme.twikoo.envId %>',
+    el: '#twikoo-container',
+    region: '<%- theme.twikoo.region %>',
+    path: <%- theme.twikoo.path %>,
+    lang: '<%- theme.twikoo.lang %>'
+})
+</script>
+<% } %>
