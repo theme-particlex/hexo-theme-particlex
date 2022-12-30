@@ -41,7 +41,7 @@ function showimg() {
     window.addEventListener("resize", () => hide());
 }
 function rendermath() {
-    if (typeof renderMathInElement != "undefined")
+    if (typeof renderMathInElement !== "undefined")
         renderMathInElement(document.body, {
             delimiters: [
                 { left: "$$", right: "$$", display: true },

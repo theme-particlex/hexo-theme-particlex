@@ -4,9 +4,9 @@
         layout = "index";
     else if (is_post())
         layout = "post";
-    else if (is_category() || page.title == "categories")
+    else if (is_category() || page.type == "categories")
         layout = "categories";
-    else if (is_tag() || page.title == "tags")
+    else if (is_tag() || page.type == "tags")
         layout = "tags";
     else if (is_archive() || is_year() || is_month())
         layout = "archives";
