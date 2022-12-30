@@ -1,65 +1,78 @@
 <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
 <script src="<%- url_for("/js/functions.js") %>"></script>
 <script src="<%- url_for("/js/particlex.js") %>"></script>
-<% if (theme.gitalk.enable && is_post()) { %>
-<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
-<script>
-    let clientID = "<%- theme.gitalk.clientID %>", clientSecret = "<%- theme.gitalk.clientSecret %>";
-    <% Object.keys(theme.gitalk.sites).forEach(key => { %>
-    if (window.location.host == "<%- key %>") {
-        clientID = "<%- theme.gitalk.sites[key].clientID %>";
-        clientSecret = "<%- theme.gitalk.sites[key].clientSecret %>";
-    }
-    <% }); %>
-    const gitalk = new Gitalk({
-        clientID: clientID,
-        clientSecret: clientSecret,
-        repo: "<%- theme.gitalk.repo %>",
-        owner: "<%- theme.gitalk.owner %>",
-        admin: ["<%- theme.gitalk.admin %>"],
-        language: "<%- theme.gitalk.language %>",
-        id: location.pathname,
-        distractionFreeMode: false,
-        <% if (theme.gitalk.proxy) { %>
-        proxy: "<%- theme.gitalk.proxy %>"
-        <% } %>
-    })
-    gitalk.render("gitalk-container")
-</script>
-<% } %>
-<% if (theme.giscus.enable && is_post()) { %>
-<script
-    src="<%- theme.giscus.src %>"
-    data-repo="<%- theme.giscus.repo %>"
-    data-repo-id="<%- theme.giscus.repoID %>"
-    data-category="<%- theme.giscus.category %>"
-    data-category-id="<%- theme.giscus.categoryID %>"
-    data-mapping="<%- theme.giscus.mapping %>"
-    data-strict="<%- theme.giscus.strict %>"
-    data-reactions-enabled="<%- theme.giscus.reactionsEnabled %>"
-    data-emit-metadata="<%- theme.giscus.emitMetadata %>"
-    data-input-position="<%- theme.giscus.inputPosition %>"
-    data-theme="<%- theme.giscus.theme %>"
-    data-lang="<%- theme.giscus.lang %>"
-    async
-></script>
-<% } %>
-<% if (theme.waline.enable && is_post()) { %>
-<script src="https://cdn.staticfile.org/waline/2.9.1/waline.min.js"></script>
-<script>
-    Waline.init({
-        el: '#waline-container',
-        serverURL: "<%- theme.waline.serverURL %>",
-        commentCount: <%- theme.waline.commentCount %>,
-        pageview: <%- theme.waline.pageview %>,
-        emoji: "<%- theme.waline.emoji %>".split(','),
-        meta: "<%- theme.waline.meta %>".split(','),
-        requiredMeta: "<%- theme.waline.requiredMeta %>".split(','),
-        lang: "<%- theme.waline.lang %>",
-        wordLimit: <%- theme.waline.wordLimit %>,
-        pageSize: "<%- theme.waline.pageSize %>",
-        login: "<%- theme.waline.login %>",
-        locale: <%- JSON.stringify(theme.waline.locale) %>
-    });
-</script>
+<% if (is_post()) { %>
+    <% if (theme.gitalk.enable) { %>
+    <script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+    <script>
+        let clientID = "<%- theme.gitalk.clientID %>", clientSecret = "<%- theme.gitalk.clientSecret %>";
+        <% Object.keys(theme.gitalk.sites).forEach(key => { %>
+        if (window.location.host == "<%- key %>") {
+            clientID = "<%- theme.gitalk.sites[key].clientID %>";
+            clientSecret = "<%- theme.gitalk.sites[key].clientSecret %>";
+        }
+        <% }); %>
+        const gitalk = new Gitalk({
+            clientID: clientID,
+            clientSecret: clientSecret,
+            repo: "<%- theme.gitalk.repo %>",
+            owner: "<%- theme.gitalk.owner %>",
+            admin: ["<%- theme.gitalk.admin %>"],
+            language: "<%- theme.gitalk.language %>",
+            id: location.pathname,
+            distractionFreeMode: false,
+            <% if (theme.gitalk.proxy) { %>
+            proxy: "<%- theme.gitalk.proxy %>"
+            <% } %>
+        })
+        gitalk.render("gitalk-container")
+    </script>
+    <% } %>
+    <% if (theme.giscus.enable) { %>
+    <script
+        src="<%- theme.giscus.src %>"
+        data-repo="<%- theme.giscus.repo %>"
+        data-repo-id="<%- theme.giscus.repoID %>"
+        data-category="<%- theme.giscus.category %>"
+        data-category-id="<%- theme.giscus.categoryID %>"
+        data-mapping="<%- theme.giscus.mapping %>"
+        data-strict="<%- theme.giscus.strict %>"
+        data-reactions-enabled="<%- theme.giscus.reactionsEnabled %>"
+        data-emit-metadata="<%- theme.giscus.emitMetadata %>"
+        data-input-position="<%- theme.giscus.inputPosition %>"
+        data-theme="<%- theme.giscus.theme %>"
+        data-lang="<%- theme.giscus.lang %>"
+        async
+    ></script>
+    <% } %>
+    <% if (theme.waline.enable) { %>
+    <script src="https://cdn.staticfile.org/waline/2.9.1/waline.min.js"></script>
+    <script>
+        Waline.init({
+            el: "#waline-container",
+            serverURL: "<%- theme.waline.serverURL %>",
+            commentCount: <%- theme.waline.commentCount %>,
+            pageview: <%- theme.waline.pageview %>,
+            emoji: "<%- theme.waline.emoji %>".split(","),
+            meta: "<%- theme.waline.meta %>".split(","),
+            requiredMeta: "<%- theme.waline.requiredMeta %>".split(","),
+            lang: "<%- theme.waline.lang %>",
+            wordLimit: <%- theme.waline.wordLimit %>,
+            pageSize: "<%- theme.waline.pageSize %>",
+            login: "<%- theme.waline.login %>",
+            locale: <%- JSON.stringify(theme.waline.locale) %>
+        });
+    </script>
+    <% } %>
+    <% if (theme.twikoo.enable) { %>
+    <script>
+        twikoo.init({
+            el: "#twikoo-container",
+            envId: "<%- theme.twikoo.envId %>",
+            region: "<%- theme.twikoo.region %>",
+            path: <%- theme.twikoo.path %>,
+            lang: "<%- theme.twikoo.lang %>"
+        })
+    </script>
+    <% } %>
 <% } %>
