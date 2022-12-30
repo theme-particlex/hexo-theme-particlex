@@ -7,10 +7,10 @@ avatar:
 # Home page head info block
 head_block_enable: true
 
-# Home page head background style
+# Home page head background image url
 home_background:
 
-# ParticleX theme icon is adopts the font awesome 6
+# ParticleX theme icon is adopts the Font Awesome 6
 # Link: https://fontawesome.com/search
 
 # Main menu navigation

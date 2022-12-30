@@ -2,13 +2,13 @@
 
 [Hexo-Theme-ParticleX](https://github.com/argvchs/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很好的
 
-原来用的是 Vue2 + AntdVue1，现更新到 Vue3，去除 AntdVue 采用自定义样式，图标更改为 FontAwesome 6，将不能用的 JsDelivr 改为 Staticfile CDN
+原来用的是 Vue 2 + Ant Design Vue 1，现更新到 Vue 3，去除 Ant Design Vue 采用自定义样式，图标更改为 Font Awesome 6，将不能用的 JSDelivr 改为 Staticfile CDN
 
 原项目 `README.md` 里说：
 
-> 目前有 full、night 和 maiden **两个**主题样式
+> 目前有 Full、Night 和 Maiden **两个**主题样式
 
-~~虽然更改后只有一种了，如果你想改颜色就在 `particlex.css` 里 `Ctrl+F` 替换吧~~
+虽然更改后只有一种了，如果你想改颜色就在 `particlex.css` 里 `Ctrl+F` 替换吧
 
 ## 演示地址
 
@@ -47,10 +47,9 @@ prismjs:
 ## 配置
 
 ```yaml
-language: # Language
-avatar: # Avatar URL
-head_block_enable: true
-home_background: # Background URL
+avatar: # Avatar image url
+head_block_enable: true # Home page head info block
+home_background: # Home page head background image url
 ```
 
 -   导航栏配置
