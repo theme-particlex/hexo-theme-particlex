@@ -277,6 +277,19 @@ home_background: # Background URL
         pageSize: 10 # Comment per page
     ```
 
+-   Twikoo
+
+    Twikoo 是一个一个简洁、安全、免费的静态网站评论系统
+
+    ```yaml
+    twikoo:
+        enable: false
+        envId:
+        region:
+        path: location.pathname
+        lang: zh-CN
+    ```
+
 ## 写在最后
 
 本项目采用 MIT 开源许可证，欢迎大家贡献，你可以随意打开一个 Issue 来进行提问，有任何改进想法都可以进行 Fork，期待您的 Pull Request

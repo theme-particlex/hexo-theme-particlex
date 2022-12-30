@@ -10,12 +10,6 @@ head_block_enable: true
 # Home page head background style
 home_background:
 
-# Light/Dark theme
-dark: true
-
-# Lanterns
-dengbox: true
-
 # ParticleX theme icon is adopts the font awesome 6
 # Link: https://fontawesome.com/search
 
@@ -158,7 +152,7 @@ waline:
 # https://github.com/imaegoo/twikoo
 twikoo:
     enable: false
-    envId:  # 腾讯云环境填 envId；Vercel 环境填地址（https://xxx.vercel.app）
-    region:  # 环境地域，默认为 ap-shanghai，腾讯云环境填 ap-shanghai 或 ap-guangzhou；Vercel 环境不填
-    path: location.pathname # 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-    lang: zh-CN # 用于手动设定评论区语言，支持的语言列表 https://github.com/imaegoo/twikoo/blob/main/src/client/utils/i18n/index.js
+    envId:
+    region:
+    path: location.pathname
+    lang: zh-CN
