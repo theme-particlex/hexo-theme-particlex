@@ -1,0 +1,32 @@
+{
+  "name": "hexo-theme-particlex",
+  "version": "1.0.0",
+  "description": "A concise Hexo theme, based on Particle.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/argvchs/hexo-theme-particlex.git"
+  },
+  "keywords": [
+    "hexo",
+    "hexo-theme",
+    "gitalk",
+    "twikoo",
+    "waline",
+    "giscus"
+  ],
+  "author": "Argvchs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/argvchs/hexo-theme-particlex/issues"
+  },
+  "homepage": "https://github.com/argvchs/hexo-theme-particlex#readme",
+  "dependencies": {
+    "hexo-generator-search-lite": "^1.0.7",
+    "hexo-helper-crypto": "^1.0.4",
+    "hexo-renderer-babeljs": "^1.0.7",
+    "hexo-renderer-ejs": "^2.0.0"
+  }
+}
