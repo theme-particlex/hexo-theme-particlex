@@ -1275,8 +1275,8 @@ body::-webkit-scrollbar-track {
     );
 }
 ::selection {
-    background-color: #edf7ff;
-    color: #9dd1ff;
+    background-color: #3392ff2a;
+    color: unset;
 }
 @media (min-width: 900px) {
     #menu .desktop-menu {
@@ -1332,7 +1332,7 @@ body::-webkit-scrollbar-track {
     }
     #home-posts .post {
         padding: 50px 50px;
-        margin: 25px 0;
+        margin: 0 0 25px;
     }
     #home-posts .post .excerpt {
         padding: 20px 0;
@@ -1429,7 +1429,7 @@ body::-webkit-scrollbar-track {
     }
     #home-posts .post {
         padding: 20px 30px;
-        margin: 30px 0;
+        margin: 0 0 30px;
     }
     #home-posts .post .post-tags {
         padding-right: 69px;
