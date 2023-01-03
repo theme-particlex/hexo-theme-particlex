@@ -10,7 +10,7 @@
 
 虽然更改后只有一种了，如果你想改颜色就在 `particlex.css` 里 `Ctrl+F` 替换吧
 
-## 演示地址
+## 演示
 
 -   Github Pages <https://argvchs.github.io>
 -   Netlify <https://argvchs.netlify.app>
@@ -42,14 +42,15 @@ prismjs:
     tab_replace: ""
 ```
 
-修改完请清除缓存：`hexo cl`
+修改完请 `hexo cl` 清除缓存
 
 ## 配置
 
 ```yaml
-avatar: # Avatar image url
-head_block_enable: true # Home page head info block
-home_background: # Home page head background image url
+avatar: # Avatar image
+headBlockEnable: true # Home page info block
+background: # Home page background image
+highlightStyle: github # Highlight style
 ```
 
 -   导航栏配置
@@ -90,7 +91,7 @@ home_background: # Home page head background image url
 
     `description` 支持 Markdown 格式
 
-    **如果图标链接或友链为空，请在 `icon_links:` 或 `friend_links:` 后添加一个 `{}`**
+    **如果图标链接或友链为空，请在 `iconLinks:` 或 `friendLinks:` 后添加一个 `{}`**
 
     ```yaml
     card:
@@ -98,13 +99,13 @@ home_background: # Home page head background image url
         description:
             - Description
             - "..."
-        icon_links:
+        iconLinks:
             {}
             # <name>:
             #    name: <icon-name>
             #    theme: <icon-theme>
             #    link: <link-url>
-        friend_links:
+        friendLinks:
             {}
             # <name>: <link-url>
     ```
@@ -186,7 +187,7 @@ home_background: # Home page head background image url
     # Site config
     search:
         path: /search.json
-        optimize: false
+        optimize: true
     ```
 
 -   Gitalk
