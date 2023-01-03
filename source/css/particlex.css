@@ -541,8 +541,8 @@ footer .footer-wrap {
     top: -70px !important;
 }
 .menu-color {
-    background: #00000033 !important;
-    box-shadow: 0 -1px 10px 0 #ffffff00 !important;
+    background: #0003 !important;
+    box-shadow: 0 -1px 10px 0 #fff0 !important;
 }
 .menu-color .title {
     color: #fff !important;
@@ -983,11 +983,11 @@ body::-webkit-scrollbar-track {
     border: 3px solid #e6efff;
     background-image: linear-gradient(
         45deg,
-        rgba(255, 255, 255, 0.4) 25%,
+        #fff6 25%,
         transparent 25%,
         transparent 50%,
-        rgba(255, 255, 255, 0.4) 50%,
-        rgba(255, 255, 255, 0.4) 75%,
+        #fff6 50%,
+        #fff6 75%,
         transparent 75%,
         transparent
     );
