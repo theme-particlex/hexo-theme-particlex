@@ -682,54 +682,6 @@ footer .footer-wrap {
     line-height: 2;
     font-size: 13px;
 }
-.content .hljs .hljs-built_in {
-    color: #42a4d6;
-}
-.content .hljs .hljs-keyword {
-    color: #e24279;
-}
-.content .hljs .hljs-literal {
-    color: #ff9800;
-}
-.content .hljs .hljs-number {
-    color: #ff9800;
-}
-.content .hljs .hljs-doctag {
-    color: #009688;
-}
-.content .hljs .hljs-string {
-    color: #009688;
-}
-.content .hljs .hljs-comment {
-    color: #9e9e9e;
-}
-.content .hljs .hljs-quote {
-    color: #9e9e9e;
-}
-.content .hljs .hljs-attribute {
-    color: #f00;
-}
-.content .hljs .hljs-name {
-    color: #f00;
-}
-.content .hljs .hljs-attr {
-    color: #525252;
-}
-.content .hljs .hljs-class {
-    color: #3f51b5;
-}
-.content .hljs .hljs-title {
-    color: #3f51b5;
-}
-.content .hljs .hljs-type {
-    color: #3f51b5;
-}
-.content .hljs .hljs-params {
-    color: #458;
-}
-.content .hljs .hljs-variable {
-    color: #458;
-}
 #main {
     margin-right: calc(100% - 100vw);
 }

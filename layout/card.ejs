@@ -14,18 +14,18 @@
             <% }); %>
         </div>
         <div class="icon-links">
-            <% Object.keys(theme.card.icon_links).forEach(key => { %>
+            <% Object.keys(theme.card.iconLinks).forEach(key => { %>
             <span class="icon-link">
-                <a href="<%- theme.card.icon_links[key].link %>">
-                    <i class="fa-<%- theme.card.icon_links[key].theme %> fa-<%- theme.card.icon_links[key].name %> fa-fw"></i>
+                <a href="<%- theme.card.iconLinks[key].link %>">
+                    <i class="fa-<%- theme.card.iconLinks[key].theme %> fa-<%- theme.card.iconLinks[key].name %> fa-fw"></i>
                 </a>
             </span>
             <% }); %>
         </div>
         <div class="friend-links">
-            <% Object.keys(theme.card.friend_links).forEach(key => { %>
+            <% Object.keys(theme.card.iconLinks).forEach(key => { %>
             <div class="friend-link">
-                <a href="<%- theme.card.friend_links[key] %>">
+                <a href="<%- theme.card.iconLinks[key] %>">
                     <%= key %>
                 </a>
             </div>
