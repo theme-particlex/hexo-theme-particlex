@@ -12,7 +12,7 @@
 
 ## 演示
 
--   [Github Pages](https://argvchs.github.io)
+-   [GitHub Pages](https://argvchs.github.io)
 -   [Netlify](https://argvchs.netlify.app)
 -   [Vercel](https://argvchs.vercel.app)
 
@@ -192,7 +192,7 @@ highlightStyle: github # Highlight style
 
 -   Gitalk
 
-    Gitalk 是一个基于 Github Issue 和 Preact 的评论系统
+    Gitalk 是一个基于 GitHub Issue 和 Preact 的评论系统
 
     考虑到博客可能部署到多个网站同步评论，但 OAuth APP 只能有一个回调 URL，所以添加了 `sites` 参数用于其他网站的评论，请注册多个 Oauth APP
 
