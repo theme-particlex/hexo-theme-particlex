@@ -162,11 +162,6 @@ pre .copycode {
 footer .footer-wrap {
     box-sizing: border-box;
 }
-.fa-icon {
-    width: 1em;
-    height: 1em;
-    vertical-align: -0.125em;
-}
 .icon {
     margin-right: 5px;
     color: #5c6b72;
@@ -660,20 +655,20 @@ footer .footer-wrap {
 .content .copycode:hover {
     opacity: 0.8;
 }
-.content .copycode svg {
+.content .copycode i {
     position: absolute;
     top: 0;
     right: 0;
     padding: 15px;
     transition: transform 0.25s;
 }
-.content .copycode.copied svg:first-child {
+.content .copycode.copied i:first-child {
     opacity: 0;
 }
-.content .copycode:not(.copied) svg:last-child {
+.content .copycode:not(.copied) i:last-child {
     opacity: 0;
 }
-.content .copycode.copied svg {
+.content .copycode.copied i {
     transform: scale(1.25);
 }
 .content .hljs {
