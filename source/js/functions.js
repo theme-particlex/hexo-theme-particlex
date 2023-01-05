@@ -4,8 +4,7 @@ function highlight() {
     hljs.configure({ ignoreUnescapedHTML: true });
     let codes = document.getElementsByTagName("pre");
     for (let code of codes) {
-        let langs = [...code.classList, ...code.firstChild.classList];
-        let lang = [].filter.call(langs, i => i != "sourceCode")[0] || "text";
+        let lang = code.classList[0] || "text";
         code.innerHTML = `<div class="code-content">${code.innerHTML}</div><div class="language">${lang}</div><div class="copycode"><i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i></div>`;
         let copycode = code.getElementsByClassName("copycode")[0];
         copycode.addEventListener("click", async function () {
