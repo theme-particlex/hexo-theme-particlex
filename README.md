@@ -23,24 +23,49 @@ cd themes
 git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=1
 ```
 
-## 关闭自带 Highlight
+-   关闭自带 Highlight
 
-到博客根目录下的 `_config.yml`，找到 `highlight` 和 `prismjs` 参数，设置为如下：
+    在博客根目录下的 `_config.yml`，修改 `highlight` 和 `prismjs` 参数
 
-```yaml
-highlight:
-    enable: false
-    line_number: true
-    auto_detect: false
-    tab_replace: ""
-    wrap: true
-    hljs: false
-prismjs:
-    enable: false
-    preprocess: true
-    line_number: true
-    tab_replace: ""
-```
+    ```yaml
+    highlight:
+        enable: false
+        line_number: true
+        auto_detect: false
+        tab_replace: ""
+        wrap: true
+        hljs: false
+    prismjs:
+        enable: false
+        preprocess: true
+        line_number: true
+        tab_replace: ""
+    ```
+
+    如果使用 Pandoc 还需要设置一下
+
+    ```yaml
+    pandoc:
+        extra:
+            - "no-highlight":
+        extensions:
+            - "+hard_line_breaks"
+            - "+emoji"
+            - "-implicit_figures"
+    ```
+
+-   禁用年度/月度归档
+
+    Hexo 会自动生成年度/月度归档，可是 ParticleX 主题没有这个功能 ~~我太懒了~~
+
+    ```yaml
+    archive_generator:
+        enabled: true
+        per_page: 0
+        yearly: false
+        monthly: false
+        daily: false
+    ```
 
 修改完请 `hexo cl` 清除缓存
 
