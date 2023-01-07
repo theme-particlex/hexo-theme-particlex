@@ -4,12 +4,12 @@
         <% site.categories.data.forEach(category => { %>
         <%
             const color = is_category(category.name)
-                ? ["background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"]
-                : ["background: #ffa2c4", "background: #00bcd4", "background: #03a9f4", "background: #00a596", "background: #ff7d73"];
+                ? ["linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"]
+                : ["#ffa2c4", "#00bcd4", "#03a9f4", "#00a596", "#ff7d73"];
             let num = Math.floor(Math.random() * color.length);
         %>
         <span>
-            <a href="<%- url_for(category.path) %>" style="<%- color[num] %>">
+            <a href="<%- url_for(category.path) %>" style="background: <%- color[num] %>">
                 <span class="icon">
                     <i class="fa-solid fa-bookmark fa-fw"></i>
                 </span>
