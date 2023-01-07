@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/argvchs/hexo-theme-particlex#readme",
   "dependencies": {
-    "hexo-generator-search-lite": "^1.0.7",
+    "hexo-generator-search-lite": "^1.0.8",
     "hexo-helper-crypto": "^1.0.4",
     "hexo-renderer-babeljs": "^1.0.7",
     "hexo-renderer-ejs": "^2.0.0"
