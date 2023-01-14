@@ -139,7 +139,7 @@ highlightStyle: github # Highlight style
 
     一般来说，缩略展示文档只需要在文档中添加 `<!-- more -->` 即可，缩略内容在显示全文中也会出现
 
-    但考虑到不想把缩略内容放在正文里，就添加了此参数，在 Front-Matter 里设置
+    但考虑到不想把缩略内容放在正文里，就添加了此参数，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置
 
     支持 Markdown 格式
 
@@ -184,9 +184,13 @@ highlightStyle: github # Highlight style
         enable: false
     ```
 
+-   文章置顶
+
+    在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `top` 作为置顶参数，越大越靠前，默认为 0
+
 -   文章加密
 
-    使用 AES 加密算法，在 Front-Matter 里设置 `password` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
+    使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `password` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
 
     ```yaml
     crypto:
