@@ -16,7 +16,16 @@
                 <%= tag.name %>
             </a>
         </span>
-        <% if (is_tag(tag.name)) { posts = tag.posts; } %><% }); %>
+        <% if (is_tag(tag.name)) { %>
+        <%
+            posts = tag.posts;
+            posts.data.sort((a, b) => {
+                a.top ??= 0, b.top ??= 0;
+                return a.top == b.top ? b.date - a.date : b.top - a.top
+            });
+        %>
+        <% } %>
+        <% }); %>
     </div>
     <% posts.forEach(post => { %>
     <div class="timeline">
