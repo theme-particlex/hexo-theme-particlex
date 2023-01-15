@@ -292,8 +292,10 @@ footer .footer-wrap {
 #home-posts .post .excerpt {
     color: #1e3e3f;
 }
+#home-posts .post .post-tags {
+    line-height: 1.5;
+}
 #home-posts .post .post-tags a {
-    color: #ffbbf4;
     font-size: 14px;
 }
 #home-posts .post .post-tags .tag {
@@ -477,7 +479,6 @@ footer .footer-wrap {
 #menu .desktop-menu .title {
     display: inline-block;
     margin-left: 30px;
-    margin-right: 20px;
     font-family: "Lexend", "Noto Sans SC", sans-serif;
     text-transform: uppercase;
     color: #555;
@@ -718,15 +719,23 @@ footer .footer-icon {
     color: #5c6b72;
     text-decoration: none;
 }
+#archives .info {
+    line-height: 1.5;
+}
+#archives .category {
+    display: inline-block;
+    margin-right: 10px;
+}
+#archives .tags {
+    display: inline-block;
+}
+#archives .tags .tag {
+    display: inline-block;
+    margin-right: 10px;
+}
 #archives .tag-icon {
     color: #5c6b72;
     text-decoration: none;
-}
-#archives .category {
-    margin-right: 20px;
-}
-#archives .tags .tag {
-    margin-right: 10px;
 }
 #archives h3 {
     margin: 10px 0;
@@ -778,6 +787,9 @@ footer .footer-icon {
     font-weight: bold;
     margin: 20px 0;
 }
+.article .info {
+    line-height: 1.5;
+}
 .article .info a {
     color: #5c6b72;
     text-decoration: none;
@@ -785,25 +797,18 @@ footer .footer-icon {
 .article .info .date {
     color: #5c6b72;
     display: inline-block;
-    margin-right: 20px;
-}
-.article .info .date .tag {
     margin-right: 10px;
 }
 .article .info .category {
-    color: #5c6b72;
     display: inline-block;
-    margin-right: 20px;
-}
-.article .info .category .tag {
     margin-right: 10px;
 }
 .article .info .tags {
-    color: #5c6b72;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .article .info .tags .tag {
+    display: inline-block;
     margin-right: 10px;
 }
 .article .content {
@@ -862,24 +867,24 @@ input.ipt:focus {
     border-color: #0969da;
     box-shadow: 0 0 0 3px #0969da4d;
 }
-input.crypto {
+#crypto {
     margin: 50px auto 0;
 }
-input.crypto.fail {
+#crypto.fail {
     color: #ea4a5a;
     border-color: #ea4a5a;
 }
-input.crypto.fail:focus {
+#crypto.fail:focus {
     box-shadow: 0 0 0 3px #ea4a5a4d;
 }
-input.crypto.success {
+#crypto.success {
     color: #34d058;
     border-color: #34d058;
 }
-input.search-bar {
+#search-bar {
     margin: 0 auto 50px;
 }
-.search-mask {
+#search-mask {
     position: relative;
     margin: auto;
     margin-top: -125px;

@@ -1,12 +1,10 @@
 <div id="archives">
     <% if (theme.search.enable) { %>
-    <div class="search-mask" style="z-index: <%= site.posts.length + 1 %>"></div>
-    <input class="ipt search-bar" placeholder="搜索..." style="z-index: <%= site.posts.length + 2 %>">
-    <script src="<%- url_for("/js/searcher.js") %>"></script>
-    <script>searcher.init("<%- url_for(theme.search.path) %>");</script>
+    <div id="search-mask" style="z-index: <%= site.posts.length + 1 %>"></div>
+    <input id="search-bar" class="ipt" placeholder="搜索" style="z-index: <%= site.posts.length + 2 %>">
     <% } %>
     <% site.posts.forEach((post, id) => { %>
-    <div class="timeline" path="<%- url_for(post.path) %>" style="z-index: <%= site.posts.length - id %>">
+    <div class="timeline" style="z-index: <%= site.posts.length - id %>" data-title="<%- post.title.toLowerCase().replace(/\s+/gm, "") %>">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
             <div class="item-time"><%- date(post.date, "YYYY/M/D") %></div>

@@ -20,7 +20,8 @@
         <%
             posts = category.posts;
             posts.data.sort((a, b) => {
-                a.top ??= 0, b.top ??= 0;
+                if (typeof a.top === "undefined") a.top = 0;
+                if (typeof b.top === "undefined") b.top = 0;
                 return a.top == b.top ? b.date - a.date : b.top - a.top
             });
         %>
