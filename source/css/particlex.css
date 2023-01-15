@@ -291,7 +291,7 @@ footer .footer-wrap {
     color: #1e3e3f;
 }
 #home-posts .post .post-tags {
-    line-height: 1.5;
+    line-height: 1.7;
 }
 #home-posts .post .post-tags a {
     font-size: 14px;
@@ -414,7 +414,6 @@ footer .footer-wrap {
     font-size: 16px;
     font-weight: bold;
     color: #1e3e3f;
-    text-transform: uppercase;
 }
 #home-card .card-style .descriptions {
     margin: 20px auto;
@@ -423,9 +422,8 @@ footer .footer-wrap {
 #home-card .card-style .icon-links {
     width: 85%;
     margin: 10px auto;
-    padding: 8px 15px;
+    padding-top: 10px;
     border-top: #cdcdcd solid 1px;
-    border-bottom: #cdcdcd solid 1px;
 }
 #home-card .card-style .icon-links a {
     color: #5c6b72;
@@ -441,20 +439,18 @@ footer .footer-wrap {
     margin: 5px;
 }
 #home-card .card-style .friend-links {
-    margin: 20px auto;
-}
-#home-card .card-style .friend-links .friend-link {
-    margin: 5px auto;
-    text-align: center;
+    width: 85%;
+    margin: 10px auto;
+    padding-top: 10px;
+    border-top: #cdcdcd solid 1px;
 }
 #home-card .card-style .friend-links .friend-link a {
     display: inline-block;
-    width: 140px;
-    line-height: 3;
+    width: 100%;
+    margin-bottom: 5px;
+    line-height: 30px;
     color: #5c6b72;
-    font-size: 16px;
-    border-radius: 15px;
-    background-blend-mode: darken;
+    border-radius: 10px;
 }
 #home-card .card-style .friend-links .friend-link a:hover {
     color: #fff;
@@ -718,7 +714,7 @@ footer .footer-icon {
     text-decoration: none;
 }
 #archives .info {
-    line-height: 1.5;
+    line-height: 1.7;
 }
 #archives .category {
     display: inline-block;
@@ -786,7 +782,7 @@ footer .footer-icon {
     margin: 20px 0;
 }
 .article .info {
-    line-height: 1.5;
+    line-height: 1.7;
 }
 .article .info a {
     color: #5c6b72;
