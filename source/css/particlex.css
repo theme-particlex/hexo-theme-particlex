@@ -891,58 +891,6 @@ input.ipt:focus {
     height: 150px;
     background: #f6f8fa;
 }
-.gt-container *:not(.gt-header-textarea) {
-    font-family: unset !important;
-}
-.gt-header-textarea {
-    font-family: "Fira Code", "Noto Sans SC", monospace;
-}
-.gt-container .gt-comment-content {
-    border: 1px solid #0000001a;
-    border-radius: 5px;
-}
-.gt-container .gt-comment-content:hover,
-.gt-container .gt-header-textarea:hover,
-.gt-container .gt-header-textarea:focus {
-    box-shadow: 0 2px 8px #00000017 !important;
-    background-color: #fbfbfb;
-}
-.gt-container .gt-header-textarea:focus {
-    background-color: #fbfbfb;
-}
-.gt-container .gt-avatar img {
-    border-radius: 50% !important;
-}
-.gt-container .gt-popup {
-    border-radius: 10px;
-}
-.gt-container .markdown-body {
-    color: unset !important;
-}
-.gt-container .markdown-body p {
-    margin: 10px 0 !important;
-}
-.gt-container .markdown-body blockquote {
-    border-left: unset !important;
-    padding: 1px 20px !important;
-    border-left: 3px solid #1e3e3f !important;
-    color: unset !important;
-}
-.gt-container .markdown-body code {
-    font-family: "Fira Code" !important;
-    background: #bddcf76b;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #4b616b;
-}
-.gt-container .markdown-body pre {
-    font-family: "Fira Code" !important;
-    font-weight: 500;
-    border: 1px solid #ebeef5;
-    padding: 20px;
-    margin: 25px 0;
-    border-radius: 15px !important;
-}
 #showimg {
     position: fixed !important;
     display: flex;
@@ -964,6 +912,9 @@ input.ipt:focus {
     max-width: 95%;
     max-height: 95%;
     box-shadow: 0 0 50px 10px #d9d9d980;
+}
+.math.display .katex {
+    overflow: auto;
 }
 ::-webkit-scrollbar {
     width: 12px;
