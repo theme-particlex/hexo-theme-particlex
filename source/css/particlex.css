@@ -503,6 +503,7 @@ footer .footer-wrap {
 #menu .phone-menu .title {
     z-index: 10004;
     cursor: pointer;
+    text-transform: uppercase;
     color: #555;
 }
 #menu .phone-menu .items {
