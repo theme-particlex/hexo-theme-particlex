@@ -38,7 +38,7 @@
         </span>
         <% } %>
     </div>
-    <% if (typeof page.password !== "undefined" && theme.crypto.enable) { %>
+    <% if (theme.crypto.enable && typeof page.password !== "undefined") { %>
     <%
         const CryptoJS = crypto();
         function sha(str) {
@@ -51,7 +51,6 @@
             }).toString();
         }
     %>
-    <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
     <input id="crypto" class="ipt" placeholder="文章被加密，请输入密码" data-encrypt="<%- encrypt(page.content, page.password.toString()) %>" data-check="<%- sha(page.content) %>">
     <div class="content" style="opacity: 0" v-pre></div>
     <% } else { %>
@@ -60,7 +59,6 @@
     </div>
     <% } %>
     <% if (theme.gitalk.enable) { %>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
     <div id="comment">
         <div id="gitalk-container"></div>
     </div>
@@ -71,7 +69,6 @@
     </div>
     <% } %>
     <% if (theme.waline.enable) { %>
-    <link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.9.1/waline.min.css" />
     <div id="comment">
         <div id="waline-container"></div>
     </div>
