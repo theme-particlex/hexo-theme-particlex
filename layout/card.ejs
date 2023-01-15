@@ -24,11 +24,11 @@
         </div>
         <div class="friend-links">
             <% Object.keys(theme.card.friendLinks).forEach(key => { %>
-            <div class="friend-link">
+            <span class="friend-link">
                 <a href="<%- theme.card.friendLinks[key] %>">
                     <%= key %>
                 </a>
-            </div>
+            </span>
             <% }); %>
         </div>
     </div>
