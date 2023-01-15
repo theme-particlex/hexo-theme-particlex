@@ -177,7 +177,7 @@ highlightStyle: github # Highlight style
 
 -   渲染数学公式
 
-    使用 $\mathrm{K\kern{-0.2em}\raise{0.21em}{\scriptstyle{A}}\kern{-0.17em}T\kern{-0.14em}\lower{0.5ex}{E}\kern{-0.115em}X}$ 渲染数学公式，默认关闭
+    使用 KaTeX 渲染数学公式，默认关闭
 
     ```yaml
     math:
