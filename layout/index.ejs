@@ -19,13 +19,13 @@
 <div id="home-posts-wrap" class="<%- theme.card.enable ? "" : "home-posts-wrap-no-card" %>">
     <div id="home-posts">
         <div id="posts">
-            <%- include("posts") %>
-            <%- include("current") %>
+            <%- partial("posts") %>
+            <%- partial("current") %>
         </div>
     </div>
     <% if (theme.card.enable) { %>
     <div id="home-card">
-        <%- include("card") %>
+        <%- partial("card") %>
     </div>
     <% } %>
 </div>

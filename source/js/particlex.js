@@ -8,10 +8,14 @@ const app = Vue.createApp({
             composition: false,
         };
     },
+    created() {
+        window.addEventListener("load", () => {
+            this.showpage = true;
+            document.getElementById("loading").style.opacity = 0;
+            document.getElementById("loading").style.visibility = "hidden";
+        });
+    },
     mounted() {
-        this.showpage = true;
-        document.getElementById("loading").style.opacity = 0;
-        document.getElementById("loading").style.visibility = "hidden";
         if (document.getElementById("home-head"))
             document.getElementById("menu").className += " menu-color";
         if (document.getElementById("crypto")) {

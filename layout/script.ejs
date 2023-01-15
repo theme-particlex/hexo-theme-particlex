@@ -1,10 +1,12 @@
 <script src="<%- url_for("/js/functions.js") %>"></script>
 <script src="<%- url_for("/js/particlex.js") %>"></script>
-<% if (is_post()) { %>
+<% if (type == "post") { %>
     <% if (theme.gitalk.enable) { %>
     <script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
     <script>
-        let clientID = "<%- theme.gitalk.clientID %>", clientSecret = "<%- theme.gitalk.clientSecret %>";
+        let clientID = "<%- theme.gitalk.clientID %>",
+            clientSecret = "<%- theme.gitalk.clientSecret %>";
         <% Object.keys(theme.gitalk.sites).forEach(key => { %>
         if (window.location.host == "<%- key %>") {
             clientID = "<%- theme.gitalk.sites[key].clientID %>";
@@ -21,10 +23,10 @@
             id: location.pathname,
             distractionFreeMode: false,
             <% if (theme.gitalk.proxy) { %>
-            proxy: "<%- theme.gitalk.proxy %>"
+            proxy: "<%- theme.gitalk.proxy %>",
             <% } %>
         })
-        gitalk.render("gitalk-container")
+        gitalk.render("gitalk-container");
     </script>
     <% } %>
     <% if (theme.giscus.enable) { %>
@@ -47,6 +49,7 @@
     <% } %>
     <% if (theme.waline.enable) { %>
     <script src="https://cdn.staticfile.org/waline/2.9.1/waline.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.9.1/waline.min.css">
     <script>
         Waline.init({
             el: "#waline-container",
@@ -60,7 +63,7 @@
             wordLimit: <%- theme.waline.wordLimit %>,
             pageSize: "<%- theme.waline.pageSize %>",
             login: "<%- theme.waline.login %>",
-            locale: <%- JSON.stringify(theme.waline.locale) %>
+            locale: <%- JSON.stringify(theme.waline.locale) %>,
         });
     </script>
     <% } %>
@@ -72,7 +75,7 @@
             envId: "<%- theme.twikoo.envId %>",
             region: "<%- theme.twikoo.region %>",
             path: <%- theme.twikoo.path %>,
-            lang: "<%- theme.twikoo.lang %>"
+            lang: "<%- theme.twikoo.lang %>",
         })
     </script>
     <% } %>
