@@ -61,6 +61,7 @@ body {
     margin: 0;
     padding: 0;
     word-wrap: break-word;
+    word-break: keep-all;
     scrollbar-width: thin;
     scrollbar-color: #8ab5ff #e6efff;
 }
@@ -199,9 +200,6 @@ footer .footer-wrap {
     text-align: center;
     color: #333;
     border-radius: 50%;
-}
-#home-head .home-info .info h1 {
-    word-break: keep-all;
 }
 #home-head .home-info .loop:nth-child(1) {
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
