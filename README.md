@@ -199,24 +199,13 @@ highlightStyle: github # Highlight style
 
 -   搜索
 
-    嵌入到 Archives 中的搜索，搜索数据是用 [Hexo-Generator-Search-Lite](https://github.com/argvchs/hexo-generator-search-lite) 生成，默认关闭，使用需要安装上述插件并**设置 `optimize: true`**
+    嵌入到 Archives 中的搜索，默认关闭
 
-    目前只支持搜索文档的 Title Categories Tags（我太弱了）
-
-    要同时在主题和根目录的两个 `_config.yml` 添加配置
+    目前只支持搜索文档标题（我太弱了）
 
     ```yaml
-    # Theme config
     search:
         enable: false
-        path: /search.json
-    ```
-
-    ```yaml
-    # Site config
-    search:
-        path: /search.json
-        optimize: true
     ```
 
 -   Gitalk
