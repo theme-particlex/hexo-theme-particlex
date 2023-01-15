@@ -6,12 +6,8 @@
         <div class="name">
             <%= config.author %>
         </div>
-        <div class="descriptions">
-            <% theme.card.description.forEach(desc => { %>
-            <div class="description">
-                <%- markdown(desc) %>
-            </div>
-            <% }); %>
+        <div class="description">
+            <%- markdown(theme.card.description) %>
         </div>
         <% if (Object.keys(theme.card.iconLinks).length) { %>
         <div class="icon-links">
