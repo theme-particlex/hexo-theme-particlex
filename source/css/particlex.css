@@ -61,6 +61,7 @@ body {
     margin: 0;
     padding: 0;
     word-wrap: break-word;
+    word-break: keep-all;
     scrollbar-width: thin;
     scrollbar-color: #8ab5ff #e6efff;
 }
@@ -200,9 +201,6 @@ footer .footer-wrap {
     color: #333;
     border-radius: 50%;
 }
-#home-head .home-info .info h1 {
-    word-break: keep-all;
-}
 #home-head .home-info .loop:nth-child(1) {
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     background: #fff;
@@ -292,8 +290,10 @@ footer .footer-wrap {
 #home-posts .post .excerpt {
     color: #1e3e3f;
 }
+#home-posts .post .post-tags {
+    line-height: 1.5;
+}
 #home-posts .post .post-tags a {
-    color: #ffbbf4;
     font-size: 14px;
 }
 #home-posts .post .post-tags .tag {
@@ -477,7 +477,6 @@ footer .footer-wrap {
 #menu .desktop-menu .title {
     display: inline-block;
     margin-left: 30px;
-    margin-right: 20px;
     font-family: "Lexend", "Noto Sans SC", sans-serif;
     text-transform: uppercase;
     color: #555;
@@ -718,15 +717,23 @@ footer .footer-icon {
     color: #5c6b72;
     text-decoration: none;
 }
+#archives .info {
+    line-height: 1.5;
+}
+#archives .category {
+    display: inline-block;
+    margin-right: 10px;
+}
+#archives .tags {
+    display: inline-block;
+}
+#archives .tags .tag {
+    display: inline-block;
+    margin-right: 10px;
+}
 #archives .tag-icon {
     color: #5c6b72;
     text-decoration: none;
-}
-#archives .category {
-    margin-right: 20px;
-}
-#archives .tags .tag {
-    margin-right: 10px;
 }
 #archives h3 {
     margin: 10px 0;
@@ -778,6 +785,9 @@ footer .footer-icon {
     font-weight: bold;
     margin: 20px 0;
 }
+.article .info {
+    line-height: 1.5;
+}
 .article .info a {
     color: #5c6b72;
     text-decoration: none;
@@ -785,25 +795,18 @@ footer .footer-icon {
 .article .info .date {
     color: #5c6b72;
     display: inline-block;
-    margin-right: 20px;
-}
-.article .info .date .tag {
     margin-right: 10px;
 }
 .article .info .category {
-    color: #5c6b72;
     display: inline-block;
-    margin-right: 20px;
-}
-.article .info .category .tag {
     margin-right: 10px;
 }
 .article .info .tags {
-    color: #5c6b72;
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 .article .info .tags .tag {
+    display: inline-block;
     margin-right: 10px;
 }
 .article .content {
@@ -862,24 +865,24 @@ input.ipt:focus {
     border-color: #0969da;
     box-shadow: 0 0 0 3px #0969da4d;
 }
-input.crypto {
+#crypto {
     margin: 50px auto 0;
 }
-input.crypto.fail {
+#crypto.fail {
     color: #ea4a5a;
     border-color: #ea4a5a;
 }
-input.crypto.fail:focus {
+#crypto.fail:focus {
     box-shadow: 0 0 0 3px #ea4a5a4d;
 }
-input.crypto.success {
+#crypto.success {
     color: #34d058;
     border-color: #34d058;
 }
-input.search-bar {
+#search-bar {
     margin: 0 auto 50px;
 }
-.search-mask {
+#search-mask {
     position: relative;
     margin: auto;
     margin-top: -125px;
@@ -887,58 +890,6 @@ input.search-bar {
     width: 100%;
     height: 150px;
     background: #f6f8fa;
-}
-.gt-container *:not(.gt-header-textarea) {
-    font-family: unset !important;
-}
-.gt-header-textarea {
-    font-family: "Fira Code", "Noto Sans SC", monospace;
-}
-.gt-container .gt-comment-content {
-    border: 1px solid #0000001a;
-    border-radius: 5px;
-}
-.gt-container .gt-comment-content:hover,
-.gt-container .gt-header-textarea:hover,
-.gt-container .gt-header-textarea:focus {
-    box-shadow: 0 2px 8px #00000017 !important;
-    background-color: #fbfbfb;
-}
-.gt-container .gt-header-textarea:focus {
-    background-color: #fbfbfb;
-}
-.gt-container .gt-avatar img {
-    border-radius: 50% !important;
-}
-.gt-container .gt-popup {
-    border-radius: 10px;
-}
-.gt-container .markdown-body {
-    color: unset !important;
-}
-.gt-container .markdown-body p {
-    margin: 10px 0 !important;
-}
-.gt-container .markdown-body blockquote {
-    border-left: unset !important;
-    padding: 1px 20px !important;
-    border-left: 3px solid #1e3e3f !important;
-    color: unset !important;
-}
-.gt-container .markdown-body code {
-    font-family: "Fira Code" !important;
-    background: #bddcf76b;
-    border-radius: 4px;
-    font-size: 14px;
-    color: #4b616b;
-}
-.gt-container .markdown-body pre {
-    font-family: "Fira Code" !important;
-    font-weight: 500;
-    border: 1px solid #ebeef5;
-    padding: 20px;
-    margin: 25px 0;
-    border-radius: 15px !important;
 }
 #showimg {
     position: fixed !important;
@@ -961,6 +912,9 @@ input.search-bar {
     max-width: 95%;
     max-height: 95%;
     box-shadow: 0 0 50px 10px #d9d9d980;
+}
+.math.display .katex {
+    overflow: auto;
 }
 ::-webkit-scrollbar {
     width: 12px;

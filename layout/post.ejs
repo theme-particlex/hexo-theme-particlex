@@ -41,21 +41,19 @@
     <% if (typeof page.password !== "undefined" && theme.crypto.enable) { %>
     <%
         const CryptoJS = crypto();
-        function SHA(str) {
+        function sha(str) {
             return CryptoJS.SHA256(str).toString(CryptoJS.enc.Base64);
         }
         function encrypt(str, key) {
-            return CryptoJS.AES.encrypt(str, SHA(key), {
+            return CryptoJS.AES.encrypt(str, sha(key), {
                 mode: CryptoJS.mode.ECB,
                 padding: CryptoJS.pad.Pkcs7,
             }).toString();
         }
     %>
-    <input class="ipt crypto" placeholder="文章被加密，请输入密码">
-    <div class="content" v-pre></div>
     <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
-    <script src="<%- url_for("/js/cryptor.js") %>"></script>
-    <script>cryptor.init("<%- encrypt(page.content, page.password.toString()) %>", "<%- SHA(page.content) %>")</script>
+    <input id="crypto" class="ipt" placeholder="文章被加密，请输入密码" data-encrypt="<%- encrypt(page.content, page.password.toString()) %>" data-check="<%- sha(page.content) %>">
+    <div class="content" style="opacity: 0" v-pre></div>
     <% } else { %>
     <div class="content" v-pre>
         <%- page.content %>
