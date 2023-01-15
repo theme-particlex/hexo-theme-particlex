@@ -13,6 +13,7 @@
             </div>
             <% }); %>
         </div>
+        <% if (Object.keys(theme.card.iconLinks).length) { %>
         <div class="icon-links">
             <% Object.keys(theme.card.iconLinks).forEach(key => { %>
             <span class="icon-link">
@@ -22,14 +23,17 @@
             </span>
             <% }); %>
         </div>
+        <% } %>
+        <% if (Object.keys(theme.card.friendLinks).length) { %>
         <div class="friend-links">
             <% Object.keys(theme.card.friendLinks).forEach(key => { %>
-            <div class="friend-link">
+            <span class="friend-link">
                 <a href="<%- theme.card.friendLinks[key] %>">
                     <%= key %>
                 </a>
-            </div>
+            </span>
             <% }); %>
         </div>
+        <% } %>
     </div>
 </div>
