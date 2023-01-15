@@ -40,7 +40,6 @@ function showimg() {
         });
     wrap.addEventListener("click", hide);
     window.addEventListener("resize", hide);
-    window.addEventListener("scroll", hide);
 }
 function rendermath() {
     if (typeof renderMathInElement !== "undefined")
