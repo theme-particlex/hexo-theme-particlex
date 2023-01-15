@@ -47,9 +47,9 @@ menu:
 # Side info card
 card:
     enable: true
-    description:
-        - "Description"
-        - "..."
+    description: |
+        Description
+        ...
     iconLinks:
         {}
         # <name>:

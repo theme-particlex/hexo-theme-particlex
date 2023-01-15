@@ -121,9 +121,9 @@ highlightStyle: github # Highlight style
     ```yaml
     card:
         enable: true
-        description:
-            - "Description"
-            - "..."
+        description: |
+            Description
+            ...
         iconLinks:
             {}
             # <name>:
@@ -144,10 +144,8 @@ highlightStyle: github # Highlight style
     支持 Markdown 格式
 
     ```yaml
-    description: |-
-        Normal
-        _Italic_
-        **Strong**
+    description: |
+        Normal _Italic_ **Strong**
     ```
 
 -   页脚
