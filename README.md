@@ -144,7 +144,10 @@ highlightStyle: github # Highlight style
     支持 Markdown 格式
 
     ```yaml
-    description: "Normal **Strong** _Italic_"
+    description: |-
+        Normal
+        _Italic_
+        **Strong**
     ```
 
 -   页脚
