@@ -1,10 +1,14 @@
+<%
+    let posts = site.posts;
+    posts.data.sort((a, b) => b.date - a.date);
+%>
 <div id="archives">
     <% if (theme.search.enable) { %>
-    <div id="search-mask" style="z-index: <%= site.posts.length + 1 %>"></div>
-    <input id="search-bar" class="ipt" placeholder="搜索" style="z-index: <%= site.posts.length + 2 %>">
+    <div id="search-mask" style="z-index: <%= posts.length + 1 %>"></div>
+    <input id="search-bar" class="ipt" placeholder="搜索" style="z-index: <%= posts.length + 2 %>">
     <% } %>
-    <% site.posts.forEach((post, id) => { %>
-    <div class="timeline" style="z-index: <%= site.posts.length - id %>" data-title="<%- post.title.toLowerCase().replace(/\s+/gm, "") %>">
+    <% posts.forEach((post, id) => { %>
+    <div class="timeline" style="z-index: <%= posts.length - id %>" data-title="<%- post.title.toLowerCase().replace(/\s+/gm, "") %>">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
             <div class="item-time"><%- date(post.date, "YYYY/M/D") %></div>
