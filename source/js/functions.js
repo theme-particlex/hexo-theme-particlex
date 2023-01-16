@@ -26,7 +26,7 @@ function showimg() {
         content = document.getElementById("showimg-content"),
         images = document.querySelectorAll(".article .content img");
     function show(src) {
-        content.setAttribute("src", src);
+        content.src = src;
         wrap.style.opacity = 1;
         wrap.style.visibility = "visible";
     }
