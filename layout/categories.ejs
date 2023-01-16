@@ -19,11 +19,7 @@
         <% if (is_category(category.name)) { %>
         <%
             posts = category.posts;
-            posts.data.sort((a, b) => {
-                if (typeof a.top === "undefined") a.top = 0;
-                if (typeof b.top === "undefined") b.top = 0;
-                return a.top == b.top ? b.date - a.date : b.top - a.top
-            });
+            posts.data.sort((a, b) => b.date - a.date);
         %>
         <% } %>
         <% }); %>

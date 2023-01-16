@@ -1,5 +1,13 @@
-<% let current = (page.current - 1) * config.index_generator.per_page; %>
-<% site.posts.slice(0 + current, config.index_generator.per_page + current).forEach(post => { %>
+<%
+    let posts = site.posts,
+        current = (page.current - 1) * config.index_generator.per_page;
+    posts.data.sort((a, b) => {
+        let topa = a.top ?? 0, topb = b.top ?? 0;
+        return topa == topb ? b.date - a.date : topb - topa;
+    });
+    posts = posts.slice(current, config.index_generator.per_page + current);
+%>
+<% posts.forEach(post => { %>
 <div class="post">
     <a href="<%- url_for(post.path) %>">
         <h2 class="post-title"><%= titlecase(post.title) %></h2>
@@ -21,6 +29,16 @@
             </span>
             <%- date(post.date, "YYYY/M/D") %>
         </span>
+        <% if (theme.crypto.enable && typeof post.password !== "undefined") { %>
+        <span class="special">
+            <i class="fa-solid fa-lock fa-fw"></i>
+        </span>
+        <% } %>
+        <% if (typeof post.top !== "undefined" && post.top > 0) { %>
+        <span class="special">
+            <i class="fa-solid fa-grip-vertical fa-fw"></i>
+        </span>
+        <% } %>
     </div>
     <div class="excerpt">
         <div class="content" v-pre>
