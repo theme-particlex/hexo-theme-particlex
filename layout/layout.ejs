@@ -20,11 +20,6 @@
     else if (is_archive() || is_year() || is_month())
         title = "Archives | ";
     title += config.title;
-    site.posts.data.sort((a, b) => {
-        if (typeof a.top === "undefined") a.top = 0;
-        if (typeof b.top === "undefined") b.top = 0;
-        return a.top == b.top ? b.date - a.date : b.top - a.top;
-    });
 %>
 <!DOCTYPE html>
 <html lang="<%- config.language %>">
