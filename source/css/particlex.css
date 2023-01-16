@@ -629,7 +629,7 @@ footer .footer-wrap a {
 }
 .menu-color {
     background: #0003 !important;
-    box-shadow: 0 -1px 10px 0 #fff0 !important;
+    box-shadow: 0 -1px 10px 0 transparent !important;
 }
 .menu-color .title,
 .menu-color a {
