@@ -255,7 +255,6 @@ footer .footer-wrap {
 #home-posts .post-title {
     text-align: center;
     color: #66afef;
-    text-decoration: none;
 }
 #home-posts .post {
     position: relative;
@@ -267,9 +266,6 @@ footer .footer-wrap {
 #home-posts .post:hover {
     box-shadow: 0 0 5px #d9d9d9;
     transform: translate(-5px, -5px);
-}
-#home-posts .post a {
-    text-decoration: none;
 }
 #home-posts .post .category-and-date {
     width: 100%;
@@ -286,6 +282,10 @@ footer .footer-wrap {
 }
 #home-posts .post .category-and-date .date {
     display: inline-block;
+}
+#home-posts .post .category-and-date .special {
+    display: inline-block;
+    margin-left: 25px;
 }
 #home-posts .post .excerpt {
     color: #1e3e3f;
@@ -352,7 +352,6 @@ footer .footer-wrap {
 }
 #home-posts .page-current a {
     color: #999;
-    text-decoration: none;
 }
 #home-posts .page-current .page-num {
     display: inline-block;
@@ -480,7 +479,6 @@ footer .footer-wrap {
 #menu .desktop-menu a {
     display: inline-block;
     margin-left: 30px;
-    text-decoration: none;
     color: #555;
 }
 #menu .desktop-menu a span {
@@ -590,7 +588,6 @@ footer .footer-wrap {
 }
 .content a {
     color: #66afef;
-    text-decoration: none;
 }
 .content b {
     line-height: 2.5;
@@ -695,7 +692,6 @@ footer .footer-wrap div {
     margin: 15px;
 }
 footer .footer-wrap a {
-    text-decoration: none;
     color: #66afef;
 }
 footer .footer-icon {
@@ -712,7 +708,6 @@ footer .footer-icon {
 }
 #archives a {
     color: #5c6b72;
-    text-decoration: none;
 }
 #archives .info {
     line-height: 1.7;
@@ -730,7 +725,6 @@ footer .footer-icon {
 }
 #archives .tag-icon {
     color: #5c6b72;
-    text-decoration: none;
 }
 #archives h3 {
     margin: 10px 0;
@@ -752,7 +746,6 @@ footer .footer-icon {
 #archives .categories-tags span a {
     padding: 10px 15px;
     color: #fff;
-    text-decoration: none;
     border-radius: 10px;
     transition: all 0.25s;
     border: #ffffff80 1px solid;
@@ -787,7 +780,6 @@ footer .footer-icon {
 }
 .article .info a {
     color: #5c6b72;
-    text-decoration: none;
 }
 .article .info .date {
     color: #5c6b72;
@@ -997,7 +989,7 @@ body::-webkit-scrollbar-track {
     }
     #home-posts .post {
         padding: 50px 50px;
-        margin: 0 0 25px;
+        margin-bottom: 25px;
     }
     #home-posts .post .excerpt {
         padding: 20px 0;
@@ -1094,7 +1086,7 @@ body::-webkit-scrollbar-track {
     }
     #home-posts .post {
         padding: 20px 30px;
-        margin: 0 0 30px;
+        margin-bottom: 30px;
     }
     #home-posts .post .post-tags {
         padding-right: 69px;
