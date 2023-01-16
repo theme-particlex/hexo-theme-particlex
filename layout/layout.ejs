@@ -58,15 +58,15 @@
         <%- partial("loading") %>
         <div id="layout">
             <transition name="into">
-                <div v-show="showpage" style="display: -not-none">
-                    <div id="menushow">
-                        <%- partial("menu") %>
-                    </div>
-                    <div id="main">
-                        <%- partial(type) %>
-                        <%- partial("footer") %>
-                    </div>
+            <div v-show="showpage" style="display: -not-none">
+                <div id="menushow">
+                    <%- partial("menu") %>
                 </div>
+                <div id="main">
+                    <%- partial(type) %>
+                    <%- partial("footer") %>
+                </div>
+            </div>
             </transition>
             <div id="showimg">
                 <img id="showimg-content" alt="showimg">

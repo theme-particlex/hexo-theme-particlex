@@ -21,6 +21,16 @@
             </span>
             <%- date(post.date, "YYYY/M/D") %>
         </span>
+        <% if (theme.crypto.enable && typeof post.password !== "undefined") { %>
+        <span class="special">
+            <i class="fa-solid fa-lock fa-fw"></i>
+        </span>
+        <% } %>
+        <% if (typeof post.top !== "undefined" && post.top > 0) { %>
+        <span class="special">
+            <i class="fa-solid fa-grip-vertical fa-fw"></i>
+        </span>
+        <% } %>
     </div>
     <div class="excerpt">
         <div class="content" v-pre>
