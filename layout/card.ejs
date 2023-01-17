@@ -1,7 +1,7 @@
 <div id="card-div">
     <div class="card-style" style="width: 300px">
         <div class="avatar">
-            <img src="<%- theme.avatar %>" alt="avatar">
+            <img src="<%- url_for(theme.avatar) %>" alt="avatar">
         </div>
         <div class="name">
             <%= config.author %>
@@ -13,7 +13,7 @@
         <div class="icon-links">
             <% Object.keys(theme.card.iconLinks).forEach(key => { %>
             <span class="icon-link">
-                <a href="<%- theme.card.iconLinks[key].link %>">
+                <a href="<%- url_for(theme.card.iconLinks[key].link) %>">
                     <i class="fa-<%- theme.card.iconLinks[key].theme %> fa-<%- theme.card.iconLinks[key].name %> fa-fw"></i>
                 </a>
             </span>
@@ -24,7 +24,7 @@
         <div class="friend-links">
             <% Object.keys(theme.card.friendLinks).forEach(key => { %>
             <div class="friend-link">
-                <a href="<%- theme.card.friendLinks[key] %>">
+                <a href="<%- url_for(theme.card.friendLinks[key]) %>">
                     <%= key %>
                 </a>
             </div>
