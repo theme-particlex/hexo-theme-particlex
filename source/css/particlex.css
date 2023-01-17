@@ -155,13 +155,14 @@
     margin: 20px auto;
     width: 85%;
 }
-#home-card .card-style .friend-links .friend-link a {
-    border-radius: 15px;
-    color: #5c6b72;
-    display: inline-block;
-    line-height: 30px;
+#home-card .card-style .friend-links .friend-link {
     margin-bottom: 5px;
-    width: 100%;
+}
+#home-card .card-style .friend-links a {
+    display: inline-block;
+    border-radius: 5px;
+    color: #5c6b72;
+    padding: 8px 0;
 }
 #home-card .card-style .icon-links .icon-link {
     margin: 5px;
@@ -170,10 +171,10 @@
     border-radius: 5px;
     color: #5c6b72;
     font-size: 18px;
-    padding: 3px 5px;
+    padding: 5px;
 }
 #home-card .card-style .icon-links a:hover,
-#home-card .card-style .friend-links .friend-link a:hover {
+#home-card .card-style .friend-links a:hover {
     background: #66afef;
     color: #fff;
 }
