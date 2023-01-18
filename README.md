@@ -263,7 +263,7 @@ highlightStyle: github # Highlight style
 
     Waline 是一个简单、安全的评论系统
 
-    详见：[在 ParticleX 上使用 Waline | Yuzi's Blog](https://blog.yuzi0201.top/posts/bcb4ff00.html)
+    详见：[在 ParticleX 上使用 Waline | Yuzi's Blog](https://blog.yuzi.dev/posts/bcb4ff00.html)
 
     **注意如果不需要 `locale` 参数，请在 `locale:` 后添加一个 `{}`**
 
