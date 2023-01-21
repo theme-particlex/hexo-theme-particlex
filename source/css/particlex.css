@@ -510,6 +510,9 @@ footer .footer-wrap {
     font-weight: bold;
     margin: 20px 0;
 }
+.content {
+    transition: opacity 0.25s;
+}
 .content .code-content {
     background: none;
     font: 500 13px/2 "Fira Code", "Noto Sans SC", monospace;
