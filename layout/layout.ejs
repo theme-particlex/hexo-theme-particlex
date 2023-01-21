@@ -39,9 +39,9 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=<% theme.polyfill.features.join(",") %>"></script>
         <% } %>
         <% if (theme.math.enable) { %>
-        <script src="https://www.unpkg.com/katex/dist/katex.min.js"></script>
-        <script src="https://www.unpkg.com/katex/dist/contrib/auto-render.min.js"></script>
-        <link rel="stylesheet" href="https://www.unpkg.com/katex/dist/katex.min.css">
+        <script src="https://unpkg.com/katex/dist/katex.min.js"></script>
+        <script src="https://unpkg.com/katex/dist/contrib/auto-render.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/katex/dist/katex.min.css">
         <% } %>
         <% if (theme.crypto.enable && typeof page.password !== "undefined") { %>
         <script src="https://unpkg.com/crypto-js/crypto-js.js"></script>
