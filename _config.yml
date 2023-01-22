@@ -109,7 +109,7 @@ gitalk:
 # https://github.com/giscus/giscus
 giscus:
     enable: false
-    src: https://giscus.app/client.js # Default src
+    src: https://giscus.app/client.js
     repo:
     repoID:
     category:
