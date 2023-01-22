@@ -278,12 +278,12 @@ highlightStyle: github # Highlight style
         commentCount: true # If false, comment count will only be displayed in post page, not in home page
         pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
         emoji: # Custom emoji
-            - https://unpkg.com/@waline/emojis@1.0.1/weibo
-            - https://unpkg.com/@waline/emojis@1.0.1/alus
-            - https://unpkg.com/@waline/emojis@1.0.1/bilibili
-            - https://unpkg.com/@waline/emojis@1.0.1/qq
-            - https://unpkg.com/@waline/emojis@1.0.1/tieba
-            - https://unpkg.com/@waline/emojis@1.0.1/tw-emoji
+            - https://unpkg.com/@waline/emojis@1.2.0/weibo
+            - https://unpkg.com/@waline/emojis@1.2.0/alus
+            - https://unpkg.com/@waline/emojis@1.2.0/bilibili
+            - https://unpkg.com/@waline/emojis@1.2.0/qq
+            - https://unpkg.com/@waline/emojis@1.2.0/tieba
+            - https://unpkg.com/@waline/emojis@1.2.0/tw-emoji
         meta: # Comment information, valid meta are nick, mail and link
             - nick
             - mail
