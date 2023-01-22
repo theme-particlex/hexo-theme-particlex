@@ -48,15 +48,11 @@ git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=
     pandoc:
         extra:
             - "no-highlight":
-        extensions:
-            - "+hard_line_breaks"
-            - "+emoji"
-            - "-implicit_figures"
     ```
 
--   禁用年度/月度归档
+-   禁用年度月度归档
 
-    Hexo 会自动生成年度/月度归档，可是 ParticleX 主题没有这个功能 ~~我太懒了~~
+    Hexo 会自动生成年度月度归档，可是 ParticleX 主题没有这个功能 ~~我太懒了~~
 
     ```yaml
     archive_generator:
