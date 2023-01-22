@@ -6,7 +6,7 @@ function highlight() {
     hljs.configure({ ignoreUnescapedHTML: true });
     let codes = document.getElementsByTagName("pre");
     for (let i of codes) {
-        let lang = [...i.classList, ...i.firstChild.classList][0] || "text";
+        let lang = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
         i.innerHTML = `<div class="code-content">${i.innerHTML}</div><div class="language">${lang}</div><div class="copycode"><i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i></div>`;
         let copycode = i.getElementsByClassName("copycode")[0];
         copycode.addEventListener("click", async function () {
