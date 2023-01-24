@@ -112,15 +112,16 @@
     color: #34d058;
 }
 #home-background {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     position: absolute;
+    z-index: -1;
     height: 100vh;
     left: 0;
     top: 0;
     width: 100vw;
-    z-index: -1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 #home-card {
     position: relative;
@@ -750,7 +751,7 @@ footer {
     padding-bottom: 20px;
     position: relative;
     text-align: center;
-    top: 80px;
+    top: 150px;
     width: 100%;
 }
 footer .footer-icon {
