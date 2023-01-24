@@ -163,7 +163,7 @@ highlightStyle: github # Highlight style
 
     使用 [Polyfill.io](https://polyfill.io/v3/url-builder) 自动根据 UA 处理新的 JS API 兼容
 
-    可以配合 [Hexo-Renderer-BabelJS](https://github.com/argvchs/hexo-renderer-babeljs) 插件处理 JS 语法
+    可以配合 [Hexo-Babel](https://github.com/argvchs/hexo-babel) 插件处理 JS 语法兼容
 
     ```yaml
     polyfill:
