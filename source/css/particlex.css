@@ -112,16 +112,16 @@
     color: #34d058;
 }
 #home-background {
-    position: absolute;
-    z-index: -1;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    width: 100vw;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
 }
 #home-card {
     position: relative;
@@ -159,9 +159,9 @@
     margin-bottom: 5px;
 }
 #home-card .card-style .friend-links a {
-    display: block;
     border-radius: 5px;
     color: #5c6b72;
+    display: block;
     padding: 8px 0;
 }
 #home-card .card-style .icon-links .icon-link {
@@ -174,7 +174,8 @@
     padding: 5px;
 }
 #home-card .card-style .icon-links a:hover,
-#home-card .card-style .friend-links a:hover {
+#home-card .card-style .friend-links a:hover,
+#home-posts .page-current .page-num:hover {
     background: #66afef;
     color: #fff;
 }
@@ -271,10 +272,6 @@
     margin: 0 7px;
     padding: 5px;
     width: 35px;
-}
-#home-posts .page-current .page-num:hover {
-    background: #66afef;
-    color: #fff;
 }
 #home-posts .page-current .prev,
 #home-posts .page-current .next {
@@ -445,8 +442,8 @@ footer .footer-wrap {
 #menu .phone-menu .title {
     color: #555;
     cursor: pointer;
-    text-transform: uppercase;
     position: relative;
+    text-transform: uppercase;
     z-index: 10004;
 }
 #search-bar {
@@ -725,7 +722,7 @@ blockquote {
 body {
     background: #f6f8fa;
     color: #000000d9;
-    font: 500 14px "Lexend", "Noto Sans SC", sans-serif;
+    font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
 }
@@ -771,27 +768,27 @@ footer .footer-wrap div {
 }
 h1 {
     color: #1e3e3f;
-    font: bold 30px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 30px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 h2 {
     color: #1e3e3f;
-    font: bold 27px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 27px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 h3 {
     color: #1e3e3f;
-    font: bold 24px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 24px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 h4 {
     color: #1e3e3f;
-    font: bold 21px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 21px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 h5 {
     color: #1e3e3f;
-    font: bold 18px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 18px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 hr {
@@ -938,7 +935,7 @@ ol {
         padding: 50px;
     }
     #home-head .home-info .info .wrap h1 {
-        font: bold 46px "Lexend", "Noto Sans SC", sans-serif;
+        font: bold 46px Lexend, "Noto Sans SC", sans-serif;
         margin-bottom: 10px;
     }
     #home-head .home-info .info .wrap h3 {
