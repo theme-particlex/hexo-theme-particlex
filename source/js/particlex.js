@@ -66,10 +66,10 @@ const app = Vue.createApp({
                 if (newlocal <= window.innerHeight - 100) menu.className += " menu-color";
                 if (newlocal <= 400) {
                     wrap.style.top = newlocal / -5 + "px";
-                    footer.style.top = 80 - newlocal / 5 + "px";
+                    footer.style.top = newlocal / -5 + 150 + "px";
                 } else {
                     wrap.style.top = "-80px";
-                    footer.style.top = "0";
+                    footer.style.top = "70px";
                 }
             }
             this.barlocal = newlocal;
