@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-particlex",
-  "version": "2.2.7",
+  "version": "2.2.8",
   "description": "A concise Hexo theme, based on Particle.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,8 +24,7 @@
   },
   "homepage": "https://github.com/argvchs/hexo-theme-particlex#readme",
   "dependencies": {
-    "hexo-helper-crypto": "^1.0.4",
-    "hexo-renderer-babeljs": "^1.0.7",
+    "hexo-helper-crypto": "^1.0.5",
     "hexo-renderer-ejs": "^2.0.0"
   }
 }

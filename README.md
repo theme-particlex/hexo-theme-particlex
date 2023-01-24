@@ -48,15 +48,11 @@ git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=
     pandoc:
         extra:
             - "no-highlight":
-        extensions:
-            - "+hard_line_breaks"
-            - "+emoji"
-            - "-implicit_figures"
     ```
 
--   禁用年度/月度归档
+-   禁用年度月度归档
 
-    Hexo 会自动生成年度/月度归档，可是 ParticleX 主题没有这个功能 ~~我太懒了~~
+    Hexo 会自动生成年度月度归档，可是 ParticleX 主题没有这个功能 ~~我太懒了~~
 
     ```yaml
     archive_generator:
@@ -167,7 +163,7 @@ highlightStyle: github # Highlight style
 
     使用 [Polyfill.io](https://polyfill.io/v3/url-builder) 自动根据 UA 处理新的 JS API 兼容
 
-    可以配合 [Hexo-Renderer-BabelJS](https://github.com/argvchs/hexo-renderer-babeljs) 插件处理 JS 语法
+    可以配合 [Hexo-Babel](https://github.com/argvchs/hexo-babel) 插件处理 JS 语法兼容
 
     ```yaml
     polyfill:
