@@ -110,6 +110,28 @@
     border-color: #34d058;
     color: #34d058;
 }
+#footer {
+    font-size: 14px;
+    margin-top: 150px;
+    padding-bottom: 20px;
+    text-align: center;
+    width: 100%;
+}
+#footer .footer-icon {
+    color: #66afef;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 10px;
+}
+#footer .footer-wrap {
+    border-top: 1px solid #aaa;
+    color: #5c6b72;
+    margin: auto;
+    width: 900px;
+}
+#footer .footer-wrap div {
+    margin: 15px;
+}
 #home-card {
     width: 300px;
 }
@@ -360,7 +382,7 @@
 #home-posts-wrap,
 #archives,
 .article,
-footer .footer-wrap {
+#footer .footer-wrap {
     box-sizing: border-box;
 }
 #main {
@@ -547,7 +569,7 @@ footer .footer-wrap {
     display: none;
 }
 .content a,
-footer .footer-wrap a {
+#footer .footer-wrap a {
     color: #66afef;
 }
 .content b,
@@ -741,28 +763,6 @@ pre .language,
 pre .copycode {
     user-select: none;
 }
-footer {
-    font-size: 14px;
-    padding-bottom: 20px;
-    text-align: center;
-    top: 150px;
-    width: 100%;
-}
-footer .footer-icon {
-    color: #66afef;
-    display: inline-block;
-    font-size: 18px;
-    margin: 0 10px;
-}
-footer .footer-wrap {
-    border-top: 1px solid #aaa;
-    color: #5c6b72;
-    margin: auto;
-    width: 900px;
-}
-footer .footer-wrap div {
-    margin: 15px;
-}
 h1 {
     color: #1e3e3f;
     font: bold 30px Lexend, "Noto Sans SC", sans-serif;
@@ -867,7 +867,7 @@ ol {
     }
     .article,
     #archives,
-    footer .footer-wrap {
+    #footer .footer-wrap {
         width: 900px;
     }
     .home-posts-wrap-no-card #home-posts {
@@ -943,7 +943,7 @@ ol {
     #home-posts-wrap,
     .article,
     #archives,
-    footer .footer-wrap {
+    #footer .footer-wrap {
         width: 100%;
     }
     #menu .desktop-menu,
