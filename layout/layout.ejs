@@ -54,13 +54,11 @@
         <div id="layout">
             <transition name="into">
             <div v-show="showpage" style="display: -not-none">
-                <div id="menushow">
-                    <%- partial("menu") %>
-                </div>
+                <%- partial("menu") %>
                 <div id="main">
                     <%- partial(type) %>
-                    <%- partial("footer") %>
                 </div>
+                <%- partial("footer") %>
             </div>
             </transition>
             <div id="showimg">
