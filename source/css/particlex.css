@@ -51,7 +51,6 @@
 #archives {
     margin: auto;
     padding: 20px;
-    position: relative;
     top: 100px;
 }
 #archives .categories-tags {
@@ -124,7 +123,6 @@
     z-index: -1;
 }
 #home-card {
-    position: relative;
     width: 300px;
 }
 #home-card .card-style {
@@ -195,7 +193,6 @@
 #home-head {
     display: flex;
     height: 100vh;
-    position: relative;
     width: 100vw;
 }
 #home-head .home-info .info {
@@ -204,7 +201,6 @@
     color: #333;
     display: flex;
     justify-content: center;
-    position: absolute;
     text-align: center;
 }
 #home-head .home-info .loop:nth-child(1) {
@@ -238,7 +234,6 @@
 #home-head .home-info,
 #home-posts {
     margin: auto;
-    position: relative;
 }
 #home-posts .page-current {
     align-items: center;
@@ -285,7 +280,6 @@
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 0 20px #d9d9d980;
-    position: relative;
     transition: box-shadow 0.25s, transform 0.25s;
 }
 #home-posts .post .category-and-date {
@@ -362,7 +356,6 @@
     display: flex;
     margin: auto;
     padding: 20px;
-    position: relative;
 }
 #home-posts-wrap,
 #archives,
@@ -390,7 +383,7 @@ footer .footer-wrap {
 #menu .desktop-menu .title {
     color: #555;
     display: inline-block;
-    font-family: "Lexend", "Noto Sans SC", sans-serif;
+    font-family: Lexend, "Noto Sans SC", sans-serif;
     margin-left: 30px;
     text-transform: uppercase;
 }
@@ -401,11 +394,9 @@ footer .footer-wrap {
 }
 #menu .desktop-menu a span {
     display: inline-block;
-    position: relative;
 }
 #menu .desktop-menu a span img {
     height: 20px;
-    position: relative;
     top: 3px;
     width: 20px;
 }
@@ -426,7 +417,6 @@ footer .footer-wrap {
 }
 #menu .phone-menu .items {
     padding: 10px 0 20px;
-    position: relative;
     z-index: 10003;
 }
 #menu .phone-menu .items .item {
@@ -442,7 +432,6 @@ footer .footer-wrap {
 #menu .phone-menu .title {
     color: #555;
     cursor: pointer;
-    position: relative;
     text-transform: uppercase;
     z-index: 10004;
 }
@@ -455,7 +444,6 @@ footer .footer-wrap {
     margin: auto;
     margin-bottom: -25px;
     margin-top: -125px;
-    position: relative;
     width: 100%;
 }
 #showimg {
@@ -478,11 +466,11 @@ footer .footer-wrap {
     margin: auto;
     max-height: 95%;
     max-width: 95%;
-    position: relative;
 }
 * {
     margin: 0;
     padding: 0;
+    position: relative;
     scrollbar-color: #8ab5ff #e6efff;
     scrollbar-width: thin;
     word-break: keep-all;
@@ -493,7 +481,6 @@ footer .footer-wrap {
     font-size: 15px;
     margin: auto;
     padding: 20px;
-    position: relative;
     top: 100px;
 }
 .article .content {
@@ -585,7 +572,6 @@ footer .footer-wrap a {
     border-radius: 15px;
     box-shadow: 0 2px 12px 0 #0000001a;
     margin: 25px 0;
-    position: relative;
 }
 .content pre code {
     background: none;
@@ -656,7 +642,6 @@ footer .footer-wrap a {
 }
 .timeline {
     margin-bottom: 30px;
-    position: relative;
     transition: margin-top 0.5s, opacity 0.25s;
 }
 .timeline-content {
@@ -746,7 +731,6 @@ pre .copycode {
 footer {
     font-size: 14px;
     padding-bottom: 20px;
-    position: relative;
     text-align: center;
     top: 150px;
     width: 100%;
@@ -810,7 +794,6 @@ input.ipt {
     display: block;
     font: 15px "Fira Code", "Noto Sans SC", monospace;
     height: 50px;
-    position: relative;
     text-indent: 20px;
     transition: background 0.25s, border 0.25s, box-shadow 0.25s;
     width: 100%;
