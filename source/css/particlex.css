@@ -51,7 +51,6 @@
 #archives {
     margin: auto;
     padding: 20px;
-    position: relative;
     top: 100px;
 }
 #archives .categories-tags {
@@ -111,20 +110,7 @@
     border-color: #34d058;
     color: #34d058;
 }
-#home-background {
-    position: absolute;
-    z-index: -1;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-}
 #home-card {
-    position: relative;
     width: 300px;
 }
 #home-card .card-style {
@@ -159,9 +145,9 @@
     margin-bottom: 5px;
 }
 #home-card .card-style .friend-links a {
-    display: block;
     border-radius: 5px;
     color: #5c6b72;
+    display: block;
     padding: 8px 0;
 }
 #home-card .card-style .icon-links .icon-link {
@@ -174,7 +160,8 @@
     padding: 5px;
 }
 #home-card .card-style .icon-links a:hover,
-#home-card .card-style .friend-links a:hover {
+#home-card .card-style .friend-links a:hover,
+#home-posts .page-current .page-num:hover {
     background: #66afef;
     color: #fff;
 }
@@ -194,50 +181,58 @@
 #home-head {
     display: flex;
     height: 100vh;
-    position: relative;
     width: 100vw;
 }
-#home-head .home-info .info {
+#home-head #home-background {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    z-index: -1;
+}
+#home-head #home-info .info {
     align-items: center;
     border-radius: 50%;
     color: #333;
     display: flex;
     justify-content: center;
-    position: absolute;
     text-align: center;
 }
-#home-head .home-info .loop:nth-child(1) {
+#home-head #home-info .loop:nth-child(1) {
     animation: loop1 10s linear infinite;
     background: #fff;
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(30deg);
 }
-#home-head .home-info .loop:nth-child(2) {
+#home-head #home-info .loop:nth-child(2) {
     animation: loop2 15s linear infinite;
     background: #fff;
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(60deg);
 }
-#home-head .home-info .loop:nth-child(3) {
+#home-head #home-info .loop:nth-child(3) {
     animation: loop3 10s linear infinite;
     background: #fff;
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(90deg);
 }
-#home-head .home-info .loop:nth-child(4) {
+#home-head #home-info .loop:nth-child(4) {
     animation: loop4 15s linear infinite;
     background: #fff;
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(120deg);
 }
-#home-head .home-info,
+#home-head #home-info,
 #home-posts {
     margin: auto;
-    position: relative;
 }
 #home-posts .page-current {
     align-items: center;
@@ -272,10 +267,6 @@
     padding: 5px;
     width: 35px;
 }
-#home-posts .page-current .page-num:hover {
-    background: #66afef;
-    color: #fff;
-}
 #home-posts .page-current .prev,
 #home-posts .page-current .next {
     text-align: center;
@@ -288,7 +279,6 @@
     background: #fff;
     border-radius: 20px;
     box-shadow: 0 0 20px #d9d9d980;
-    position: relative;
     transition: box-shadow 0.25s, transform 0.25s;
 }
 #home-posts .post .category-and-date {
@@ -310,7 +300,8 @@
     color: #5c6b72;
 }
 #home-posts .post .category-and-date .date,
-#archives .tags {
+#archives .tags,
+#menu .desktop-menu a span {
     display: inline-block;
 }
 #home-posts .post .category-and-date .special {
@@ -365,7 +356,6 @@
     display: flex;
     margin: auto;
     padding: 20px;
-    position: relative;
 }
 #home-posts-wrap,
 #archives,
@@ -393,7 +383,7 @@ footer .footer-wrap {
 #menu .desktop-menu .title {
     color: #555;
     display: inline-block;
-    font-family: "Lexend", "Noto Sans SC", sans-serif;
+    font-family: Lexend, "Noto Sans SC", sans-serif;
     margin-left: 30px;
     text-transform: uppercase;
 }
@@ -402,13 +392,8 @@ footer .footer-wrap {
     display: inline-block;
     margin-left: 30px;
 }
-#menu .desktop-menu a span {
-    display: inline-block;
-    position: relative;
-}
 #menu .desktop-menu a span img {
     height: 20px;
-    position: relative;
     top: 3px;
     width: 20px;
 }
@@ -429,7 +414,6 @@ footer .footer-wrap {
 }
 #menu .phone-menu .items {
     padding: 10px 0 20px;
-    position: relative;
     z-index: 10003;
 }
 #menu .phone-menu .items .item {
@@ -446,8 +430,18 @@ footer .footer-wrap {
     color: #555;
     cursor: pointer;
     text-transform: uppercase;
-    position: relative;
     z-index: 10004;
+}
+#menu.hidden-menu {
+    top: -70px !important;
+}
+#menu.menu-color {
+    background: #0003 !important;
+    box-shadow: 0 -1px 10px 0 transparent !important;
+}
+#menu.menu-color .title,
+#menu.menu-color a {
+    color: #fff !important;
 }
 #search-bar {
     margin: 0 auto 50px;
@@ -458,14 +452,13 @@ footer .footer-wrap {
     margin: auto;
     margin-bottom: -25px;
     margin-top: -125px;
-    position: relative;
     width: 100%;
 }
 #showimg {
     align-items: center;
     background-color: #fffc;
     display: flex;
-    height: 100%;
+    height: 100vh;
     justify-content: center;
     left: 0;
     opacity: 0;
@@ -473,7 +466,7 @@ footer .footer-wrap {
     top: 0;
     transition: opacity 0.25s, visibility 0.25s;
     visibility: hidden;
-    width: 100%;
+    width: 100vw;
     z-index: 10006;
 }
 #showimg-content {
@@ -481,11 +474,11 @@ footer .footer-wrap {
     margin: auto;
     max-height: 95%;
     max-width: 95%;
-    position: relative;
 }
 * {
     margin: 0;
     padding: 0;
+    position: relative;
     scrollbar-color: #8ab5ff #e6efff;
     scrollbar-width: thin;
     word-break: keep-all;
@@ -496,7 +489,6 @@ footer .footer-wrap {
     font-size: 15px;
     margin: auto;
     padding: 20px;
-    position: relative;
     top: 100px;
 }
 .article .content {
@@ -588,38 +580,50 @@ footer .footer-wrap a {
     border-radius: 15px;
     box-shadow: 0 2px 12px 0 #0000001a;
     margin: 25px 0;
-    position: relative;
 }
 .content pre code {
     background: none;
     padding: 0;
 }
-.content table tbody tr {
-    border-top: 2px solid #fff;
+.content table tbody tr td:nth-child(even) {
+    background: #c7e0fb4d;
+}
+.content table tbody tr td:nth-child(odd) {
+    background: #d9e8ff4d;
+}
+.content table thead tr th {
+    background: #a3ddfb;
+    color: #1e3e3f;
+    padding: 8px 20px;
 }
 .content table tr td {
     padding: 8px 20px;
 }
-.content table tr td:nth-child(2n) {
-    background: #c7e0fb4d;
-}
-.content table tr td:nth-child(2n-1) {
-    background: #d9e8ff4d;
-}
-.content table tr th {
-    color: #1e3e3f;
-    padding: 8px 20px;
-}
-.content table tr th:nth-child(2n),
-.content table tr th:nth-child(2n-1) {
-    background: #a3ddfb;
-}
-.hidden-menu {
-    top: -70px !important;
-}
 .icon {
     color: #5c6b72;
     margin-right: 5px;
+}
+.input {
+    background: #f6f8fa;
+    border: 1px solid #d0d7de;
+    border-radius: 50px;
+    box-sizing: border-box;
+    color: #000;
+    display: block;
+    font: 15px "Fira Code", "Noto Sans SC", monospace;
+    height: 50px;
+    text-indent: 20px;
+    transition: background 0.25s, border 0.25s, box-shadow 0.25s;
+    width: 100%;
+}
+.input:focus {
+    background: #fff;
+    border-color: #0969da;
+    box-shadow: 0 0 0 3px #0969da4d;
+    outline: none;
+}
+.input:hover {
+    background: #fff;
 }
 .into-enter-active,
 .into-leave-active {
@@ -627,14 +631,6 @@ footer .footer-wrap a {
 }
 .math.display .katex {
     overflow: auto;
-}
-.menu-color {
-    background: #0003 !important;
-    box-shadow: 0 -1px 10px 0 transparent !important;
-}
-.menu-color .title,
-.menu-color a {
-    color: #fff !important;
 }
 .page-num,
 .icon-link a,
@@ -659,7 +655,6 @@ footer .footer-wrap a {
 }
 .timeline {
     margin-bottom: 30px;
-    position: relative;
     transition: margin-top 0.5s, opacity 0.25s;
 }
 .timeline-content {
@@ -725,7 +720,7 @@ blockquote {
 body {
     background: #f6f8fa;
     color: #000000d9;
-    font: 500 14px "Lexend", "Noto Sans SC", sans-serif;
+    font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
 }
@@ -749,7 +744,6 @@ pre .copycode {
 footer {
     font-size: 14px;
     padding-bottom: 20px;
-    position: relative;
     text-align: center;
     top: 150px;
     width: 100%;
@@ -771,27 +765,27 @@ footer .footer-wrap div {
 }
 h1 {
     color: #1e3e3f;
-    font: bold 30px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 30px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 h2 {
     color: #1e3e3f;
-    font: bold 27px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 27px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 h3 {
     color: #1e3e3f;
-    font: bold 24px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 24px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 h4 {
     color: #1e3e3f;
-    font: bold 21px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 21px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 h5 {
     color: #1e3e3f;
-    font: bold 18px "Lexend", "Noto Sans SC", sans-serif;
+    font: bold 18px Lexend, "Noto Sans SC", sans-serif;
     margin: 15px 0;
 }
 hr {
@@ -803,29 +797,6 @@ hr {
 }
 img {
     border-radius: 10px;
-}
-input.ipt {
-    background: #f6f8fa;
-    border: 1px solid #d0d7de;
-    border-radius: 50px;
-    box-sizing: border-box;
-    color: #000;
-    display: block;
-    font: 15px "Fira Code", "Noto Sans SC", monospace;
-    height: 50px;
-    position: relative;
-    text-indent: 20px;
-    transition: background 0.25s, border 0.25s, box-shadow 0.25s;
-    width: 100%;
-}
-input.ipt:focus {
-    background: #fff;
-    border-color: #0969da;
-    box-shadow: 0 0 0 3px #0969da4d;
-    outline: none;
-}
-input.ipt:hover {
-    background: #fff;
 }
 p {
     line-height: 1.7;
@@ -845,30 +816,30 @@ ol {
     #home-card {
         margin-right: auto;
     }
-    #home-head .home-info .info .wrap {
+    #home-head #home-info .info .wrap {
         padding: 25px;
     }
-    #home-head .home-info .info .wrap h1 {
+    #home-head #home-info .info .wrap h1 {
         font-size: 52px;
         font-weight: bold;
         margin-bottom: 10px;
     }
-    #home-head .home-info .info .wrap h3 {
+    #home-head #home-info .info .wrap h3 {
         font-size: 24px;
         margin: 10px 0;
     }
-    #home-head .home-info .info .wrap h5 {
+    #home-head #home-info .info .wrap h5 {
         font-size: 16px;
         margin: 20px 0;
     }
-    #home-head .home-info .loop {
+    #home-head #home-info .loop {
         display: inline-block;
         height: 500px;
         position: absolute;
         width: 500px;
     }
-    #home-head .home-info,
-    #home-head .home-info .info {
+    #home-head #home-info,
+    #home-head #home-info .info {
         height: 500px;
         width: 500px;
     }
@@ -921,11 +892,11 @@ ol {
     }
 }
 @media (max-width: 900px) {
-    #home-head .home-info {
+    #home-head #home-info {
         height: 350px;
         width: 350px;
     }
-    #home-head .home-info .info {
+    #home-head #home-info .info {
         align-items: center;
         background: #ffffffa6;
         display: flex;
@@ -934,22 +905,22 @@ ol {
         margin: auto;
         width: 350px;
     }
-    #home-head .home-info .info .wrap {
+    #home-head #home-info .info .wrap {
         padding: 50px;
     }
-    #home-head .home-info .info .wrap h1 {
-        font: bold 46px "Lexend", "Noto Sans SC", sans-serif;
+    #home-head #home-info .info .wrap h1 {
+        font: bold 46px Lexend, "Noto Sans SC", sans-serif;
         margin-bottom: 10px;
     }
-    #home-head .home-info .info .wrap h3 {
+    #home-head #home-info .info .wrap h3 {
         font-size: 20px;
         margin: 10px 0;
     }
-    #home-head .home-info .info .wrap h5 {
+    #home-head #home-info .info .wrap h5 {
         font-size: 14px;
         margin: 20px 0;
     }
-    #home-head .home-info .loop {
+    #home-head #home-info .loop {
         display: none;
         height: 350px;
         position: absolute;
