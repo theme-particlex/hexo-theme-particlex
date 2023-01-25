@@ -51,7 +51,7 @@
             }).toString();
         }
     %>
-    <input id="crypto" class="input" placeholder="文章被加密，请输入密码" data-encrypt="<%- encrypt(page.content, page.password.toString()) %>" data-check="<%- sha(page.content) %>">
+    <input id="crypto" class="ipt" placeholder="文章被加密，请输入密码" data-encrypt="<%- encrypt(page.content, page.password.toString()) %>" data-check="<%- sha(page.content) %>">
     <div class="content" style="opacity: 0" v-pre></div>
     <% } else { %>
     <div class="content" v-pre>
