@@ -25,8 +25,9 @@ function showimg() {
     let wrap = document.getElementById("showimg"),
         content = document.getElementById("showimg-content"),
         images = document.querySelectorAll(".article .content img");
-    function show(src) {
-        content.src = src;
+    function show(image) {
+        content.alt = image.alt;
+        content.src = image.src;
         wrap.style.opacity = 1;
         wrap.style.visibility = "visible";
     }
@@ -36,7 +37,7 @@ function showimg() {
     }
     for (let i of images)
         i.addEventListener("click", function () {
-            show(this.getAttribute("src"));
+            show(this);
         });
     wrap.addEventListener("click", hide);
     window.addEventListener("resize", hide);
