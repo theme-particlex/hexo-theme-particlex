@@ -50,8 +50,8 @@
 }
 #archives {
     margin: auto;
+    margin-top: 100px;
     padding: 20px;
-    top: 100px;
 }
 #archives .categories-tags {
     margin: auto;
@@ -510,8 +510,8 @@
     color: #1e3e3f;
     font-size: 15px;
     margin: auto;
+    margin-top: 100px;
     padding: 20px;
-    top: 100px;
 }
 .article .content {
     margin: 50px 0;
