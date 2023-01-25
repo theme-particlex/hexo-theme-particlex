@@ -5,7 +5,7 @@
 <div id="archives">
     <% if (theme.search.enable) { %>
     <div id="search-mask" style="z-index: <%= posts.length + 1 %>"></div>
-    <input id="search-bar" class="input" placeholder="搜索" style="z-index: <%= posts.length + 2 %>">
+    <input id="search-bar" class="ipt" placeholder="搜索" style="z-index: <%= posts.length + 2 %>">
     <% } %>
     <% posts.forEach((post, id) => { %>
     <div class="timeline" style="z-index: <%= posts.length - id %>" data-title="<%- post.title.toLowerCase().replace(/\s+/gm, "") %>">
