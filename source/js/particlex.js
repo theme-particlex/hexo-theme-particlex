@@ -57,20 +57,14 @@ const app = Vue.createApp({
             let newlocal = document.documentElement.scrollTop;
             let menu = document.getElementById("menu");
             let wrap = document.getElementById("home-posts-wrap");
-            let footer = document.getElementById("footer");
             if (this.barlocal < newlocal) {
                 menu.className = "hidden-menu";
                 this.menushow = false;
             } else menu.className = "show-menu";
             if (wrap) {
                 if (newlocal <= window.innerHeight - 100) menu.className += " menu-color";
-                if (newlocal <= 400) {
-                    wrap.style.top = newlocal / -5 + "px";
-                    footer.style.top = newlocal / -5 + 150 + "px";
-                } else {
-                    wrap.style.top = "-80px";
-                    footer.style.top = "70px";
-                }
+                if (newlocal <= 400) wrap.style.marginTop = newlocal / -5 + "px";
+                else wrap.style.marginTop = "-80px";
             }
             this.barlocal = newlocal;
         },
