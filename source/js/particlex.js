@@ -45,13 +45,16 @@ const app = Vue.createApp({
             });
         }
         window.addEventListener("scroll", this.handlescroll, true);
-        highlight();
-        showimg();
-        rendermath();
+        this.render();
     },
     methods: {
         homeclick() {
             window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+        },
+        render() {
+            highlight();
+            showimg();
+            rendermath();
         },
         handlescroll() {
             let newlocal = document.documentElement.scrollTop;
@@ -71,16 +74,14 @@ const app = Vue.createApp({
         handlecrypto() {
             let input = document.getElementById("crypto"),
                 content = document.getElementsByClassName("content")[0];
-            let res = decrypt(input.dataset.encrypt, input.value, input.dataset.check);
+            let res = decrypt(input.dataset.encrypt, input.value, input.dataset.shasum);
             if (res.check) {
                 input.disabled = true;
                 input.classList.remove("fail");
                 input.classList.add("success");
                 content.innerHTML = res.decrypt;
                 content.style.opacity = 1;
-                highlight();
-                showimg();
-                rendermath();
+                this.render();
             } else input.classList.add("fail");
         },
         handlesearch() {
