@@ -14,11 +14,11 @@
     if (page.title)
         title = page.title + " | ";
     else if (is_category())
-        title = "categories: " + page.category + " | ";
+        title = "Categories: " + page.category + " | ";
     else if (is_tag())
-        title = "tags: " + page.tag + " | ";
+        title = "Tags: " + page.tag + " | ";
     else if (is_archive() || is_year() || is_month())
-        title = "archives | ";
+        title = "Archives | ";
     title += config.title;
 %>
 <!DOCTYPE html>
