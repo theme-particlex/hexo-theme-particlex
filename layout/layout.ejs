@@ -14,18 +14,18 @@
     if (page.title)
         title = page.title + " | ";
     else if (is_category())
-        title = "Categories: " + page.category + " | ";
+        title = "categories: " + page.category + " | ";
     else if (is_tag())
-        title = "Tags: " + page.tag + " | ";
+        title = "tags: " + page.tag + " | ";
     else if (is_archive() || is_year() || is_month())
-        title = "Archives | ";
+        title = "archives | ";
     title += config.title;
 %>
 <!DOCTYPE html>
 <html lang="<%- config.language %>">
     <head>
         <meta charset="UTF-8">
-        <title><%= titlecase(title) %></title>
+        <title><%= title %></title>
         <meta name="author" content="<%- config.author %>">
         <meta name="description" content="<%- config.description %>">
         <meta name="keywords" content="<%- config.keywords %>">
