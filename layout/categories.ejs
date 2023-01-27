@@ -30,7 +30,7 @@
         <div class="timeline-content">
             <div class="item-time"><%= date(post.date, "YYYY/M/D") %></div>
             <a href="<%- url_for(post.path) %>">
-                <h3><%= titlecase(post.title) %></h3>
+                <h3><%= post.title %></h3>
             </a>
             <div class="info">
                 <% if (post.categories && post.categories.data.length != 0) { %>
