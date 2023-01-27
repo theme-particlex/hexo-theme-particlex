@@ -408,7 +408,6 @@
     display: inline-block;
     font-family: Lexend, "Noto Sans SC", sans-serif;
     margin-left: 30px;
-    text-transform: uppercase;
 }
 #menu .desktop-menu a {
     color: #555;
@@ -452,7 +451,6 @@
 #menu .phone-menu .title {
     color: #555;
     cursor: pointer;
-    text-transform: uppercase;
     z-index: 10004;
 }
 #menu.hidden-menu {

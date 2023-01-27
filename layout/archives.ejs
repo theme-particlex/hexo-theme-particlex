@@ -4,14 +4,14 @@
 %>
 <div id="archives">
     <% if (theme.search.enable) { %>
-    <div id="search-mask" style="z-index: <%= posts.length + 1 %>"></div>
-    <input id="search-bar" class="input" placeholder="搜索" style="z-index: <%= posts.length + 2 %>">
+    <div id="search-mask" style="z-index: <%- posts.length + 1 %>"></div>
+    <input id="search-bar" class="input" placeholder="搜索" style="z-index: <%- posts.length + 2 %>">
     <% } %>
     <% posts.forEach((post, id) => { %>
-    <div class="timeline" style="z-index: <%= posts.length - id %>" data-title="<%- post.title.toLowerCase().replace(/\s+/gm, "") %>">
+    <div class="timeline" style="z-index: <%- posts.length - id %>" data-title="<%- post.title.toLowerCase().replace(/\s+/gm, "") %>">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
-            <div class="item-time"><%- date(post.date, "YYYY/M/D") %></div>
+            <div class="item-time"><%= date(post.date, "YYYY/M/D") %></div>
             <a href="<%- url_for(post.path) %>">
                 <h3><%= post.title %></h3>
             </a>
@@ -37,9 +37,7 @@
                             const color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
                             let num = Math.floor(Math.random() * color.length);
                         %>
-                        <a href="<%- url_for(data.path) %>" style="<%- color[num] %>">
-                            <%= data.name %>
-                        </a>
+                        <a href="<%- url_for(data.path) %>" style="<%- color[num] %>"><%= data.name %></a>
                     </span>
                     <% }); %>
                 </span>
