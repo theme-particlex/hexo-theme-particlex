@@ -1,7 +1,7 @@
 <nav id="menu">
     <div class="desktop-menu">
         <a href="<%- config.root %>">
-            <span class="title"><%= uppercase(config.title) %></span>
+            <span class="title"><%= config.title.toUpperCase() %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
         <a href="<%- url_for(theme.menu[key].src) %>">
@@ -14,7 +14,7 @@
         <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
         <div class="title" @click="menushow = !menushow">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;<%= uppercase(config.title) %></span>
+            <span>&emsp;<%= config.title.toUpperCase() %></span>
         </div>
         <transition name="slide">
         <div class="items" v-show="menushow">
