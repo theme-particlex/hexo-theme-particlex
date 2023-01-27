@@ -330,7 +330,7 @@
     display: inline-block;
     margin-left: 25px;
 }
-#home-posts .post .excerpt {
+#home-posts .post .description {
     color: #1e3e3f;
 }
 #home-posts .post .go-post {
@@ -853,7 +853,7 @@ ol {
         margin-bottom: 25px;
         padding: 50px;
     }
-    #home-posts .post .excerpt {
+    #home-posts .post .description {
         padding: 20px 0;
     }
     #home-posts-wrap {
@@ -935,7 +935,7 @@ ol {
         margin-bottom: 30px;
         padding: 20px 30px;
     }
-    #home-posts .post .excerpt {
+    #home-posts .post .description {
         padding: 20px 0;
     }
     #home-posts .post .post-tags {
