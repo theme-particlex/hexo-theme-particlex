@@ -54,15 +54,12 @@ function rendermath() {
         });
 }
 function sha(str) {
-    return CryptoJS.SHA256(str).toString(CryptoJS.enc.Base64);
+    return CryptoJS.SHA256(str).toString();
 }
-function decrypt(encrypt, key, check) {
+function decrypt(str, key, shasum) {
     try {
-        let res = CryptoJS.AES.decrypt(encrypt, sha(key), {
-            mode: CryptoJS.mode.ECB,
-            padding: CryptoJS.pad.Pkcs7,
-        }).toString(CryptoJS.enc.Utf8);
-        return { decrypt: res, check: sha(res) == check };
+        let res = CryptoJS.AES.decrypt(str, key).toString(CryptoJS.enc.Utf8);
+        return { decrypt: res, check: sha(res) === shasum };
     } catch {
         return { check: false };
     }
