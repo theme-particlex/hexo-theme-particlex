@@ -23,9 +23,15 @@ cd themes
 git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=1
 ```
 
+然后在根目录 `_config.yml` 设置主题为 ParticleX 即可
+
+```yaml
+theme: particlex
+```
+
 -   关闭自带 Highlight
 
-    在博客根目录下的 `_config.yml`，修改 `highlight` 和 `prismjs` 参数
+    Hexo 有自带的 Highlight，但是和 ParticleX 的 Highlight 不兼容
 
     ```yaml
     highlight:
