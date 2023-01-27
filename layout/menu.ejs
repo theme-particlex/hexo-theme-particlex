@@ -1,7 +1,7 @@
 <nav id="menu">
     <div class="desktop-menu">
-        <a href="<%- config.root %>">
-            <span class="title"><%= config.title.toUpperCase() %></span>
+        <a class="title" href="<%- config.root %>">
+            <span><%= config.title.toUpperCase() %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
         <a href="<%- url_for(theme.menu[key].src) %>">

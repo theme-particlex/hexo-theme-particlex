@@ -406,21 +406,13 @@
 #menu .desktop-menu .title {
     color: #555;
     display: inline-block;
-    font-family: Lexend, "Noto Sans SC", sans-serif;
-    margin-left: 30px;
+    margin-left: 60px;
+    margin-right: 5px;
 }
 #menu .desktop-menu a {
     color: #555;
     display: inline-block;
     margin-left: 30px;
-}
-#menu .desktop-menu a span img {
-    height: 20px;
-    top: 3px;
-    width: 20px;
-}
-#menu .desktop-menu a span:nth-child(1) {
-    margin-right: 5px;
 }
 #menu .phone-menu {
     min-height: 50px;
@@ -740,7 +732,7 @@ blockquote {
 }
 body {
     background: #f6f8fa;
-    color: #000000d9;
+    color: #000c;
     font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
