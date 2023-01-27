@@ -86,23 +86,23 @@ highlightStyle: github # Highlight style
 
     ```yaml
     menu:
-        home:
+        Home:
             name: house
             theme: solid
             src: /
-        about:
+        About:
             name: id-card
             theme: solid
             src: /about
-        archives:
+        Archives:
             name: box-archive
             theme: solid
             src: /archives
-        categories:
+        Categories:
             name: bookmark
             theme: solid
             src: /categories
-        tags:
+        Tags:
             name: tags
             theme: solid
             src: /tags

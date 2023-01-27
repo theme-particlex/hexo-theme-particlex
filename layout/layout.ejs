@@ -8,7 +8,7 @@
         type = "categories";
     else if (is_tag() || page.type == "tags")
         type = "tags";
-    else if (is_archive() || is_year() || is_month())
+    else if (is_archive())
         type = "archives";
     let title = "";
     if (page.title)
@@ -17,7 +17,7 @@
         title = "Categories: " + page.category + " | ";
     else if (is_tag())
         title = "Tags: " + page.tag + " | ";
-    else if (is_archive() || is_year() || is_month())
+    else if (is_archive())
         title = "Archives | ";
     title += config.title;
 %>
@@ -25,7 +25,7 @@
 <html lang="<%- config.language %>">
     <head>
         <meta charset="UTF-8">
-        <title><%= titlecase(title) %></title>
+        <title><%= title %></title>
         <meta name="author" content="<%- config.author %>">
         <meta name="description" content="<%- config.description %>">
         <meta name="keywords" content="<%- config.keywords %>">
@@ -36,7 +36,7 @@
         <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/<%- theme.highlightStyle %>.min.css">
         <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css">
         <% if (theme.polyfill.enable) { %>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=<% theme.polyfill.features.join(",") %>"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=<%- theme.polyfill.features.join(",") %>"></script>
         <% } %>
         <% if (theme.math.enable) { %>
         <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
