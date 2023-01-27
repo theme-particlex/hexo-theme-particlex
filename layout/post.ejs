@@ -30,9 +30,7 @@
                     const color = ["color: #ffa2c4", "color: #00bcd4", "color: #03a9f4", "color: #00a596", "color: #ff7d73"];
                     let num = Math.floor(Math.random() * color.length);
                 %>
-                <a href="<%- url_for(data.path) %>" style="<%- color[num] %>">
-                    <%= data.name %>
-                </a>
+                <a href="<%- url_for(data.path) %>" style="<%- color[num] %>"><%= data.name %></a>
             </span>
             <% }); %>
         </span>
@@ -52,7 +50,7 @@
         }
     %>
     <input id="crypto" class="input" placeholder="文章被加密，请输入密码" data-encrypt="<%- encrypt(page.content, page.password.toString()) %>" data-check="<%- sha(page.content) %>">
-    <div class="content" style="opacity: 0" v-pre></div>
+    <div class="content" v-pre style="opacity: 0"></div>
     <% } else { %>
     <div class="content" v-pre>
         <%- page.content %>

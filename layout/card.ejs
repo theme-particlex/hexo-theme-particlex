@@ -3,9 +3,7 @@
         <div class="avatar">
             <img src="<%- url_for(theme.avatar) %>" alt="avatar">
         </div>
-        <div class="name">
-            <%= config.author %>
-        </div>
+        <div class="name"><%= config.author %></div>
         <div class="description">
             <%- markdown(theme.card.description) %>
         </div>
@@ -24,9 +22,7 @@
         <div class="friend-links">
             <% Object.keys(theme.card.friendLinks).forEach(key => { %>
             <div class="friend-link">
-                <a href="<%- url_for(theme.card.friendLinks[key]) %>">
-                    <%= key %>
-                </a>
+                <a href="<%- url_for(theme.card.friendLinks[key]) %>"><%= key %></a>
             </div>
             <% }); %>
         </div>

@@ -1,12 +1,12 @@
 <nav id="menu">
     <div class="desktop-menu">
         <a href="<%- config.root %>">
-            <span class="title"><%- config.title %></span>
+            <span class="title"><%= titlecase(config.title) %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
-        <a href="<%= url_for(theme.menu[key].src) %>">
+        <a href="<%- url_for(theme.menu[key].src) %>">
             <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
-            <span>&ensp;<%= key %></span>
+            <span>&ensp;<%= titlecase(key) %></span>
         </a>
         <% }); %>
     </div>
@@ -14,17 +14,17 @@
         <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
         <div class="title" @click="menushow = !menushow">
             <i class="fa-solid fa-bars fa-fw"></i>
-            <span>&emsp;<%- config.title %></span>
+            <span>&emsp;<%= titlecase(config.title) %></span>
         </div>
         <transition name="slide">
         <div class="items" v-show="menushow">
             <% Object.keys(theme.menu).forEach(key => { %>
-            <a href="<%= url_for(theme.menu[key].src) %>">
+            <a href="<%- url_for(theme.menu[key].src) %>">
                 <div class="item">
                     <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
                     </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%"><%= key %></div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%"><%= titlecase(key) %></div>
                 </div>
             </a>
             <% }); %>

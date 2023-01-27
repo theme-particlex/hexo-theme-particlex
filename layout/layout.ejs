@@ -36,7 +36,7 @@
         <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/<%- theme.highlightStyle %>.min.css">
         <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css">
         <% if (theme.polyfill.enable) { %>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=<% theme.polyfill.features.join(",") %>"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=<%- theme.polyfill.features.join(",") %>"></script>
         <% } %>
         <% if (theme.math.enable) { %>
         <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
