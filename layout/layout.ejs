@@ -8,7 +8,7 @@
         type = "categories";
     else if (is_tag() || page.type == "tags")
         type = "tags";
-    else if (is_archive() || is_year() || is_month())
+    else if (is_archive())
         type = "archives";
     let title = "";
     if (page.title)
@@ -17,7 +17,7 @@
         title = "Categories: " + page.category + " | ";
     else if (is_tag())
         title = "Tags: " + page.tag + " | ";
-    else if (is_archive() || is_year() || is_month())
+    else if (is_archive())
         title = "Archives | ";
     title += config.title;
 %>
