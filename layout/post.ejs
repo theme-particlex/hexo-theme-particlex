@@ -53,6 +53,7 @@
         <%- page.content %>
     </div>
     <% } %>
+    <% if (page.comments) { %>
     <% if (theme.gitalk.enable) { %>
     <div id="comment">
         <div id="gitalk-container"></div>
@@ -72,5 +73,6 @@
     <div id="comment">
         <div id="twikoo-container"></div>
     </div>
+    <% } %>
     <% } %>
 </div>
