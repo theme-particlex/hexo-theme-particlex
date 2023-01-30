@@ -155,7 +155,7 @@ waline:
 # https://github.com/imaegoo/twikoo
 twikoo:
     enable: false
-    envId:
+    envID:
     region:
     path: location.pathname
     lang: zh-CN
