@@ -305,7 +305,7 @@ highlightStyle: github # Highlight style
     ```yaml
     twikoo:
         enable: false
-        envId:
+        envID:
         region:
         path: location.pathname
         lang: zh-CN

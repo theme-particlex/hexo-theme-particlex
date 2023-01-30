@@ -57,9 +57,9 @@
         serverURL: "<%- theme.waline.serverURL %>",
         commentCount: <%- theme.waline.commentCount %>,
         pageview: <%- theme.waline.pageview %>,
-        emoji: "<%- theme.waline.emoji %>".split(","),
-        meta: "<%- theme.waline.meta %>".split(","),
-        requiredMeta: "<%- theme.waline.requiredMeta %>".split(","),
+        emoji: <%- JSON.stringify(theme.waline.emoji) %>,
+        meta: <%- JSON.stringify(theme.waline.meta) %>,
+        requiredMeta: <%- JSON.stringify(theme.waline.requiredMeta) %>,
         lang: "<%- theme.waline.lang %>",
         wordLimit: <%- theme.waline.wordLimit %>,
         pageSize: "<%- theme.waline.pageSize %>",
@@ -73,7 +73,7 @@
 <script>
     twikoo.init({
         el: "#twikoo-container",
-        envId: "<%- theme.twikoo.envId %>",
+        envId: "<%- theme.twikoo.envID %>",
         region: "<%- theme.twikoo.region %>",
         path: <%- theme.twikoo.path %>,
         lang: "<%- theme.twikoo.lang %>",
