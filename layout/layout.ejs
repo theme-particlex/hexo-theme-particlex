@@ -4,9 +4,9 @@
         type = "index";
     else if (is_post())
         type = "post";
-    else if (is_category() || page.type == "categories")
+    else if (is_category() || page.type === "categories")
         type = "categories";
-    else if (is_tag() || page.type == "tags")
+    else if (is_tag() || page.type === "tags")
         type = "tags";
     else if (is_archive())
         type = "archives";
@@ -43,7 +43,7 @@
         <script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
         <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
         <% } %>
-        <% if (theme.crypto.enable && typeof page.password !== "undefined") { %>
+        <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
         <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
         <% } %>
         <link rel="stylesheet" href="<%- url_for("/css/fonts.min.css") %>">

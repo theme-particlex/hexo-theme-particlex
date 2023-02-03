@@ -16,7 +16,7 @@
                 <h3><%= post.title %></h3>
             </a>
             <div class="info">
-                <% if (post.categories && post.categories.data.length != 0) { %>
+                <% if (post.categories && post.categories.data.length !== 0) { %>
                 <span class="category">
                     <a href="<%- url_for(post.categories.data[0].path) %>">
                         <span class="icon">
@@ -26,7 +26,7 @@
                     </a>
                 </span>
                 <% } %>
-                <% if (post.tags && post.tags.data.length != 0) { %>
+                <% if (post.tags && post.tags.data.length !== 0) { %>
                 <span class="tags">
                     <span class="icon">
                         <i class="fa-solid fa-tags fa-fw"></i>
