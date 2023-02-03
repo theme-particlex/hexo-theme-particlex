@@ -2,8 +2,8 @@
     let posts = site.posts,
         current = (page.current - 1) * config.index_generator.per_page;
     posts.data.sort((a, b) => {
-        let topa = a.top ?? 0, topb = b.top ?? 0;
-        return topa == topb ? b.date - a.date : topb - topa;
+        let pina = a.pin ?? 0, pinb = b.pin ?? 0;
+        return pina === pinb ? b.date - a.date : pinb - pina;
     });
     posts = posts.slice(current, config.index_generator.per_page + current);
 %>
@@ -13,7 +13,7 @@
         <h2 class="post-title"><%= post.title %></h2>
     </a>
     <div class="category-and-date">
-        <% if (post.categories.data.length != 0) { %>
+        <% if (post.categories.data.length !== 0) { %>
         <span class="category">
             <a href="<%- url_for(post.categories.data[0].path) %>">
                 <span class="icon">
@@ -29,12 +29,12 @@
             </span>
             <%- date(post.date, "YYYY/M/D") %>
         </span>
-        <% if (theme.crypto.enable && typeof post.password !== "undefined") { %>
+        <% if (theme.crypto.enable && typeof post.secret !== "undefined") { %>
         <span class="special">
             <i class="fa-solid fa-lock fa-fw"></i>
         </span>
         <% } %>
-        <% if (typeof post.top !== "undefined" && post.top > 0) { %>
+        <% if (typeof post.pin !== "undefined" && post.pin > 0) { %>
         <span class="special">
             <i class="fa-solid fa-grip-vertical fa-fw"></i>
         </span>
@@ -52,7 +52,7 @@
         </div>
     </div>
     <div class="post-tags">
-        <% if (post.tags.data.length != 0) { %>
+        <% if (post.tags.data.length !== 0) { %>
         <span class="icon">
             <i class="fa-solid fa-tags fa-fw"></i>
         </span>

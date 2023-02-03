@@ -9,7 +9,7 @@
             </span>
             <%= date(page.date, "YYYY/M/D") %>
         </span>
-        <% if (page.categories && page.categories.data.length != 0) { %>
+        <% if (page.categories && page.categories.data.length !== 0) { %>
         <span class="category">
             <a href="<%- url_for(page.categories.data[0].path) %>">
                 <span class="icon">
@@ -19,7 +19,7 @@
             </a>
         </span>
         <% } %>
-        <% if (page.tags && page.tags.data.length != 0) { %>
+        <% if (page.tags && page.tags.data.length !== 0) { %>
         <span class="tags">
             <span class="icon">
                 <i class="fa-solid fa-tags fa-fw"></i>
@@ -36,7 +36,7 @@
         </span>
         <% } %>
     </div>
-    <% if (theme.crypto.enable && typeof page.password !== "undefined") { %>
+    <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
     <%
         const CryptoJS = crypto();
         function sha(str) {
@@ -46,7 +46,7 @@
             return CryptoJS.AES.encrypt(str, key).toString();
         }
     %>
-    <input id="crypto" class="input" placeholder="文章被加密，请输入密码" data-encrypt="<%- encrypt(page.content, page.password) %>" data-shasum="<%- sha(page.content) %>">
+    <input id="crypto" class="input" placeholder="文章被加密，请输入密码" data-encrypt="<%- encrypt(page.content, page.secret) %>" data-shasum="<%- sha(page.content) %>">
     <div class="content" v-pre style="opacity: 0"></div>
     <% } else { %>
     <div class="content" v-pre>
