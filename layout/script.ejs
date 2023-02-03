@@ -1,6 +1,6 @@
 <script src="<%- url_for("/js/functions.js") %>"></script>
 <script src="<%- url_for("/js/particlex.js") %>"></script>
-<% if (type == "post" && page.comments) { %>
+<% if (type === "post" && page.comments) { %>
 <% if (theme.gitalk.enable) { %>
 <script src="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.js"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.css">
@@ -8,7 +8,7 @@
     let clientID = "<%- theme.gitalk.clientID %>",
         clientSecret = "<%- theme.gitalk.clientSecret %>";
     <% Object.keys(theme.gitalk.sites).forEach(key => { %>
-    if (window.location.host == "<%- key %>") {
+    if (window.location.host === "<%- key %>") {
         clientID = "<%- theme.gitalk.sites[key].clientID %>";
         clientSecret = "<%- theme.gitalk.sites[key].clientSecret %>";
     }

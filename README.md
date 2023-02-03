@@ -189,11 +189,11 @@ highlightStyle: github # Highlight style
 
 -   文章置顶
 
-    在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `top` 作为置顶参数，越大越靠前，默认为 0
+    在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `pin` 作为置顶参数，越大越靠前，默认为 0
 
 -   文章加密
 
-    使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `password` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
+    使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `secret` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
 
     ```yaml
     crypto:
