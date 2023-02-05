@@ -525,17 +525,13 @@ body::-webkit-scrollbar-track {
 .content {
     transition: opacity 0.25s;
 }
-.content img {
-    display: block;
-    margin: 15px auto;
-    max-width: 75%;
-}
+.content img,
 .content video,
 .content audio,
 .content iframe {
     display: block;
     margin: 15px auto;
-    width: 75%;
+    max-width: 75%;
 }
 .copycode {
     color: #5c6b72;
