@@ -53,6 +53,11 @@ function rendermath() {
             ],
         });
 }
+function renderall() {
+    highlight();
+    showimg();
+    rendermath();
+}
 function sha(str) {
     return CryptoJS.SHA256(str).toString();
 }
