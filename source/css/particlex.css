@@ -514,7 +514,8 @@
 }
 .code-content {
     background: none;
-    font: 500 13px/2 "Fira Code", "Noto Sans SC", monospace;
+    font-size: 13px;
+    line-height: 2;
     overflow: auto;
     padding: 50px 30px 20px;
 }
@@ -564,7 +565,7 @@ body::-webkit-scrollbar-track {
     box-sizing: border-box;
     color: #000;
     display: block;
-    font: 15px "Fira Code", "Noto Sans SC", monospace;
+    font-size: 15px;
     height: 50px;
     text-indent: 20px;
     transition: background 0.25s, border 0.25s, box-shadow 0.25s;
@@ -584,11 +585,12 @@ body::-webkit-scrollbar-track {
     animation: into 0.6s;
 }
 .language {
-    background: linear-gradient(to right, #ed6ea0 0, #ec8c69 100%);
+    background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
     border-radius: 0 0 10px 10px;
     box-shadow: 1px 1px 0.75rem #ed6ea14d;
     color: #fff;
-    font: bold 12px "Fira Code", "Noto Sans SC", monospace;
+    font-weight: bold;
+    font-size: 12px;
     left: 30px;
     padding: 10px 15px;
     position: absolute;
@@ -698,6 +700,15 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
+pre,
+code,
+.hljs,
+.highlight,
+.commit-tease-sha,
+.input,
+.language {
+    font-family: "Fira Code", "Noto Sans SC", monospace;
+}
 button,
 img,
 video,
@@ -719,7 +730,8 @@ code {
     background: #bddcf76b;
     border-radius: 4px;
     color: #4b616b;
-    font: 500 14px/2.5 "Fira Code", "Noto Sans SC", monospace;
+    font-size: 14px;
+    line-height: 2.5;
     padding: 4px 8px;
 }
 h1 {
@@ -891,7 +903,7 @@ ol li {
         padding: 50px;
     }
     #home-head #home-info .info .wrap h1 {
-        font: bold 46px Lexend, "Noto Sans SC", sans-serif;
+        font-size: 46px;
         margin-bottom: 10px;
     }
     #home-head #home-info .info .wrap h3 {
