@@ -512,105 +512,50 @@
     display: inline-block;
     margin-right: 10px;
 }
-.article h1 {
-    font-weight: bold;
-    margin: 20px 0;
-}
-.content {
-    transition: opacity 0.25s;
-}
-.content .code-content {
+.code-content {
     background: none;
     font: 500 13px/2 "Fira Code", "Noto Sans SC", monospace;
     overflow: auto;
     padding: 50px 30px 20px;
 }
-.content .copycode {
+.comment iframe,
+body::-webkit-scrollbar-track {
+    border-radius: 0;
+}
+.content {
+    transition: opacity 0.25s;
+}
+.content img {
+    display: block;
+    margin: 15px auto;
+    max-width: 75%;
+}
+.content video,
+.content audio,
+.content iframe {
+    display: block;
+    margin: 15px auto;
+    width: 75%;
+}
+.copycode {
     color: #5c6b72;
     position: absolute;
     right: 0;
     top: 0;
 }
-.content .copycode i {
+.copycode i {
     padding: 15px;
     position: absolute;
     right: 0;
     top: 0;
     transition: transform 0.25s;
 }
-.content .copycode.copied i {
+.copycode.copied i {
     transform: scale(1.25);
 }
-.content .copycode.copied i:first-child,
-.content .copycode:not(.copied) i:last-child {
+.copycode.copied i:first-child,
+.copycode:not(.copied) i:last-child {
     opacity: 0;
-}
-.content .language {
-    background: linear-gradient(to right, #ed6ea0 0, #ec8c69 100%);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 1px 1px 0.75rem #ed6ea14d;
-    color: #fff;
-    font: bold 12px "Fira Code", "Noto Sans SC", monospace;
-    left: 30px;
-    padding: 10px 15px;
-    position: absolute;
-    top: 0;
-}
-.content .markdownIt-Anchor {
-    display: none;
-}
-.content a,
-#footer .footer-wrap a {
-    color: #66afef;
-}
-.content b,
-.content strong {
-    font-weight: bold;
-    line-height: 2.5;
-}
-.content code {
-    background: #bddcf76b;
-    border-radius: 4px;
-    color: #4b616b;
-    font: 500 14px/2.5 "Fira Code", "Noto Sans SC", monospace;
-    padding: 4px 8px;
-}
-.content h1,
-.content h2,
-.content h3,
-.content h4,
-.content h5 {
-    margin: 18px 0;
-    text-align: left !important;
-}
-.content img {
-    display: block;
-    margin: 0 auto;
-    max-width: 70%;
-}
-.content pre {
-    border: 1px solid #ebeef5;
-    border-radius: 15px;
-    box-shadow: 0 2px 12px 0 #0000001a;
-    margin: 25px 0;
-}
-.content pre code {
-    background: none;
-    padding: 0;
-}
-.content table tbody tr td:nth-child(even) {
-    background: #c7e0fb4d;
-}
-.content table tbody tr td:nth-child(odd) {
-    background: #d9e8ff4d;
-}
-.content table thead tr th {
-    background: #a3ddfb;
-    color: #1e3e3f;
-    padding: 8px 20px;
-}
-.content table tr td {
-    padding: 8px 20px;
 }
 .icon {
     color: #5c6b72;
@@ -641,6 +586,20 @@
 .into-enter-active,
 .into-leave-active {
     animation: into 0.6s;
+}
+.language {
+    background: linear-gradient(to right, #ed6ea0 0, #ec8c69 100%);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 1px 1px 0.75rem #ed6ea14d;
+    color: #fff;
+    font: bold 12px "Fira Code", "Noto Sans SC", monospace;
+    left: 30px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+}
+.markdownIt-Anchor {
+    display: none;
 }
 .math.display .katex {
     overflow: auto;
@@ -717,18 +676,24 @@
     color: unset;
 }
 a {
+    color: #66afef;
     text-decoration: none;
 }
 a:hover,
 .content .copycode:hover {
     opacity: 0.8;
 }
+b,
+strong {
+    font-weight: bold;
+    line-height: 2.5;
+}
 blockquote {
     background: #d9e8ff6b;
     border-left: 3px solid #1e3e3f;
     border-radius: 3px;
-    margin: 15px 0;
-    padding: 0.1px 15px;
+    display: flex;
+    padding: 0 15px;
 }
 body {
     background: #f6f8fa;
@@ -737,71 +702,101 @@ body {
     overflow-x: hidden;
     width: 100%;
 }
-body::-webkit-scrollbar-track {
-    border-radius: 0;
-}
 button,
 img,
+video,
+audio,
 iframe,
 #home-head,
 #menu,
 .math,
 .go-post,
 .page-current,
-.categories-tags span a,
+.categories-tags a,
 .friend-link a,
-pre .language,
-pre .copycode {
+.icon-link a,
+.language,
+.copycode {
     user-select: none;
 }
+code {
+    background: #bddcf76b;
+    border-radius: 4px;
+    color: #4b616b;
+    font: 500 14px/2.5 "Fira Code", "Noto Sans SC", monospace;
+    padding: 4px 8px;
+}
 h1 {
+    font-size: 30px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: #1e3e3f;
-    font: bold 30px Lexend, "Noto Sans SC", sans-serif;
+    font-weight: bold;
     margin: 15px 0;
 }
 h2 {
-    color: #1e3e3f;
-    font: bold 27px Lexend, "Noto Sans SC", sans-serif;
-    margin: 15px 0;
+    font-size: 27px;
 }
 h3 {
-    color: #1e3e3f;
-    font: bold 24px Lexend, "Noto Sans SC", sans-serif;
-    margin: 15px 0;
+    font-size: 24px;
 }
 h4 {
-    color: #1e3e3f;
-    font: bold 21px Lexend, "Noto Sans SC", sans-serif;
-    margin: 15px 0;
+    font-size: 21px;
 }
 h5 {
-    color: #1e3e3f;
-    font: bold 18px Lexend, "Noto Sans SC", sans-serif;
-    margin: 15px 0;
+    font-size: 18px;
+}
+h6 {
+    font-size: 15px;
 }
 hr {
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    border-style: dashed;
+    border-style: dashed none none;
     border-width: 1.5px;
 }
-img {
+img,
+video,
+audio,
+iframe {
     border-radius: 10px;
 }
-p {
-    line-height: 1.7;
-    margin: 15px 0;
-}
-ul li,
-ol li {
-    margin: 8px auto;
-}
+p,
 ul,
 ol {
     line-height: 1.7;
-    margin-bottom: 10px !important;
-    margin-top: 15px !important;
+    margin: 15px 0;
+}
+pre {
+    border: 1px solid #ebeef5;
+    border: 1px solid #ebeef5;
+    border-radius: 15px;
+    border-radius: 15px;
+    box-shadow: 0 2px 12px 0 #0000001a;
+    box-shadow: 0 2px 12px 0 #0000001a;
+    margin: 25px 0;
+    margin: 25px 0;
+}
+table tbody tr td:nth-child(even) {
+    background: #c7e0fb4d;
+}
+table tbody tr td:nth-child(odd) {
+    background: #d9e8ff4d;
+}
+table thead tr th {
+    background: #a3ddfb;
+    color: #1e3e3f;
+    padding: 8px 20px;
+}
+table tr td {
+    padding: 8px 20px;
+}
+ul li,
+ol li {
+    margin: 8px 0;
 }
 @media (min-width: 900px) {
     #home-card {
