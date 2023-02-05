@@ -12,7 +12,6 @@ const app = Vue.createApp({
         window.addEventListener("load", () => {
             this.showpage = true;
             document.getElementById("loading").style.opacity = 0;
-            document.getElementById("loading").style.visibility = "hidden";
         });
     },
     mounted() {
@@ -45,16 +44,11 @@ const app = Vue.createApp({
             });
         }
         window.addEventListener("scroll", this.handlescroll, true);
-        this.render();
+        renderall();
     },
     methods: {
         homeclick() {
             window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
-        },
-        render() {
-            highlight();
-            showimg();
-            rendermath();
         },
         handlescroll() {
             let newlocal = document.documentElement.scrollTop;
@@ -81,7 +75,7 @@ const app = Vue.createApp({
                 input.classList.add("success");
                 content.innerHTML = res.decrypt;
                 content.style.opacity = 1;
-                this.render();
+                renderall();
             } else input.classList.add("fail");
         },
         handlesearch() {
