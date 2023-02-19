@@ -189,7 +189,7 @@ highlightStyle: github # Highlight style
 
 -   文章置顶
 
-    在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `pin` 作为置顶参数，越大越靠前，默认为 0
+    在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `pinned` 作为置顶参数，越大越靠前，默认为 0
 
 -   文章加密
 

@@ -2,8 +2,9 @@
     let posts = site.posts,
         current = (page.current - 1) * config.index_generator.per_page;
     posts.data.sort((a, b) => {
-        let pina = a.pin ?? 0, pinb = b.pin ?? 0;
-        return pina === pinb ? b.date - a.date : pinb - pina;
+        let x = a.pinned ?? 0,
+            y = b.pinned ?? 0;
+        return x === y ? b.date - a.date : y - x;
     });
     posts = posts.slice(current, config.index_generator.per_page + current);
 %>
@@ -34,7 +35,7 @@
             <i class="fa-solid fa-lock fa-fw"></i>
         </span>
         <% } %>
-        <% if (typeof post.pin !== "undefined" && post.pin > 0) { %>
+        <% if (typeof post.pinned !== "undefined") { %>
         <span class="special">
             <i class="fa-solid fa-grip-vertical fa-fw"></i>
         </span>
