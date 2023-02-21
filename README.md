@@ -36,16 +36,8 @@ theme: particlex
     ```yaml
     highlight:
         enable: false
-        line_number: true
-        auto_detect: false
-        tab_replace: ""
-        wrap: true
-        hljs: false
     prismjs:
         enable: false
-        preprocess: true
-        line_number: true
-        tab_replace: ""
     ```
 
     如果使用 Pandoc 还需要设置一下
