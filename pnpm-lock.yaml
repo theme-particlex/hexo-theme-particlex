@@ -1,11 +1,11 @@
 lockfileVersion: 5.4
 
 specifiers:
-  hexo-helper-crypto: ^1.0.6
+  hexo-helper-crypto: ^1.0.7
   hexo-renderer-ejs: ^2.0.0
 
 dependencies:
-  hexo-helper-crypto: 1.0.6
+  hexo-helper-crypto: 1.0.7
   hexo-renderer-ejs: 2.0.0
 
 packages:
@@ -84,8 +84,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /hexo-helper-crypto/1.0.6:
-    resolution: {integrity: sha512-bpjDvGDwFQpNCLJ0IWui5Iq68MogE3FG0Zh8wRUC1da/vvb22A3bTpjH6oUQDdHuH3A4Td20aqiKLjSsmhbGUg==}
+  /hexo-helper-crypto/1.0.7:
+    resolution: {integrity: sha512-vBbHeJtlZMTf5prI+JjIwHSOWxudTim33fJUmNGBTAoXfdu+nO4bxgMLvIw+6/ml/jYM2HHyRtUyYIXHf9nYcA==}
     dependencies:
       crypto-js: 4.1.1
     dev: false

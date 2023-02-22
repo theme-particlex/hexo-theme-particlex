@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/argvchs/hexo-theme-particlex#readme",
   "dependencies": {
-    "hexo-helper-crypto": "^1.0.6",
+    "hexo-helper-crypto": "^1.0.7",
     "hexo-renderer-ejs": "^2.0.0"
   }
 }
