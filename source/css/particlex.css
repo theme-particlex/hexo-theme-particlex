@@ -547,12 +547,6 @@ body::-webkit-scrollbar-track {
 .copycode:not(.copied) i:last-child {
     opacity: 0;
 }
-.header-anchor {
-    margin-left: 10px;
-    margin-right: 10px;
-    opacity: 0;
-    transition: opacity 0.25s;
-}
 .icon {
     color: #5c6b72;
     margin-right: 5px;
@@ -703,8 +697,7 @@ iframe,
 .friend-link a,
 .icon-link a,
 .language,
-.copycode,
-.header-anchor {
+.copycode {
     user-select: none;
 }
 code {
@@ -727,12 +720,6 @@ h6 {
     font-weight: bold;
     margin: 15px 0;
 }
-h1:hover .header-anchor,
-h2:hover .header-anchor,
-h3:hover .header-anchor,
-h4:hover .header-anchor,
-h5:hover .header-anchor,
-h6:hover .header-anchor,
 .page-num:hover,
 .icon-link a:hover,
 .friend-link a:hover,
@@ -764,13 +751,6 @@ video,
 audio,
 iframe {
     border-radius: 10px;
-}
-mark {
-    background: #fff13360;
-    border-radius: 4px;
-    color: unset;
-    line-height: 2.5;
-    padding: 4px 8px;
 }
 p,
 ul,
