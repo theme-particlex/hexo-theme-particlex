@@ -22,9 +22,5 @@
   "bugs": {
     "url": "https://github.com/argvchs/hexo-theme-particlex/issues"
   },
-  "homepage": "https://github.com/argvchs/hexo-theme-particlex#readme",
-  "dependencies": {
-    "hexo-helper-crypto": "^1.1.0",
-    "hexo-renderer-ejs": "^2.0.0"
-  }
+  "homepage": "https://github.com/argvchs/hexo-theme-particlex#readme"
 }
