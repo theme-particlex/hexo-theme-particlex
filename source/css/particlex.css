@@ -195,7 +195,6 @@
     width: 85%;
 }
 #home-card .card-style .name {
-    color: #1e3e3f;
     font-size: 16px;
     font-weight: bold;
     margin: 20px auto;
@@ -219,7 +218,6 @@
 #home-head #home-info .info {
     align-items: center;
     border-radius: 50%;
-    color: #333;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -258,7 +256,6 @@
 }
 #home-posts .page-current {
     align-items: center;
-    color: #999;
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -329,9 +326,6 @@
 #home-posts .post .category-and-date .special {
     display: inline-block;
     margin-left: 25px;
-}
-#home-posts .post .description {
-    color: #1e3e3f;
 }
 #home-posts .post .go-post {
     background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%);
@@ -498,7 +492,6 @@
     word-wrap: break-word;
 }
 .article {
-    color: #1e3e3f;
     font-size: 15px;
     margin: auto;
     margin-top: 100px;
@@ -554,6 +547,12 @@ body::-webkit-scrollbar-track {
 .copycode:not(.copied) i:last-child {
     opacity: 0;
 }
+.header-anchor {
+    margin-left: 10px;
+    margin-right: 10px;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
 .icon {
     color: #5c6b72;
     margin-right: 5px;
@@ -589,15 +588,12 @@ body::-webkit-scrollbar-track {
     border-radius: 0 0 10px 10px;
     box-shadow: 1px 1px 0.75rem #ed6ea14d;
     color: #fff;
-    font-weight: bold;
     font-size: 12px;
+    font-weight: bold;
     left: 30px;
     padding: 10px 15px;
     position: absolute;
     top: 0;
-}
-.markdownIt-Anchor {
-    display: none;
 }
 .math.display .katex {
     overflow: auto;
@@ -606,13 +602,6 @@ body::-webkit-scrollbar-track {
 .icon-link a,
 .friend-link a {
     transition: background 0.25s, color 0.25s;
-}
-.page-num:hover,
-.icon-link a:hover,
-.friend-link a:hover,
-.categories-tags a:hover,
-.go-post:hover {
-    opacity: 1;
 }
 .slide-enter-active,
 .slide-leave-active {
@@ -695,19 +684,10 @@ blockquote {
 }
 body {
     background: #f6f8fa;
-    color: #000c;
+    color: #1e3e3f;
     font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
-}
-pre,
-code,
-.hljs,
-.highlight,
-.commit-tease-sha,
-.input,
-.language {
-    font-family: "Fira Code", "Noto Sans SC", monospace;
 }
 button,
 img,
@@ -729,7 +709,6 @@ iframe,
 code {
     background: #bddcf76b;
     border-radius: 4px;
-    color: #4b616b;
     font-size: 14px;
     line-height: 2.5;
     padding: 4px 8px;
@@ -743,9 +722,21 @@ h3,
 h4,
 h5,
 h6 {
-    color: #1e3e3f;
     font-weight: bold;
     margin: 15px 0;
+}
+h1:hover .header-anchor,
+h2:hover .header-anchor,
+h3:hover .header-anchor,
+h4:hover .header-anchor,
+h5:hover .header-anchor,
+h6:hover .header-anchor,
+.page-num:hover,
+.icon-link a:hover,
+.friend-link a:hover,
+.categories-tags a:hover,
+.go-post:hover {
+    opacity: 1;
 }
 h2 {
     font-size: 27px;
@@ -772,6 +763,13 @@ audio,
 iframe {
     border-radius: 10px;
 }
+mark {
+    background: #fff13360;
+    border-radius: 4px;
+    color: unset;
+    line-height: 2.5;
+    padding: 4px 8px;
+}
 p,
 ul,
 ol {
@@ -788,6 +786,15 @@ pre {
     margin: 25px 0;
     margin: 25px 0;
 }
+pre,
+code,
+.hljs,
+.highlight,
+.commit-tease-sha,
+.input,
+.language {
+    font-family: "Fira Code", "Noto Sans SC", monospace;
+}
 table tbody tr td:nth-child(even) {
     background: #c7e0fb4d;
 }
@@ -796,7 +803,6 @@ table tbody tr td:nth-child(odd) {
 }
 table thead tr th {
     background: #a3ddfb;
-    color: #1e3e3f;
     padding: 8px 20px;
 }
 table tr td {
