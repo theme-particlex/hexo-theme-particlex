@@ -45,7 +45,7 @@ theme: particlex
     ```yaml
     pandoc:
         extra:
-            - "no-highlight":
+            - no-highlight:
     ```
 
 -   禁用年度月度归档
