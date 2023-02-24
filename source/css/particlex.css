@@ -703,7 +703,8 @@ iframe,
 .friend-link a,
 .icon-link a,
 .language,
-.copycode {
+.copycode,
+.header-anchor {
     user-select: none;
 }
 code {
