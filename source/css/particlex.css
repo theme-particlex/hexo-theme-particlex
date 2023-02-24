@@ -752,6 +752,13 @@ audio,
 iframe {
     border-radius: 10px;
 }
+mark {
+    background: #fff13360;
+    border-radius: 4px;
+    color: unset;
+    line-height: 2.5;
+    padding: 4px 8px;
+}
 p,
 ul,
 ol {
