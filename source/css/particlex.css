@@ -595,7 +595,7 @@ body::-webkit-scrollbar-track {
     position: absolute;
     top: 0;
 }
-.math.display .katex {
+.katex {
     overflow: auto;
 }
 .page-num,
@@ -696,7 +696,7 @@ audio,
 iframe,
 #home-head,
 #menu,
-.math,
+.katex,
 .go-post,
 .page-current,
 .categories-tags a,
@@ -723,6 +723,7 @@ h3,
 h4,
 h5,
 h6 {
+    color: #1e3e3f;
     font-weight: bold;
     margin: 15px 0;
 }
