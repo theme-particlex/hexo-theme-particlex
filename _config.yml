@@ -2,13 +2,13 @@
 # https://github.com/argvchs/hexo-theme-particlex
 
 # Avatar image
-avatar:
+avatar: https://static-argvchs.netlify.app/images/avatar.jpg
 
 # Home page info block
 headBlockEnable: true
 
 # Home page background image
-background:
+background: https://static-argvchs.netlify.app/images/home.jpg
 
 # Highlight style
 # https://highlightjs.org
@@ -48,16 +48,32 @@ menu:
 card:
     enable: true
     description: |
-        Description
-        ...
+        Here's an argvchs...
     iconLinks:
-        {}
+        github:
+            name: github
+            theme: brands
+            link: https://github.com/argvchs
+        qq:
+            name: qq
+            theme: brands
+            link: http://wpa.qq.com/msgrd?v=3&uin=3364555156&site=qq&menu=yes
+        twitter:
+            name: twitter
+            theme: brands
+            link: https://twitter.com/argvchs
+        email:
+            name: envelope
+            theme: solid
+            link: mailto:argvchs@outlook.com
         # <name>:
         #    name: <icon-name>
         #    theme: <icon-theme>
         #    link: <link-url>
     friendLinks:
-        {}
+        Yuzi: https://blog.yuzi.dev
+        LynxCatTheThird: https://lynxcatthethird.github.io
+        Kaitaku: https://www.kaitaku.xyz
         # <name>: <link-url>
 
 # Footer info
@@ -78,15 +94,15 @@ polyfill:
 
 # Rendering math with KaTeX
 math:
-    enable: false
+    enable: true
 
 # Article encryption
 crypto:
-    enable: false
+    enable: true
 
 # Search
 search:
-    enable: false
+    enable: true
 
 # Gitalk
 # https://github.com/gitalk/gitalk
@@ -108,18 +124,18 @@ gitalk:
 # Giscus
 # https://github.com/giscus/giscus
 giscus:
-    enable: false
+    enable: true
     src: https://giscus.app/client.js
-    repo:
-    repoID:
-    category:
-    categoryID:
+    repo: argvchs/giscus-comments
+    repoID: R_kgDOI_uC-w
+    category: Announcements
+    categoryID: DIC_kwDOI_uC-84CUToF
     mapping: pathname
-    strict: 0
+    strict: 1
     reactionsEnabled: 1
     emitMetadata: 0
     inputPosition: bottom
-    theme: preferred_color_scheme
+    theme: https://static-argvchs.netlify.app/css/giscus.css
     lang: zh-CN
 
 # Waline

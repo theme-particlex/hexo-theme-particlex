@@ -1,9 +1,16 @@
 <script src="<%- url_for("/js/functions.js") %>"></script>
 <script src="<%- url_for("/js/particlex.js") %>"></script>
+<script>
+    console.info("Welcome to Argvchs' blog!");
+    if (!window.hasOwnProperty("ontouchstart")) {
+        let html = '<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas><script src="https://static-argvchs.netlify.app/js/fireworks.min.js"><\/script>';
+        document.body.append(document.createRange().createContextualFragment(html));
+    }
+</script>
 <% if (type === "post" && page.comments) { %>
 <% if (theme.gitalk.enable) { %>
-<script src="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.css">
+<script src="https://static-argvchs.netlify.app/libs/gitalk/1.8.0/gitalk.min.js"></script>
+<link rel="stylesheet" href="https://static-argvchs.netlify.app/libs/gitalk/1.8.0/gitalk.min.css">
 <script>
     let clientID = "<%- theme.gitalk.clientID %>",
         clientSecret = "<%- theme.gitalk.clientSecret %>";
@@ -48,9 +55,9 @@
 ></script>
 <% } %>
 <% if (theme.waline.enable) { %>
-<script src="https://cdn.staticfile.org/waline/2.14.7/waline.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.7/waline.min.css">
-<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.7/waline-meta.min.css">
+<script src="https://static-argvchs.netlify.app/libs/waline/2.14.7/waline.min.js"></script>
+<link rel="stylesheet" href="https://static-argvchs.netlify.app/libs/waline/2.14.7/waline.min.css">
+<link rel="stylesheet" href="https://static-argvchs.netlify.app/libs/waline/2.14.7/waline-meta.min.css">
 <script>
     Waline.init({
         el: "#waline-container",
@@ -69,7 +76,7 @@
 </script>
 <% } %>
 <% if (theme.twikoo.enable) { %>
-<script src="https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js"></script>
+<script src="https://static-argvchs.netlify.app/libs/twikoo/1.6.8/twikoo.all.min.js"></script>
 <script>
     twikoo.init({
         el: "#twikoo-container",
