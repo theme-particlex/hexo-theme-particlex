@@ -1,5 +1,5 @@
 <div id="home-head">
-    <div id="home-background" style="background-image: url(<%- theme.background %>)"></div>
+    <div id="home-background"></div>
     <% if (theme.headBlockEnable) { %>
     <div id="home-info" @click="homeclick">
         <span class="loop"></span>
@@ -29,3 +29,16 @@
     </div>
     <% } %>
 </div>
+<script>
+  (() => {
+    const imageConfig = '<%- theme.background %>'
+    if (!imageConfig) {
+      return
+    }
+    const images = imageConfig.split(',')
+    const bgElement = document.getElementById('home-background')
+    const val = `background-image: url("${images[(Math.random() * images.length) & 0xffff]}")`
+    bgElement.setAttribute('style', val)
+  })();
+
+</script>
