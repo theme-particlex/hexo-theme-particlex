@@ -303,6 +303,22 @@ highlightStyle: github # Highlight style
         lang: zh-CN
     ```
 
+-   首页随机背景
+
+    `background`可以配置多个，在进入首页时会随机加载一个背景.
+    
+    ```yaml
+    background: 
+        - https://xxxx.xxxx/8d14e464-2200-4e54-af81-0d9f25f55b3e.jpg
+        - https://xxxx.xxxx/017e03b0-992c-4844-b28f-869799d32b96.png
+        - https://xxxx.xxxx/66a241f4-eca3-45f3-b590-05aeed688f60.png
+    ```
+    
+    当然，也可以只配置一个：
+    ```yaml
+    background: https://xxxx.xxxx/8d14e464-2200-4e54-af81-0d9f25f55b3e.jpg
+    ```
+
 ## 写在最后
 
 本项目采用 MIT 开源许可证，欢迎大家贡献，你可以随意打开一个 Issue 来进行提问，有任何改进想法都可以进行 Fork，期待您的 Pull Request
