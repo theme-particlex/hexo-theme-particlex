@@ -10,10 +10,6 @@ headBlockEnable: true
 # Home page background image
 background: https://static-argvchs.netlify.app/images/home.jpg
 
-# Highlight style
-# https://highlightjs.org
-highlightStyle: github
-
 # ParticleX theme icon is adopts the Font Awesome 6
 # https://fontawesome.com/search
 
@@ -91,6 +87,12 @@ polyfill:
     enable: true
     features:
         - default
+
+# Highlight.js
+# https://highlightjs.org
+highlight:
+    enable: true
+    style: github
 
 # Rendering math with KaTeX
 math:
