@@ -1,4 +1,4 @@
-<nav id="menu">
+<nav id="menu" ref="menu">
     <div class="desktop-menu">
         <a class="title" href="<%- config.root %>">
             <span><%= config.title.toUpperCase() %></span>
@@ -10,14 +10,14 @@
         </a>
         <% }); %>
     </div>
-    <div :class="&quot;phone-menu &quot; + menushow" id="phone-menu">
-        <div class="curtain" @click="menushow = !menushow" v-show="menushow"></div>
-        <div class="title" @click="menushow = !menushow">
+    <div id="mobile-menu">
+        <div class="curtain" v-show="showMenu" @click="showMenu = !showMenu"></div>
+        <div class="title" @click="showMenu = !showMenu">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;<%= config.title.toUpperCase() %></span>
         </div>
         <transition name="slide">
-        <div class="items" v-show="menushow">
+        <div class="items" v-show="showMenu">
             <% Object.keys(theme.menu).forEach(key => { %>
             <a href="<%- url_for(theme.menu[key].src) %>">
                 <div class="item">
