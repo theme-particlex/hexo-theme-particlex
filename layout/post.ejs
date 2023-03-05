@@ -34,9 +34,9 @@
                         "color: #00a596",
                         "color: #ff7d73",
                     ];
-                    let num = Math.floor(Math.random() * color.length);
+                    let id = Math.floor(Math.random() * color.length);
                 %>
-                <a href="<%- url_for(data.path) %>" style="<%- color[num] %>"><%= data.name %></a>
+                <a href="<%- url_for(data.path) %>" style="<%- color[id] %>"><%= data.name %></a>
             </span>
             <% }); %>
         </span>
