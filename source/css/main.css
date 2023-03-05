@@ -47,7 +47,7 @@
     top: 80px;
 }
 #crypto {
-    margin: 50px auto 0;
+    margin: 50px 0;
 }
 #crypto.fail {
     border-color: #ea4a5a;
@@ -452,7 +452,7 @@
     max-width: 95%;
 }
 #search-bar {
-    margin: 0 auto 50px;
+    margin-bottom: 50px;
     z-index: 10001;
 }
 #timeline-wrap {
@@ -687,7 +687,6 @@ audio,
 iframe,
 #home-head,
 #menu,
-#loading,
 .katex,
 .go-post,
 .page-current,
