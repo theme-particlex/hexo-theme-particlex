@@ -37,7 +37,7 @@
     }
     const images = imageConfig.split(',')
     const bgElement = document.getElementById('home-background')
-    const val = `background-image: url("${images[(Math.random() * images.length) & 0xffff]}")`
+    const val = `background-image: url("${images[Math.floor((Math.random() * images.length))]}")`
     bgElement.setAttribute('style', val)
   })();
 
