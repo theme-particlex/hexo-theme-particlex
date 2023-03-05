@@ -57,6 +57,7 @@
             </div>
             </transition>
         </div>
+        <script src="<%- url_for("/js/main.js") %>"></script>
         <% if (type === "post" && page.comments) { %>
         <%- partial("comment") %>
         <% } %>
