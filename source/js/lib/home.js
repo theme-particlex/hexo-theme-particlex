@@ -2,7 +2,6 @@ mixins.home = {
     mounted() {
         let menu = this.$refs.menu,
             background = this.$refs.homeBackground;
-        console.log(background)
         menu.classList.add("menu-color");
         let image = background.dataset.image.split(",");
         let id = Math.floor(Math.random * image.length);
