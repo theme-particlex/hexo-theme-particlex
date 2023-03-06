@@ -1,7 +1,7 @@
 <%
     let type = "post";
     if (is_home())
-        type = "index";
+        type = "home";
     else if (is_post())
         type = "post";
     else if (is_category() || page.type === "categories")

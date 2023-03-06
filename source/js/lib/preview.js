@@ -6,8 +6,8 @@ mixins.preview = {
         preview() {
             let that = this;
             let preview = this.$refs.preview,
-                content = this.$refs.previewContent,
-                images = document.querySelectorAll("img");
+                content = this.$refs.previewContent;
+            let images = document.querySelectorAll("img");
             for (let i of images)
                 i.addEventListener("click", function () {
                     content.alt = this.alt;

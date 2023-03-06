@@ -9,13 +9,6 @@ const app = Vue.createApp({
         });
     },
     mounted() {
-        if (this.$refs.homeBackground) {
-            this.$refs.menu.classList.add("menu-color");
-            let background = this.$refs.homeBackground;
-            let image = background.dataset.image.split(",");
-            let id = Math.floor(Math.random * image.length)
-            background.style.backgroundImage = `url('${image[id]}')`;
-        }
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
     },
@@ -23,9 +16,6 @@ const app = Vue.createApp({
         render() {
             if (typeof this.renderers === "undefined") return;
             for (let i of this.renderers) i();
-        },
-        homeClick() {
-            window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
         },
         handleScroll() {
             let menu = this.$refs.menu,
