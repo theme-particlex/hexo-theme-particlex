@@ -1,11 +1,7 @@
 const app = Vue.createApp({
-    mixins,
+    mixins: Object.values(mixins),
     data() {
-        return {
-            loading: true,
-            showMenu: false,
-            barLocal: 0,
-        };
+        return { loading: true, showMenu: false, barLocal: 0 };
     },
     created() {
         window.addEventListener("load", () => {
@@ -18,6 +14,10 @@ const app = Vue.createApp({
         this.render();
     },
     methods: {
+        render() {
+            if (typeof this.renderers === "undefined") return;
+            for (let i of this.renderers) i();
+        },
         homeClick() {
             window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
         },
@@ -36,11 +36,6 @@ const app = Vue.createApp({
                 else wrap.style.marginTop = "-80px";
             }
             this.barLocal = newlocal;
-        },
-        render() {
-            if (typeof this.highlight !== "undefined") this.highlight();
-            if (typeof this.math !== "undefined") this.math();
-            this.preview();
         },
     },
 });

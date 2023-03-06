@@ -1,4 +1,7 @@
-const mathMixin = {
+mixins.math = {
+    data() {
+        return { renderers: [this.math] };
+    },
     methods: {
         math() {
             renderMathInElement(document.body, {
@@ -12,4 +15,3 @@ const mathMixin = {
         },
     },
 };
-mixins.push(mathMixin);

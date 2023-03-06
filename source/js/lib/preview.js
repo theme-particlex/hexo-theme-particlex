@@ -1,6 +1,6 @@
-const previewMixin = {
+mixins.preview = {
     data() {
-        return { previewShow: false };
+        return { previewShow: false, renderers: [this.preview] };
     },
     methods: {
         preview() {
@@ -23,4 +23,3 @@ const previewMixin = {
         },
     },
 };
-mixins.push(previewMixin);

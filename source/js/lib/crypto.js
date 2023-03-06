@@ -1,9 +1,6 @@
-const cryptoMixin = {
+mixins.crypto = {
     data() {
-        return {
-            crypto: "",
-            check: false,
-        };
+        return { crypto: "", check: false };
     },
     methods: {
         SHA(word) {

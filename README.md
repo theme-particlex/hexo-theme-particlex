@@ -190,6 +190,15 @@ background: # Home page background image
         enable: false
     ```
 
+-   图片预览
+
+    简单的点击图片放大缩小的预览
+
+    ```yaml
+    preview:
+        enable: true
+    ```
+
 -   文章置顶
 
     在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `pinned` 作为置顶参数，越大越靠前，默认为 0

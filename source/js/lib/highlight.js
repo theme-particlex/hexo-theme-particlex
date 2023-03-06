@@ -1,8 +1,8 @@
-const highlightMixin = {
+mixins.highlight = {
     data() {
-        return { copying: false };
+        return { copying: false, renderers: [this.highlight] };
     },
-    mounted() {
+    created() {
         hljs.configure({ ignoreUnescapedHTML: true });
     },
     methods: {
@@ -29,4 +29,3 @@ const highlightMixin = {
         },
     },
 };
-mixins.push(highlightMixin);

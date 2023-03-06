@@ -82,6 +82,10 @@ highlight:
 math:
     enable: false
 
+# Image Preview
+preview:
+    enable: true
+
 # Article encryption
 crypto:
     enable: false
