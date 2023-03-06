@@ -1,5 +1,5 @@
 <div id="home-head">
-    <div id="home-background" ref="homeBackground" data-image="<% url_for(theme.background) %>"></div>
+    <div id="home-background" ref="homeBackground" data-image="<%- url_for(theme.background) %>"></div>
     <% if (theme.headBlockEnable) { %>
     <div id="home-info" @click="homeClick">
         <span class="loop"></span>
