@@ -84,27 +84,27 @@ background:
         Home:
             name: house
             theme: solid
-            src: /
+            link: /
         About:
             name: id-card
             theme: solid
-            src: /about
+            link: /about
         Archives:
             name: box-archive
             theme: solid
-            src: /archives
+            link: /archives
         Categories:
             name: bookmark
             theme: solid
-            src: /categories
+            link: /categories
         Tags:
             name: tags
             theme: solid
-            src: /tags
+            link: /tags
         # <name>:
         #     name: <icon-name>
         #     theme: <icon-theme>
-        #     src: <link-url>
+        #     link: <link-url>
     ```
 
 -   主页信息卡片
