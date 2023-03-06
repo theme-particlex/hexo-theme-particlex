@@ -1,25 +1,7 @@
 <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css" />
 <link rel="stylesheet" href="<%- url_for("/css/fonts.min.css") %>" />
-<script>
-  function toArray(config) {
-    if (!config) {
-      return []
-    } else if (typeof config === 'string') {
-      return config.split(',')
-    } else if (Array.isArray(config)) {
-      return config
-    } else {
-      return [config]
-    }
-  }
-
-  const mixins = {}
-  const themeConfig = Object.freeze({
-    background: toArray('<%- theme.background %>')
-  })
-
-</script>
+<script> const mixins = {}; </script>
 <% if (theme.polyfill.enable) { %>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=<%- theme.polyfill.features.join(",") %>"></script>
 <% } %>

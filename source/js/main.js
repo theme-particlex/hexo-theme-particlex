@@ -9,16 +9,12 @@ const app = Vue.createApp({
         });
     },
     mounted() {
-        if (this.$refs.homePostsWrap) {
+        if (this.$refs.homeBackground) {
             this.$refs.menu.classList.add("menu-color");
-            const { background } = themeConfig
-            if (background.length > 0) {
-                const bgElement = document.getElementById("home-background")
-                if (bgElement) {
-                    const randomIndex = Math.floor(Math.random() * background.length)
-                    bgElement.style.backgroundImage = `url('${background[randomIndex]}')`
-                }
-            }
+            let background = this.$refs.homeBackground;
+            let image = background.dataset.image.split(",");
+            let id = Math.floor(Math.random * image.length)
+            background.style.backgroundImage = `url('${image[id]}')`;
         }
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
