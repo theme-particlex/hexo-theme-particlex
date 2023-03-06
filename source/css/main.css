@@ -504,24 +504,24 @@ body::-webkit-scrollbar-track {
     margin: 15px auto;
     max-width: 75%;
 }
-.copycode {
+.code-copy {
     color: #5c6b72;
     position: absolute;
     right: 0;
     top: 0;
 }
-.copycode i {
+.code-copy i {
     padding: 15px;
     position: absolute;
     right: 0;
     top: 0;
     transition: transform 0.25s;
 }
-.copycode.copied i {
+.code-copy.copied i {
     transform: scale(1.25);
 }
-.copycode.copied i:first-child,
-.copycode:not(.copied) i:last-child {
+.code-copy.copied i:first-child,
+.code-copy:not(.copied) i:last-child {
     opacity: 0;
 }
 .fade-enter-active,
@@ -658,7 +658,7 @@ a {
     text-decoration: none;
 }
 a:hover,
-.content .copycode:hover {
+.content .code-copy:hover {
     opacity: 0.8;
 }
 b,
@@ -694,7 +694,7 @@ iframe,
 .friend-link a,
 .icon-link a,
 .language,
-.copycode {
+.code-copy {
     user-select: none;
 }
 code {
