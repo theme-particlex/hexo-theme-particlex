@@ -1,20 +1,20 @@
-const highlightMixin = {
+mixins.highlight = {
     data() {
-        return { copying: false };
+        return { copying: false, renderers: [this.highlight] };
     },
-    mounted() {
+    created() {
         hljs.configure({ ignoreUnescapedHTML: true });
     },
     methods: {
         highlight() {
             let that = this;
-            let codes = document.getElementsByTagName("pre");
+            let codes = document.querySelectorAll("pre");
             for (let i of codes) {
                 let lang = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
                 let code = i.innerText;
-                i.innerHTML = `<div class="code-content">${code}</div><div class="language">${lang}</div><div class="copycode"><i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i></div>`;
-                let copycode = i.getElementsByClassName("copycode")[0];
-                copycode.addEventListener("click", async function () {
+                i.innerHTML = `<div class="code-content">${code}</div><div class="language">${lang}</div><div class="code-copy"><i class="fa-solid fa-copy fa-fw"></i><i class="fa-solid fa-clone fa-fw"></i></div>`;
+                let copy = i.querySelector(".code-copy");
+                copy.addEventListener("click", async function () {
                     if (that.copying) return;
                     that.copying = true;
                     this.classList.add("copied");
@@ -23,10 +23,9 @@ const highlightMixin = {
                     this.classList.remove("copied");
                     that.copying = false;
                 });
-                let content = i.getElementsByClassName("code-content")[0];
+                let content = i.querySelector(".code-content");
                 hljs.highlightElement(content);
             }
         },
     },
 };
-mixins.push(highlightMixin);

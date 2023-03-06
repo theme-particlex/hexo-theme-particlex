@@ -16,7 +16,7 @@
         <div>
             备案号：
             <% if (theme.footer.ICP.link) { %>
-            <a href="<%- theme.footer.ICP.link %>"><%= theme.footer.ICP.code %></a>
+            <a href="<%- url_for(theme.footer.ICP.link) %>"><%= theme.footer.ICP.code %></a>
             <% } else { %>
             <%= theme.footer.ICP.code %>
             <% } %>

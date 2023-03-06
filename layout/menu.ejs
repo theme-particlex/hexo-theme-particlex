@@ -4,7 +4,7 @@
             <span><%= config.title.toUpperCase() %></span>
         </a>
         <% Object.keys(theme.menu).forEach(key => { %>
-        <a href="<%- url_for(theme.menu[key].src) %>">
+        <a href="<%- url_for(theme.menu[key].link) %>">
             <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
             <span>&ensp;<%= key %></span>
         </a>
@@ -19,7 +19,7 @@
         <transition name="slide">
         <div class="items" v-show="showMenu">
             <% Object.keys(theme.menu).forEach(key => { %>
-            <a href="<%- url_for(theme.menu[key].src) %>">
+            <a href="<%- url_for(theme.menu[key].link) %>">
                 <div class="item">
                     <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>

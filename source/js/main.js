@@ -1,11 +1,7 @@
 const app = Vue.createApp({
-    mixins,
+    mixins: Object.values(mixins),
     data() {
-        return {
-            loading: true,
-            showMenu: false,
-            barLocal: 0,
-        };
+        return { loading: true, showMenu: false, barLocal: 0 };
     },
     created() {
         window.addEventListener("load", () => {
@@ -13,17 +9,17 @@ const app = Vue.createApp({
         });
     },
     mounted() {
-        if (this.$refs.head) this.$refs.menu.classList.add("menu-color");
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
     },
     methods: {
-        homeClick() {
-            window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+        render() {
+            if (typeof this.renderers === "undefined") return;
+            for (let i of this.renderers) i();
         },
         handleScroll() {
             let menu = this.$refs.menu,
-                wrap = this.$refs.wrap;
+                wrap = this.$refs.homePostsWrap;
             let newlocal = document.documentElement.scrollTop;
             if (this.barLocal < newlocal) {
                 this.showMenu = false;
@@ -36,11 +32,6 @@ const app = Vue.createApp({
                 else wrap.style.marginTop = "-80px";
             }
             this.barLocal = newlocal;
-        },
-        render() {
-            if (typeof this.highlight !== "undefined") this.highlight();
-            if (typeof this.math !== "undefined") this.math();
-            this.preview();
         },
     },
 });

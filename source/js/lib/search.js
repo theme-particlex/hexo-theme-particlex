@@ -1,8 +1,6 @@
-const searchMixin = {
+mixins.search = {
     data() {
-        return {
-            rawSearch: "",
-        };
+        return { rawSearch: "" };
     },
     watch: {
         search(value) {
@@ -25,4 +23,3 @@ const searchMixin = {
         },
     },
 };
-mixins.push(searchMixin);

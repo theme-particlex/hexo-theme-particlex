@@ -51,11 +51,13 @@
                 <%- partial("footer") %>
             </div>
             </transition>
+            <% if (theme.preview.enable) { %>
             <transition name="fade">
             <div id="preview" ref="preview" v-show="previewShow">
                 <img id="preview-content" ref="previewContent" />
             </div>
             </transition>
+            <% } %>
         </div>
         <script src="<%- url_for("/js/main.js") %>"></script>
         <script>

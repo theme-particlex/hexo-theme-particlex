@@ -1,13 +1,13 @@
-const previewMixin = {
+mixins.preview = {
     data() {
-        return { previewShow: false };
+        return { previewShow: false, renderers: [this.preview] };
     },
     methods: {
         preview() {
             let that = this;
             let preview = this.$refs.preview,
-                content = this.$refs.previewContent,
-                images = document.getElementsByTagName("img");
+                content = this.$refs.previewContent;
+            let images = document.querySelectorAll("img");
             for (let i of images)
                 i.addEventListener("click", function () {
                     content.alt = this.alt;
@@ -23,4 +23,3 @@ const previewMixin = {
         },
     },
 };
-mixins.push(previewMixin);

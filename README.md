@@ -66,10 +66,14 @@ theme: particlex
 ## 配置
 
 ```yaml
-avatar: # Avatar image
-headBlockEnable: true # Home page info block
-background: # Home page background image
+avatar:
+
+headBlockEnable: true
+
+background:
 ```
+
+其中 Background 可以是一个列表，打开时会随机加载一个背景
 
 -   导航栏
 
@@ -80,27 +84,27 @@ background: # Home page background image
         Home:
             name: house
             theme: solid
-            src: /
+            link: /
         About:
             name: id-card
             theme: solid
-            src: /about
+            link: /about
         Archives:
             name: box-archive
             theme: solid
-            src: /archives
+            link: /archives
         Categories:
             name: bookmark
             theme: solid
-            src: /categories
+            link: /categories
         Tags:
             name: tags
             theme: solid
-            src: /tags
+            link: /tags
         # <name>:
         #     name: <icon-name>
         #     theme: <icon-theme>
-        #     src: <link-url>
+        #     link: <link-url>
     ```
 
 -   主页信息卡片
@@ -188,6 +192,15 @@ background: # Home page background image
     ```yaml
     math:
         enable: false
+    ```
+
+-   图片预览
+
+    简单的点击图片放大缩小的预览
+
+    ```yaml
+    preview:
+        enable: true
     ```
 
 -   文章置顶
