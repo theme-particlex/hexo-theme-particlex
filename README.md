@@ -66,11 +66,11 @@ theme: particlex
 ## 配置
 
 ```yaml
-avatar: # Avatar image
+avatar:
 
-headBlockEnable: true # Home page info block
+headBlockEnable: true
 
-background: # Home page background image
+background:
 ```
 
 其中 Background 可以是一个列表，打开时会随机加载一个背景
