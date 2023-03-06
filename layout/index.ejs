@@ -29,16 +29,3 @@
     </div>
     <% } %>
 </div>
-<script>
-  (() => {
-    const imageConfig = '<%- theme.background %>'
-    if (!imageConfig) {
-      return
-    }
-    const images = imageConfig.split(',')
-    const bgElement = document.getElementById('home-background')
-    const val = `background-image: url("${images[Math.floor((Math.random() * images.length))]}")`
-    bgElement.setAttribute('style', val)
-  })();
-
-</script>
