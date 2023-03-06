@@ -67,9 +67,13 @@ theme: particlex
 
 ```yaml
 avatar: # Avatar image
+
 headBlockEnable: true # Home page info block
+
 background: # Home page background image
 ```
+
+其中 Background 可以是一个列表，打开时会随机加载一个背景
 
 -   导航栏
 
@@ -321,22 +325,6 @@ background: # Home page background image
         region:
         path: location.pathname
         lang: zh-CN
-    ```
-
--   首页随机背景
-
-    `background`可以配置多个，在进入首页时会随机加载一个背景.
-    
-    ```yaml
-    background: 
-        - https://xxxx.xxxx/8d14e464-2200-4e54-af81-0d9f25f55b3e.jpg
-        - https://xxxx.xxxx/017e03b0-992c-4844-b28f-869799d32b96.png
-        - https://xxxx.xxxx/66a241f4-eca3-45f3-b590-05aeed688f60.png
-    ```
-    
-    当然，也可以只配置一个：
-    ```yaml
-    background: https://xxxx.xxxx/8d14e464-2200-4e54-af81-0d9f25f55b3e.jpg
     ```
 
 ## 写在最后
