@@ -8,7 +8,7 @@
     } else if (typeof config === 'string') {
       return config.split(',')
     } else if (Array.isArray(config)) {
-      return []
+      return config
     } else {
       return [config]
     }
