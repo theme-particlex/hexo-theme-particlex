@@ -4,7 +4,7 @@ mixins.home = {
             background = this.$refs.homeBackground;
         menu.classList.add("menu-color");
         let image = background.dataset.image.split(",");
-        let id = Math.floor(Math.random * image.length);
+        let id = Math.floor(Math.random() * image.length);
         background.style.backgroundImage = `url('${image[id]}')`;
     },
     methods: {
