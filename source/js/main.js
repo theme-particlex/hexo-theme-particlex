@@ -9,7 +9,17 @@ const app = Vue.createApp({
         });
     },
     mounted() {
-        if (this.$refs.homePostsWrap) this.$refs.menu.classList.add("menu-color");
+        if (this.$refs.homePostsWrap) {
+            this.$refs.menu.classList.add("menu-color");
+            const { background } = themeConfig
+            if (background.length > 0) {
+                const bgElement = document.getElementById("home-background")
+                if (bgElement) {
+                    const randomIndex = Math.floor(Math.random() * background.length)
+                    bgElement.style.backgroundImage = `url('${background[randomIndex]}')`
+                }
+            }
+        }
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
     },
