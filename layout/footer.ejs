@@ -1,14 +1,17 @@
 <footer id="footer">
-    <div class="footer-wrap">
+    <div id="footer-wrap">
         <div>
             &copy;
             <%= theme.footer.since %> - <%= date(Date.now(), "YYYY") %> <%= config.title %>
-            <span class="footer-icon">
+            <span id="footer-icon">
                 <i class="fa-solid fa-font-awesome fa-fw"></i>
             </span>
             &commat;<%= config.author %>
         </div>
-        <div>Based on the <a href="https://hexo.io">Hexo Engine</a> &amp; <a href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        <div>
+            Based on the <a href="https://hexo.io">Hexo Engine</a> &amp;
+            <a href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
         <% if (theme.footer.ICP.enable) { %>
         <div>
             备案号：

@@ -69,7 +69,6 @@ theme: particlex
 avatar: # Avatar image
 headBlockEnable: true # Home page info block
 background: # Home page background image
-highlightStyle: github # Highlight style
 ```
 
 -   导航栏
@@ -170,9 +169,21 @@ highlightStyle: github # Highlight style
             - default
     ```
 
--   渲染数学公式
+-   代码高亮
 
-    使用 KaTeX 渲染数学公式，默认关闭
+    使用 Highlight.js 代码高亮
+
+    样式可以在[这里](https://highlightjs.org/static/demo)选择，默认为 GitHub
+
+    ```yaml
+    highlight:
+        enable: false
+        style: github
+    ```
+
+-   数学渲染
+
+    使用 KaTeX 渲染数学公式
 
     ```yaml
     math:
@@ -194,7 +205,7 @@ highlightStyle: github # Highlight style
 
 -   搜索
 
-    嵌入到 Archives 中的搜索，默认关闭
+    嵌入到 Archives 中的搜索
 
     目前只支持搜索文档标题（我太弱了）
 

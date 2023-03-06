@@ -1,7 +1,7 @@
-<div id="home-head">
-    <div id="home-background"></div>
+<div id="home-head" ref="head">
+    <div id="home-background" style="background-image: url(<%- theme.background %>)"></div>
     <% if (theme.headBlockEnable) { %>
-    <div id="home-info" @click="homeclick">
+    <div id="home-info" @click="homeClick">
         <span class="loop"></span>
         <span class="loop"></span>
         <span class="loop"></span>
@@ -16,7 +16,7 @@
     </div>
     <% } %>
 </div>
-<div id="home-posts-wrap" class="<%- theme.card.enable ? "" : "home-posts-wrap-no-card" %>">
+<div id="home-posts-wrap" <%- theme.card.enable ? "" : 'class="home-posts-wrap-no-card"' %> ref="wrap">
     <div id="home-posts">
         <div id="posts">
             <%- partial("posts") %>

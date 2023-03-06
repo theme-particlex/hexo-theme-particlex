@@ -24,45 +24,42 @@
 <!DOCTYPE html>
 <html lang="<%- config.language %>">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" />
         <title><%= title %></title>
-        <meta name="author" content="<%- config.author %>">
-        <meta name="description" content="<%- config.description %>">
-        <meta name="keywords" content="<%- config.keywords %>">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <link rel="icon" href="<%- url_for(theme.avatar) %>">
-        <script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
-        <script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/<%- theme.highlightStyle %>.min.css">
-        <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css">
-        <% if (theme.polyfill.enable) { %>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=<%- theme.polyfill.features.join(",") %>"></script>
-        <% } %>
-        <% if (theme.math.enable) { %>
-        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
-        <script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css">
-        <% } %>
-        <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
-        <script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
-        <% } %>
-        <link rel="stylesheet" href="<%- url_for("/css/fonts.min.css") %>">
-        <link rel="stylesheet" href="<%- url_for("/css/particlex.css") %>">
+        <meta name="author" content="<%- config.author %>" />
+        <meta name="description" content="<%- config.description %>" />
+        <meta name="keywords" content="<%- config.keywords %>" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <link rel="icon" href="<%- url_for(theme.avatar) %>" />
+        <%- partial("import", { type }) %>
     </head>
     <body>
-        <%- partial("loading") %>
         <div id="layout">
+            <transition name="fade">
+            <div id="loading" v-show="loading">
+                <div id="loading-circle">
+                    <h2>LOADING</h2>
+                    <p>加载过慢请开启缓存&ensp;浏览器默认开启</p>
+                    <img src="<%- url_for("/images/loading.gif") %>" />
+                </div>
+            </div>
+            </transition>
             <transition name="into">
-            <div id="main" v-show="showpage" style="display: -not-none">
+            <div id="main" v-show="!loading">
                 <%- partial("menu") %>
                 <%- partial(type) %>
                 <%- partial("footer") %>
             </div>
             </transition>
-            <div id="showimg">
-                <img id="showimg-content">
+            <transition name="fade">
+            <div id="preview" ref="preview" v-show="previewShow">
+                <img id="preview-content" ref="previewContent" />
             </div>
+            </transition>
         </div>
-        <%- partial("script", { type }) %>
+        <script src="<%- url_for("/js/main.js") %>"></script>
+        <% if (type === "post" && page.comments) { %>
+        <%- partial("comment") %>
+        <% } %>
     </body>
 </html>

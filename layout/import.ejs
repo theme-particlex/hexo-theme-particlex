@@ -1,0 +1,44 @@
+<script src="https://cdn.staticfile.org/vue/3.2.45/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.2.1/css/all.min.css" />
+<link rel="stylesheet" href="<%- url_for("/css/fonts.min.css") %>" />
+<script>const mixins = [];</script>
+<% if (theme.highlight.enable) { %>
+<script src="https://cdn.staticfile.org/highlight.js/11.7.0/highlight.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.7.0/styles/<%- theme.highlight.style %>.min.css"
+/>
+<script src="<%- url_for("/js/lib/highlight.js") %>"></script>
+<% } %>
+<% if (theme.polyfill.enable) { %>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=<%- theme.polyfill.features.join(",") %>"></script>
+<% } %>
+<% if (theme.math.enable) { %>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.4/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.4/katex.min.css" />
+<script src="<%- url_for("/js/lib/math.js") %>"></script>
+<% } %>
+<% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
+<script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="<%- url_for("/js/lib/crypto.js") %>"></script>
+<% } %>
+<% if (theme.search.enable && type === "archives") { %>
+<script src="<%- url_for("/js/lib/search.js") %>"></script>
+<% } %>
+<% if (page.comments && type === "post") { %>
+<% if (theme.gitalk.enable) { %>
+<script src="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.css" />
+<% } %>
+<% if (theme.waline.enable) { %>
+<script src="https://cdn.staticfile.org/waline/2.14.7/waline.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.7/waline.min.css" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.14.7/waline-meta.min.css" />
+<% } %>
+<% if (theme.twikoo.enable) { %>
+<script src="https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js"></script>
+<% } %>
+<% } %>
+<script src="<%- url_for("/js/lib/preview.js") %>"></script>
+<link rel="stylesheet" href="<%- url_for("/css/main.css") %>" />
