@@ -13,7 +13,15 @@ const app = Vue.createApp({
         });
     },
     mounted() {
-        if (this.$refs.head) this.$refs.menu.classList.add("menu-color");
+        if (this.$refs.head) {
+            this.$refs.menu.classList.add("menu-color");
+            const bgElement = document.getElementById("home-background")
+            if (bgElement) {
+                const { background } = themeConfig
+                const randomIndex = Math.floor(Math.random() * background.length)
+                bgElement.style.background = background[randomIndex]
+            }
+        }
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
     },
