@@ -1,4 +1,4 @@
-<div id="home-head" ref="head">
+<div id="home-head">
     <div id="home-background" style="background-image: url(<%- theme.background %>)"></div>
     <% if (theme.headBlockEnable) { %>
     <div id="home-info" @click="homeClick">
@@ -16,7 +16,7 @@
     </div>
     <% } %>
 </div>
-<div id="home-posts-wrap" <%- theme.card.enable ? "" : 'class="home-posts-wrap-no-card"' %> ref="wrap">
+<div id="home-posts-wrap" <%- theme.card.enable ? "" : 'class="home-posts-wrap-no-card"' %> ref="homePostsWrap">
     <div id="home-posts">
         <div id="posts">
             <%- partial("posts") %>

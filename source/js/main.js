@@ -13,7 +13,7 @@ const app = Vue.createApp({
         });
     },
     mounted() {
-        if (this.$refs.head) this.$refs.menu.classList.add("menu-color");
+        if (this.$refs.homePostsWrap) this.$refs.menu.classList.add("menu-color");
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
     },
@@ -23,7 +23,7 @@ const app = Vue.createApp({
         },
         handleScroll() {
             let menu = this.$refs.menu,
-                wrap = this.$refs.wrap;
+                wrap = this.$refs.homePostsWrap;
             let newlocal = document.documentElement.scrollTop;
             if (this.barLocal < newlocal) {
                 this.showMenu = false;
