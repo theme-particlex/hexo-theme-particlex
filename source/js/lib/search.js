@@ -19,7 +19,7 @@ mixins.search = {
     },
     computed: {
         search() {
-            return this.rawSearch.toLowerCase().replace(/s+/gm, "");
+            return this.rawSearch.toLowerCase().replace(/\s+/g, "");
         },
     },
 };
