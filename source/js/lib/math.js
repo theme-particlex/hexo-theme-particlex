@@ -1,6 +1,6 @@
 mixins.math = {
-    data() {
-        return { renderers: [this.math] };
+    created() {
+        this.renderers.push(this.math);
     },
     methods: {
         math() {
