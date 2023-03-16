@@ -1,6 +1,8 @@
 mixins.preview = {
     data() {
-        return { previewShow: false };
+        return {
+            previewShow: false,
+        };
     },
     created() {
         this.renderers.push(this.preview);
