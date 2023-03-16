@@ -8,7 +8,7 @@
     <% } %>
     <div id="timeline-wrap" ref="timeline">
         <% posts.reverse().forEach((post, id) => { %>
-        <div class="timeline" data-title="<%- post.title.toLowerCase().replace(/\s+/gm, "") %>">
+        <div class="timeline" data-title="<%- post.title.toLowerCase().replace(/\s+/g, "") %>">
             <div class="timeline-tail"></div>
             <div class="timeline-content">
                 <div class="item-time"><%= date(post.date, "YYYY/M/D") %></div>
