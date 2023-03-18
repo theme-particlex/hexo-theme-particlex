@@ -1,7 +1,12 @@
 const app = Vue.createApp({
     mixins: Object.values(mixins),
     data() {
-        return { loading: true, showMenu: false, barLocal: 0, renderers: [] };
+        return {
+            loading: true,
+            showMenu: false,
+            barLocal: 0,
+            renderers: [],
+        };
     },
     created() {
         window.addEventListener("load", () => {

@@ -1,6 +1,8 @@
 mixins.search = {
     data() {
-        return { rawSearch: "" };
+        return {
+            rawSearch: "",
+        };
     },
     watch: {
         search(value) {
