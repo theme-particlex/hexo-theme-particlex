@@ -142,8 +142,6 @@ waline:
     serverURL: # Waline server address url, you should set this to your own link
     locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
         {}
-        # e.g.:
-        # placeholder: Leave a comment
     commentCount: true # If false, comment count will only be displayed in post page, not in home page
     pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
     emoji: # Custom emoji
