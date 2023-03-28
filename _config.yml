@@ -11,7 +11,7 @@ headBlockEnable: true
 background: https://static-argvchs.netlify.app/images/home.jpg
 
 # ParticleX theme icon is adopts the Font Awesome 6
-# https://fontawesome.com/search
+# https://fontawesome.com
 
 # Main menu navigation
 menu:
@@ -35,10 +35,6 @@ menu:
         name: tags
         theme: solid
         link: /tags
-    # <name>:
-    #     name: <icon-name>
-    #     theme: <icon-theme>
-    #     link: <link-url>
 
 # Side info card
 card:
@@ -62,15 +58,10 @@ card:
             name: envelope
             theme: solid
             link: mailto:argvchs@outlook.com
-        # <name>:
-        #    name: <icon-name>
-        #    theme: <icon-theme>
-        #    link: <link-url>
     friendLinks:
         Yuzi: https://blog.yuzi.dev
         LynxCatTheThird: https://lynxcatthethird.github.io
         Kaitaku: https://www.kaitaku.xyz
-        # <name>: <link-url>
 
 # Footer info
 footer:
@@ -82,7 +73,7 @@ footer:
         link:
 
 # Polyfill
-# https://polyfill.io/v3/url-builder
+# https://polyfill.io
 polyfill:
     enable: true
     features:
@@ -110,23 +101,6 @@ crypto:
 search:
     enable: true
 
-# Gitalk
-# https://github.com/gitalk/gitalk
-gitalk:
-    enable: false
-    clientID: # Default ClientID
-    clientSecret: # Default ClientSecret
-    repo: # The name of repository of store comments
-    owner: # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
-    language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
-    proxy: # CORS proxy
-    sites: # Sites
-        {}
-        # <www.example.com>:
-        #    clientID: <client-id>
-        #    clientSecret: <client-secret>
-
 # Giscus
 # https://github.com/giscus/giscus
 giscus:
@@ -143,6 +117,23 @@ giscus:
     inputPosition: bottom
     theme: https://static-argvchs.netlify.app/css/giscus.css
     lang: zh-CN
+
+# Gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+    enable: false
+    clientID: # Default ClientID
+    clientSecret: # Default ClientSecret
+    repo: # The name of repository of store comments
+    owner: # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
+    language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
+    proxy: # CORS proxy
+    sites: # Sites
+        {}
+        # www.example.com:
+        #    clientID:
+        #    clientSecret:
 
 # Waline
 # https://github.com/walinejs/waline
