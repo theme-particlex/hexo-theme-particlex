@@ -8,7 +8,7 @@ avatar: https://static-argvchs.netlify.app/images/avatar.jpg
 headBlockEnable: true
 
 # Home page background image
-background: https://static-argvchs.netlify.app/images/home.jpg
+background: https://static-argvchs.netlify.app/images/background.jpg
 
 # ParticleX theme icon is adopts the Font Awesome 6
 # https://fontawesome.com
