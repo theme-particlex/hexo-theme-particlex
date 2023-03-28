@@ -1,29 +1,3 @@
-<% if (theme.gitalk.enable) { %>
-<script>
-    let clientID = "<%- theme.gitalk.clientID %>",
-        clientSecret = "<%- theme.gitalk.clientSecret %>";
-    <% Object.keys(theme.gitalk.sites).forEach(key => { %>
-    if (window.location.host === "<%- key %>") {
-        clientID = "<%- theme.gitalk.sites[key].clientID %>";
-        clientSecret = "<%- theme.gitalk.sites[key].clientSecret %>";
-    }
-    <% }); %>
-    const gitalk = new Gitalk({
-        clientID: clientID,
-        clientSecret: clientSecret,
-        repo: "<%- theme.gitalk.repo %>",
-        owner: "<%- theme.gitalk.owner %>",
-        admin: ["<%- theme.gitalk.admin %>"],
-        language: "<%- theme.gitalk.language %>",
-        id: location.pathname,
-        distractionFreeMode: false,
-        <% if (theme.gitalk.proxy) { %>
-        proxy: "<%- theme.gitalk.proxy %>",
-        <% } %>
-    })
-    gitalk.render("gitalk-container");
-</script>
-<% } %>
 <% if (theme.giscus.enable) { %>
 <script
     src="<%- theme.giscus.src %>"
@@ -41,6 +15,34 @@
     crossorigin
     async
 ></script>
+<% } %>
+<% if (theme.gitalk.enable) { %>
+<script>
+    (function () {
+        let clientID = "<%- theme.gitalk.clientID %>",
+            clientSecret = "<%- theme.gitalk.clientSecret %>";
+        <% Object.keys(theme.gitalk.sites).forEach(key => { %>
+        if (window.location.host === "<%- key %>") {
+            clientID = "<%- theme.gitalk.sites[key].clientID %>";
+            clientSecret = "<%- theme.gitalk.sites[key].clientSecret %>";
+        }
+        <% }); %>
+        const gitalk = new Gitalk({
+            clientID: clientID,
+            clientSecret: clientSecret,
+            repo: "<%- theme.gitalk.repo %>",
+            owner: "<%- theme.gitalk.owner %>",
+            admin: ["<%- theme.gitalk.admin %>"],
+            language: "<%- theme.gitalk.language %>",
+            id: location.pathname,
+            distractionFreeMode: false,
+            <% if (theme.gitalk.proxy) { %>
+            proxy: "<%- theme.gitalk.proxy %>",
+            <% } %>
+        })
+        gitalk.render("gitalk-container");
+    })();
+</script>
 <% } %>
 <% if (theme.waline.enable) { %>
 <script>

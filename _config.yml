@@ -2,16 +2,16 @@
 # https://github.com/argvchs/hexo-theme-particlex
 
 # Avatar image
-avatar:
+avatar: /images/avatar.jpg
 
 # Home page info block
 headBlockEnable: true
 
 # Home page background image
-background:
+background: /images/background.jpg
 
 # ParticleX theme icon is adopts the Font Awesome 6
-# https://fontawesome.com/search
+# https://fontawesome.com
 
 # Main menu navigation
 menu:
@@ -35,10 +35,6 @@ menu:
         name: tags
         theme: solid
         link: /tags
-    # <name>:
-    #     name: <icon-name>
-    #     theme: <icon-theme>
-    #     link: <link-url>
 
 # Side info card
 card:
@@ -48,13 +44,8 @@ card:
         ...
     iconLinks:
         {}
-        # <name>:
-        #    name: <icon-name>
-        #    theme: <icon-theme>
-        #    link: <link-url>
     friendLinks:
-        {}
-        # <name>: <link-url>
+        Argvchs: https://argvchs.netlify.app
 
 # Footer info
 footer:
@@ -66,7 +57,7 @@ footer:
         link:
 
 # Polyfill
-# https://polyfill.io/v3/url-builder
+# https://polyfill.io
 polyfill:
     enable: true
     features:
@@ -94,23 +85,6 @@ crypto:
 search:
     enable: false
 
-# Gitalk
-# https://github.com/gitalk/gitalk
-gitalk:
-    enable: false
-    clientID: # Default ClientID
-    clientSecret: # Default ClientSecret
-    repo: # The name of repository of store comments
-    owner: # GitHub repo owner
-    admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
-    language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
-    proxy: # CORS proxy
-    sites: # Sites
-        {}
-        # <www.example.com>:
-        #    clientID: <client-id>
-        #    clientSecret: <client-secret>
-
 # Giscus
 # https://github.com/giscus/giscus
 giscus:
@@ -127,6 +101,23 @@ giscus:
     inputPosition: bottom
     theme: preferred_color_scheme
     lang: zh-CN
+
+# Gitalk
+# https://github.com/gitalk/gitalk
+gitalk:
+    enable: false
+    clientID: # Default ClientID
+    clientSecret: # Default ClientSecret
+    repo: # The name of repository of store comments
+    owner: # GitHub repo owner
+    admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
+    language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
+    proxy: # CORS proxy
+    sites: # Sites
+        {}
+        # www.example.com:
+        #    clientID:
+        #    clientSecret:
 
 # Waline
 # https://github.com/walinejs/waline
