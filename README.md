@@ -29,9 +29,9 @@ git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=
 theme: particlex
 ```
 
--   关闭自带 Highlight
+-   关闭自带代码高亮
 
-    Hexo 有自带的 Highlight，但是和 ParticleX 的 Highlight 不兼容
+    Hexo 有自带的代码高亮，但是和 ParticleX 的不兼容
 
     ```yaml
     highlight:
