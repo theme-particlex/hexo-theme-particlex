@@ -65,7 +65,8 @@
     <div class="content" ref="content" v-show="check"></div>
     </transition>
     <% } else { %>
-    <div class="content" v-pre>
+    <toc-component></toc-component>
+    <div class="content" v-pre id="main-content">
         <%- page.content %>
     </div>
     <% } %>

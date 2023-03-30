@@ -85,6 +85,10 @@ crypto:
 search:
     enable: false
 
+# toc support
+toc:
+    enable: true
+
 # Giscus
 # https://github.com/giscus/giscus
 giscus:
