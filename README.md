@@ -29,7 +29,7 @@ git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=
 theme: particlex
 ```
 
-## 2.1 关闭自带代码高亮
+## 2.1. 关闭自带代码高亮
 
 Hexo 有自带的代码高亮，但是和 ParticleX 的不兼容
 
@@ -48,7 +48,7 @@ pandoc:
         - no-highlight:
 ```
 
-## 2.2 禁用年度月度归档
+## 2.2. 禁用年度月度归档
 
 Hexo 会自动生成年度月度归档，可是 ParticleX 主题没有这个功能 ~~我太懒了~~
 
@@ -65,7 +65,7 @@ archive_generator:
 
 # 3. 配置
 
-## 3.1 基本配置
+## 3.1. 基本配置
 
 ```yaml
 # Avatar image
@@ -78,9 +78,9 @@ background:
 
 其中 Background 是一个列表，打开时会随机加载一个背景
 
-## 3.2 内容配置
+## 3.2. 内容配置
 
-### 3.2.1 导航栏
+### 3.2.1. 导航栏
 
 为了方便，主题使用的图标是 Font Awesome 6 图标
 
@@ -112,7 +112,7 @@ menu:
         link: /tags
 ```
 
-### 3.2.2 主页信息卡片
+### 3.2.2. 主页信息卡片
 
 `description` 支持 Markdown 格式
 
@@ -133,7 +133,7 @@ card:
         Argvchs: https://argvchs.netlify.app
 ```
 
-### 3.2.3 页脚
+### 3.2.3. 页脚
 
 考虑到博客部署在服务器并使用自己域名的情况，按规定需要在网站下边添加备案消息
 
@@ -150,9 +150,9 @@ footer:
         link:
 ```
 
-## 3.3 功能配置
+## 3.3. 功能配置
 
-### 3.3.1 Polyfill
+### 3.3.1. Polyfill
 
 使用 [Polyfill.io](https://polyfill.io) 自动根据 UA 处理新的 JS API 兼容
 
@@ -167,7 +167,7 @@ polyfill:
         - default
 ```
 
-### 3.3.2 代码高亮
+### 3.3.2. 代码高亮
 
 使用 Highlight.js 代码高亮
 
@@ -181,7 +181,7 @@ highlight:
     style: github
 ```
 
-### 3.3.3 数学渲染
+### 3.3.3. 数学渲染
 
 使用 KaTeX 渲染数学公式
 
@@ -191,7 +191,7 @@ math:
     enable: false
 ```
 
-### 3.3.4 图片预览
+### 3.3.4. 图片预览
 
 简单的点击图片放大缩小的预览
 
@@ -201,7 +201,7 @@ preview:
     enable: true
 ```
 
-### 3.3.5 文章缩略
+### 3.3.5. 文章缩略
 
 一般来说，缩略展示文档只需要在文档中添加 `<!-- more -->` 即可，缩略内容在显示全文中也会出现
 
@@ -214,11 +214,11 @@ description: |
     Normal _Italic_ **Strong**
 ```
 
-### 3.3.6 文章置顶
+### 3.3.6. 文章置顶
 
 在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `pinned` 作为置顶参数，越大越靠前，默认为 0
 
-### 3.3.7 文章加密
+### 3.3.7. 文章加密
 
 使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `secret` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/argvchs/hexo-helper-crypto)**
 
@@ -228,7 +228,7 @@ crypto:
     enable: false
 ```
 
-### 3.3.8 搜索
+### 3.3.8. 搜索
 
 嵌入到 Archives 中的搜索
 
@@ -240,9 +240,9 @@ search:
     enable: false
 ```
 
-## 3.4 评论配置
+## 3.4. 评论配置
 
-### 3.4.1 Giscus
+### 3.4.1. Giscus
 
 Giscus 是一个由 GitHub Discussions 支持的评论系统
 
@@ -267,7 +267,7 @@ giscus:
     lang: zh-CN
 ```
 
-### 3.4.2 Gitalk
+### 3.4.2. Gitalk
 
 Gitalk 是一个基于 GitHub Issue 和 Preact 的评论系统
 
@@ -275,7 +275,7 @@ Gitalk 是一个基于 GitHub Issue 和 Preact 的评论系统
 
 **同样如果没有其他网站，请在 `sites:` 后添加一个 `{}`**
 
-由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 参数，搭建 CORS 代理可以看[这篇文章](https://argvchs.github.io/2022/07/04/build-cors-anywhere)
+由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 参数，搭建 CORS 代理可以看[这篇文章](https://argvchs.netlify.app/2022/07/04/build-cors-anywhere)
 
 ```yaml
 # Gitalk
@@ -296,7 +296,7 @@ gitalk:
         #    clientSecret:
 ```
 
-### 3.4.3 Waline
+### 3.4.3. Waline
 
 Waline 是一个简单、安全的评论系统
 
@@ -333,7 +333,7 @@ waline:
     pageSize: 10 # Comment per page
 ```
 
-### 3.4.4 Twikoo
+### 3.4.4. Twikoo
 
 Twikoo 是一个一个简洁、安全、免费的静态网站评论系统
 
