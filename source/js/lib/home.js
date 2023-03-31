@@ -1,11 +1,10 @@
 mixins.home = {
     mounted() {
-        let menu = this.$refs.menu,
-            background = this.$refs.homeBackground;
-        menu.classList.add("menu-color");
-        let image = background.dataset.image.split(",");
-        let id = Math.floor(Math.random() * image.length);
-        background.style.backgroundImage = `url('${image[id]}')`;
+        let background = this.$refs.homeBackground;
+        let images = background.dataset.images.split(",");
+        let id = Math.floor(Math.random() * images.length);
+        background.style.backgroundImage = `url('${images[id]}')`;
+        this.menuColor = true;
     },
     methods: {
         homeClick() {

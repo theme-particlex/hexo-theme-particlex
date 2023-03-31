@@ -43,26 +43,19 @@
         <% } %>
     </div>
     <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
-    <%
-        const CryptoJS = crypto();
-        function SHA(word) {
-            return CryptoJS.SHA256(word).toString();
-        }
-        function encrypt(word, secret) {
-            return CryptoJS.AES.encrypt(word, secret).toString();
-        }
-    %>
+    <% const CryptoJS = crypto(); %>
     <input
         id="crypto"
-        class="input"
+        :class="['input', cryptoClass]"
+        :disabled="check"
         ref="crypto"
         placeholder="文章被加密，请输入密码"
-        data-encrypted="<%- encrypt(page.content, page.secret) %>"
-        data-shasum="<%- SHA(page.content) %>"
+        data-encrypted="<%- CryptoJS.AES.encrypt(page.content, page.secret).toString() %>"
+        data-shasum="<%- CryptoJS.SHA256(page.content).toString() %>"
         v-model="crypto"
     />
     <transition name="fade">
-    <div class="content" ref="content" v-show="check"></div>
+    <div class="content" ref="content" v-html="decrypted" v-show="check"></div>
     </transition>
     <% } else { %>
     <div class="content" v-pre>

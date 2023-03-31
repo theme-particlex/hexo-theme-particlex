@@ -488,6 +488,7 @@
     line-height: 2;
     overflow: auto;
     padding: 50px 30px 20px;
+    white-space: pre;
 }
 .comment iframe,
 body::-webkit-scrollbar-track {
@@ -504,24 +505,24 @@ body::-webkit-scrollbar-track {
     margin: 15px auto;
     max-width: 75%;
 }
-.code-copy {
+.copycode {
     color: #5c6b72;
     position: absolute;
     right: 0;
     top: 0;
 }
-.code-copy i {
+.copycode i {
     padding: 15px;
     position: absolute;
     right: 0;
     top: 0;
     transition: transform 0.25s;
 }
-.code-copy.copied i {
+.copycode.copied i {
     transform: scale(1.25);
 }
-.code-copy.copied i:first-child,
-.code-copy:not(.copied) i:last-child {
+.copycode.copied i:first-child,
+.copycode:not(.copied) i:last-child {
     opacity: 0;
 }
 .fade-enter-active,
@@ -658,7 +659,7 @@ a {
     text-decoration: none;
 }
 a:hover,
-.content .code-copy:hover {
+.content .copycode:hover {
     opacity: 0.8;
 }
 b,
@@ -694,7 +695,7 @@ iframe,
 .friend-link a,
 .icon-link a,
 .language,
-.code-copy {
+.copycode {
     user-select: none;
 }
 code {
@@ -764,6 +765,7 @@ pre {
     box-shadow: 0 2px 12px 0 #0000001a;
     margin: 25px 0;
     margin: 25px 0;
+    white-space: normal;
 }
 pre,
 code,
