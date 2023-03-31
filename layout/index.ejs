@@ -1,6 +1,9 @@
 <div id="home-head">
-    <div id="home-background" ref="homeBackground" data-image="<%- url_for(theme.background) %>"></div>
-    <% if (theme.headBlockEnable) { %>
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-image="<%- theme.background.map(i => url_for(i)) %>"
+    ></div>
     <div id="home-info" @click="homeClick">
         <span class="loop"></span>
         <span class="loop"></span>
@@ -14,7 +17,6 @@
             </div>
         </span>
     </div>
-    <% } %>
 </div>
 <div id="home-posts-wrap" <%- theme.card.enable ? "" : 'class="home-posts-wrap-no-card"' %> ref="homePostsWrap">
     <div id="home-posts">
