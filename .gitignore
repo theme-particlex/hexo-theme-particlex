@@ -1,1 +1,4 @@
 node_modules/
+# 本地打包即可
+source/
+.idea/

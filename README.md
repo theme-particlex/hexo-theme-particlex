@@ -17,11 +17,17 @@
 -   [Vercel](https://argvchs.vercel.app)
 
 ## 安装
+**从Release列表下载(推荐)：**
 
+[Release](https://github.com/argvchs/hexo-theme-particlex/releases)
+
+**手动安装：**
 ```bash
 cd themes
 git clone https://github.com/argvchs/hexo-theme-particlex.git particlex --depth=1
+npm run build
 ```
+---
 
 然后在根目录 `_config.yml` 设置主题为 ParticleX 即可
 

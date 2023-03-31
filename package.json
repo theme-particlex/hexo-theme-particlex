@@ -3,7 +3,9 @@
   "version": "2.5.7",
   "description": "A concise Hexo theme, based on Particle.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack watch --mode development",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -26,5 +28,17 @@
   "dependencies": {
     "hexo-helper-crypto": "^1.1.0",
     "hexo-renderer-ejs": "^2.0.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.3",
+    "css-minimizer-webpack-plugin": "^5.0.0",
+    "glob": "^9.3.2",
+    "mini-css-extract-plugin": "^2.7.5",
+    "style-loader": "^3.3.2",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "webpack": "^5.77.0",
+    "webpack-cli": "^5.0.1"
   }
 }
