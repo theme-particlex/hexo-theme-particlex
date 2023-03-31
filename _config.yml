@@ -4,11 +4,9 @@
 # Avatar image
 avatar: https://static-argvchs.netlify.app/images/avatar.jpg
 
-# Home page info block
-headBlockEnable: true
-
 # Home page background image
-background: https://static-argvchs.netlify.app/images/background.jpg
+background:
+    - https://static-argvchs.netlify.app/images/background.jpg
 
 # ParticleX theme icon is adopts the Font Awesome 6
 # https://fontawesome.com
@@ -85,11 +83,11 @@ highlight:
     enable: true
     style: github
 
-# Rendering math with KaTeX
+# KaTeX math rendering
 math:
     enable: true
 
-# Image Preview
+# Image preview
 preview:
     enable: true
 
