@@ -18,7 +18,7 @@
 <% } %>
 <% if (theme.gitalk.enable) { %>
 <script>
-    (function () {
+    (() => {
         let clientID = "<%- theme.gitalk.clientID %>",
             clientSecret = "<%- theme.gitalk.clientSecret %>";
         <% Object.keys(theme.gitalk.sites).forEach(key => { %>
