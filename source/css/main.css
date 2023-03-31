@@ -363,8 +363,8 @@
     width: 50vmin;
 }
 #main {
+    display: grid;
     margin-right: calc(100% - 100vw);
-    overflow: auto;
 }
 #menu {
     background: #92cafa;
