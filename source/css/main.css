@@ -92,6 +92,7 @@
     box-shadow: 0 0 20px #d9d9d980;
     padding: 25px 0;
     text-align: center;
+    width: 300px;
 }
 #home-card .card-style .avatar {
     border: #f1f1f1 solid 3px;
@@ -360,10 +361,10 @@
     height: 50vmin;
     justify-content: center;
     padding: 50px;
+    text-align: center;
     width: 50vmin;
 }
 #main {
-    display: grid;
     margin-right: calc(100% - 100vw);
 }
 #menu {
@@ -701,7 +702,6 @@ iframe,
 code {
     background: #bddcf76b;
     border-radius: 4px;
-    font-size: 14px;
     line-height: 2.5;
     padding: 4px 8px;
 }
@@ -826,9 +826,6 @@ ol li {
     }
 }
 @media (min-width: 900px) {
-    #home-card {
-        margin-right: auto;
-    }
     #home-head #home-info .info .wrap {
         padding: 25px;
     }
@@ -857,9 +854,8 @@ ol li {
         width: 500px;
     }
     #home-posts {
-        margin-left: auto;
         margin-right: 50px;
-        width: 900px;
+        width: 850px;
     }
     #home-posts .post {
         margin-bottom: 25px;
@@ -869,8 +865,7 @@ ol li {
         padding: 20px 0;
     }
     #home-posts-wrap {
-        max-width: 1150px;
-        padding: 30px 0;
+        max-width: 1200px;
     }
     #menu .desktop-menu {
         display: block;
@@ -896,7 +891,6 @@ ol li {
         display: none;
     }
     #home-posts {
-        margin: auto;
         width: 100%;
     }
     #home-posts-wrap,

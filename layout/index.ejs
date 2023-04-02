@@ -20,10 +20,8 @@
 </div>
 <div id="home-posts-wrap" <%- theme.card.enable ? "" : 'class="home-posts-wrap-no-card"' %> ref="homePostsWrap">
     <div id="home-posts">
-        <div id="posts">
-            <%- partial("posts") %>
-            <%- partial("current") %>
-        </div>
+        <%- partial("posts") %>
+        <%- partial("current") %>
     </div>
     <% if (theme.card.enable) { %>
     <div id="home-card">
