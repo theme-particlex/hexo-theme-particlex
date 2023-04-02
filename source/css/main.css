@@ -360,6 +360,7 @@
     height: 50vmin;
     justify-content: center;
     padding: 50px;
+    text-align: center;
     width: 50vmin;
 }
 #main {
