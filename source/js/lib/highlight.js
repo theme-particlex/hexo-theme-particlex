@@ -13,16 +13,16 @@ mixins.highlight = {
             let codes = document.querySelectorAll("pre");
             for (let i of codes) {
                 let code = i.innerText;
-                let lang = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
+                let language = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
+                let highlighted = hljs.highlight(code, { language }).value;
                 i.innerHTML = `
-                    <div class="code-content">${code}</div>
-                    <div class="language">${lang}</div>
+                    <div class="code-content">${highlighted}</div>
+                    <div class="language">${language}</div>
                     <div class="copycode">
                         <i class="fa-solid fa-copy fa-fw"></i>
                         <i class="fa-solid fa-clone fa-fw"></i>
                     </div>
                 `;
-                let content = i.querySelector(".code-content");
                 let copycode = i.querySelector(".copycode");
                 copycode.addEventListener("click", async () => {
                     if (this.copying) return;
@@ -33,7 +33,6 @@ mixins.highlight = {
                     copycode.classList.remove("copied");
                     this.copying = false;
                 });
-                hljs.highlightElement(content);
             }
         },
     },
