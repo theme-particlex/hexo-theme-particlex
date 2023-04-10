@@ -130,7 +130,7 @@ card:
     iconLinks:
         {}
     friendLinks:
-        Argvchs: https://argvchs.netlify.app
+        Argvchs: https://argvchs.github.io
 ```
 
 ### 3.2.3. 页脚
@@ -275,7 +275,7 @@ Gitalk 是一个基于 GitHub Issue 和 Preact 的评论系统
 
 **同样如果没有其他网站，请在 `sites:` 后添加一个 `{}`**
 
-由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 参数，搭建 CORS 代理可以看[这篇文章](https://argvchs.netlify.app/2022/07/04/build-cors-anywhere)
+由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 参数，搭建 CORS 代理可以看[这篇文章](https://argvchs.github.io/2022/07/04/build-cors-anywhere)
 
 ```yaml
 # Gitalk
