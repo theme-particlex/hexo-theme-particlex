@@ -4,6 +4,9 @@
 # Avatar image
 avatar: https://static-argvchs.netlify.app/images/avatar.jpg
 
+# Favicon
+favicon: /images/favicon.png
+
 # Home page background image
 background:
     - https://static-argvchs.netlify.app/images/background.jpg
