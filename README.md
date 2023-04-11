@@ -67,16 +67,19 @@ archive_generator:
 
 ## 3.1. 基本配置
 
+`background` 参数是一个列表，打开时会随机加载一个背景
+
 ```yaml
 # Avatar image
 avatar: /images/avatar.jpg
+
+# Favicon
+favicon: /images/favicon.png
 
 # Home page background image
 background:
     - /images/background.jpg
 ```
-
-其中 Background 是一个列表，打开时会随机加载一个背景
 
 ## 3.2. 内容配置
 
