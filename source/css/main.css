@@ -672,7 +672,7 @@ blockquote {
     background: #d9e8ff6b;
     border-left: 3px solid #1e3e3f;
     border-radius: 3px;
-    display: flex;
+    overflow: auto;
     padding: 0 15px;
 }
 body {
