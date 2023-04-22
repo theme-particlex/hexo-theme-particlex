@@ -1,8 +1,6 @@
 mixins.highlight = {
     data() {
-        return {
-            copying: false,
-        };
+        return { copying: false };
     },
     created() {
         hljs.configure({ ignoreUnescapedHTML: true });

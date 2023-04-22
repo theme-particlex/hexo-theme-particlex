@@ -70,9 +70,7 @@
                 ];
                 let id = Math.floor(Math.random() * color.length);
             %>
-            <a href="<%- url_for(data.path) %>" style="<%- color[id] %>">
-                <%= data.name %>
-            </a>
+            <a href="<%- url_for(data.path) %>" style="<%- color[id] %>"><%= data.name %></a>
         </span>
         <% }); %>
     </div>
