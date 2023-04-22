@@ -1,9 +1,6 @@
 mixins.crypto = {
     data() {
-        return {
-            crypto: "",
-            check: null,
-        };
+        return { crypto: "", check: null };
     },
     watch: {
         crypto(value) {
