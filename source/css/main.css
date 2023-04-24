@@ -633,7 +633,7 @@ body::-webkit-scrollbar-track {
     width: 12px;
 }
 ::-webkit-scrollbar-thumb {
-    background-image: #8ab5ff
+    background: #8ab5ff
         linear-gradient(
             45deg,
             #fff6 25%,
