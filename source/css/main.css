@@ -633,17 +633,17 @@ body::-webkit-scrollbar-track {
     width: 12px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #8ab5ff;
-    background-image: linear-gradient(
-        45deg,
-        #fff6 25%,
-        transparent 25%,
-        transparent 50%,
-        #fff6 50%,
-        #fff6 75%,
-        transparent 75%,
-        transparent
-    );
+    background-image: #8ab5ff
+        linear-gradient(
+            45deg,
+            #fff6 25%,
+            transparent 25%,
+            transparent 50%,
+            #fff6 50%,
+            #fff6 75%,
+            transparent 75%,
+            transparent
+        );
     border: 3px solid #e6efff;
     border-radius: 100px;
 }
@@ -672,6 +672,7 @@ blockquote {
     background: #d9e8ff6b;
     border-left: 3px solid #1e3e3f;
     border-radius: 3px;
+    margin: 15px 0;
     overflow: auto;
     padding: 0 15px;
 }
@@ -776,18 +777,22 @@ code,
 .language {
     font-family: "Fira Code", "Noto Sans SC", monospace;
 }
-table tbody tr td:nth-child(even) {
+table {
+    margin: 15px 0;
+}
+table td:nth-child(even) {
     background: #c7e0fb4d;
 }
-table tbody tr td:nth-child(odd) {
+table td:nth-child(odd) {
     background: #d9e8ff4d;
 }
-table thead tr th {
+table th {
     background: #a3ddfb;
-    padding: 8px 20px;
 }
+table tr th,
 table tr td {
-    padding: 8px 20px;
+    padding: 10px 20px;
+    border-radius: 3px;
 }
 ul li,
 ol li {
