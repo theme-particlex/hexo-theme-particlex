@@ -48,7 +48,7 @@
                     <span class="icon">
                         <i class="fa-solid fa-tags fa-fw"></i>
                     </span>
-                    <% post.tags.data.forEach(data => { %>
+                    <% post.tags.data.forEach(tag => { %>
                     <span class="tag">
                         <%
                             const color = [
@@ -60,7 +60,7 @@
                             ];
                             let id = Math.floor(Math.random() * color.length);
                         %>
-                        <a href="<%- url_for(data.path) %>" style="<%- color[id] %>"><%= data.name %></a>
+                        <a href="<%- url_for(tag.path) %>" style="<%- color[id] %>"><%= tag.name %></a>
                     </span>
                     <% }); %>
                 </span>

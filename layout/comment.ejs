@@ -18,30 +18,19 @@
 <% } %>
 <% if (theme.gitalk.enable) { %>
 <script>
-    (() => {
-        let clientID = "<%- theme.gitalk.clientID %>",
-            clientSecret = "<%- theme.gitalk.clientSecret %>";
-        <% Object.keys(theme.gitalk.sites).forEach(key => { %>
-        if (window.location.host === "<%- key %>") {
-            clientID = "<%- theme.gitalk.sites[key].clientID %>";
-            clientSecret = "<%- theme.gitalk.sites[key].clientSecret %>";
-        }
-        <% }); %>
-        const gitalk = new Gitalk({
-            clientID: clientID,
-            clientSecret: clientSecret,
-            repo: "<%- theme.gitalk.repo %>",
-            owner: "<%- theme.gitalk.owner %>",
-            admin: ["<%- theme.gitalk.admin %>"],
-            language: "<%- theme.gitalk.language %>",
-            id: location.pathname,
-            distractionFreeMode: false,
-            <% if (theme.gitalk.proxy) { %>
-            proxy: "<%- theme.gitalk.proxy %>",
-            <% } %>
-        })
-        gitalk.render("gitalk-container");
-    })();
+    const gitalk = new Gitalk({
+        clientID: "<%- theme.gitalk.clientID %>",
+        clientSecret: "<%- theme.gitalk.clientSecret %>",
+        repo: "<%- theme.gitalk.repo %>",
+        owner: "<%- theme.gitalk.owner %>",
+        admin: "<%- theme.gitalk.admin %>".split(","),
+        language: "<%- theme.gitalk.language %>",
+        id: location.pathname,
+        <% if (theme.gitalk.proxy) { %>
+        proxy: "<%- theme.gitalk.proxy %>",
+        <% } %>
+    })
+    gitalk.render("gitalk-container");
 </script>
 <% } %>
 <% if (theme.waline.enable) { %>
@@ -51,14 +40,16 @@
         serverURL: "<%- theme.waline.serverURL %>",
         commentCount: <%- theme.waline.commentCount %>,
         pageview: <%- theme.waline.pageview %>,
-        emoji: <%- JSON.stringify(theme.waline.emoji) %>,
-        meta: <%- JSON.stringify(theme.waline.meta) %>,
-        requiredMeta: <%- JSON.stringify(theme.waline.requiredMeta) %>,
+        emoji: "<%- (theme.waline.emoji) %>".split(","),
+        meta: "<%- (theme.waline.meta) %>".split(","),
+        requiredMeta: "<%- theme.waline.requiredMeta %>".split(","),
         lang: "<%- theme.waline.lang %>",
         wordLimit: <%- theme.waline.wordLimit %>,
         pageSize: "<%- theme.waline.pageSize %>",
         login: "<%- theme.waline.login %>",
+        <% if (theme.waline.locale) { %>
         locale: <%- JSON.stringify(theme.waline.locale) %>,
+        <% } %>
     });
 </script>
 <% } %>
