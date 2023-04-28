@@ -9,7 +9,7 @@
         </div>
         <% if (theme.card.iconLinks) { %>
         <div class="icon-links">
-            <% Object.entries(theme.card.iconLinks).forEach([key, value] => { %>
+            <% Object.entries(theme.card.iconLinks).forEach(([key, value]) => { %>
             <span class="icon-link">
                 <a href="<%- url_for(value.link) %>">
                     <i
@@ -22,7 +22,7 @@
         <% } %>
         <% if (theme.card.friendLinks) { %>
         <div class="friend-links">
-            <% Object.entries(theme.card.friendLinks).forEach([key, value] => { %>
+            <% Object.entries(theme.card.friendLinks).forEach(([key, value]) => { %>
             <div class="friend-link">
                 <a href="<%- url_for(value) %>"><%= key %></a>
             </div>
