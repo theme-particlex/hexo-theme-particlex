@@ -14,12 +14,12 @@
             <span class="page-omit">...</span>
             <% } %>
             <% if (page.current - 2 >= 1) { %>
-                <% if (page.current - 2 === 1) { %>
-                <a class="page-num" href="<%- config.root %>">1</a>
-                <% } %>
-                <% if (page.current - 2 !== 1) { %>
-                <a class="page-num" href="<%- url_for("page/" + (page.current - 2)) %>"><%= page.current - 2 %></a>
-                <% } %>
+            <% if (page.current - 2 === 1) { %>
+            <a class="page-num" href="<%- config.root %>">1</a>
+            <% } %>
+            <% if (page.current - 2 !== 1) { %>
+            <a class="page-num" href="<%- url_for("page/" + (page.current - 2)) %>"><%= page.current - 2 %></a>
+            <% } %>
             <% } %>
             <a class="page-num" href="<%- url_for(page.prev_link) %>"><%= page.prev %></a>
         </span>

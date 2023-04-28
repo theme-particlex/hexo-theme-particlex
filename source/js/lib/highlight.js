@@ -10,9 +10,14 @@ mixins.highlight = {
         highlight() {
             let codes = document.querySelectorAll("pre");
             for (let i of codes) {
-                let code = i.innerText;
-                let language = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
-                let highlighted = hljs.highlight(code, { language }).value;
+                let code = i.innerText,
+                    language = [...i.classList, ...i.firstChild.classList][0] || "plaintext",
+                    highlighted;
+                try {
+                    highlighted = hljs.highlight(code, { language }).value;
+                } catch {
+                    highlighted = code;
+                }
                 i.innerHTML = `
                     <div class="code-content">${highlighted}</div>
                     <div class="language">${language}</div>

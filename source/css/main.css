@@ -271,7 +271,7 @@
 }
 #home-posts .post .category-and-date .date,
 #archives .tags,
-#menu .desktop-menu a span {
+#menu #desktop-menu a span {
     display: inline-block;
 }
 #home-posts .post .category-and-date .special {
@@ -376,18 +376,18 @@
     top: 0;
     transition: background 0.25s ease-out, top 0.25s ease-out;
     width: 100vw;
-    z-index: 10004;
+    z-index: 1004;
 }
-#menu .desktop-menu {
+#menu #desktop-menu {
     height: 50px;
 }
-#menu .desktop-menu .title {
+#menu #desktop-menu .title {
     color: #555;
     display: inline-block;
     margin-left: 60px;
     margin-right: 5px;
 }
-#menu .desktop-menu a {
+#menu #desktop-menu a {
     color: #555;
     display: inline-block;
     margin-left: 30px;
@@ -396,17 +396,18 @@
     min-height: 50px;
     text-align: center;
 }
-#menu #mobile-menu .curtain {
+#menu-curtain {
+    background: #0003;
     height: 100%;
     left: 0;
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: -1;
+    z-index: 1001;
 }
 #menu #mobile-menu .items {
     padding: 10px 0 20px;
-    z-index: 10002;
+    z-index: 1002;
 }
 #menu #mobile-menu .items .item {
     display: flex;
@@ -421,10 +422,10 @@
 #menu #mobile-menu .title {
     color: #555;
     cursor: pointer;
-    z-index: 10003;
+    z-index: 1003;
 }
 #menu.hidden {
-    top: -70px !important;
+    top: -50px !important;
 }
 #menu.menu-color {
     background: #0003 !important;
@@ -444,7 +445,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index: 10005;
+    z-index: 1005;
 }
 #preview-content {
     box-shadow: 0 0 50px 10px #d9d9d980;
@@ -454,7 +455,7 @@
 }
 #search-bar {
     margin-bottom: 50px;
-    z-index: 10001;
+    z-index: 1000;
 }
 #timeline-wrap {
     display: flex;
@@ -872,7 +873,7 @@ ol li {
     #home-posts-wrap {
         max-width: 1200px;
     }
-    #menu .desktop-menu {
+    #menu #desktop-menu {
         display: block;
     }
     #menu #mobile-menu {
@@ -958,7 +959,7 @@ ol li {
     #footer #footer-wrap {
         width: 100%;
     }
-    #menu .desktop-menu,
+    #menu #desktop-menu,
     #home-card {
         display: none;
     }

@@ -27,26 +27,26 @@
     <body>
         <div id="layout">
             <transition name="fade">
-            <div id="loading" v-show="loading">
-                <div id="loading-circle">
-                    <h2>LOADING</h2>
-                    <p>加载过慢请开启缓存 浏览器默认开启</p>
-                    <img src="<%- url_for("/images/loading.gif") %>" />
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>加载过慢请开启缓存 浏览器默认开启</p>
+                        <img src="<%- url_for("/images/loading.gif") %>" />
+                    </div>
                 </div>
-            </div>
             </transition>
             <%- partial("menu") %>
             <transition name="into">
-            <div id="main" v-show="!loading">
-                <%- partial(type) %>
-                <%- partial("footer") %>
-            </div>
+                <div id="main" v-show="!loading">
+                    <%- partial(type) %>
+                    <%- partial("footer") %>
+                </div>
             </transition>
             <% if (theme.preview.enable) { %>
             <transition name="fade">
-            <div id="preview" ref="preview" v-show="previewShow">
-                <img id="preview-content" ref="previewContent" />
-            </div>
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
             </transition>
             <% } %>
         </div>

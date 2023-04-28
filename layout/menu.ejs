@@ -1,5 +1,5 @@
 <nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
-    <div class="desktop-menu">
+    <div id="desktop-menu">
         <a class="title" href="<%- config.root %>">
             <span><%= config.title.toUpperCase() %></span>
         </a>
@@ -11,24 +11,26 @@
         <% }); %>
     </div>
     <div id="mobile-menu">
-        <div class="curtain" @click="shouMenuItems = !shouMenuItems" v-show="shouMenuItems"></div>
-        <div class="title" @click="shouMenuItems = !shouMenuItems">
+        <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;<%= config.title.toUpperCase() %></span>
         </div>
         <transition name="slide">
-        <div class="items" v-show="shouMenuItems">
-            <% Object.keys(theme.menu).forEach(key => { %>
-            <a href="<%- url_for(theme.menu[key].link) %>">
-                <div class="item">
-                    <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
+            <div class="items" v-show="showMenuItems">
+                <% Object.keys(theme.menu).forEach(key => { %>
+                <a href="<%- url_for(theme.menu[key].link) %>">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-<%- theme.menu[key].theme %> fa-<%- theme.menu[key].name %> fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%"><%= key %></div>
                     </div>
-                    <div style="min-width: 100px; max-width: 150%; width: 20%"><%= key %></div>
-                </div>
-            </a>
-            <% }); %>
-        </div>
+                </a>
+                <% }); %>
+            </div>
         </transition>
     </div>
 </nav>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>

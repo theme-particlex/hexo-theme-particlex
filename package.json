@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-particlex",
-  "version": "2.5.15",
+  "version": "2.6.0",
   "description": "A concise Hexo theme, based on Particle.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
