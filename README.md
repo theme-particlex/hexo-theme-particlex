@@ -121,8 +121,6 @@ menu:
 
 图标链接配置和导航栏配置相同
 
-**如果图标链接或友链为空，请在 `iconLinks:` 或 `friendLinks:` 后添加一个 `{}`**
-
 ```yaml
 # Side info card
 card:
@@ -131,7 +129,6 @@ card:
         Description
         ...
     iconLinks:
-        {}
     friendLinks:
         Argvchs: https://argvchs.github.io
 ```
@@ -274,11 +271,7 @@ giscus:
 
 Gitalk 是一个基于 GitHub Issue 和 Preact 的评论系统
 
-考虑到博客可能部署到多个网站同步评论，但 OAuth APP 只能有一个回调 URL，所以添加了 `sites` 参数用于多个网站的评论
-
-**同样如果没有其他网站，请在 `sites:` 后添加一个 `{}`**
-
-由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，添加了 `proxy` 参数，搭建 CORS 代理可以看[这篇文章](https://argvchs.github.io/2022/07/04/build-cors-anywhere)
+由于 Gitalk 官方 CORS 代理用的是 Cloudflare，速度过慢，搭建 CORS 代理可以看[这篇文章](https://argvchs.github.io/2022/07/04/build-cors-anywhere)
 
 ```yaml
 # Gitalk
@@ -292,11 +285,6 @@ gitalk:
     admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
     language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
     proxy: # CORS proxy
-    sites: # Sites
-        {}
-        # www.example.com:
-        #    clientID:
-        #    clientSecret:
 ```
 
 ### 3.4.3. Waline
@@ -305,8 +293,6 @@ Waline 是一个简单、安全的评论系统
 
 详见：[在 ParticleX 上使用 Waline | Yuzi's Blog](https://blog.yuzi.dev/posts/bcb4ff00.html)
 
-**注意如果不需要 `locale` 参数，请在 `locale:` 后添加一个 `{}`**
-
 ```yaml
 # Waline
 # https://github.com/walinejs/waline
@@ -314,7 +300,6 @@ waline:
     enable: false
     serverURL: # Waline server address url, you should set this to your own link
     locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
-        {}
     commentCount: true # If false, comment count will only be displayed in post page, not in home page
     pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
     emoji: # Custom emoji

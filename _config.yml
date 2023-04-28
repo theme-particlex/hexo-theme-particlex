@@ -44,7 +44,6 @@ card:
         Description
         ...
     iconLinks:
-        {}
     friendLinks:
         Argvchs: https://argvchs.github.io
 
@@ -114,11 +113,6 @@ gitalk:
     admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
     language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
     proxy: # CORS proxy
-    sites: # Sites
-        {}
-        # www.example.com:
-        #    clientID:
-        #    clientSecret:
 
 # Waline
 # https://github.com/walinejs/waline
@@ -126,7 +120,6 @@ waline:
     enable: false
     serverURL: # Waline server address url, you should set this to your own link
     locale: # Locale: https://waline.js.org/guide/client/i18n.html#locale-option
-        {}
     commentCount: true # If false, comment count will only be displayed in post page, not in home page
     pageview: false # Pageviews count, Note: You should not enable both `waline.pageview` and `leancloud_visitors`
     emoji: # Custom emoji

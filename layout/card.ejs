@@ -7,24 +7,24 @@
         <div class="description">
             <%- markdown(theme.card.description) %>
         </div>
-        <% if (Object.keys(theme.card.iconLinks).length) { %>
+        <% if (theme.card.iconLinks) { %>
         <div class="icon-links">
-            <% Object.keys(theme.card.iconLinks).forEach(key => { %>
+            <% Object.entries(theme.card.iconLinks).forEach([key, value] => { %>
             <span class="icon-link">
-                <a href="<%- url_for(theme.card.iconLinks[key].link) %>">
+                <a href="<%- url_for(value.link) %>">
                     <i
-                        class="fa-<%- theme.card.iconLinks[key].theme %> fa-<%- theme.card.iconLinks[key].name %> fa-fw"
+                        class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"
                     ></i>
                 </a>
             </span>
             <% }); %>
         </div>
         <% } %>
-        <% if (Object.keys(theme.card.friendLinks).length) { %>
+        <% if (theme.card.friendLinks) { %>
         <div class="friend-links">
-            <% Object.keys(theme.card.friendLinks).forEach(key => { %>
+            <% Object.entries(theme.card.friendLinks).forEach([key, value] => { %>
             <div class="friend-link">
-                <a href="<%- url_for(theme.card.friendLinks[key]) %>"><%= key %></a>
+                <a href="<%- url_for(value) %>"><%= key %></a>
             </div>
             <% }); %>
         </div>
