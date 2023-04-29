@@ -51,6 +51,13 @@
             <% } %>
         </div>
         <script src="<%- url_for("/js/main.js") %>"></script>
+        <script>
+            console.info("Welcome to Argvchs' blog!");
+            if (!window.hasOwnProperty("ontouchstart")) {
+                let html = '<canvas id="fireworks" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 32767"></canvas><script src="https://static-argvchs.netlify.app/js/fireworks.min.js"><\/script>';
+                document.body.append(document.createRange().createContextualFragment(html));
+            }
+        </script>
         <% if (type === "post" && page.comments) { %>
         <%- partial("comment") %>
         <% } %>
