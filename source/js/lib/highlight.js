@@ -7,12 +7,15 @@ mixins.highlight = {
         this.renderers.push(this.highlight);
     },
     methods: {
+        sleep(time) {
+            return new Promise(resolve => setTimeout(resolve, time));
+        },
         highlight() {
             let codes = document.querySelectorAll("pre");
             for (let i of codes) {
-                let code = i.innerText,
-                    language = [...i.classList, ...i.firstChild.classList][0] || "plaintext",
-                    highlighted;
+                let code = i.innerText;
+                let language = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
+                let highlighted;
                 try {
                     highlighted = hljs.highlight(code, { language }).value;
                 } catch {
@@ -32,7 +35,7 @@ mixins.highlight = {
                     this.copying = true;
                     copycode.classList.add("copied");
                     await navigator.clipboard.writeText(code);
-                    await new Promise(resolve => setTimeout(resolve, 1000));
+                    await this.sleep(1000);
                     copycode.classList.remove("copied");
                     this.copying = false;
                 });
