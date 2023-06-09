@@ -571,7 +571,7 @@ body::-webkit-scrollbar-track {
     transform: scale(1.1);
 }
 .katex {
-    overflow: auto;
+    white-space: normal;
 }
 .language {
     background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
@@ -760,12 +760,8 @@ ol {
 }
 pre {
     border: 1px solid #ebeef5;
-    border: 1px solid #ebeef5;
-    border-radius: 15px;
     border-radius: 15px;
     box-shadow: 0 2px 12px 0 #0000001a;
-    box-shadow: 0 2px 12px 0 #0000001a;
-    margin: 25px 0;
     margin: 25px 0;
     white-space: normal;
 }
