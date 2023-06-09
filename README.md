@@ -8,7 +8,7 @@
 
 > 目前有 Full、Night 和 Maiden **两个**主题样式
 
-虽然更改后只有一种了，如果你想改颜色就在 `main.css` 里替换吧
+但是更改后只有一种了，如果你想改颜色就在 `main.css` 里替换吧
 
 # 1. 演示
 
@@ -205,7 +205,7 @@ preview:
 
 一般来说，缩略展示文档只需要在文档中添加 `<!-- more -->` 即可，缩略内容在显示全文中也会出现
 
-但考虑到不想把缩略内容放在正文里，就添加了此参数，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置
+但考虑到不想把缩略内容放在正文里，就添加了此参数，在 [Front-Matter](https://hexo.io/docs/front-matter) 里设置
 
 支持 Markdown 格式
 
@@ -216,11 +216,11 @@ description: |
 
 ### 3.3.6. 文章置顶
 
-在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `pinned` 作为置顶参数，越大越靠前，默认为 0
+在 [Front-Matter](https://hexo.io/docs/front-matter) 里设置 `pinned` 作为置顶参数，越大越靠前，默认为 0
 
 ### 3.3.7. 文章加密
 
-使用 AES 加密算法，在 [Front-Matter](https://hexo.io/zh-cn/docs/front-matter) 里设置 `secret` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/theme-particlex/hexo-helper-crypto)**
+使用 AES 加密算法，在 [Front-Matter](https://hexo.io/docs/front-matter) 里设置 `secret` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/theme-particlex/hexo-helper-crypto)**
 
 ```yaml
 # Article encryption
@@ -264,7 +264,7 @@ giscus:
     emitMetadata: 0
     inputPosition: bottom
     theme: preferred_color_scheme
-    lang: zh-CN
+    lang:
 ```
 
 ### 3.4.2. Gitalk
@@ -283,7 +283,7 @@ gitalk:
     repo: # The name of repository of store comments
     owner: # GitHub repo owner
     admin: # GitHub repo owner and collaborators, only these guys can initialize github issues
-    language: zh-CN # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
+    language: # en, zh-CN, zh-TW, es-ES, fr, ru, de, pl and ko are currently available
     proxy: # CORS proxy
 ```
 
@@ -315,7 +315,7 @@ waline:
         - link
     requiredMeta: # Set required meta field, e.g.: [nick] | [nick, mail]
         - nick
-    lang: zh-CN # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
+    lang: # Language, available values: en-US, zh-CN, zh-TW, pt-BR, ru-RU, jp-JP
     wordLimit: 0 # Word limit, no limit when setting to 0
     login: enable # Whether enable login, can choose from 'enable', 'disable' and 'force'
     pageSize: 10 # Comment per page
@@ -333,7 +333,7 @@ twikoo:
     envID:
     region:
     path: location.pathname
-    lang: zh-CN
+    lang:
 ```
 
 # 4. 写在最后
