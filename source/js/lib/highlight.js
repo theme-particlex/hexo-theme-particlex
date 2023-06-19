@@ -7,8 +7,8 @@ mixins.highlight = {
         this.renderers.push(this.highlight);
     },
     methods: {
-        sleep(time) {
-            return new Promise(resolve => setTimeout(resolve, time));
+        sleep(delay) {
+            return new Promise(resolve => setTimeout(resolve, delay));
         },
         highlight() {
             let codes = document.querySelectorAll("pre");
