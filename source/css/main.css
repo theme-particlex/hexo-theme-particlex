@@ -541,7 +541,7 @@ body::-webkit-scrollbar-track {
     border-right: 1px solid #ccc;
     color: #ccc;
     padding-right: 10px !important;
-    text-align: center;
+    text-align: right;
     vertical-align: top;
 }
 .icon {
