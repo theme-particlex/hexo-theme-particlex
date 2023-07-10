@@ -396,15 +396,6 @@
     min-height: 50px;
     text-align: center;
 }
-#menu-curtain {
-    background: #0003;
-    height: 100%;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1001;
-}
 #menu #mobile-menu .items {
     padding: 10px 0 20px;
     z-index: 1002;
@@ -423,6 +414,15 @@
     color: #555;
     cursor: pointer;
     z-index: 1003;
+}
+#menu-curtain {
+    background: #0003;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1001;
 }
 #menu.hidden {
     top: -50px;
@@ -534,6 +534,16 @@ body::-webkit-scrollbar-track {
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
+}
+.hljs-ln-code {
+    padding-left: 20px !important;
+}
+.hljs-ln-numbers {
+    border-right: 1px solid #ccc;
+    color: #ccc;
+    padding-right: 10px !important;
+    text-align: center;
+    vertical-align: top;
 }
 .icon {
     color: #5c6b72;
@@ -664,6 +674,24 @@ a:hover,
 .content .copycode:hover {
     opacity: 0.8;
 }
+audio,
+button,
+iframe,
+img,
+video,
+#home-head,
+#menu,
+.categories-tags a,
+.copycode,
+.friend-link a,
+.go-post,
+.hljs-ln-numbers,
+.icon-link a,
+.katex,
+.language,
+.page-current {
+    user-select: none;
+}
 b,
 strong {
     font-weight: bold;
@@ -683,23 +711,6 @@ body {
     font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
-}
-button,
-img,
-video,
-audio,
-iframe,
-#home-head,
-#menu,
-.katex,
-.go-post,
-.page-current,
-.categories-tags a,
-.friend-link a,
-.icon-link a,
-.language,
-.copycode {
-    user-select: none;
 }
 code {
     background: #bddcf76b;
@@ -774,22 +785,22 @@ code,
 .language {
     font-family: "Fira Code", "Noto Sans SC", monospace;
 }
-table {
+table:not(.hljs-ln) {
     margin: 15px 0;
 }
-table td:nth-child(even) {
+table:not(.hljs-ln) td:nth-child(even) {
     background: #c7e0fb4d;
 }
-table td:nth-child(odd) {
+table:not(.hljs-ln) td:nth-child(odd) {
     background: #d9e8ff4d;
 }
-table th {
+table:not(.hljs-ln) th {
     background: #a3ddfb;
 }
-table tr th,
-table tr td {
-    padding: 10px 20px;
+table:not(.hljs-ln) tr th,
+table:not(.hljs-ln) tr td {
     border-radius: 3px;
+    padding: 10px 20px;
 }
 ul li,
 ol li {

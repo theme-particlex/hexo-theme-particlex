@@ -29,6 +29,8 @@ mixins.highlight = {
                         <i class="fa-solid fa-clone fa-fw"></i>
                     </div>
                 `;
+                let content = i.querySelector(".code-content");
+                hljs.lineNumbersBlock(content, { singleLine: true });
                 let copycode = i.querySelector(".copycode");
                 copycode.addEventListener("click", async () => {
                     if (this.copying) return;
