@@ -774,13 +774,12 @@ pre {
     border-radius: 15px;
     box-shadow: 0 2px 12px 0 #0000001a;
     margin: 25px 0;
+    overflow: hidden;
     white-space: normal;
 }
 pre,
 code,
 .hljs,
-.highlight,
-.commit-tease-sha,
 .input,
 .language {
     font-family: "Fira Code", "Noto Sans SC", monospace;

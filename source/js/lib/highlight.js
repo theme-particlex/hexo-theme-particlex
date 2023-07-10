@@ -22,7 +22,7 @@ mixins.highlight = {
                     highlighted = code;
                 }
                 i.innerHTML = `
-                    <div class="code-content">${highlighted}</div>
+                    <div class="code-content hljs">${highlighted}</div>
                     <div class="language">${language}</div>
                     <div class="copycode">
                         <i class="fa-solid fa-copy fa-fw"></i>
