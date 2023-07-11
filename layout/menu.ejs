@@ -1,5 +1,5 @@
-<nav id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
-    <div id="desktop-menu">
+<div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
         <a class="title" href="<%- config.root %>">
             <span><%= config.title.toUpperCase() %></span>
         </a>
@@ -9,8 +9,8 @@
             <span>&ensp;<%= key %></span>
         </a>
         <% }); %>
-    </div>
-    <div id="mobile-menu">
+    </nav>
+    <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
             <i class="fa-solid fa-bars fa-fw"></i>
             <span>&emsp;<%= config.title.toUpperCase() %></span>
@@ -29,8 +29,8 @@
                 <% }); %>
             </div>
         </transition>
-    </div>
-</nav>
+    </nav>
+</div>
 <transition name="fade">
     <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
 </transition>
