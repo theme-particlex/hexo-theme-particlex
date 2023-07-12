@@ -36,12 +36,12 @@
                 </div>
             </transition>
             <%- partial("menu") %>
-            <transition name="into">
-                <div id="main">
+            <!-- <transition name="into"> -->
+            <div id="main" class="into-enter-from">
                     <%- partial(type) %>
                     <%- partial("footer") %>
                 </div>
-            </transition>
+            <!-- </transition> -->
             <% if (theme.preview.enable) { %>
             <transition name="fade">
                 <div id="preview" ref="preview" v-show="previewShow">
