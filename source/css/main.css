@@ -576,12 +576,10 @@ body::-webkit-scrollbar-track {
 .input:hover {
     background: #fff;
 }
-.into-enter-active,
-.into-leave-active {
+.into-enter-active {
     transition: opacity 0.5s, transform 0.5s;
 }
-.into-enter-from,
-.into-leave-to {
+.into-enter-from {
     opacity: 0;
     transform: scale(1.1);
 }

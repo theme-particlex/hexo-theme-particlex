@@ -13,7 +13,6 @@ const app = Vue.createApp({
     created() {
         window.addEventListener("load", () => {
             this.loading = false;
-            document.getElementById("main").className = "into-enter-active";
         });
     },
     mounted() {
