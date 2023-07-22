@@ -42,10 +42,6 @@
 #archives h3 {
     margin: 10px 0;
 }
-#card-div {
-    position: sticky;
-    top: 80px;
-}
 #crypto {
     margin: 50px 0;
 }
@@ -85,16 +81,26 @@
 #home-card {
     width: 300px;
 }
-#home-card .card-style {
+#home-card #card-style {
     background: #fff;
     border: none;
     border-radius: 10px;
     box-shadow: 0 0 20px #d9d9d980;
-    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    justify-content: center;
+    overflow: auto;
+    position: sticky;
     text-align: center;
+    top: 20vh;
     width: 300px;
 }
-#home-card .card-style .avatar {
+#home-card #card-div {
+    overflow: auto;
+    padding: 25px 0;
+}
+#home-card #card-div .avatar {
     border: #f1f1f1 solid 3px;
     border-radius: 50%;
     height: 140px;
@@ -102,50 +108,50 @@
     text-align: center;
     width: 140px;
 }
-#home-card .card-style .avatar img {
+#home-card #card-div .avatar img {
     border-radius: 50%;
     height: 100%;
     width: 100%;
 }
-#home-card .card-style .avatar:hover img {
+#home-card #card-div .avatar:hover img {
     transform: rotate(360deg);
 }
-#home-card .card-style .description {
+#home-card #card-div .description {
     margin: 20px auto;
     width: 85%;
 }
-#home-card .card-style .friend-links .friend-link {
+#home-card #card-div .friend-links .friend-link {
     margin-bottom: 5px;
 }
-#home-card .card-style .friend-links a {
+#home-card #card-div .friend-links a {
     border-radius: 5px;
     color: #5c6b72;
     display: block;
     padding: 8px 0;
 }
-#home-card .card-style .icon-links .icon-link {
+#home-card #card-div .icon-links .icon-link {
     margin: 5px;
 }
-#home-card .card-style .icon-links a {
+#home-card #card-div .icon-links a {
     border-radius: 5px;
     color: #5c6b72;
     font-size: 18px;
     padding: 5px;
 }
-#home-card .card-style .icon-links a:hover,
-#home-card .card-style .friend-links a:hover,
+#home-card #card-div .icon-links a:hover,
+#home-card #card-div .friend-links a:hover,
 #home-posts .page-current .page-num:hover {
     background: #66afef;
     color: #fff;
 }
-#home-card .card-style .icon-links,
-#home-card .card-style .friend-links {
+#home-card #card-div .icon-links,
+#home-card #card-div .friend-links {
     border-top: #cdcdcd solid 1px;
     margin: 10px auto;
     padding-top: 10px;
     width: 85%;
 }
-#home-card .card-style .name {
+#home-card #card-div .name {
     font-size: 16px;
     font-weight: bold;
     margin: 20px auto;
