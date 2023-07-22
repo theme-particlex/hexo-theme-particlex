@@ -36,12 +36,10 @@
                 </div>
             </transition>
             <%- partial("menu") %>
-            <transition name="into">
-                <div id="main" v-show="!loading">
-                    <%- partial(type) %>
-                    <%- partial("footer") %>
-                </div>
-            </transition>
+            <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+                <%- partial(type) %>
+                <%- partial("footer") %>
+            </div>
             <% if (theme.preview.enable) { %>
             <transition name="fade">
                 <div id="preview" ref="preview" v-show="previewShow">
