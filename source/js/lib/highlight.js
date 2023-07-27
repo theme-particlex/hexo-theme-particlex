@@ -13,7 +13,7 @@ mixins.highlight = {
         highlight() {
             let codes = document.querySelectorAll("pre");
             for (let i of codes) {
-                let code = i.innerText;
+                let code = i.textContent;
                 let language = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
                 let highlighted;
                 try {
