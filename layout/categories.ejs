@@ -1,12 +1,19 @@
 <div id="archives">
     <% let posts = []; %>
     <div class="categories-tags">
-        <% site.categories.data.forEach(category => { %>
+        <%
+            let last_categories_id = -1;
+            site.categories.data.forEach(category => {
+        %>
         <%
             const color = is_category(category.name)
                 ? ["linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"]
                 : theme.categorycolors;
             let id = Math.floor(Math.random() * color.length);
+            if ( last_categories_id == id) {
+                id = (id + 1) % color.length;
+            }
+            last_categories_id = id;
         %>
         <span>
             <a href="<%- url_for(category.path) %>" style="background: <%- color[id] %>">
@@ -48,11 +55,18 @@
                     <span class="icon">
                         <i class="fa-solid fa-tags fa-fw"></i>
                     </span>
-                    <% post.tags.data.forEach(tag => { %>
+                    <%
+                        let last_tags_id = -1;
+                        post.tags.data.forEach(tag => {
+                    %>
                     <span class="tag">
                         <%
                             const color = theme.tagcolors;
                             let id = Math.floor(Math.random() * color.length);
+                            if(last_tags_id == id){
+                                id = (id + 1) % color.length;
+                            }
+                            last_tags_id = id;
                         %>
                         <a href="<%- url_for(tag.path) %>" style="color: <%- color[id] %>"><%= tag.name %></a>
                     </span>
