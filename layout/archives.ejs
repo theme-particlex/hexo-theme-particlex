@@ -34,16 +34,10 @@
                         <% post.tags.data.forEach(tag => { %>
                         <span class="tag">
                             <%
-                                const color = [
-                                    "color: #ffa2c4",
-                                    "color: #00bcd4",
-                                    "color: #03a9f4",
-                                    "color: #00a596",
-                                    "color: #ff7d73",
-                                ];
+                                const color = theme.tagcolors;
                                 let id = Math.floor(Math.random() * color.length);
                             %>
-                            <a href="<%- url_for(tag.path) %>" style="<%- color[id] %>"><%= tag.name %></a>
+                            <a href="<%- url_for(tag.path) %>" style="color: <%- color[id] %>"><%= tag.name %></a>
                         </span>
                         <% }); %>
                     </span>

@@ -5,7 +5,7 @@
         <%
             const color = is_category(category.name)
                 ? ["linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"]
-                : ["#ffa2c4", "#00bcd4", "#03a9f4", "#00a596", "#ff7d73"];
+                : theme.categorycolors;
             let id = Math.floor(Math.random() * color.length);
         %>
         <span>
@@ -51,16 +51,10 @@
                     <% post.tags.data.forEach(tag => { %>
                     <span class="tag">
                         <%
-                            const color = [
-                                "color: #ffa2c4",
-                                "color: #00bcd4",
-                                "color: #03a9f4",
-                                "color: #00a596",
-                                "color: #ff7d73",
-                            ];
+                            const color = theme.tagcolors;
                             let id = Math.floor(Math.random() * color.length);
                         %>
-                        <a href="<%- url_for(tag.path) %>" style="<%- color[id] %>"><%= tag.name %></a>
+                        <a href="<%- url_for(tag.path) %>" style="color: <%- color[id] %>"><%= tag.name %></a>
                     </span>
                     <% }); %>
                 </span>

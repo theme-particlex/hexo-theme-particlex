@@ -11,6 +11,11 @@ favicon: /images/favicon.png
 background:
     - /images/background.jpg
 
+# List of optional colors for category and tag
+categorycolors: ["#ffa2c4", "#00bcd4", "#03a9f4", "#00a596", "#ff7d73"]
+tagscolors: ["#ffa2c4", "#00bcd4", "#03a9f4", "#00a596", "#ff7d73"]
+
+
 # ParticleX theme icon is adopts the Font Awesome 6
 # https://fontawesome.com
 
