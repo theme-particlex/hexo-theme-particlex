@@ -45,11 +45,11 @@
 #crypto {
     margin: 50px 0;
 }
-#crypto.fail {
+#crypto.failure {
     border-color: #ea4a5a;
     color: #ea4a5a;
 }
-#crypto.fail:focus {
+#crypto.failure:focus {
     box-shadow: 0 0 0 3px #ea4a5a4d;
 }
 #crypto.success {
