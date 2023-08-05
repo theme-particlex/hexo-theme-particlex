@@ -31,20 +31,15 @@
                         <span class="icon">
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
-                        <%
-                            let last_tags_id = -1;
-                            post.tags.data.forEach(tag => {
-                        %>
+                        <% let prev; %>
+                        <% post.tags.data.forEach(tag => { %>
                         <span class="tag">
                             <%
-                                const color = theme.tagcolors;
-                                let id = Math.floor(Math.random() * color.length);
-                                if(last_tags_id == id){
-                                    id = (id + 1) % color.length;
-                                }
-                                last_tags_id = id;
+                                const colors = theme.colors.filter(color => color !== prev);
+                                let id = Math.floor(Math.random() * colors.length);
+                                prev = colors[id];
                             %>
-                            <a href="<%- url_for(tag.path) %>" style="color: <%- color[id] %>"><%= tag.name %></a>
+                            <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>"><%= tag.name %></a>
                         </span>
                         <% }); %>
                     </span>

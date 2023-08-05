@@ -1,22 +1,17 @@
 <div id="archives">
     <% let posts = []; %>
     <div class="categories-tags">
+        <% let prev; %>
+        <% site.tags.data.forEach(tag => { %>
         <%
-            let last_tags_id = -1;
-            site.tags.data.forEach(tag => {
-        %>
-        <%
-            const color = is_tag(tag.name)
+            const colors = is_tag(tag.name)
                 ? ["linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"]
-                : theme.tagcolors;
-            let id = Math.floor(Math.random() * color.length);
-            if(last_tags_id == id){
-                id = (id + 1) % color.length;
-            }
-            last_tags_id = id;
+                : theme.colors.filter(color => color !== prev);
+            let id = Math.floor(Math.random() * colors.length);
+            prev = colors[id];
         %>
         <span>
-            <a href="<%- url_for(tag.path) %>" style="background: <%- color[id] %>">
+            <a href="<%- url_for(tag.path) %>" style="background: <%- colors[id] %>">
                 <span class="icon">
                     <i class="fa-solid fa-tags fa-fw"></i>
                 </span>
@@ -40,7 +35,7 @@
                 <h3><%= post.title %></h3>
             </a>
             <div class="info">
-                <% if (post.categories && post.categories.data.length){ %>
+                <% if (post.categories && post.categories.data.length !== 0) { %>
                 <span class="category">
                     <a href="<%- url_for(post.categories.data[0].path) %>">
                         <span class="icon">
@@ -55,20 +50,15 @@
                     <span class="icon">
                         <i class="fa-solid fa-tags fa-fw"></i>
                     </span>
-                    <%
-                        let last_tags_id = -1;
-                        post.tags.data.forEach(tag => {
-                    %>
+                    <% let prev; %>
+                    <% post.tags.data.forEach(tag => { %>
                     <span class="tag">
                         <%
-                            const color = theme.tagcolors;
-                            let id = Math.floor(Math.random() * color.length);
-                            if(last_tags_id == id){
-                                id = (id + 1) % color.length;
-                            }
-                            last_tags_id = id;
+                            const colors = theme.colors.filter(color => color !== prev);
+                            let id = Math.floor(Math.random() * colors.length);
+                            prev = colors[id];
                         %>
-                        <a href="<%- url_for(tag.path) %>" style="color: <%- color[id] %>"><%= tag.name %></a>
+                        <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>"><%= tag.name %></a>
                     </span>
                     <% }); %>
                 </span>
