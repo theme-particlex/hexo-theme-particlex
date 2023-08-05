@@ -79,6 +79,17 @@ favicon: /images/favicon.png
 # Home page background image
 background:
     - /images/background.jpg
+
+# Loading image
+loading: /images/loading.gif
+
+# Optional colors for category and tag
+colors:
+    - "#ffa2c4"
+    - "#00bcd4"
+    - "#03a9f4"
+    - "#00a596"
+    - "#ff7d73"
 ```
 
 ## 3.2. 内容配置
