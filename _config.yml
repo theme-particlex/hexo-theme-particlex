@@ -1,7 +1,21 @@
 # ParticleX Configuration
 # https://github.com/theme-particlex/hexo-theme-particlex
 
-# Avatar image
+theme: particlex
+
+highlight:
+    enable: false
+prismjs:
+    enable: false
+
+archive_generator:
+    enabled: true
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
+
+## Avatar image
 avatar: /images/avatar.jpg
 
 # Favicon
@@ -56,11 +70,11 @@ card:
         ...
     iconLinks:
     friendLinks:
-        Argvchs: https://argvchs.github.io
+        #Argvchs: https://argvchs.github.io
 
 # Footer info
 footer:
-    since: 2022
+    since: 2023
     # Customize the server domain name ICP
     ICP:
         enable: false
@@ -101,10 +115,10 @@ search:
 giscus:
     enable: false
     src: https://giscus.app/client.js
-    repo:
-    repoID:
-    category:
-    categoryID:
+    repo: I-like-magic/blog-comments
+    repoID: R_kgDOKJlmJw
+    category: Announcements
+    categoryID: DIC_kwDOKJlmJ84CYvu8
     mapping: pathname
     strict: 0
     reactionsEnabled: 1
