@@ -15,7 +15,7 @@ archive_generator:
     monthly: false
     daily: false
 
-# Avatar image
+## Avatar image
 avatar: /images/avatar.jpg
 
 # Favicon
