@@ -1,12 +1,8 @@
 lockfileVersion: '6.0'
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   hexo-helper-crypto:
-    specifier: ^1.1.3
+    specifier: ^1.1.4
     version: 1.1.4
   hexo-renderer-ejs:
     specifier: ^2.0.0
@@ -74,7 +70,7 @@ packages:
     engines: {node: '>=0.10.0'}
     hasBin: true
     dependencies:
-      jake: 10.8.5
+      jake: 10.8.7
     dev: false
 
   /filelist@1.0.4:
@@ -101,8 +97,8 @@ packages:
       ejs: 3.1.9
     dev: false
 
-  /jake@10.8.5:
-    resolution: {integrity: sha512-sVpxYeuAhWt0OTWITwT98oyV0GsXyMlXCF+3L1SuafBVUIr/uILGRB+NqwkzhgXKvoJpDIpQvqkUALgdmQsQxw==}
+  /jake@10.8.7:
+    resolution: {integrity: sha512-ZDi3aP+fG/LchyBzUM804VjddnwfSfsdeYkwt8NcbKRvo4rFkjhs456iLFn3k2ZUWvNe4i48WACDbza8fhq2+w==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
@@ -131,3 +127,7 @@ packages:
     dependencies:
       has-flag: 4.0.0
     dev: false
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
