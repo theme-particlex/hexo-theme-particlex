@@ -22,6 +22,16 @@
         <meta name="keywords" content="<%- config.keywords %>" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
         <link rel="icon" href="<%- url_for(theme.favicon) %>" />
+        <script>
+            if (localStorage.theme === "dark" ||
+                (!("theme" in localStorage) &&
+                    window.matchMedia("(prefers-color-scheme: dark)").matches)
+            ) {
+                document.documentElement.classList.add("dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
+        </script>
         <%- partial("import", { type }) %>
     </head>
     <body>

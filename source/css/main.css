@@ -1,3 +1,12 @@
+:root {
+    --foreground-rgb: 30, 62, 63;
+    --background-rgb: 246, 248, 250;
+}
+
+:root.dark {
+    --foreground-rgb: 246, 248, 250;
+    --background-rgb: 5, 5, 5;
+}
 #archives {
     margin: auto;
     margin-top: 100px;
@@ -96,6 +105,10 @@
     top: 20vh;
     width: 300px;
 }
+:root.dark #home-card #card-style {
+    background: #1e1e1e;
+    box-shadow: 0 0 20px #00000080;
+}
 #home-card #card-div {
     overflow: auto;
     padding: 25px 0;
@@ -172,6 +185,9 @@
     width: 100vw;
     z-index: -1;
 }
+:root.dark #home-head #home-background {
+    filter: brightness(50%);
+}
 #home-head #home-info .info {
     align-items: center;
     border-radius: 50%;
@@ -181,31 +197,38 @@
 }
 #home-head #home-info .loop:nth-child(1) {
     animation: loop1 10s linear infinite;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(30deg);
 }
 #home-head #home-info .loop:nth-child(2) {
     animation: loop2 15s linear infinite;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(60deg);
 }
 #home-head #home-info .loop:nth-child(3) {
     animation: loop3 10s linear infinite;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(90deg);
 }
 #home-head #home-info .loop:nth-child(4) {
     animation: loop4 15s linear infinite;
-    background: #fff;
+    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(120deg);
+}
+#home-head #home-info .loop {
+    background: #fff;
+}
+
+:root.dark #home-head #home-info .loop {
+    background: #000;
 }
 #home-head #home-info,
 #home-posts {
@@ -256,6 +279,10 @@
     border-radius: 20px;
     box-shadow: 0 0 20px #d9d9d980;
     transition: box-shadow 0.25s, transform 0.25s;
+}
+:root.dark #home-posts .post {
+    background: #1e1e1e;
+    box-shadow: 0 0 20px #00000080;
 }
 #home-posts .post .category-and-date {
     color: #5c6b72;
@@ -338,7 +365,7 @@
 }
 #loading {
     align-items: center;
-    background: #fff;
+    background: rgb(var(--background-rgb));
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -384,6 +411,10 @@
     width: 100vw;
     z-index: 1004;
 }
+:root.dark #menu {
+    background: #111;
+    box-shadow: 0 -1px 10px 0 #0000004d;
+}
 #menu #desktop-menu {
     height: 50px;
 }
@@ -397,6 +428,13 @@
     color: #555;
     display: inline-block;
     margin-left: 30px;
+}
+#menu #desktop-menu .theme-switcher {
+    color: #555;
+    position: absolute;
+    right: 20px;
+    transform: scale(1.5) translate(-50%, 85%);
+    cursor: pointer;
 }
 #menu #mobile-menu {
     min-height: 50px;
@@ -413,6 +451,7 @@
     min-width: 200px;
     width: 80%;
 }
+#menu #mobile-menu .items,
 #menu #mobile-menu .items a {
     color: #555;
 }
@@ -420,6 +459,14 @@
     color: #555;
     cursor: pointer;
     z-index: 1003;
+}
+:root.dark #menu #desktop-menu .title,
+:root.dark #menu #desktop-menu a,
+:root.dark #menu #desktop-menu .theme-switcher,
+:root.dark #menu #mobile-menu .items,
+:root.dark #menu #mobile-menu .items a,
+:root.dark #menu #mobile-menu .title {
+    color: #eee;
 }
 #menu-curtain {
     background: #0003;
@@ -437,10 +484,21 @@
     background: #0003;
 }
 #menu.menu-color #desktop-menu a,
+#menu.menu-color #desktop-menu .theme-switcher,
 #menu.menu-color #mobile-menu a,
 #menu.menu-color #mobile-menu .title {
     color: #fff;
 }
+:root.dark #menu.menu-color {
+    background: #0003;
+}
+
+/* :root.dark #menu.menu-color #desktop-menu a,
+:root.dark #menu.menu-color #desktop-menu .theme-switcher,
+:root.dark #menu.menu-color #mobile-menu a,
+:root.dark #menu.menu-color #mobile-menu .title {
+    color: #000;
+} */
 #preview {
     align-items: center;
     background-color: #fffc;
@@ -665,6 +723,9 @@ body::-webkit-scrollbar-track {
     background: #e6efff;
     border-radius: 100px;
 }
+:root.dark ::-webkit-scrollbar-track {
+    background: #111;
+}
 ::selection {
     background-color: #3392ff2a;
     color: unset;
@@ -709,8 +770,11 @@ blockquote {
     padding: 0 15px;
 }
 body {
-    background: #f6f8fa;
-    color: #1e3e3f;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+        background: rgb(var(--background-rgb));
+        color: rgb(var(--foreground-rgb));
     font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
@@ -730,7 +794,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: #1e3e3f;
+    color: rgb(var(--foreground-rgb));
     font-weight: bold;
     margin: 15px 0;
 }
@@ -927,6 +991,9 @@ ol li {
         margin: auto;
         width: 350px;
     }
+        :root.dark #home-head #home-info .info {
+            background: #000000a6;
+        }
     #home-head #home-info .info .wrap {
         padding: 50px;
     }
