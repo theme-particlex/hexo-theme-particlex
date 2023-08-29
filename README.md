@@ -73,9 +73,6 @@ archive_generator:
 # Avatar image
 avatar: /images/avatar.jpg
 
-# Favicon
-favicon: /images/favicon.png
-
 # Home page background image
 background:
     - /images/background.jpg
