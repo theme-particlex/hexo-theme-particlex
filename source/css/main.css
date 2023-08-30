@@ -347,6 +347,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    word-break: keep-all;
     z-index: 2147483647;
 }
 #loading h2,
@@ -473,7 +474,6 @@
     position: relative;
     scrollbar-color: #8ab5ff #e6efff;
     scrollbar-width: thin;
-    word-break: keep-all;
     word-wrap: break-word;
 }
 .article {
@@ -721,9 +721,6 @@ code {
     line-height: 2.5;
     padding: 4px 8px;
 }
-h1 {
-    font-size: 30px;
-}
 h1,
 h2,
 h3,
@@ -733,6 +730,10 @@ h6 {
     color: #1e3e3f;
     font-weight: bold;
     margin: 15px 0;
+    word-break: keep-all;
+}
+h1 {
+    font-size: 30px;
 }
 h2 {
     font-size: 27px;
