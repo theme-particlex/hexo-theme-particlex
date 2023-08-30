@@ -214,8 +214,10 @@
 #home-posts .page-current {
     align-items: center;
     display: flex;
+    font-weight: bold;
     justify-content: center;
     margin-top: 50px;
+    text-align: center;
     width: 100%;
 }
 #home-posts .page-current .current {
@@ -228,11 +230,6 @@
     padding: 5px;
     width: 35px;
 }
-#home-posts .page-current .page-index {
-    font-weight: bold;
-    text-align: center;
-    width: 300px;
-}
 #home-posts .page-current .page-num,
 #home-posts .page-current .page-omit {
     border-radius: 5px;
@@ -242,11 +239,6 @@
     margin: 0 7px;
     padding: 5px;
     width: 35px;
-}
-#home-posts .page-current .prev,
-#home-posts .page-current .next {
-    text-align: center;
-    width: 50px;
 }
 #home-posts .page-current a {
     color: #999;
