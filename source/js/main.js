@@ -55,7 +55,17 @@ const app = Vue.createApp({
          * @param {boolean} dark 
          */
         setDarkMode(dark) {
-            dark ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
+            if (dark) {
+                document.documentElement.classList.add("dark");
+                document
+                .getElementById("highlight-style-dark")
+                .removeAttribute("disabled");
+            } else {
+                document.documentElement.classList.remove("dark");
+                document
+                .getElementById("highlight-style-dark")
+                .setAttribute("disabled", "");
+            }
         },
         handleThemeSwitch() {
             this.theme = ((theme) => {
