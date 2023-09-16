@@ -2,7 +2,6 @@
     --foreground-rgb: 30, 62, 63;
     --background-rgb: 246, 248, 250;
 }
-
 :root.dark {
     --foreground-rgb: 246, 248, 250;
     --background-rgb: 5, 5, 5;
@@ -197,28 +196,24 @@
 }
 #home-head #home-info .loop:nth-child(1) {
     animation: loop1 10s linear infinite;
-    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(30deg);
 }
 #home-head #home-info .loop:nth-child(2) {
     animation: loop2 15s linear infinite;
-    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(60deg);
 }
 #home-head #home-info .loop:nth-child(3) {
     animation: loop3 10s linear infinite;
-    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(90deg);
 }
 #home-head #home-info .loop:nth-child(4) {
     animation: loop4 15s linear infinite;
-    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(120deg);
@@ -477,21 +472,14 @@
     background: #0003;
 }
 #menu.menu-color #desktop-menu a,
-#menu.menu-color #desktop-menu .theme-switcher,
 #menu.menu-color #mobile-menu a,
-#menu.menu-color #mobile-menu .title {
+#menu.menu-color #mobile-menu .title,
+#menu.menu-color .theme-switcher {
     color: #fff;
 }
 :root.dark #menu.menu-color {
     background: #0003;
 }
-
-/* :root.dark #menu.menu-color #desktop-menu a,
-:root.dark #menu.menu-color #desktop-menu .theme-switcher,
-:root.dark #menu.menu-color #mobile-menu a,
-:root.dark #menu.menu-color #mobile-menu .title {
-    color: #000;
-} */
 #preview {
     align-items: center;
     background-color: #fffc;
@@ -762,11 +750,12 @@ blockquote {
     padding: 0 15px;
 }
 body {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
-        background: rgb(var(--background-rgb));
-        color: rgb(var(--foreground-rgb));
+    transition-property: color, background-color, border-color, text-decoration-color,
+        fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background: rgb(var(--background-rgb));
+    color: rgb(var(--foreground-rgb));
     font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
@@ -984,9 +973,9 @@ ol li {
         margin: auto;
         width: 350px;
     }
-        :root.dark #home-head #home-info .info {
-            background: #000000a6;
-        }
+    :root.dark #home-head #home-info .info {
+        background: #000000a6;
+    }
     #home-head #home-info .info .wrap {
         padding: 50px;
     }

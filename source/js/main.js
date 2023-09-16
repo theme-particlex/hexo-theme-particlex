@@ -8,21 +8,21 @@ const app = Vue.createApp({
             menuColor: false,
             scrollTop: 0,
             renderers: [],
-            theme: localStorage.getItem("theme") || "auto",
+            theme: localStorage.getItem("theme"),
         };
     },
     created() {
         window.addEventListener("load", () => {
             this.loading = false;
         });
-        if (this.theme === "auto")
-            this.isSystemDarkMode() ? this.setDarkMode(true) : this.setDarkMode(false);
-        else
-            this.theme === "dark" ? this.setDarkMode(true) : this.setDarkMode(false);
-        window.addEventListener("beforeunload", () => {
-            if (this.theme === "auto") localStorage.removeItem("theme");
-            else localStorage.setItem("theme", this.theme);
-        });
+        if (this.theme === null) {
+            let media = window.matchMedia("(prefers-color-scheme: dark)");
+            this.theme = media.matches ? "dark" : "light";
+        }
+        if (this.theme === "dark") {
+            document.documentElement.classList.add("dark");
+            document.querySelector("hljs-style-dark").setAttribute("disabled", "");
+        }
     },
     mounted() {
         window.addEventListener("scroll", this.handleScroll, true);
@@ -47,38 +47,11 @@ const app = Vue.createApp({
             }
             this.scrollTop = newScrollTop;
         },
-        isSystemDarkMode() {
-            return window.matchMedia("(prefers-color-scheme: dark)").matches;
-        },
-        /**
-         * @param {boolean} dark 
-         */
-        setDarkMode(dark) {
-            if (dark) {
-                document.documentElement.classList.add("dark");
-                document
-                .getElementById("highlight-style-dark")
-                .removeAttribute("disabled");
-            } else {
-                document.documentElement.classList.remove("dark");
-                document
-                .getElementById("highlight-style-dark")
-                .setAttribute("disabled", "");
-            }
-        },
         handleThemeSwitch() {
-            this.theme = ((theme) => {
-                switch (theme) {
-                case "auto": // auto -> light
-                    this.setDarkMode(false);
-                    return "light";
-                case "light": // light -> dark
-                    this.setDarkMode(true)
-                    return "dark";
-                case "dark": // dark -> auto
-                    this.isSystemDarkMode() ? this.setDarkMode(true) : this.setDarkMode(false);
-                    return "auto";
-            }})(this.theme)
+            this.theme = this.theme === "light" ? "dark" : "light";
+            localStorage.setItem("theme", this.theme);
+            document.documentElement.classList.toggle("dark");
+            document.querySelector("hljs-style-dark").toggleAttribute("disabled");
         },
     },
 });

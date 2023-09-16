@@ -9,8 +9,7 @@
             <span>&ensp;<%= key %></span>
         </a>
         <% }); %>
-        <i class="fa-solid fa-fw theme-switcher" :class="theme=='auto'?'fa-circle-half-stroke':theme=='dark'?'fa-moon':'fa-sun'"
-            @click="handleThemeSwitch"></i>
+        <i :class="[theme === 'light' ? 'fa-sun' : 'fa-moon', 'fa-solid', 'fa-fw', 'theme-switcher']" @click="handleThemeSwitch"></i>
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -29,13 +28,12 @@
                     </div>
                 </a>
                 <% }); %>
-                <div class="item" @click="handleThemeSwitch">
+                <div class="item theme-switcher" @click="handleThemeSwitch">
                     <div style="min-width: 20px; max-width: 50px; width: 10%">
-                        <i class="fa-solid fa-fw theme-switcher"
-                            :class="theme=='auto'?'fa-circle-half-stroke':theme=='dark'?'fa-moon':'fa-sun'"></i>
+                        <i :class="[theme === 'light' ? 'fa-sun' : 'fa-moon', 'fa-solid', 'fa-fw']"></i>
                     </div>
                     <div style="min-width: 100px; max-width: 150%; width: 20%">
-                        Theme: {{ theme=='auto'?'Auto':theme=='dark'?'Dark':'Light' }}
+                        Theme: {{ theme === 'light' ? 'Light' : 'Dark' }}
                     </div>
                 </div>
             </div>

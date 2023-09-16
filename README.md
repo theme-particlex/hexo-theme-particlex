@@ -187,6 +187,7 @@ polyfill:
 highlight:
     enable: true
     style: github
+    styleDark: github-dark
 ```
 
 ### 3.3.3. 数学渲染
