@@ -472,9 +472,10 @@
     background: #0003;
 }
 #menu.menu-color #desktop-menu a,
+#menu.menu-color #desktop-menu .theme-switcher,
 #menu.menu-color #mobile-menu a,
-#menu.menu-color #mobile-menu .title,
-#menu.menu-color .theme-switcher {
+#menu.menu-color #mobile-menu .theme-switcher,
+#menu.menu-color #mobile-menu .title {
     color: #fff;
 }
 :root.dark #menu.menu-color {
