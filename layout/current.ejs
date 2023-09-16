@@ -1,48 +1,25 @@
 <div class="page-current">
-    <div class="prev">
-        <% if (page.current !== 1) { %>
-        <a class="page-num" href="<%- url_for(page.prev_link) %>">
-            <i class="fa-solid fa-caret-left fa-fw"></i>
-        </a>
-        <% } %>
-    </div>
-    <div class="page-index">
-        <% if (page.current !== 1) { %>
-        <span>
-            <% if (page.current - 3 >= 1) { %>
-            <a class="page-num" href="<%- config.root %>">1</a>
-            <span class="page-omit">...</span>
-            <% } %>
-            <% if (page.current - 2 >= 1) { %>
-            <% if (page.current - 2 === 1) { %>
-            <a class="page-num" href="<%- config.root %>">1</a>
-            <% } %>
-            <% if (page.current - 2 !== 1) { %>
-            <a class="page-num" href="<%- url_for("page/" + (page.current - 2)) %>"><%= page.current - 2 %></a>
-            <% } %>
-            <% } %>
-            <a class="page-num" href="<%- url_for(page.prev_link) %>"><%= page.prev %></a>
-        </span>
-        <% } %>
-        <span class="current"><%= page.current %></span>
-        <% if (page.current !== page.total) { %>
-        <span>
-            <a class="page-num" href="<%- url_for(page.next_link) %>"><%= page.next %></a>
-            <% if (page.current + 2 <= page.total) { %>
-            <a class="page-num" href="<%- url_for("page/" + (page.current + 2)) %>"><%= page.current + 2 %></a>
-            <% } %>
-            <% if (page.current + 3 <= page.total) { %>
-            <span class="page-omit">...</span>
-            <a class="page-num" href="<%- url_for("page/" + page.total) %>"><%= page.total %></a>
-            <% } %>
-        </span>
-        <% } %>
-    </div>
-    <div class="next">
-        <% if (page.current !== page.total) { %>
-        <a class="page-num" href="<%- url_for(page.next_link) %>">
-            <i class="fa-solid fa-caret-right fa-fw"></i>
-        </a>
-        <% } %>
-    </div>
+    <% if (page.current !== 1) { %>
+    <a class="page-num" href="<%- url_for(page.prev_link) %>">
+        <i class="fa-solid fa-caret-left fa-fw"></i>
+    </a>
+    <a class="page-num" href="<%- config.root %>">1</a>
+    <span class="page-omit">...</span>
+    <% } %>
+    <span class="current"><%= page.current %></span>
+    <% if (page.current + 1 <= page.total) { %>
+    <a class="page-num" href="<%- url_for("page/" + (page.current + 1)) %>"><%= page.current + 1 %></a>
+    <% } %>
+    <% if (page.current + 2 <= page.total) { %>
+    <a class="page-num" href="<%- url_for("page/" + (page.current + 2)) %>"><%= page.current + 2 %></a>
+    <% } %>
+    <% if (page.current + 3 <= page.total) { %>
+    <span class="page-omit">...</span>
+    <a class="page-num" href="<%- url_for("page/" + page.total) %>"><%= page.total %></a>
+    <% } %>
+    <% if (page.current !== page.total) { %>
+    <a class="page-num" href="<%- url_for(page.next_link) %>">
+        <i class="fa-solid fa-caret-right fa-fw"></i>
+    </a>
+    <% } %>
 </div>

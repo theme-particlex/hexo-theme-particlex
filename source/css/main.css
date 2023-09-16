@@ -97,12 +97,12 @@
     box-shadow: 0 0 20px #d9d9d980;
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    max-height: 80vh;
     justify-content: center;
     overflow: auto;
     position: sticky;
     text-align: center;
-    top: 20vh;
+    top: 10vh;
     width: 300px;
 }
 :root.dark #home-card #card-style {
@@ -237,8 +237,10 @@
 #home-posts .page-current {
     align-items: center;
     display: flex;
+    font-weight: bold;
     justify-content: center;
     margin-top: 50px;
+    text-align: center;
     width: 100%;
 }
 #home-posts .page-current .current {
@@ -251,11 +253,6 @@
     padding: 5px;
     width: 35px;
 }
-#home-posts .page-current .page-index {
-    font-weight: bold;
-    text-align: center;
-    width: 300px;
-}
 #home-posts .page-current .page-num,
 #home-posts .page-current .page-omit {
     border-radius: 5px;
@@ -265,11 +262,6 @@
     margin: 0 7px;
     padding: 5px;
     width: 35px;
-}
-#home-posts .page-current .prev,
-#home-posts .page-current .next {
-    text-align: center;
-    width: 50px;
 }
 #home-posts .page-current a {
     color: #999;
@@ -374,6 +366,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    word-break: keep-all;
     z-index: 2147483647;
 }
 #loading h2,
@@ -531,7 +524,6 @@
     position: relative;
     scrollbar-color: #8ab5ff #e6efff;
     scrollbar-width: thin;
-    word-break: keep-all;
     word-wrap: break-word;
 }
 .article {
@@ -785,9 +777,6 @@ code {
     line-height: 2.5;
     padding: 4px 8px;
 }
-h1 {
-    font-size: 30px;
-}
 h1,
 h2,
 h3,
@@ -797,6 +786,10 @@ h6 {
     color: rgb(var(--foreground-rgb));
     font-weight: bold;
     margin: 15px 0;
+    word-break: keep-all;
+}
+h1 {
+    font-size: 30px;
 }
 h2 {
     font-size: 27px;

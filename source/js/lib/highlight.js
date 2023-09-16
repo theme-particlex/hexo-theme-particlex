@@ -14,7 +14,8 @@ mixins.highlight = {
             let codes = document.querySelectorAll("pre");
             for (let i of codes) {
                 let code = i.textContent;
-                let language = [...i.classList, ...i.firstChild.classList][0] || "plaintext";
+                let language =
+                    [...i.classList, ...i.firstChild.classList][0] || "plaintext";
                 let highlighted;
                 try {
                     highlighted = hljs.highlight(code, { language }).value;
@@ -26,7 +27,7 @@ mixins.highlight = {
                     <div class="language">${language}</div>
                     <div class="copycode">
                         <i class="fa-solid fa-copy fa-fw"></i>
-                        <i class="fa-solid fa-clone fa-fw"></i>
+                        <i class="fa-solid fa-check fa-fw"></i>
                     </div>
                 `;
                 let content = i.querySelector(".code-content");

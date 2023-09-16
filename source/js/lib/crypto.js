@@ -8,7 +8,9 @@ mixins.crypto = {
                 content = this.$refs.content;
             let { encrypted, shasum } = input.dataset;
             try {
-                let decrypted = CryptoJS.AES.decrypt(encrypted, value).toString(CryptoJS.enc.Utf8);
+                let decrypted = CryptoJS.AES.decrypt(encrypted, value).toString(
+                    CryptoJS.enc.Utf8
+                );
                 if (CryptoJS.SHA256(decrypted).toString() === shasum) {
                     this.cryptoStatus = "success";
                     content.innerHTML = decrypted;
