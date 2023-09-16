@@ -26,6 +26,9 @@
 <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.8/katex.min.css" />
 <script src="<%- url_for("/js/lib/math.js") %>"></script>
 <% } %>
+<% if (theme.darkmode.enable) { %>
+<script src="<%- url_for("/js/lib/darkmode.js") %>"></script>
+<% } %>
 <% if (theme.preview.enable) { %>
 <script src="<%- url_for("/js/lib/preview.js") %>"></script>
 <% } %>

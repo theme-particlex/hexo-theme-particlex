@@ -9,7 +9,9 @@
             <span>&ensp;<%= key %></span>
         </a>
         <% }); %>
+        <% if (theme.darkmode.enable) { %>
         <i :class="[theme === 'light' ? 'fa-sun' : 'fa-moon', 'fa-solid', 'fa-fw', 'theme-switcher']" @click="handleThemeSwitch"></i>
+        <% } %>
     </nav>
     <nav id="mobile-menu">
         <div class="title" @click="showMenuItems = !showMenuItems">
@@ -28,6 +30,7 @@
                     </div>
                 </a>
                 <% }); %>
+                <% if (theme.darkmode.enable) { %>
                 <div class="item theme-switcher" @click="handleThemeSwitch">
                     <div style="min-width: 20px; max-width: 50px; width: 10%">
                         <i :class="[theme === 'light' ? 'fa-sun' : 'fa-moon', 'fa-solid', 'fa-fw']"></i>
@@ -36,6 +39,7 @@
                         Theme: {{ theme === 'light' ? 'Light' : 'Dark' }}
                     </div>
                 </div>
+                <% } %>
             </div>
         </transition>
     </nav>

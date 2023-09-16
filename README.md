@@ -200,7 +200,17 @@ math:
     enable: false
 ```
 
-### 3.3.4. 图片预览
+### 3.3.4. 暗黑模式
+
+在导航栏里添加一个切换暗黑模式的按钮。
+
+```yaml
+# Darkmode
+darkmode:
+    enable: false
+```
+
+### 3.3.5. 图片预览
 
 简单的点击图片放大缩小的预览。
 
@@ -210,7 +220,7 @@ preview:
     enable: true
 ```
 
-### 3.3.5. 文章缩略
+### 3.3.6. 文章缩略
 
 一般来说，缩略展示文档只需要在文档中添加 `<!-- more -->` 即可，缩略内容在显示全文中也会出现。
 
@@ -223,11 +233,11 @@ description: |
     Normal _Italic_ **Strong**
 ```
 
-### 3.3.6. 文章置顶
+### 3.3.7. 文章置顶
 
 在 [Front-Matter](https://hexo.io/docs/front-matter) 里设置 `pinned` 作为置顶参数，越大越靠前，默认为 0。
 
-### 3.3.7. 文章加密
+### 3.3.8. 文章加密
 
 使用 AES 加密算法，在 [Front-Matter](https://hexo.io/docs/front-matter) 里设置 `secret` 作为密码，**使用请安装插件 [Hexo-Helper-Crypto](https://github.com/theme-particlex/hexo-helper-crypto)**。
 
@@ -237,7 +247,7 @@ crypto:
     enable: false
 ```
 
-### 3.3.8. 搜索
+### 3.3.9. 搜索
 
 嵌入到 Archives 中的搜索。
 

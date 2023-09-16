@@ -82,6 +82,10 @@ highlight:
 math:
     enable: false
 
+# Darkmode
+darkmode:
+    enable: false
+
 # Image preview
 preview:
     enable: true
