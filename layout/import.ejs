@@ -14,7 +14,7 @@
 />
 <link 
     rel="stylesheet"
-    id="highlight-style-dark"
+    id="hljs-style-dark"
     disabled
     href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/<%- theme.highlight.styleDark %>.min.css"
 />
@@ -25,6 +25,9 @@
 <script src="https://cdn.staticfile.org/KaTeX/0.16.8/contrib/auto-render.min.js"></script>
 <link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.8/katex.min.css" />
 <script src="<%- url_for("/js/lib/math.js") %>"></script>
+<% } %>
+<% if (theme.darkmode.enable) { %>
+<script src="<%- url_for("/js/lib/darkmode.js") %>"></script>
 <% } %>
 <% if (theme.preview.enable) { %>
 <script src="<%- url_for("/js/lib/preview.js") %>"></script>

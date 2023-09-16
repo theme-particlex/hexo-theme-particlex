@@ -43,7 +43,7 @@
     <input
         id="crypto"
         :class="['input', cryptoStatus]"
-        :disabled="cryptoStatus == 'success'"
+        :disabled="cryptoStatus === 'success'"
         ref="crypto"
         placeholder="文章被加密，请输入密码"
         data-encrypted="<%- CryptoJS.AES.encrypt(page.content, page.secret).toString() %>"
@@ -51,7 +51,7 @@
         v-model="crypto"
     />
     <transition name="fade">
-        <div class="content" ref="content" v-show="cryptoStatus == 'success'"></div>
+        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
     </transition>
     <% } else { %>
     <div class="content" v-pre>

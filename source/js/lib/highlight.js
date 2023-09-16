@@ -26,7 +26,7 @@ mixins.highlight = {
                     <div class="language">${language}</div>
                     <div class="copycode">
                         <i class="fa-solid fa-copy fa-fw"></i>
-                        <i class="fa-solid fa-clone fa-fw"></i>
+                        <i class="fa-solid fa-check fa-fw"></i>
                     </div>
                 `;
                 let content = i.querySelector(".code-content");

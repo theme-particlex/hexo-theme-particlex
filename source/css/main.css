@@ -2,7 +2,6 @@
     --foreground-rgb: 30, 62, 63;
     --background-rgb: 246, 248, 250;
 }
-
 :root.dark {
     --foreground-rgb: 246, 248, 250;
     --background-rgb: 5, 5, 5;
@@ -97,12 +96,12 @@
     box-shadow: 0 0 20px #d9d9d980;
     display: flex;
     flex-direction: column;
-    height: 60vh;
+    max-height: 80vh;
     justify-content: center;
     overflow: auto;
     position: sticky;
     text-align: center;
-    top: 20vh;
+    top: 10vh;
     width: 300px;
 }
 :root.dark #home-card #card-style {
@@ -197,28 +196,24 @@
 }
 #home-head #home-info .loop:nth-child(1) {
     animation: loop1 10s linear infinite;
-    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(30deg);
 }
 #home-head #home-info .loop:nth-child(2) {
     animation: loop2 15s linear infinite;
-    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(60deg);
 }
 #home-head #home-info .loop:nth-child(3) {
     animation: loop3 10s linear infinite;
-    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(90deg);
 }
 #home-head #home-info .loop:nth-child(4) {
     animation: loop4 15s linear infinite;
-    /* background: #fff; */
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(120deg);
@@ -237,8 +232,10 @@
 #home-posts .page-current {
     align-items: center;
     display: flex;
+    font-weight: bold;
     justify-content: center;
     margin-top: 50px;
+    text-align: center;
     width: 100%;
 }
 #home-posts .page-current .current {
@@ -251,11 +248,6 @@
     padding: 5px;
     width: 35px;
 }
-#home-posts .page-current .page-index {
-    font-weight: bold;
-    text-align: center;
-    width: 300px;
-}
 #home-posts .page-current .page-num,
 #home-posts .page-current .page-omit {
     border-radius: 5px;
@@ -265,11 +257,6 @@
     margin: 0 7px;
     padding: 5px;
     width: 35px;
-}
-#home-posts .page-current .prev,
-#home-posts .page-current .next {
-    text-align: center;
-    width: 50px;
 }
 #home-posts .page-current a {
     color: #999;
@@ -374,6 +361,7 @@
     position: fixed;
     top: 0;
     width: 100vw;
+    word-break: keep-all;
     z-index: 2147483647;
 }
 #loading h2,
@@ -486,19 +474,13 @@
 #menu.menu-color #desktop-menu a,
 #menu.menu-color #desktop-menu .theme-switcher,
 #menu.menu-color #mobile-menu a,
+#menu.menu-color #mobile-menu .theme-switcher,
 #menu.menu-color #mobile-menu .title {
     color: #fff;
 }
 :root.dark #menu.menu-color {
     background: #0003;
 }
-
-/* :root.dark #menu.menu-color #desktop-menu a,
-:root.dark #menu.menu-color #desktop-menu .theme-switcher,
-:root.dark #menu.menu-color #mobile-menu a,
-:root.dark #menu.menu-color #mobile-menu .title {
-    color: #000;
-} */
 #preview {
     align-items: center;
     background-color: #fffc;
@@ -531,7 +513,6 @@
     position: relative;
     scrollbar-color: #8ab5ff #e6efff;
     scrollbar-width: thin;
-    word-break: keep-all;
     word-wrap: break-word;
 }
 .article {
@@ -770,11 +751,12 @@ blockquote {
     padding: 0 15px;
 }
 body {
-    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 150ms;
-        background: rgb(var(--background-rgb));
-        color: rgb(var(--foreground-rgb));
+    transition-property: color, background-color, border-color, text-decoration-color,
+        fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    background: rgb(var(--background-rgb));
+    color: rgb(var(--foreground-rgb));
     font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
@@ -785,9 +767,6 @@ code {
     line-height: 2.5;
     padding: 4px 8px;
 }
-h1 {
-    font-size: 30px;
-}
 h1,
 h2,
 h3,
@@ -797,6 +776,10 @@ h6 {
     color: rgb(var(--foreground-rgb));
     font-weight: bold;
     margin: 15px 0;
+    word-break: keep-all;
+}
+h1 {
+    font-size: 30px;
 }
 h2 {
     font-size: 27px;
@@ -991,9 +974,9 @@ ol li {
         margin: auto;
         width: 350px;
     }
-        :root.dark #home-head #home-info .info {
-            background: #000000a6;
-        }
+    :root.dark #home-head #home-info .info {
+        background: #000000a6;
+    }
     #home-head #home-info .info .wrap {
         padding: 50px;
     }
