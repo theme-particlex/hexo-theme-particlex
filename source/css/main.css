@@ -358,7 +358,7 @@
 }
 #loading {
     align-items: center;
-    background: rgb(var(--background-rgb));
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -758,8 +758,8 @@ body {
         fill, stroke;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
-    background: rgb(var(--background-rgb));
-    color: rgb(var(--foreground-rgb));
+    background: var(--background-color);
+    color: var(--foreground-color);
     font: 500 14px Lexend, "Noto Sans SC", sans-serif;
     overflow-x: hidden;
     width: 100%;
@@ -776,7 +776,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: rgb(var(--foreground-rgb));
+    color: var(--foreground-color);
     font-weight: bold;
     margin: 15px 0;
     word-break: keep-all;
