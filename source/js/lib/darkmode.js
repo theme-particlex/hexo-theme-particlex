@@ -5,7 +5,7 @@ if (theme === null) {
 }
 if (theme === "dark") {
     document.documentElement.classList.add("dark");
-    document.querySelector("hljs-style-dark").setAttribute("disabled", "");
+    document.querySelector("#hljs-style-dark").toggleAttribute("disabled");
 }
 mixins.darkmode = {
     data() {
@@ -16,7 +16,7 @@ mixins.darkmode = {
             this.theme = this.theme === "light" ? "dark" : "light";
             localStorage.setItem("theme", this.theme);
             document.documentElement.classList.toggle("dark");
-            document.querySelector("hljs-style-dark").toggleAttribute("disabled");
+            document.querySelector("#hljs-style-dark").toggleAttribute("disabled");
         },
     },
 };
