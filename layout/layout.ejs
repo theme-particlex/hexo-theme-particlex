@@ -5,7 +5,7 @@
     if (is_category() || page.type === "categories") type = "categories";
     if (is_tag() || page.type === "tags") type = "tags";
     if (is_archive()) type = "archives";
-    let title = config.title;
+    let title = page.title + " | " + config.title;
     if (is_home()) title = config.title;
     if (is_post() || is_page()) title = page.title + " | " + config.title;
     if (is_category()) title = "Categories: " + page.category + " | " + config.title;
