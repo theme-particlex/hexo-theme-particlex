@@ -1,6 +1,6 @@
 <link rel="preconnect" href="https://cdn.staticfile.org" />
-<script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+<script src="https://cdn.staticfile.org/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.2/css/all.min.css" />
 <link rel="preconnect" href="https://fonts.loli.net" />
 <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
 <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
@@ -9,11 +9,11 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=<%- theme.polyfill.features %>"></script>
 <% } %>
 <% if (theme.highlight.enable) { %>
-<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
 <script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <link
     rel="stylesheet"
-    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/<%- theme.highlight.style %>.min.css"
+    href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/<%- theme.highlight.style %>.min.css"
 />
 <link 
     rel="stylesheet"
@@ -24,9 +24,9 @@
 <script src="<%- url_for("/js/lib/highlight.js") %>"></script>
 <% } %>
 <% if (theme.math.enable) { %>
-<script src="https://cdn.staticfile.org/KaTeX/0.16.8/katex.min.js"></script>
-<script src="https://cdn.staticfile.org/KaTeX/0.16.8/contrib/auto-render.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.8/katex.min.css" />
+<script src="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdn.staticfile.org/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/KaTeX/0.16.9/katex.min.css" />
 <script src="<%- url_for("/js/lib/math.js") %>"></script>
 <% } %>
 <% if (theme.darkmode.enable) { %>
@@ -36,7 +36,7 @@
 <script src="<%- url_for("/js/lib/preview.js") %>"></script>
 <% } %>
 <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
-<script src="https://cdn.staticfile.org/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script src="https://cdn.staticfile.org/crypto-js/4.2.0/crypto-js.min.js"></script>
 <script src="<%- url_for("/js/lib/crypto.js") %>"></script>
 <% } %>
 <% if (type === "archives" && theme.search.enable) { %>
@@ -48,12 +48,12 @@
 <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.8.0/gitalk.min.css" />
 <% } %>
 <% if (theme.waline.enable) { %>
-<script src="https://cdn.staticfile.org/waline/2.15.5/waline.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.5/waline.min.css" />
-<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.5/waline-meta.min.css" />
+<script src="https://cdn.staticfile.org/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://cdn.staticfile.org/waline/2.15.8/waline-meta.min.css" />
 <% } %>
 <% if (theme.twikoo.enable) { %>
-<script src="https://cdn.staticfile.org/twikoo/1.6.16/twikoo.all.min.js"></script>
+<script src="https://cdn.staticfile.org/twikoo/1.6.22/twikoo.all.min.js"></script>
 <% } %>
 <% } %>
 <% if (type === "index") { %>

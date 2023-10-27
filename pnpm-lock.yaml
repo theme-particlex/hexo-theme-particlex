@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   hexo-helper-crypto:
-    specifier: ^1.1.4
-    version: 1.1.4
+    specifier: ^1.1.5
+    version: 1.1.5
   hexo-renderer-ejs:
     specifier: ^2.0.0
     version: 2.0.0
@@ -88,8 +88,8 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
-  /hexo-helper-crypto@1.1.4:
-    resolution: {integrity: sha512-FGLqbpZS15daGXQQkGxng7qimq1zSnh61xNbM3w4mfIMv117/xNemzlSydc3TY7foZ6XExHZUwI+dRgwyjJhrA==}
+  /hexo-helper-crypto@1.1.5:
+    resolution: {integrity: sha512-KfrpsBv5SoMLNXVtGjPklyFaHP3Jb0SdALSRyhkJ1TFFIl95dH2Pa6M4Dam5xNDo44fmLrEzm/VHrM5AXJMFEA==}
     dependencies:
       crypto-js: 4.2.0
     dev: false
