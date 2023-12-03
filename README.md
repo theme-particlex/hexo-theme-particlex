@@ -40,6 +40,11 @@ prismjs:
     enable: false
 ```
 
+如果使用Hexo 7.0.0之后的版本只需要修改为：
+```yaml
+syntax_highlighter: /js/lib/highlight.js
+```
+
 如果使用 Pandoc 还需要设置一下：
 
 ```yaml
