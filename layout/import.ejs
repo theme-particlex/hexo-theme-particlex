@@ -1,6 +1,6 @@
-<link rel="preconnect" href="https://cdn.staticfile.net" />
-<script src="https://cdn.staticfile.net/vue/3.3.7/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.net/font-awesome/6.4.2/css/all.min.css" />
+<link rel="preconnect" href="https://s4.zstatic.net" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 <link rel="preconnect" href="https://fonts.loli.net" />
 <link rel="preconnect" href="https://gstatic.loli.net" crossorigin />
 <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap" />
@@ -9,25 +9,25 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=<%- theme.polyfill.features %>"></script>
 <% } %>
 <% if (theme.highlight.enable) { %>
-<script src="https://cdn.staticfile.net/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="https://cdn.staticfile.net/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
 <link
     rel="stylesheet"
-    href="https://cdn.staticfile.net/highlight.js/11.9.0/styles/<%- theme.highlight.style %>.min.css"
+    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/<%- theme.highlight.style %>.min.css"
 />
 <script src="<%- url_for("/js/lib/highlight.js") %>"></script>
 <% } %>
 <% if (theme.math.enable) { %>
-<script src="https://cdn.staticfile.net/KaTeX/0.16.9/katex.min.js"></script>
-<script src="https://cdn.staticfile.net/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.net/KaTeX/0.16.9/katex.min.css" />
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
 <script src="<%- url_for("/js/lib/math.js") %>"></script>
 <% } %>
 <% if (theme.preview.enable) { %>
 <script src="<%- url_for("/js/lib/preview.js") %>"></script>
 <% } %>
 <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
-<script src="https://cdn.staticfile.net/crypto-js/4.2.0/crypto-js.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 <script src="<%- url_for("/js/lib/crypto.js") %>"></script>
 <% } %>
 <% if (type === "archives" && theme.search.enable) { %>
@@ -35,16 +35,16 @@
 <% } %>
 <% if (type === "post" && page.comments) { %>
 <% if (theme.gitalk.enable) { %>
-<script src="https://cdn.staticfile.net/gitalk/1.8.0/gitalk.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.net/gitalk/1.8.0/gitalk.min.css" />
+<script src="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.css" />
 <% } %>
 <% if (theme.waline.enable) { %>
-<script src="https://cdn.staticfile.net/waline/2.15.8/waline.min.js"></script>
-<link rel="stylesheet" href="https://cdn.staticfile.net/waline/2.15.8/waline.min.css" />
-<link rel="stylesheet" href="https://cdn.staticfile.net/waline/2.15.8/waline-meta.min.css" />
+<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
 <% } %>
 <% if (theme.twikoo.enable) { %>
-<script src="https://cdn.staticfile.net/twikoo/1.6.22/twikoo.all.min.js"></script>
+<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
 <% } %>
 <% } %>
 <% if (type === "index") { %>
