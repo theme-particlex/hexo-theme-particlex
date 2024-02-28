@@ -15,9 +15,16 @@ const app = Vue.createApp({
             this.loading = false;
         });
     },
-    mounted() {
+       mounted() {
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
+        document.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                let href = link.getAttribute('href');
+                let siteDomain = window.location.hostname;
+                if (href.startsWith('/') || href.includes(siteDomain)) { this.loading = true; }
+            });
+        });
     },
     methods: {
         render() {
