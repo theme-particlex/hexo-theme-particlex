@@ -2,7 +2,7 @@
 
 [ParticleX](https://github.com/theme-particlex/hexo-theme-particlex) 主题，诞生原因是因为原来的 [Particle](https://github.com/korilin/hexo-theme-particle) 主题不维护了，但是我觉得还是很好的。
 
-原来用的是 Vue 2 + Ant Design Vue 1，现更新到 Vue 3，去除 Ant Design Vue 采用自定义样式，图标更改为 Font Awesome 6，CDN 改为 Staticfile。
+原来用的是 Vue 2 + Ant Design Vue 1，现更新到 Vue 3，去除 Ant Design Vue 采用自定义样式，图标更改为 Font Awesome 6，CDN 改为 ZStatic。
 
 原项目 `README.md` 里说：
 
@@ -29,6 +29,17 @@ git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex 
 theme: particlex
 ```
 
+**由于[一些原因](https://github.com/hexojs/hexo/issues/5367)，主题与 Hexo 7.0.0 版本不兼容。可以通过降级到 6.3.0 解决。**
+
+```bash
+# npm
+npm i hexo@6.3.0
+# yarn
+yarn up hexo@6.3.0
+# pnpm
+pnpm up hexo@6.3.0
+```
+
 ## 2.1. 关闭自带代码高亮
 
 Hexo 有自带的代码高亮，但是和 ParticleX 的不兼容。
@@ -38,6 +49,12 @@ highlight:
     enable: false
 prismjs:
     enable: false
+```
+
+如果使用 Hexo 7 之后的版本只需要修改为：
+
+```yaml
+syntax_highlighter:
 ```
 
 如果使用 Pandoc 还需要设置一下：
