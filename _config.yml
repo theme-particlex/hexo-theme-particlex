@@ -27,23 +27,23 @@ menu:
     Home:
         name: house
         theme: solid
-        link: /
+        link: ./
     About:
         name: id-card
         theme: solid
-        link: /about
+        link: ./about
     Archives:
         name: box-archive
         theme: solid
-        link: /archives
+        link: ./archives
     Categories:
         name: bookmark
         theme: solid
-        link: /categories
+        link: ./categories
     Tags:
         name: tags
         theme: solid
-        link: /tags
+        link: ./tags
 
 # Side info card
 card:
@@ -76,6 +76,7 @@ polyfill:
 highlight:
     enable: true
     style: github
+    darkstyle: github-dark
 
 # KaTeX math rendering
 math:
@@ -109,6 +110,7 @@ giscus:
     inputPosition: bottom
     theme: preferred_color_scheme
     lang:
+    crossorigin: anonymous
 
 # Gitalk
 # https://github.com/gitalk/gitalk
