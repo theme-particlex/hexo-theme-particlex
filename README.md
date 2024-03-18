@@ -29,17 +29,6 @@ git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex 
 theme: particlex
 ```
 
-**由于[一些原因](https://github.com/hexojs/hexo/issues/5367)，主题与 Hexo 7.0.0 版本不兼容。可以通过降级到 6.3.0 解决。**
-
-```bash
-# npm
-npm i hexo@6.3.0
-# yarn
-yarn up hexo@6.3.0
-# pnpm
-pnpm up hexo@6.3.0
-```
-
 ## 2.1. 关闭自带代码高亮
 
 Hexo 有自带的代码高亮，但是和 ParticleX 的不兼容。
@@ -51,7 +40,7 @@ prismjs:
     enable: false
 ```
 
-如果使用 Hexo 7 之后的版本只需要修改为：
+如果使用 Hexo 7.0.0 之后的版本只需要修改为：
 
 ```yaml
 syntax_highlighter:
