@@ -2,7 +2,7 @@
     <% let posts = []; %>
     <div class="categories-tags">
         <% let prev; %>
-        <% site.categories.data.forEach(category => { %>
+        <% site.categories.forEach(category => { %>
         <%
             const colors = is_category(category.name)
                 ? ["linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"]
