@@ -15,7 +15,7 @@ const app = Vue.createApp({
             this.loading = false;
         });
     },
-       mounted() {
+    mounted() {
         window.addEventListener("scroll", this.handleScroll, true);
         this.render();
         document.querySelectorAll('a').forEach((link) => {

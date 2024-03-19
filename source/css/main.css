@@ -386,6 +386,7 @@
     margin-left: 60px;
     margin-right: 5px;
 }
+#menu #desktop-menu,
 #menu #desktop-menu a {
     color: #454545;
     display: inline-block;
@@ -406,6 +407,7 @@
     min-width: 200px;
     width: 80%;
 }
+#menu #mobile-menu,
 #menu #mobile-menu .items a {
     color: #454545;
 }
@@ -431,6 +433,8 @@
 }
 #menu.menu-color #desktop-menu a,
 #menu.menu-color #mobile-menu a,
+#menu.menu-color #desktop-menu,
+#menu.menu-color #mobile-menu,
 #menu.menu-color #mobile-menu .title {
     color: #fff;
 }
