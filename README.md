@@ -254,6 +254,17 @@ search:
     enable: false
 ```
 
+### 3.3.4. 暗黑模式
+
+自动适应浏览器黑暗模式，`themeswitchbutton`是在导航栏里添加一个切换暗黑模式的按钮。。
+
+```yaml
+# DarkMode
+darkmode:
+    enable: true
+    themeswitchbutton: true
+```
+
 ## 3.4. 评论配置
 
 ### 3.4.1. Giscus

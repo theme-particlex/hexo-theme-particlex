@@ -328,9 +328,15 @@
 #footer #footer-wrap {
     box-sizing: border-box;
 }
+:root {
+    --background-color: #fff;
+}
+:root.dark {
+    --background-color: #181a1b;
+}
 #loading {
     align-items: center;
-    background: #fff;
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -381,13 +387,14 @@
     height: 50px;
 }
 #menu #desktop-menu .title {
-    color: #555;
+    color: #454545;
     display: inline-block;
     margin-left: 60px;
     margin-right: 5px;
 }
+#menu #desktop-menu,
 #menu #desktop-menu a {
-    color: #555;
+    color: #454545;
     display: inline-block;
     margin-left: 30px;
 }
@@ -406,11 +413,12 @@
     min-width: 200px;
     width: 80%;
 }
+#menu #mobile-menu,
 #menu #mobile-menu .items a {
-    color: #555;
+    color: #454545;
 }
 #menu #mobile-menu .title {
-    color: #555;
+    color: #454545;
     cursor: pointer;
     z-index: 1003;
 }
@@ -431,6 +439,8 @@
 }
 #menu.menu-color #desktop-menu a,
 #menu.menu-color #mobile-menu a,
+#menu.menu-color #desktop-menu,
+#menu.menu-color #mobile-menu,
 #menu.menu-color #mobile-menu .title {
     color: #fff;
 }
@@ -713,35 +723,6 @@ code {
     line-height: 2.5;
     padding: 4px 8px;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #1e3e3f;
-    font-weight: bold;
-    margin: 15px 0;
-    word-break: keep-all;
-}
-h1 {
-    font-size: 30px;
-}
-h2 {
-    font-size: 27px;
-}
-h3 {
-    font-size: 24px;
-}
-h4 {
-    font-size: 21px;
-}
-h5 {
-    font-size: 18px;
-}
-h6 {
-    font-size: 15px;
-}
 hr {
     border-style: dashed none none;
     border-width: 1.5px;
@@ -838,7 +819,7 @@ ol li {
         padding: 25px;
     }
     #home-head #home-info .info .wrap h1 {
-        font-size: 52px;
+        font-size: 50px;
         font-weight: bold;
         margin-bottom: 10px;
     }
@@ -889,6 +870,9 @@ ol li {
     .home-posts-wrap-no-card #home-posts {
         margin: auto;
     }
+    #home-posts .post-title {
+        font-size: 27px;
+    }
     ul,
     ol {
         padding-left: 40px;
@@ -924,7 +908,7 @@ ol li {
         padding: 50px;
     }
     #home-head #home-info .info .wrap h1 {
-        font-size: 46px;
+        font-size: 38px;
         margin-bottom: 10px;
     }
     #home-head #home-info .info .wrap h3 {
