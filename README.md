@@ -75,7 +75,7 @@ archive_generator:
 
 `homeBackground`和`contentBackground` 参数是一个列表，打开时会随机加载一个背景。
 
-`homeBackground`是首页的背景，至少要有一张图片`contentBackground`是内容，或者说整个网站的背景，默认为空，可置入任意数量的图片。
+`homeBackground`是首页的背景，至少要有一张图片、`contentBackground`是内容，或者说整个网站的背景，默认为空，可置入任意数量的图片。
 
 ```yaml
 # Avatar image
