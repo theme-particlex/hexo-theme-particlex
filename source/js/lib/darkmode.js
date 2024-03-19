@@ -16,12 +16,14 @@ mixins.darkmode = {
             sessionStorage.setItem("isDrek", true);
             document.querySelector("#highlight-darkstyle").removeAttribute("disabled");
             document.querySelector("#darkstyle").removeAttribute("disabled");
+            document.documentElement.classList.add("dark");
         },
         switchLight() {
             this.isDark = false;
             sessionStorage.removeItem("isDrek");
             document.querySelector("#highlight-darkstyle").setAttribute("disabled", "");
             document.querySelector("#darkstyle").setAttribute("disabled", "");
+            document.documentElement.classList.remove("dark");
         },
         handleThemeSwitch() { this.isDark ? this.switchLight() : this.switchDark(); },
     },

@@ -1,3 +1,9 @@
+<% if (theme.darkmode.enable) { %>
+    <script>
+        if ((!sessionStorage.getItem("NotFirstVisit") && window.matchMedia('(prefers-color-scheme: dark)').matches)
+            || sessionStorage.getItem("isDrek")) { document.documentElement.classList.add("dark"); }
+    </script>
+<% } %>
 <link rel="preconnect" href="https://s4.zstatic.net" />
 <script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
 <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />

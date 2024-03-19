@@ -328,9 +328,15 @@
 #footer #footer-wrap {
     box-sizing: border-box;
 }
+:root {
+    --background-color: #fff;
+}
+:root.dark {
+    --background-color: #181a1b;
+}
 #loading {
     align-items: center;
-    background: #fff;
+    background: var(--background-color);
     display: flex;
     flex-direction: column;
     height: 100vh;
