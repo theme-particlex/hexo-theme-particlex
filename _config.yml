@@ -78,6 +78,11 @@ highlight:
     style: github
     darkstyle: github-dark
 
+# DarkMode
+darkmode:
+    enable: true
+    themeswitchbutton: true
+
 # KaTeX math rendering
 math:
     enable: false

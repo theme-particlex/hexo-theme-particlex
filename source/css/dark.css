@@ -1,0 +1,54 @@
+*,
+#home-card #card-div .friend-links a,
+#home-posts .post .category-and-date .category a{
+    color: #cbc6bf;
+}
+#menu.menu-color *{
+    color: #fff;
+}
+body {
+    background: #1c1e1f;
+}
+#home-head #home-info .info,
+#home-head #home-info .loop:nth-child(1),
+#home-head #home-info .loop:nth-child(2),
+#home-head #home-info .loop:nth-child(3),
+#home-head #home-info .loop:nth-child(4),
+#preview,
+#search-bar,
+#crypto {
+    background: #0000006f;
+    color: #c1c1c1;
+}
+#menu {
+    background-color: #054072;
+}
+#home-posts .post .go-post {
+    background: linear-gradient(120deg, #103081 0%, #650b5e 100%);
+    box-shadow: 0 0 0px;
+}
+#home-posts .post,
+#home-card #card-style,
+#preview-content {
+    background: #181a1b;
+    box-shadow: 0 0 0px;
+}
+.timeline-content,
+.timeline-tail,
+#loading {
+    color: #fff;
+    background-color: #181a1b;
+}
+blockquote{
+    background: #23435e;
+    border-left: 3px solid #c1c1c1;
+}
+table:not(.hljs-ln) td:nth-child(even) {
+    background: #2b3133;
+}
+table:not(.hljs-ln) td:nth-child(odd) {
+    background: #8087928d;
+}
+table:not(.hljs-ln) th {
+    background: #206b97;
+}
