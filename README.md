@@ -172,6 +172,8 @@ footer:
 
 可以配合 [Hexo-Babel](https://github.com/theme-particlex/hexo-babel) 插件处理 JS 语法兼容。
 
+Polyfill 在国内一些省份被墙，这里换成了阿里的 [Polyfill](https://polyfill.alicdn.com)。
+
 ```yaml
 # Polyfill
 # https://polyfill.io
