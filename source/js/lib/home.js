@@ -1,10 +1,17 @@
 mixins.home = {
     mounted() {
-        let background = this.$refs.homeBackground;
-        let images = background.dataset.images.split(",");
-        let id = Math.floor(Math.random() * images.length);
-        background.style.backgroundImage = `url('${images[id]}')`;
+        let homeBackgroundRef = this.$refs.homeBackground;
+        let homeBgImgURLs = homeBackgroundRef.dataset.images.split(",");
+        homeBackgroundRef.style.backgroundImage = `url('${
+          homeBgImgURLs[Math.floor(Math.random() * homeBgImgURLs.length)]
+        }')`;
         this.menuColor = true;
+
+        let contentBackgroundRef = this.$refs.contentBackground;
+        let contentBgImgURLs = contentBackgroundRef.dataset.images.split(",");
+        contentBackgroundRef.style.backgroundImage = `url('${
+          contentBgImgURLs[Math.floor(Math.random() * contentBgImgURLs.length)]
+        }')`;
     },
     methods: {
         homeClick() {

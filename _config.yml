@@ -5,8 +5,12 @@
 avatar: /images/avatar.jpg
 
 # Home page background image
-background:
-    - /images/background.jpg
+homeBackground:
+    - /images/home-background.jpg
+
+# Content (or global) background image
+contentBackground:
+    # - /images/content-background.jpg
 
 # Loading image
 loading: /images/loading.gif
