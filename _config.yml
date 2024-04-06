@@ -93,7 +93,7 @@ crypto:
 search:
     enable: false
 
-# Giscus
+# giscus
 # https://github.com/giscus/giscus
 giscus:
     enable: false
