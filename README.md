@@ -18,7 +18,7 @@
 
 # 2. 安装
 
-```shell
+```bash
 cd themes
 git clone https://github.com/theme-particlex/hexo-theme-particlex.git particlex --depth=1
 ```
