@@ -8,7 +8,7 @@
     });
     posts = posts.slice(current, config.index_generator.per_page + current);
 %>
-<% posts.forEach(post => { %>
+<% posts.forEach((post) => { %>
 <div class="post">
     <a href="<%- url_for(post.path) %>">
         <h2 class="post-title"><%= post.title %></h2>
@@ -59,10 +59,10 @@
         </span>
         <% } %>
         <% let prev; %>
-        <% post.tags.data.forEach(tag => { %>
+        <% post.tags.data.forEach((tag) => { %>
         <span class="tag">
             <%
-                const colors = theme.colors.filter(color => color !== prev);
+                const colors = theme.colors.filter((color) => color !== prev);
                 let id = Math.floor(Math.random() * colors.length);
                 prev = colors[id];
             %>

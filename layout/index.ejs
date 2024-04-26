@@ -1,5 +1,9 @@
 <div id="home-head">
-    <div id="home-background" ref="homeBackground" data-images="<%- theme.background.map(url_for) %>"></div>
+    <div
+        id="home-background"
+        ref="homeBackground"
+        data-images="<%- theme.background.map(url_for) %>"
+    ></div>
     <div id="home-info" @click="homeClick">
         <span class="loop"></span>
         <span class="loop"></span>
@@ -14,7 +18,11 @@
         </span>
     </div>
 </div>
-<div id="home-posts-wrap" <%- theme.card.enable || 'class="home-posts-wrap-no-card"' %> ref="homePostsWrap">
+<div
+    id="home-posts-wrap"
+    ref="homePostsWrap"
+    <%- theme.card.enable || 'class="home-posts-wrap-no-card"' %>
+>
     <div id="home-posts">
         <%- partial("posts") %>
         <%- partial("current") %>

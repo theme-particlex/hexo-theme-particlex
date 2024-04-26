@@ -32,14 +32,16 @@
                             <i class="fa-solid fa-tags fa-fw"></i>
                         </span>
                         <% let prev; %>
-                        <% post.tags.data.forEach(tag => { %>
+                        <% post.tags.data.forEach((tag) => { %>
                         <span class="tag">
                             <%
-                                const colors = theme.colors.filter(color => color !== prev);
+                                const colors = theme.colors.filter((color) => color !== prev);
                                 let id = Math.floor(Math.random() * colors.length);
                                 prev = colors[id];
                             %>
-                            <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>"><%= tag.name %></a>
+                            <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>">
+                                <%= tag.name %>
+                            </a>
                         </span>
                         <% }); %>
                     </span>

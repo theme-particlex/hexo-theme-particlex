@@ -2,11 +2,11 @@
     <% let posts = []; %>
     <div class="categories-tags">
         <% let prev; %>
-        <% site.tags.forEach(tag => { %>
+        <% site.tags.forEach((tag) => { %>
         <%
             const colors = is_tag(tag.name)
                 ? ["linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)"]
-                : theme.colors.filter(color => color !== prev);
+                : theme.colors.filter((color) => color !== prev);
             let id = Math.floor(Math.random() * colors.length);
             prev = colors[id];
         %>
@@ -26,7 +26,7 @@
         <% } %>
         <% }); %>
     </div>
-    <% posts.forEach(post => { %>
+    <% posts.forEach((post) => { %>
     <div class="timeline">
         <div class="timeline-tail"></div>
         <div class="timeline-content">
@@ -51,14 +51,16 @@
                         <i class="fa-solid fa-tags fa-fw"></i>
                     </span>
                     <% let prev; %>
-                    <% post.tags.data.forEach(tag => { %>
+                    <% post.tags.data.forEach((tag) => { %>
                     <span class="tag">
                         <%
-                            const colors = theme.colors.filter(color => color !== prev);
+                            const colors = theme.colors.filter((color) => color !== prev);
                             let id = Math.floor(Math.random() * colors.length);
                             prev = colors[id];
                         %>
-                        <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>"><%= tag.name %></a>
+                        <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>">
+                            <%= tag.name %>
+                        </a>
                     </span>
                     <% }); %>
                 </span>

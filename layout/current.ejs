@@ -8,10 +8,14 @@
     <% } %>
     <span class="current"><%= page.current %></span>
     <% if (page.current + 1 <= page.total) { %>
-    <a class="page-num" href="<%- url_for("page/" + (page.current + 1)) %>"><%= page.current + 1 %></a>
+    <a class="page-num" href="<%- url_for("page/" + (page.current + 1)) %>">
+        <%= page.current + 1 %>
+    </a>
     <% } %>
     <% if (page.current + 2 <= page.total) { %>
-    <a class="page-num" href="<%- url_for("page/" + (page.current + 2)) %>"><%= page.current + 2 %></a>
+    <a class="page-num" href="<%- url_for("page/" + (page.current + 2)) %>">
+        <%= page.current + 2 %>
+    </a>
     <% } %>
     <% if (page.current + 3 <= page.total) { %>
     <span class="page-omit">...</span>
