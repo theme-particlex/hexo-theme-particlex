@@ -73,15 +73,23 @@ archive_generator:
 
 ## 3.1. 基本配置
 
-`background` 参数是一个列表，打开时会随机加载一个背景。
+`homeBackground`和`contentBackground` 参数是一个列表，打开时会随机加载一个背景。
+
+`homeBackground`是首页的背景，至少要有一张图片、`contentBackground`是内容，或者说整个网站的背景，默认为空，可置入任意数量的图片。
 
 ```yaml
 # Avatar image
 avatar: /images/avatar.jpg
 
 # Home page background image
-background:
-    - /images/background.jpg
+homeBackground:
+    - /images/home-background.jpg
+    # - /images/home-background1.jpg
+
+# Content (or global) background image
+contentBackground:
+    # - /images/content-background.jpg
+    # - /images/content-background1.jpg
 
 # Loading image
 loading: /images/loading.gif

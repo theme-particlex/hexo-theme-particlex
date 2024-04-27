@@ -42,6 +42,18 @@
 #archives h3 {
     margin: 10px 0;
 }
+#content-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(""); */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
 #crypto {
     margin: 50px 0;
 }
