@@ -41,7 +41,7 @@
         <% } %>
     </div>
     <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
-    <% const CryptoJS = crypto(); %>
+    <% const CryptoJS = getCryptoJS(); %>
     <input
         id="crypto"
         :class="['input', cryptoStatus]"
