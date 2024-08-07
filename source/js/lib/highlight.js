@@ -7,8 +7,8 @@ mixins.highlight = {
         this.renderers.push(this.highlight);
     },
     methods: {
-        sleep(delay) {
-            return new Promise((resolve) => setTimeout(resolve, delay));
+        sleep(ms) {
+            return new Promise((resolve) => setTimeout(resolve, ms));
         },
         highlight() {
             let codes = document.querySelectorAll("pre");
@@ -22,12 +22,12 @@ mixins.highlight = {
                     highlighted = code;
                 }
                 i.innerHTML = `
-                    <div class="code-content hljs">${highlighted}</div>
-                    <div class="language">${language}</div>
-                    <div class="copycode">
-                        <i class="fa-solid fa-copy fa-fw"></i>
-                        <i class="fa-solid fa-check fa-fw"></i>
-                    </div>
+                <div class="code-content hljs">${highlighted}</div>
+                <div class="language">${language}</div>
+                <div class="copycode">
+                    <i class="fa-solid fa-copy fa-fw"></i>
+                    <i class="fa-solid fa-check fa-fw"></i>
+                </div>
                 `;
                 let content = i.querySelector(".code-content");
                 hljs.lineNumbersBlock(content, { singleLine: true });
