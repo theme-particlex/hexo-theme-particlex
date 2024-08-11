@@ -456,6 +456,16 @@
     margin-bottom: 50px;
     z-index: 1000;
 }
+#toc {
+    font-size: 15px;
+    color: #8ab5ff;
+}
+#toc .toc-link {
+    list-style: none;
+}
+#toc .toc-child {
+    list-style: none;
+}
 #timeline-wrap {
     display: flex;
     flex-direction: column-reverse;
