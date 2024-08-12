@@ -94,10 +94,9 @@ highlight:
     style: vs
 
 toc:
-    maxdepth: 6
-    mindepth: 1
+    max_depth: 6
+    min_depth: 2
     class: toc
-    slugify: transliteration
     decodeEntities: false
     list_number: false
     anchor:
