@@ -2,11 +2,13 @@
 # https://github.com/theme-particlex/hexo-theme-particlex
 
 # Avatar image
-avatar: /images/avatar.jpg
+avatar: /images/nachoneko.png
 
 # Home page background image
 background:
     - /images/background.jpg
+    - /images/neko1.jpeg
+    - /images/neko2.jpeg
 
 # Loading image
 loading: /images/loading.gif
@@ -49,15 +51,29 @@ menu:
 card:
     enable: true
     description: |
-        Description
-        ...
+        ずっと真夜中でいいのに..
+        --- Midnight Forever ---
     iconLinks:
+      Github:
+        name: github
+        theme: brands
+        link: https://github.com/aurora0x27
+      twitter:
+        name: twitter
+        theme: brands
+        link: https://twitter.com/Aurora0x27
+      mail:
+        name: envelope
+        theme: solid
+        link: mailto:qingfengzl0831@163.com 
     friendLinks:
         Argvchs: https://argvchs.github.io
+        kingpoem: https://kingpoem.github.io
+        mx-pai: https://mx-pai.github.io/
 
 # Footer info
 footer:
-    since: 2022
+    since: 2024
     # Customize the server domain name ICP
     ICP:
         enable: false
@@ -75,11 +91,21 @@ polyfill:
 # https://highlightjs.org
 highlight:
     enable: true
-    style: github
+    style: vs
+
+toc:
+    max_depth: 6
+    min_depth: 2
+    class: toc
+    decodeEntities: false
+    list_number: false
+    anchor:
+        position: after
+        symbol: h3
 
 # KaTeX math rendering
 math:
-    enable: false
+    enable: true
 
 # Image preview
 preview:
@@ -96,19 +122,35 @@ search:
 # giscus
 # https://github.com/giscus/giscus
 giscus:
-    enable: false
-    src: https://giscus.app/client.js
-    repo:
-    repoID:
-    category:
-    categoryID:
-    mapping: pathname
+    enable: true
+    src: "https://giscus.app/client.js"
+    repo: "aurora0x27/aurora0x27.github.io"
+    repoID: "R_kgDOMfB-WQ"
+    category: "Announcements"
+    categoryID: "DIC_kwDOMfB-Wc4ChZUZ"
+    mapping: "pathname"
     strict: 0
     reactionsEnabled: 1
     emitMetadata: 0
     inputPosition: bottom
-    theme: preferred_color_scheme
-    lang:
+    theme: "light"
+    lang: "zh-CN"
+
+    #<script src="https://giscus.app/client.js"
+    #        data-repo="aurora0x27/aurora0x27.github.io"
+    #        data-repo-id="R_kgDOMfB-WQ"
+    #        data-category="Announcements"
+    #        data-category-id="DIC_kwDOMfB-Wc4ChZUZ"
+    #        data-mapping="pathname"
+    #        data-strict="0"
+    #        data-reactions-enabled="1"
+    #        data-emit-metadata="0"
+    #        data-input-position="bottom"
+    #        data-theme="preferred_color_scheme"
+    #        data-lang="zh-CN"
+    #        crossorigin="anonymous"
+    #        async>
+    #</script>
 
 # Gitalk
 # https://github.com/gitalk/gitalk

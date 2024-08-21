@@ -456,10 +456,35 @@
     margin-bottom: 50px;
     z-index: 1000;
 }
-#timeline-wrap {
-    display: flex;
-    flex-direction: column-reverse;
+
+.toc-article {
+    position: relative;
 }
+
+.toc-article .toc-title{
+    font-weight: bold;
+}
+
+#toc {
+    font-size: 15px;
+}
+
+#toc .toc {
+    padding: 0
+}
+
+#toc li , .toc li {
+    list-style-type: none
+}
+
+#toc ol {
+    margin: 0;
+}
+
+#toc .toc-child {
+    padding-left: 1.5em
+}
+
 * {
     margin: 0;
     padding: 0;
