@@ -1,33 +1,38 @@
 <div id="card-style">
     <div id="card-div">
-        <div class="avatar">
-            <img src="<%- url_for(theme.avatar) %>" alt="avatar" />
-        </div>
-        <div class="name"><%= config.author %></div>
-        <div class="description">
-            <%- markdown(theme.card.description) %>
+        <div class="personal-info-wrapper">
+            <div class="avatar">
+                <img src="<%- url_for(theme.avatar) %>" alt="avatar" />
+            </div>
+            <div class="name"><%= config.author %></div>
+            <div class="description">
+                <%- markdown(theme.card.description) %>
+            </div>
         </div>
         <% if (theme.card.iconLinks) { %>
-        <div class="icon-links">
-            <% Object.entries(theme.card.iconLinks).forEach(([key, value]) => { %>
-            <span class="icon-link">
-                <a href="<%- url_for(value.link) %>">
+            <div class="icon-links">
+                <% Object.entries(theme.card.iconLinks).forEach(([key, value]) => { %>
+                    <span class="icon-link">
+                <a href="<%- url_for(value.link) %>" title="<%= key %>">
                     <i
-                        class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"
+                            class="fa-<%- value.theme %> fa-<%- value.name %> fa-fw"
                     ></i>
                 </a>
             </span>
-            <% }); %>
-        </div>
+                <% }); %>
+            </div>
         <% } %>
         <% if (theme.card.friendLinks) { %>
-        <div class="friend-links">
-            <% Object.entries(theme.card.friendLinks).forEach(([key, value]) => { %>
-            <div class="friend-link">
-                <a href="<%- url_for(value) %>"><%= key %></a>
+            <div class="friend-links-wrapper">
+                <h3 class="friend-links-title">友情链接</h3>
+                <div class="friend-links">
+                    <% Object.entries(theme.card.friendLinks).forEach(([key, value]) => { %>
+                        <div class="friend-link">
+                            <a href="<%- url_for(value) %>"><%= key %></a>
+                        </div>
+                    <% }); %>
+                </div>
             </div>
-            <% }); %>
-        </div>
         <% } %>
     </div>
 </div>

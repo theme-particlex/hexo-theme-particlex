@@ -80,8 +80,14 @@
 }
 #home-card {
     width: 300px;
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    max-height: 80vh;
+    overflow-y: auto;
+    align-self: flex-start;
 }
-#home-card #card-style {
+#card-style {
     background: #fff;
     border: none;
     border-radius: 10px;
@@ -99,6 +105,14 @@
 #home-card #card-div {
     overflow: auto;
     padding: 25px 0;
+}
+#home-card #card-div .personal-info-wrapper {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 0 auto 20px;
+    padding: 15px;
+    width: 85%;
 }
 #home-card #card-div .avatar {
     border: #f1f1f1 solid 3px;
@@ -120,6 +134,26 @@
     margin: 20px auto;
     width: 85%;
 }
+#home-card #card-div .friend-links-wrapper {
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin: 20px auto;
+    padding: 15px;
+    width: 85%;
+}
+#home-card #card-div .friend-links-title {
+    border-bottom: 1px solid #e0e0e0;
+    color: #5c6b72;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+#home-card #card-div .friend-links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
 #home-card #card-div .friend-links .friend-link {
     margin-bottom: 5px;
 }
@@ -127,15 +161,17 @@
     border-radius: 5px;
     color: #5c6b72;
     display: block;
-    padding: 8px 0;
+    padding: 8px 5px;
+    transition: all 0.3s ease;
+    font-size: 14px;
 }
 #home-card #card-div .icon-links .icon-link {
     margin: 5px;
 }
 #home-card #card-div .icon-links a {
     border-radius: 5px;
-    color: #5c6b72;
-    font-size: 18px;
+    color: hsl(199, 11%, 40%);
+    font-size: 22px;
     padding: 5px;
 }
 #home-card #card-div .icon-links a:hover,
@@ -170,6 +206,15 @@
     position: absolute;
     top: 0;
     width: 100vw;
+    z-index: -1;
+}
+#home-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     z-index: -1;
 }
 #home-head #home-info .info {
@@ -316,11 +361,13 @@
     transform: translate(-5px, -5px);
 }
 #home-posts-wrap {
-    background: transparent;
-    border-radius: 10px;
-    display: flex;
     margin: auto;
-    padding: 20px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 20px;
 }
 #home-posts-wrap,
 #archives,
@@ -640,7 +687,7 @@ body::-webkit-scrollbar-track {
 }
 ::-webkit-scrollbar-thumb {
     background: #8ab5ff
-        linear-gradient(
+    linear-gradient(
             45deg,
             #fff6 25%,
             transparent 25%,
@@ -649,7 +696,7 @@ body::-webkit-scrollbar-track {
             #fff6 75%,
             transparent 75%,
             transparent
-        );
+    );
     border: 3px solid #e6efff;
     border-radius: 100px;
 }
@@ -874,6 +921,10 @@ ol li {
     }
     #home-posts-wrap {
         max-width: 1200px;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        padding-top: 20px;
     }
     #menu #desktop-menu {
         display: block;
