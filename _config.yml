@@ -156,3 +156,9 @@ twikoo:
     region:
     path: location.pathname
     lang:
+
+my_friends:
+    ColdRain:
+        url: https://ziheng5.github.io/
+        avatar: https://ziheng5.github.io/images/head.jpg
+        desc: 理想主义重症患者
