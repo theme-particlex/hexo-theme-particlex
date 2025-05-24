@@ -2,6 +2,10 @@
     <div>
         <h1><%= page.title %></h1>
     </div>
+
+    
+     <% if (page.__post) { %>
+    <!-- post 部分设计 -->
     <div class="info">
         <span class="date">
             <span class="icon">
@@ -56,9 +60,13 @@
         <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
     </transition>
     <% } else { %>
+
+    <!-- 显示文章特有的模块（如标签、分类） -->
     <div class="content" v-pre>
-        <%- page.content %>
-    </div>
+        <%- partial('toc')%>
+            <%- page.content %>
+        </div>
+
     <% } %>
     <% if (page.comments) { %>
     <% if (theme.gitalk.enable) { %>
@@ -83,3 +91,32 @@
     <% } %>
     <% } %>
 </div>
+
+
+    <% } else { %>
+        <!-- page 部分设计 -->
+        <% if (page.type === 'friend_links') { %>
+            <!-- 友链设计部分 -->
+            <div
+                id="home-posts-wrap"
+                ref="homePostsWrap"
+                <%- theme.card.enable || 'class="home-posts-wrap-no-card"' %>
+            >
+
+            <div class="page-container">
+                <div class="page-content">
+                  <%- page.content %>
+                </div>
+              </div>
+
+                <!-- 在这里插入友链 -->
+                <div id="friend_links">
+                    <%- partial('friends') -%>
+                </div>
+            </div>
+            
+
+        <% } else { %>
+            <!-- 其他 page 部分 -->
+        <% }%>
+    <% } %>

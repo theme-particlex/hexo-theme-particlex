@@ -973,3 +973,139 @@ ol li {
         padding-left: 20px;
     }
 }
+
+/* 卡片容器 - 响应式网格布局 */
+/* .friends-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 15px;
+  } */
+  .friends-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 15px;
+  }
+  
+  /* 单个卡片样式 */
+  .friend-card {
+    display: flex;
+    height: 140px;
+    width: 360;
+    text-decoration: none; /* 移除链接下划线 */
+    color: inherit; /* 继承文字颜色 */
+    border: 4px solid #eaeaea;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+
+  .friend-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  /* 头像区域（固定宽度） */
+  .friend-avatar {
+    width: 140px;
+    flex-shrink: 0;
+  }
+  
+  .friend-avatar img {
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 10%; /* 50% - (60%/2) */
+    left: calc(50% - 30%);
+    object-fit: contain;
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  @keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  
+  /* 文字区域（自适应剩余空间） */
+  .friend-info {
+    font-size: 16px; /* 基准大小 */
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .friend-info h3 {
+    font-size: 1.2em; /* 19.2px */
+    margin-bottom: 0.3em;
+    margin-top: 0.3em;
+  }
+  
+  .friend-info p {
+    font-size: 0.875em;  /* 14px */
+    line-height: 1.6;
+    color: #555;
+    margin: 0;
+    transition: font-size 0.3s ease; /* 平滑过渡 */
+  }
+  
+  @media (max-width: 768px) {
+    .friend-info {
+      font-size: 15px; /* 移动端基准略小 */
+        }
+    }
+
+
+/* page 界面添加背景图片 */
+.page-container {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .page-container::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/background3.jpg'); /* 图片路径 */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* 置于内容下层 */
+    opacity: 0.75; /* 透明度0-1 */
+  }
+
+
+  @media (max-width: 768px) {
+    .page-container::before {
+      background-attachment: scroll; /* 移动端取消固定背景 */
+    }
+    .page-content {
+      background-color: rgba(255, 255, 255, 0.9); /* 移动端提高可读性 */
+    }
+  }
+
+  /* 视差滚动效果 */
+.page-container::before {
+    background-attachment: fixed;
+    transform: translateZ(0);
+  }
+  
+  /* 动态渐变透明度 */
+  .page-content {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.9) 0%,
+      rgba(255,255,255,0.7) 100%
+    );
+  }

@@ -1,0 +1,17 @@
+<main class="content">
+  <div class="friends-container">
+    <% Object.entries(theme.my_friends).forEach(([key, value]) => { %>
+      <a href="<%= url_for(value.url) %>" class="friend-card" target="_blank" rel="noopener">
+        <div class="friend-avatar">
+          <img src="<%= url_for(value.avatar) %>" alt="<%= key %>">
+        </div>
+        <div class="friend-info">
+          <h3><%= key %></h3>
+          <p><%= value.desc %></p>
+        </div>
+      </a>
+    <% }) %>
+  </div>
+
+</main>
+
