@@ -1,0 +1,10 @@
+<% if (page.toc == true) { %>
+    <div id="toc">
+        <span class="icon">
+            <i class="fas fa-stream" id="ic"></i>
+        </span>
+        <span class="toc_title">目录</span>
+        <%- toc(page.content, {list_number : false}) %>
+        <link rel="stylesheet" type="text/css" href="/css/toc.css">
+    </div>
+<% } %>

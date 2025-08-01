@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="<%- url_for('/css/friends.css') %>">
+
+<div class="friends-container">
+  <h1 class="friends-title">My Friends</h1>
+
+  <ul class="friends-list">
+    <% const friends = site.data.friends; %>
+    <% friends.forEach(friend => { %>
+      <li class="friend-item">
+        <img src="<%= friend.avatar %>" class="avatar" loading="lazy" onerror="this.src='/images/default_avatar.svg'"/>
+        <div class="friend-url">
+            <a href="<%= friend.url %>">
+              <div class="friend-name"><%= friend.name %></div>
+              <div class="friend-des"><%= friend.des %></div>
+            </a>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
+</div>

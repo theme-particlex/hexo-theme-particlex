@@ -1,0 +1,47 @@
+.friends-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5em;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+.friends-title {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 1em;
+}
+.friends-list {
+  list-style: none;
+  padding: 0;
+}
+.friend-item {
+  width: 100%;
+  display: flex;
+  margin: 1em 0;
+  padding: 1em;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+.friend-item:hover {
+  background-color: #f0f0f0;
+}
+.friend-name {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.friend-des {
+  color: #666;
+}
+.friend-url{
+    padding-left: .5rem;
+    padding-top: .35rem;
+}
+.avatar{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #ddd;
+}

@@ -1,7 +1,15 @@
 <%
     let type = "post";
     if (is_home()) type = "index";
-    if (is_post() || is_page()) type = "post";
+    if (is_post()) {
+        type = "post";
+    } else if (is_page()) {
+        if (page.type === "friends") {
+            type = "friends";
+        } else {
+            type = "post"; // 默认 page 还是走 post 模板
+        }
+    }
     if (is_category() || page.type === "categories") type = "categories";
     if (is_tag() || page.type === "tags") type = "tags";
     if (is_archive()) type = "archives";
@@ -11,6 +19,7 @@
     if (is_category()) title = "Categories: " + page.category + " | " + config.title;
     if (is_tag()) title = "Tags: " + page.tag + " | " + config.title;
     if (is_archive()) title = "Archives | " + config.title;
+    if (page.type === "friends") title = "Friends | " + config.title;
 %>
 <!DOCTYPE html>
 <html lang="<%- config.language %>">

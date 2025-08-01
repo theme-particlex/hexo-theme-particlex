@@ -1,85 +1,89 @@
-<div class="article">
-    <div>
-        <h1><%= page.title %></h1>
-    </div>
-    <div class="info">
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            <%= date(page.date, "YYYY/M/D") %>
-        </span>
-        <% if (page.categories && page.categories.data.length !== 0) { %>
-        <span class="category">
-            <a href="<%- url_for(page.categories.data[0].path) %>">
+<div id="container__">
+    <div class="article">
+        <div>
+            <h1 id="mian-title"><%= page.title %></h1>
+        </div>
+        <div class="info">
+            <span class="date">
                 <span class="icon">
-                    <i class="fa-solid fa-bookmark fa-fw"></i>
+                    <i class="fa-solid fa-calendar fa-fw"></i>
                 </span>
-                <%= page.categories.data[0].name %>
-            </a>
-        </span>
-        <% } %>
-        <% if (page.tags && page.tags.data.length !== 0) { %>
-        <span class="tags">
-            <span class="icon">
-                <i class="fa-solid fa-tags fa-fw"></i>
+                <%= date(page.date, "YYYY/M/D") %>
             </span>
-            <% let prev; %>
-            <% page.tags.data.forEach((tag) => { %>
-            <span class="tag">
-                <%
-                    const colors = theme.colors.filter((color) => color !== prev);
-                    let id = Math.floor(Math.random() * colors.length);
-                    prev = colors[id];
-                %>
-                <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>">
-                    <%= tag.name %>
+            <% if (page.categories && page.categories.data.length !== 0) { %>
+            <span class="category">
+                <a href="<%- url_for(page.categories.data[0].path) %>">
+                    <span class="icon">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </span>
+                    <%= page.categories.data[0].name %>
                 </a>
             </span>
-            <% }); %>
-        </span>
+            <% } %>
+            <% if (page.tags && page.tags.data.length !== 0) { %>
+            <span class="tags">
+                <span class="icon">
+                    <i class="fa-solid fa-tags fa-fw"></i>
+                </span>
+                <% let prev; %>
+                <% page.tags.data.forEach((tag) => { %>
+                <span class="tag">
+                    <%
+                        const colors = theme.colors.filter((color) => color !== prev);
+                        let id = Math.floor(Math.random() * colors.length);
+                        prev = colors[id];
+                    %>
+                    <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>">
+                        <%= tag.name %>
+                    </a>
+                </span>
+                <% }); %>
+            </span>
+            <% } %>
+        </div>
+        <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
+        <% const CryptoJS = getCryptoJS(); %>
+        <input
+            id="crypto"
+            :class="['input', cryptoStatus]"
+            :disabled="cryptoStatus === 'success'"
+            ref="crypto"
+            placeholder="文章被加密，请输入密码"
+            data-encrypted="<%- CryptoJS.AES.encrypt(page.content, page.secret).toString() %>"
+            data-shasum="<%- CryptoJS.SHA256(page.content).toString() %>"
+            v-model="crypto"
+        />
+        <transition name="fade">
+            <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
+        </transition>
+        <% } else { %>
+        <div class="content" v-pre>
+            <%- page.content %>
+        </div>
         <% } %>
+        <% if (page.comments) { %>
+        <% if (theme.gitalk.enable) { %>
+        <div id="comment">
+            <div id="gitalk-container"></div>
+        </div>
+        <% } %>
+        <% if (theme.giscus.enable) { %>
+        <div id="comment">
+            <div id="giscus-container" class="giscus"></div>
+        </div>
+        <% } %>
+        <% if (theme.waline.enable) { %>
+        <div id="comment">
+            <div id="waline-container"></div>
+        </div>
+        <% } %>
+        <% if (theme.twikoo.enable) { %>
+        <div id="comment">
+            <div id="twikoo-container"></div>
+        </div>
+        <% } %>
+        <% } %>
+
     </div>
-    <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
-    <% const CryptoJS = getCryptoJS(); %>
-    <input
-        id="crypto"
-        :class="['input', cryptoStatus]"
-        :disabled="cryptoStatus === 'success'"
-        ref="crypto"
-        placeholder="文章被加密，请输入密码"
-        data-encrypted="<%- CryptoJS.AES.encrypt(page.content, page.secret).toString() %>"
-        data-shasum="<%- CryptoJS.SHA256(page.content).toString() %>"
-        v-model="crypto"
-    />
-    <transition name="fade">
-        <div class="content" ref="content" v-show="cryptoStatus === 'success'"></div>
-    </transition>
-    <% } else { %>
-    <div class="content" v-pre>
-        <%- page.content %>
-    </div>
-    <% } %>
-    <% if (page.comments) { %>
-    <% if (theme.gitalk.enable) { %>
-    <div id="comment">
-        <div id="gitalk-container"></div>
-    </div>
-    <% } %>
-    <% if (theme.giscus.enable) { %>
-    <div id="comment">
-        <div id="giscus-container" class="giscus"></div>
-    </div>
-    <% } %>
-    <% if (theme.waline.enable) { %>
-    <div id="comment">
-        <div id="waline-container"></div>
-    </div>
-    <% } %>
-    <% if (theme.twikoo.enable) { %>
-    <div id="comment">
-        <div id="twikoo-container"></div>
-    </div>
-    <% } %>
-    <% } %>
+    <%- partial('toc') %>
 </div>

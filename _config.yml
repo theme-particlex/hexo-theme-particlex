@@ -44,6 +44,10 @@ menu:
         name: tags
         theme: solid
         link: /tags
+    Friends:
+        name: user-group
+        theme: solid
+        link: /friends
 
 # Side info card
 card:
