@@ -64,7 +64,7 @@ footer:
 # Polyfill
 # https://polyfill.io
 polyfill:
-    enable: true
+    enable: false
     features:
         - default
 
