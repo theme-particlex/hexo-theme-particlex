@@ -31,7 +31,6 @@
         <%- partial("menu") %>
         <div id="main">
             <%- partial(type) %>
-            <%- partial("footer") %>
         </div>
         <% if (theme.preview.enable) { %>
         <transition name="fade">
@@ -45,5 +44,6 @@
     <% if (type === "post" && page.comments) { %>
     <%- partial("comment") %>
     <% } %>
+    <%- partial("footer") %>
 </body>
 </html>
