@@ -328,41 +328,6 @@
 #footer #footer-wrap {
     box-sizing: border-box;
 }
-#loading {
-    align-items: center;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    left: 0;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    word-break: keep-all;
-    z-index: 2147483647;
-}
-#loading h2,
-#loading p,
-#loading img {
-    margin: 10px;
-}
-#loading img {
-    border-radius: 0;
-    height: 50px;
-}
-#loading-circle {
-    align-items: center;
-    border: 10px solid #a3ddfb;
-    border-radius: 50%;
-    display: flex;
-    flex-direction: column;
-    height: 50vmin;
-    justify-content: center;
-    padding: 50px;
-    text-align: center;
-    width: 50vmin;
-}
 #main {
     margin-right: calc(100% - 100vw);
 }

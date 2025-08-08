@@ -8,9 +8,6 @@ avatar: /images/avatar.jpg
 background:
     - /images/background.jpg
 
-# Loading image
-loading: /images/loading.gif
-
 # Optional colors for category and tag
 colors:
     - "#ffa2c4"
