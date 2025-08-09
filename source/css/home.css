@@ -1,11 +1,19 @@
+:root {
+    --box-shadow: #d9d9d980;
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --box-shadow: #29292980;
+    }
+}
 #home-card {
     width: 300px;
 }
 #home-card #card-style {
-    background: #fff;
+    background: var(--input);
     border: none;
     border-radius: 10px;
-    box-shadow: 0 0 20px #d9d9d980;
+    box-shadow: 0 0 20px var(--box-shadow);
     display: flex;
     flex-direction: column;
     max-height: 80vh;
@@ -45,7 +53,7 @@
 }
 #home-card #card-div .friend-links a {
     border-radius: 5px;
-    color: #5c6b72;
+    color: var(--icon);
     display: block;
     padding: 8px 0;
 }
@@ -54,7 +62,7 @@
 }
 #home-card #card-div .icon-links a {
     border-radius: 5px;
-    color: #5c6b72;
+    color: var(--icon);
     font-size: 18px;
     padding: 5px;
 }
@@ -62,7 +70,7 @@
 #home-card #card-div .friend-links a:hover,
 #home-posts .page-current .page-num:hover {
     background: #66afef;
-    color: #fff;
+    color: var(--icon);
 }
 #home-card #card-div .icon-links,
 #home-card #card-div .friend-links {
@@ -102,28 +110,28 @@
 }
 #home-head #home-info .loop:nth-child(1) {
     animation: loop1 10s linear infinite;
-    background: #fff;
+    background: var(--input);
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(30deg);
 }
 #home-head #home-info .loop:nth-child(2) {
     animation: loop2 15s linear infinite;
-    background: #fff;
+    background: var(--input);
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(60deg);
 }
 #home-head #home-info .loop:nth-child(3) {
     animation: loop3 10s linear infinite;
-    background: #fff;
+    background: var(--input);
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.3;
     transform: rotate(90deg);
 }
 #home-head #home-info .loop:nth-child(4) {
     animation: loop4 15s linear infinite;
-    background: #fff;
+    background: var(--input);
     border-radius: 38% 62% 63% 37%/41% 44% 56% 59%;
     opacity: 0.45;
     transform: rotate(120deg);
@@ -165,13 +173,13 @@
     color: #999;
 }
 #home-posts .post {
-    background: #fff;
+    background: var(--input);
     border-radius: 20px;
-    box-shadow: 0 0 20px #d9d9d980;
+    box-shadow: 0 0 20px var(--box-shadow);
     transition: box-shadow 0.25s, transform 0.25s;
 }
 #home-posts .post .category-and-date {
-    color: #5c6b72;
+    color: var(--icon);
     margin-top: 15px;
     text-align: center;
     width: 100%;
@@ -186,7 +194,7 @@
 #archives .item-time,
 #archives .categories-tags span a:hover .icon,
 .article .info a {
-    color: #5c6b72;
+    color: var(--icon);
 }
 #home-posts .post .category-and-date .date,
 #archives .tags,

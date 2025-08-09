@@ -1,3 +1,15 @@
+:root {
+	--archive-color: #5c6b72;
+	--archive-bg: #fff;
+	--archive-shadow: #00000017;
+}
+@media (prefers-color-scheme:dark) {
+	:root {
+		--archive-color: #cbc6bf;
+		--archive-bg: #2e3031;
+		--archive-shadow: #ffffff17;
+	}
+}
 #archives {
     margin: auto;
     margin-top: 100px;
@@ -27,9 +39,9 @@
     transition: background 0.25s, border 0.25s, color 0.25s;
 }
 #archives .categories-tags span a:hover {
-    background: #fff !important;
+    background: var(--archive-bg) !important;
     border: #a5c2f5 1px solid;
-    color: #5c6b72;
+    color: var(--archive-color);
 }
 #archives .category,
 #archives .tags .tag,
@@ -39,12 +51,15 @@
     display: inline-block;
     margin-right: 10px;
 }
+#archives .icon {
+	color: var(--archive-color);
+}
 #archives h3 {
     margin: 10px 0;
 }
 #search-bar {
     margin-bottom: 50px;
-    z-index: 1000;
+    z-index: 1;
 }
 #timeline-wrap {
     display: flex;
@@ -55,7 +70,7 @@
     transition: margin-top 0.5s, opacity 0.3s, visibility 0.3s;
 }
 .timeline-content {
-    background: #fff;
+    background: var(--archive-bg);
     border: 1px solid #0002;
     border-radius: 3px;
     margin-left: 17.5px;
@@ -63,10 +78,10 @@
     transition: box-shadow 0.5s;
 }
 .timeline-content:hover {
-    box-shadow: 0 2px 8px #00000017;
+    box-shadow: 0 2px 8px var(--archive-shadow);
 }
 .timeline-tail {
-    background: #fff;
+    background: var(--archive-bg);
     border: 2px solid #a5c2f5;
     border-radius: 50%;
     height: 7px;
