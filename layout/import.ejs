@@ -1,56 +1,66 @@
 <link rel="preconnect" href="https://s4.zstatic.net" />
-<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+<script src="https://s4.zstatic.net/ajax/libs/vue/3.5.18/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
 <link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
 <link
     rel="stylesheet"
-    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800;900&family=Noto+Sans+SC:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.cn/css2?family=Fira+Code:wght@500&family=Lexend:wght@500;700&family=Noto+Sans+SC:wght@500&display=swap"
 />
+<link rel="stylesheet" href="<%- url_for("/css/main.css") %>" />
 <script> const mixins = {}; </script>
-<% if (theme.polyfill.enable) { %>
-<script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=<%- theme.polyfill.features %>"></script>
+<% if (type === "index") { %>
+    <link rel="stylesheet" href="<%- url_for("/css/home.css") %>" />
+    <script src="<%- url_for("/js/lib/home.js") %>"></script>
 <% } %>
-<% if (theme.highlight.enable) { %>
-<script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
-<link
-    rel="stylesheet"
-    href="https://s4.zstatic.net/ajax/libs/highlight.js/11.9.0/styles/<%- theme.highlight.style %>.min.css"
-/>
-<script src="<%- url_for("/js/lib/highlight.js") %>"></script>
-<% } %>
-<% if (theme.math.enable) { %>
-<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
-<script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
-<script src="<%- url_for("/js/lib/math.js") %>"></script>
-<% } %>
-<% if (theme.preview.enable) { %>
-<script src="<%- url_for("/js/lib/preview.js") %>"></script>
-<% } %>
-<% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
-<script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
-<script src="<%- url_for("/js/lib/crypto.js") %>"></script>
+<% if (type === "archives" | type === "categories" | type === "tags") { %>
+    <link rel="stylesheet" href="<%- url_for("/css/archive.css") %>" />
 <% } %>
 <% if (type === "archives" && theme.search.enable) { %>
-<script src="<%- url_for("/js/lib/search.js") %>"></script>
+    <script src="<%- url_for("/js/lib/search.js") %>"></script>
+<% } %>
+<% if (theme.polyfill.enable) { %>
+    <script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=<%- theme.polyfill.features %>"></script>
+<% } %>
+<% if (theme.highlight.enable) { %>
+    <script src="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="https://s4.zstatic.net/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+    <link
+        media="(prefers-color-scheme: light)"
+        rel="stylesheet"
+        href="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/styles/<%- theme.highlight.style %>.min.css"
+    />
+    <link
+        media="(prefers-color-scheme: dark)"
+        rel="stylesheet"
+        href="https://s4.zstatic.net/ajax/libs/highlight.js/11.11.1/styles/<%- theme.highlight.styleDark %>.min.css"
+    />
+    <script src="<%- url_for("/js/lib/highlight.js") %>"></script>
+<% } %>
+<% if (theme.math.enable) { %>
+    <script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+    <script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css" />
+    <script src="<%- url_for("/js/lib/math.js") %>"></script>
+<% } %>
+<% if (theme.preview.enable) { %>
+    <script src="<%- url_for("/js/lib/preview.js") %>"></script>
+<% } %>
+<% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
+    <script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+    <script src="<%- url_for("/js/lib/crypto.js") %>"></script>
 <% } %>
 <% if (type === "post" && page.comments) { %>
-<% if (theme.gitalk.enable) { %>
-<script src="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.js"></script>
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.css" />
+    <% if (theme.gitalk.enable) { %>
+    <script src="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.js"></script>
+    <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.css" />
+    <% } %>
+    <% if (theme.waline.enable) { %>
+    <script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
+    <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
+    <link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
+    <% } %>
+    <% if (theme.twikoo.enable) { %>
+    <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
+    <% } %>
 <% } %>
-<% if (theme.waline.enable) { %>
-<script src="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.js"></script>
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline.min.css" />
-<link rel="stylesheet" href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css" />
-<% } %>
-<% if (theme.twikoo.enable) { %>
-<script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
-<% } %>
-<% } %>
-<% if (type === "index") { %>
-<script src="<%- url_for("/js/lib/home.js") %>"></script>
-<% } %>
-<link rel="stylesheet" href="<%- url_for("/css/main.css") %>" />
