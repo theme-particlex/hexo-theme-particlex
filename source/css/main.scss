@@ -782,6 +782,20 @@ a {
   }
   .code-wrapper {
     position: relative;
+
+    .code-content {
+      position: relative;
+      border-radius: 10px;
+    }
+
+    // &.code-collapsible .code-content {
+    //   overflow: hidden;
+    // }
+
+    &.code-collapsible.expanded .code-content {
+      overflow: visible;
+    }
+
     pre {
       font-family: "Fira Code", monospace;
       box-shadow: 0 2px 12px 0 #0000001a;
@@ -789,6 +803,66 @@ a {
       padding-top: 2rem;
       border-radius: 15px;
     }
+
+    .code-fade {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -1rem;
+      height: 4rem;
+      opacity: 0.8;
+      border-radius: 1rem;
+      transition: opacity 0.3s ease;
+      background:
+        radial-gradient(circle at 15% 70%, rgba(255, 255, 255, 0.95) 0, rgba(255, 255, 255, 0.75) 48%, rgba(255, 255, 255, 0) 70%),
+        radial-gradient(circle at 45% 85%, rgba(237, 110, 160, 0.28) 0, rgba(237, 110, 160, 0.1) 60%, rgba(237, 110, 160, 0) 75%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.9) 0, rgba(255, 255, 255, 0.72) 48%, rgba(255, 255, 255, 0) 70%),
+        linear-gradient(to top, rgba(246, 248, 250, 0.95), rgba(246, 248, 250, 0));
+    }
+
+    // &.code-collapsible:not(.expanded) .code-fade {
+    //   opacity: 1;
+    // }
+
+    .code-toggle {
+      background: linear-gradient(120deg, #ed6ea0 0%, #ec8c69 100%);
+      border: none;
+      border-radius: 999px;
+      color: #fff;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font: 500 12px "Lexend", "Noto Sans SC", sans-serif;
+      margin: -10px auto 15px;
+      padding: 6px 18px;
+      position: relative;
+      box-shadow: 0 10px 20px -12px rgba(237, 110, 160, 0.8);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+    }
+
+    .code-toggle:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px -10px rgba(236, 140, 105, 0.85);
+    }
+
+    .code-toggle:focus-visible {
+      outline: 2px solid rgba(237, 110, 160, 0.4);
+      outline-offset: 2px;
+    }
+
+    &.code-collapsible:not(.expanded) .code-toggle::after {
+      content: "↓";
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
+    &.code-collapsible.expanded .code-toggle::after {
+      content: "↑";
+      font-size: 12px;
+      margin-left: 8px;
+    }
+
     .code-lang {
       background: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
       border-radius: 5px 10px;
@@ -804,7 +878,7 @@ a {
       position: absolute;
       padding: 15px;
       right: 0;
-      top: 0;
+      top: 1rem;
       color: #ddf3ff;
       cursor: pointer;
 
