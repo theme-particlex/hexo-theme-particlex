@@ -50,6 +50,9 @@
 <script src="https://s4.zstatic.net/ajax/libs/twikoo/1.6.31/twikoo.all.min.js"></script>
 <% } %>
 <% } %>
+<% if ((type === "post") && page.toc !== false) { %>
+<script src="<%- url_for("/js/lib/toc.js") %>"></script>
+<% } %>
 <% if (type === "index") { %>
 <script src="<%- url_for("/js/lib/home.js") %>"></script>
 <% } %>

@@ -1,0 +1,19 @@
+<aside class="toc-sidebar">
+        <% if (page.toc !== false && toc(page.content)) { %>
+            <div class="toc-wrapper">
+                <div class="toc-header">
+                    <i class="fa-solid fa-list"></i> 目录
+                </div>
+                <%- toc(page.content, { class: 'toc', list_number: true }) %>
+            </div>
+    
+    <div class="toc-nav-buttons">
+                <a href="javascript:;" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="toc-btn" title="回到顶部">
+                    <i class="fa-solid fa-arrow-up"></i> 顶部
+                </a>
+                <a href="#comment" class="toc-btn" title="查看评论">
+                    <i class="fa-solid fa-comments"></i> 评论
+                </a>
+            </div>
+        <% } %>
+</aside>

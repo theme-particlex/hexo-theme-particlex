@@ -973,3 +973,114 @@ ol li {
         padding-left: 20px;
     }
 }
+.post-main-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 20px;
+    transition: max-width 0.3s ease;
+}
+.post-main-wrapper.has-toc {
+    max-width: 1200px;
+    gap: 30px;
+}
+.post-main-wrapper.no-toc {
+    max-width: 900px;
+}
+.post-main-wrapper.no-toc .article {
+    width: 100%;
+    flex: none;
+}
+.toc-sidebar {
+    width: 280px;
+    position: sticky;
+    top: 100px;
+}
+@media (max-width: 1200px) {
+    .toc-sidebar {
+        display: none;
+    }
+    .post-main-wrapper.has-toc {
+        max-width: 100%;
+    }
+}
+.toc-wrapper {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+}
+.toc-header {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #1e3e3f;
+    border-bottom: 1px solid #858585;
+    padding-bottom: 8px;
+}
+.toc {
+    list-style: none;
+    padding-left: 0;
+    line-height: 1.8;
+    font-size: 0.95em;
+}
+.toc-child {
+    list-style: none;
+    padding-left: 15px;
+}
+.toc-link {
+    -webkit-user-drag: none;
+    display: block;
+    color: #1e3e3f;
+    text-decoration: none;
+    padding: 1px 2px;
+    border-radius: 4px;
+    transition: all 0.15s ease-in-out;
+    border-left: 3px solid transparent;
+}
+.toc-link:hover {
+    background-color: #8cbce6;
+    color: #666;
+}
+.toc-link.active {
+    font-weight: bold;
+    background-color: #66afef;
+    border-left-color: #1c4161;
+    color: #EEE;
+}
+.content h1, 
+.content h2, 
+.content h3, 
+.content h4, 
+.content h5, 
+.content h6 {
+    scroll-margin-top: 70px; 
+}
+.toc-nav-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+.toc-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px #d9d9d980;
+    cursor: pointer;
+}
+.toc-btn:hover {
+    background: #66afef;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 255, 255, 0.12);
+    color: #fff;
+}
