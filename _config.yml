@@ -95,6 +95,10 @@ prismjs:
   theme: prism-tomorrow
   lineNumbers: true
 
+# https://highlightjs.org/
+highlight:
+  enable: false
+
 # KaTeX math rendering
 math:
   enable: false

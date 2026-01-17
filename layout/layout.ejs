@@ -1,14 +1,12 @@
 <% let type = "post"; if (is_home()) type = "index"; if (is_post() || is_page())
 type = "post"; if (is_category() || page.type === "categories") type =
 "categories"; if (is_tag() || page.type === "tags") type = "tags"; if
-(is_archive()) type = "archives";if (page.layout === "photo") type = "photo";
-%> 
-<%let title = page.title + " | " + config.title;
-if (is_home()) title = config.title; if (is_post() || is_page()) title =
-page.title + " | " + config.title; if (is_category()) title = "Categories: " +
-page.category + " | " + config.title; if (is_tag()) title = "Tags: " + page.tag
-+ " | " + config.title; if (is_archive()) title = "Archives | " + config.title;
-%>
+(is_archive()) type = "archives";if (page.layout === "photo") type = "photo"; %>
+<%let title = page.title + " | " + config.title; if (is_home()) title =
+config.title; if (is_post() || is_page()) title = page.title + " | " +
+config.title; if (is_category()) title = "Categories: " + page.category + " | "
++ config.title; if (is_tag()) title = "Tags: " + page.tag + " | " +
+config.title; if (is_archive()) title = "Archives | " + config.title; %>
 <!DOCTYPE html>
 <html lang="<%- config.language %>">
   <head>
@@ -28,9 +26,6 @@ page.category + " | " + config.title; if (is_tag()) title = "Tags: " + page.tag
         cursor: url("<%- url_for(theme.arrow) %>"), auto;
       }
     </style>
-    <% if (theme.TopIndex.enable) { %>
-    <!-- <script src="<%- url_for('/js/TopIndex.js') %>"></script> -->
-    <% } %>
   </head>
   <body>
     <div id="layout">
@@ -46,8 +41,7 @@ page.category + " | " + config.title; if (is_tag()) title = "Tags: " + page.tag
       </transition>
       <%- partial("menu", {}, {cache: true}) %>
       <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
-        <%- partial(type) %> 
-        <%- partial("footer", {}, {cache: true}) %>
+        <%- partial(type) %> <%- partial("footer", {}, {cache: true}) %>
       </div>
 
       <% if (theme.Background_particles.enable) { %>
@@ -60,8 +54,9 @@ page.category + " | " + config.title; if (is_tag()) title = "Tags: " + page.tag
         </div>
       </transition>
       <% } %> -->
-
+      <% if (theme.TopIndex.enable) { %>
       <div id="scrollProgressBar" :style="{ width: scrollPercent + '%' }"></div>
+      <% } %>
       <div
         id="scrollTop"
         @click="scrollToTop"

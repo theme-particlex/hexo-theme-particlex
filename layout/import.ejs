@@ -2,18 +2,26 @@
 <link rel="preconnect" href="https://fonts.googleapis.cn" />
 <link rel="preconnect" href="https://fonts.gstatic.cn" crossorigin />
 
-<script src="https://s4.zstatic.net/ajax/libs/vue/3.3.7/vue.global.prod.min.js"></script>
+<script
+  src="https://s4.zstatic.net/ajax/libs/vue/3.5.22/vue.global.prod.min.js"
+  integrity="sha384-dXO0tVOGNl1wgAWAtcOqxLmhahhsemOLpJUgOyUx7VUwhfwkaS10/zJAzmaB+wM7"
+  crossorigin="anonymous"
+></script>
 <link
   rel="stylesheet"
   href="https://s4.zstatic.net/ajax/libs/font-awesome/6.4.2/css/all.min.css"
 />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.css">
+<link
+  rel="stylesheet"
+  href="https://s4.zstatic.net/ajax/libs/firacode/6.2.0/fira_code.css"
+/>
 
-<script>
-  const mixins = {};
-</script>
 <!-- <script src="<%- url_for('/js/jquery-3.7.1.js') %>"></script> -->
-<script src="https://upcdn.b0.upaiyun.com/libs/jquery/jquery-2.0.2.min.js"></script>
+<script
+  src="https://s4.zstatic.net/ajax/libs/jquery/3.7.1/jquery.slim.min.js"
+  integrity="sha384-5AkRS45j4ukf+JbWAfHL8P4onPA9p0KwwP7pUdjSQA3ss9edbJUJc/XcYAiheSSz"
+  crossorigin="anonymous"
+></script>
 <% if (theme.polyfill.enable) { %>
 <script src="https://polyfill.alicdn.com/v3/polyfill.min.js?features=<%- theme.polyfill.features %>"></script>
 <% } %>
@@ -21,31 +29,37 @@
 <!-- PrismJS -->
 <% if (theme.prismjs.enable) { %>
 <!-- PrismJS 样式 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/themes/<%= theme.prismjs.theme %>.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/prismjs/themes/<%= theme.prismjs.theme %>.min.css"
+/>
 <% if (theme.prismjs.lineNumbers) { %>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css" />
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.css"
+/>
 <% } %>
 <!-- PrismJS 高亮脚本 -->
 <script src="<%- url_for('/js/PrismJS.js') %>"></script>
 
 <% } %>
 
-
-<% if (theme.math.enable) { %>
+<!-- Highlight.js -->
+<% if (theme.highlight.enable) { %>
+<script src="https://cdn.jsdelivr.net/npm/highlight.js@11.9.0/lib/core.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.8.0/dist/highlightjs-line-numbers.min.js"></script>
+<% } %> <% if (theme.math.enable) { %>
 <script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
 <script src="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
 <link
   rel="stylesheet"
   href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"
 />
-<script src="<%- url_for('/js/lib/math.js') %>"></script>
 <% } %> <% if (theme.preview.enable) { %>
 <!-- <script src="<%- url_for('/js/preview.js') %>"></script> -->
 <% } %> <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
 <script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
-<script src="<%- url_for('/js/lib/crypto.js') %>"></script>
 <% } %> <% if (type === "archives" && theme.search.enable) { %>
-<script src="<%- url_for('/js/lib/search.js') %>"></script>
 <% } %> <% if (type === "post" && page.comments) { %> <% if
 (theme.gitalk.enable) { %>
 <script src="https://s4.zstatic.net/ajax/libs/gitalk/1.8.0/gitalk.min.js"></script>
@@ -64,11 +78,12 @@
   href="https://s4.zstatic.net/ajax/libs/waline/2.15.8/waline-meta.min.css"
 />
 <% } %> <% if (theme.twikoo.enable) { %>
-<script src="https://s4.zstatic.net/npm/twikoo@1.6.44/dist/twikoo.min.js"></script>
-<% } %> <% } %>
-<% if (type === "index") { %>
-<script src="<%- url_for('/js/lib/home.js') %>"></script>
-<% } %> <link rel="stylesheet" href="<%- url_for("/css/main.css") %>" />
-<% if (type==="photo") { %>
-<link rel="stylesheet" href="<%- url_for("/css/photo.css") %>" />
-<%}%>
+<script
+  src="https://s4.zstatic.net/npm/twikoo@1.6.44/dist/twikoo.min.js"
+  integrity="sha384-dZ/hSVfTPHuzXyECOYCetAvMd0cgqWxN5Fh+mwo86PV4GdU9xgQ/MNzh/YM/lotR"
+  crossorigin="anonymous"
+></script>
+<% } %> <% } %> <% if (type === "index") { %>
+<% } %> <link rel="stylesheet" href="<%- url_for("/css/main.css") %>" /> <% if
+(type==="photo") { %> <link rel="stylesheet" href="<%- url_for("/css/photo.css")
+%>" /> <%}%>
