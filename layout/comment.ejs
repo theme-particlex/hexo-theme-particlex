@@ -40,7 +40,7 @@
         serverURL: "<%- theme.waline.serverURL %>",
         commentCount: <%- theme.waline.commentCount %>,
         pageview: <%- theme.waline.pageview %>,
-        emoji: "<%- (theme.waline.emoji) %>".split(","),
+        emoji: <%- JSON.stringify(theme.waline.emoji) %>,
         meta: "<%- (theme.waline.meta) %>".split(","),
         requiredMeta: "<%- theme.waline.requiredMeta %>".split(","),
         lang: "<%- theme.waline.lang %>",

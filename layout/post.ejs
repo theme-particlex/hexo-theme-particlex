@@ -27,7 +27,7 @@
       <span class="tag">
         <% const colors = theme.colors.filter((color) => color !== prev); let id
         = Math.floor(Math.random() * colors.length); prev = colors[id]; %>
-        <a href="<%- url_for(tag.path) %>" style="color: '<%- colors[id] %>'">
+        <a href="<%- url_for(tag.path) %>" style="color: <%- colors[id] %>">
           <%= tag.name %>
         </a>
       </span>
