@@ -16,7 +16,6 @@
   href="https://s4.zstatic.net/ajax/libs/firacode/6.2.0/fira_code.css"
 />
 
-<!-- <script src="<%- url_for('/js/jquery-3.7.1.js') %>"></script> -->
 <script
   src="https://s4.zstatic.net/ajax/libs/jquery/3.7.1/jquery.slim.min.js"
   integrity="sha384-5AkRS45j4ukf+JbWAfHL8P4onPA9p0KwwP7pUdjSQA3ss9edbJUJc/XcYAiheSSz"
@@ -55,9 +54,7 @@
   rel="stylesheet"
   href="https://s4.zstatic.net/ajax/libs/KaTeX/0.16.9/katex.min.css"
 />
-<% } %> <% if (theme.preview.enable) { %>
-<!-- <script src="<%- url_for('/js/preview.js') %>"></script> -->
-<% } %> <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
+  <% } %> <% if (theme.crypto.enable && typeof page.secret !== "undefined") { %>
 <script src="https://s4.zstatic.net/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 <% } %> <% if (type === "archives" && theme.search.enable) { %>
 <% } %> <% if (type === "post" && page.comments) { %> <% if
